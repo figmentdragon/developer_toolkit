@@ -1,0 +1,9 @@
+[submodule "vendors/the-new-css-reset"]
+	path = vendors/the-new-css-reset
+	url = https://github.com/elad2412/the-new-css-reset.git
+[submodule "vendors/git-project-template"]
+	path = vendors/git-project-template
+	url = https://github.com/Josee9988/project-template.git
+[submodule "code-resources/css"]
+	path = code-resources/css
+	url = https://github.com/codeAdrian/clay.css.git
