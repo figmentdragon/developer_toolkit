@@ -1,0 +1,417 @@
+$card-height                          : null;
+$card-width                           : null;
+
+$card-spacer-y                        : $offset * $spacer;
+$card-spacer-x                        : $offset * $base-unit;
+$card-title-offset-y                  : $offset-y-lg;
+$card-border-width                    : $border-width-md;
+$card-border-color                    : shade-color($secondary-color, $border-shade-percentage);
+$card-border-radius                   : $border-radius;
+$card-box-shadow                      : $card-box-shadow;
+$card-inner-border-radius             : subtract($card-border-radius, $card-border-width);
+
+$card-bg-color                        : tint-color($primary-color, $background-tint-percentage);
+$card-height                          : null;
+$card-body-text-color                 : $body-color;
+$card-body-bg-color                   : tint-color($accent-color, $background-tint-percentage);
+$card-body-border-color               : shade-color(
+  $secondary-color,
+  $border-shade-percentage
+);
+$card-img-overlay-padding             : $offset;
+$card-group-margin                    : $offset * 0.5;
+
+$card-panel-bg                        : shift-color($primary-color, $background-tint-percentage);
+$card-body-padding                    : $offset;
+$card-body-padding-x                  : $offset;
+$card-body-padding-y                  : $offset;
+$card-body-padding-x-l                : $offset-md;
+$card-body-padding-y-l                : $offset-md;
+
+$card-cap-padding-y                   : round(($card-offset-y * 0.5));
+$card-cap-padding-x                   : $card-offset-x;
+$card-cap-padding-y-l                 : $offset-md * 0.5;
+$card-cap-padding-x-l                 : round(($offset-md * 0.5));
+$card-cap-bg-color                    : tint-color(
+  $card-cap-text-color,
+  $background-tint-percentage
+);
+$card-cap-text-color                  : $primary-color;
+
+$card-img-overlay-padding             : $spacer;
+$card-img-border-radius               : $sm-border-radius;
+$card-image-placeholder-color         : $primary-color;
+
+$card-group-margin                    : $offset * 0.5;
+$card-link-hover-color                : shift-color($card-text-color, $link-hover-shade-percentage);
+$card-hover-background                : darken($card-bg, 5%);
+
+$card-badge-top                       : 15px;
+$card-badge-right                     : 15px;
+$card-badge-height                    : 22px;
+$card-badge-padding-horizontal        : 10px;
+$card-badge-background                : $color-bg-secondary;
+$card-badge-color                     : $body-color-body;
+$card-badge-font-size                 : $font-size-base * $sm;
+
+$card-font-size                       : $font-size-base;
+$card-title-font-size                 : font-size-lg;
+$card-title-text-font-weight          : 300;
+$card-title-line-height               : $line-height-base;
+$card-title-color                     : $post-title-color;
+
+$card-subtitle-font-size              : $font-size-md;
+$card-subtitle-color                  : $post-lead-color;
+
+$card-title-perspective-origin-x      : 165px;
+$card-title-perspective-origin-y      : 56px;
+
+$card-title-transform-origin-x        : 165px;
+$card-title-transform-origin-y        : 56px;
+
+$card-title-text-transform-origin-x   : 149px;
+$card-title-text-transform-origin-y   : 48px;
+
+$card-lead-text-font-size             : $font-size-base;
+$card-lead-text-line-height           : $line-height-base;
+$card-lead-text-text-color            : $lead-text-color;
+$card-actions-font-size               : $font-size-sm;
+
+/* Cover image */
+$card-cover-image-height              : 186px;
+$card-background-image-url            : "";
+
+$card-footer-padding-horizontal       : $offset;
+$card-footer-padding-vertical         : ($offset * 0.5);
+$card-footer-padding-horizontal-l     : $offset-md;
+$card-footer-padding-vertical-l       : round(($offset-md * 0.5));
+
+@mixin border-radius($radius          : $card-border-radius) {
+  border-radius                       : ;
+}
+
+//
+// Base styles
+//
+
+.card {
+  position                            : relative;
+  display                             : block;
+  margin-bottom                       : $card-spacer-y;
+  background-color                    : $card-bg-color;
+  border                              : $card-border-width solid $card-border-color;
+  @include border-radius($card-border-radius);
+}
+
+.card-block {
+  padding                             : $card-spacer-x;
+}
+
+.card-title {
+  margin-bottom                       : $card-spacer-y;
+}
+
+.card-subtitle {
+  margin-top                          : -divide($card-spacer-y, 2);
+  margin-bottom                       : 0;
+}
+
+.card-text                            :last-child {
+  margin-bottom                       : 0;
+}
+
+// .card-actions {
+// padding                            : $card-spacer-y $card-spacer-x;
+
+// .card-link + .card-link {
+// margin-left                        : $card-spacer-x;
+// }
+// }
+
+.card-link {
+  @include hover {
+    text-decoration                   : none;
+  }
+
+  + .card-link {
+    margin-left                       : $card-spacer-x;
+  }
+}
+
+@if $enable-rounded {
+  .card {
+    > .list-group                     :first-child {
+      .list-group-item                :first-child {
+        border-radius                 : $card-border-radius $card-border-radius 0 0;
+      }
+    }
+
+    > .list-group                     :last-child {
+      .list-group-item                :last-child {
+        border-radius                 : 0 0 $card-border-radius $card-border-radius;
+      }
+    }
+  }
+}
+
+//
+// Optional textual caps
+//
+
+.card-header {
+  margin-bottom                       : 0;
+  padding                             : $card-spacer-y $card-spacer-x;
+  background-color                    : $card-cap-bg;
+  border-bottom                       : $card-border-width;
+  border-style                        : solid;
+  border-color                        : $card-border-color;
+  align-items                         : center;
+  line-height                         : normal;
+  @include box-sizing(border-box);
+  @include box-shadow($card-box-shadow);
+
+  &                                   :first-child {
+    @include border-radius(
+      $card-border-radius-inner $card-border-radius-inner 0 0
+    );
+  }
+}
+
+.card-title {
+  font-family                         : $post-title-font;
+  align-items                         : center;
+  align-self                          : flex-end;
+  color                               : $color-post-title;
+  display                             : block;
+  display                             : flex;
+  font-size                           : $card-title-font-size;
+  font-weight                         : $card-title-text-font-weight;
+  line-height                         : normal;
+  overflow                            : hidden;
+  margin                              : 0;
+  padding                             : $card-vertical-padding $card-horizontal-padding;
+  @include box-sizing($border-box);
+}
+
+.card-lead {
+  font-family                         : $lead-font;
+  font-size                           : $lead-font-size;
+  color                               : $color-lead-text;
+  overflow                            : hidden;
+  width                               : 90%;
+}
+
+.card-footer {
+  padding                             : $card-spacer-y $card-spacer-x;
+  background-color                    : $card-cap-bg;
+  border-top                          : $card-border-width solid $card-border-color;
+
+  &                                   :last-child {
+    @include border-radius(
+      0 0 $card-border-radius-inner $card-border-radius-inner
+    );
+  }
+}
+
+//
+// Background variations
+//
+
+.card-primary {
+  @include card-variant($brand-primary, $brand-primary);
+}
+.card-success {
+  @include card-variant($brand-success, $brand-success);
+}
+.card-info {
+  @include card-variant($brand-info, $brand-info);
+}
+.card-warning {
+  @include card-variant($brand-warning, $brand-warning);
+}
+.card-danger {
+  @include card-variant($brand-danger, $brand-danger);
+}
+
+// Remove all backgrounds
+.card-primary-outline {
+  @include card-outline-variant($btn-primary-bg);
+}
+.card-secondary-outline {
+  @include card-outline-variant($btn-secondary-border);
+}
+.card-info-outline {
+  @include card-outline-variant($btn-info-bg);
+}
+.card-success-outline {
+  @include card-outline-variant($btn-success-bg);
+}
+.card-warning-outline {
+  @include card-outline-variant($btn-warning-bg);
+}
+.card-danger-outline {
+  @include card-outline-variant($btn-danger-bg);
+}
+
+//
+// Inverse text within a card for use with dark backgrounds
+//
+
+.card-inverse {
+  @include card-inverse;
+}
+
+//
+// Blockquote
+//
+
+.card-blockquote {
+  padding                             : 0;
+  margin-bottom                       : 0;
+  border-left                         : 0;
+}
+
+// Card image
+.card-img {
+  // margin                           : -1.325rem;
+  @include border-radius(0.25rem);
+}
+.card-img-overlay {
+  position                            : absolute;
+  top                                 : 0;
+  right                               : 0;
+  bottom                              : 0;
+  left                                : 0;
+  padding                             : 1.25rem;
+}
+
+// Card image caps
+.card-img-top {
+  @include border-radius(
+    $card-border-radius-inner $card-border-radius-inner 0 0
+  );
+}
+.card-img-bottom {
+  @include border-radius(
+    0 0 $card-border-radius-inner $card-border-radius-inner
+  );
+}
+
+//
+// Card set
+//
+
+@if $enable-flex {
+  @include media-breakpoint-up(sm) {
+    .card-deck {
+      display                         : flex;
+      flex-flow                       : row wrap;
+      margin-right                    : -0.625rem;
+      margin-left                     : -0.625rem;
+
+      .card {
+        flex                          : 1 0 0;
+        margin-right                  : 0.625rem;
+        margin-left                   : 0.625rem;
+      }
+    }
+  }
+} @else {
+  @include media-breakpoint-up(sm) {
+    .card-deck {
+      display                         : table;
+      table-layout                    : fixed;
+      border-spacing                  : 1.25rem 0;
+
+      .card {
+        display                       : table-cell;
+        width                         : 1%;
+        vertical-align                : top;
+      }
+    }
+    .card-deck-wrapper {
+      margin-right                    : -1.25rem;
+      margin-left                     : -1.25rem;
+    }
+  }
+}
+
+//
+// Card groups
+//
+
+@include media-breakpoint-up(sm) {
+  .card-group {
+    @if $enable-flex {
+      display                         : flex;
+      flex-flow                       : row wrap;
+    } @else {
+      display                         : table;
+      width                           : 100%;
+      table-layout                    : fixed;
+    }
+
+    .card {
+      @if $enable-flex {
+        flex                          : 1 0 0;
+      } @else {
+        display                       : table-cell;
+        vertical-align                : top;
+      }
+
+      + .card {
+        margin-left                   : 0;
+        border-left                   : 0;
+      }
+
+      // Handle rounded corners
+      @if $enable-rounded {
+        &                             :first-child {
+          @include border-right-radius(0);
+
+          .card-img-top {
+            border-top-right-radius   : 0;
+          }
+          .card-img-bottom {
+            border-bottom-right-radius: 0;
+          }
+        }
+        &                             :last-child {
+          @include border-left-radius(0);
+
+          .card-img-top {
+            border-top-left-radius    : 0;
+          }
+          .card-img-bottom {
+            border-bottom-left-radius : 0;
+          }
+        }
+
+        &                             :not(:first-child):not(:last-child) {
+          border-radius               : 0;
+
+          .card-img-top,
+          .card-img-bottom {
+            border-radius             : 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+//
+// Card
+//
+
+@include media-breakpoint-up(sm) {
+  .card-columns {
+    column-count                      : 3;
+    column-gap                        : 1.25rem;
+
+    .card {
+      display                         : inline-block;
+      width                           : 100%; // Don't let them exceed the column width
+    }
+  }
+}

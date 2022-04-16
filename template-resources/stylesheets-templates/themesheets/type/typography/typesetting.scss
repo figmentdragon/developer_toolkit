@@ -1,0 +1,217 @@
+/* TYPOGRAPHY __________________________________________________________
+Site Name                     : CJMT
+Author                        : CJ Montes-Termini
+
+Stylesheet                    : CJMT Brand Typography
+
+	= TOC =
+		(1) @FONTFACE (In Your Face)
+		(2) Font Stacks
+		(3) Font Variables
+			- [] Font Families
+			- [] Font Colors
+				- Shadows
+				- Gradients
+				- Stroke Outline
+		(4) Text Level CSS Selectors
+			- [] Text Level
+			- [] Headings
+			- [] Links
+		(5) Text Level HTML Elements
+		(6) Responsive Settings
+
+ __________________________________________________________ TYPOGRAPHY */
+
+ p {
+   margin-bottom: $body-color-margin-bottom;
+ }
+
+ // Text Styles
+ em { font-style: italic; }
+ strong { font-weight: bold; }
+ .uppercase { text-transform: uppercase; }
+
+
+ a,
+ a:link {
+   outline: none !important;
+   font-weight: bold;
+   text-decoration: underline;
+   color: $link-text-color;
+
+     & :hover {
+       text-decoration: underline, bold;
+       color: $link-hover-color;
+     }
+ }
+
+ //
+ // Headings
+ //
+
+ h1, h2, h3, h4, h5, h6,
+ .h1, .h2, .h3, .h4, .h5, .h6 {
+   margin-bottom: $headings-margin;
+   font-family: $headings-font-family;
+   font-weight: $headings-font-weight;
+   line-height: $headings-line-height;
+   color: $headings-text-color;
+   a {
+     font-weight: inherit;
+   }
+ }
+
+ h1 {
+   font-size: h1;
+   line-height: 1.35;
+   font-style: normal;
+   margin: $headings-margin;
+   font-weight: $headings-font-weight;
+ }
+
+ h2 {
+   font-weight: $headings-font-weight;
+   font-size: h2;
+   margin: $headings-margin 0 0.8em;
+ }
+
+ h3 {
+   font-weight: $headings-font-weight;
+   text-transform: uppercase;
+   font-size: h3;
+   letter-spacing: 0.15em;
+   margin: divide($headings-margin, 2) 0 0.8em;
+ }
+
+ h4 {
+   font-weight: 600;
+   font-size: h4;
+   letter-spacing: 0.1em;
+   margin: divide($headings-margin, 2) 0 0.8em;
+ }
+
+ h5 {
+   font-weight: 600;
+   font-style: italic;
+   font-size: h5;
+   margin: divide($headings-margin, 2) 0 0.8em;
+ }
+
+ h6 {
+   font-weight: 500;
+   font-size: h6;
+   letter-spacing: 0.1em;
+   margin: divide($headings-margin, 2) 0 0.8em;
+ }
+
+ // These declarations are kept separate from and placed after
+ // the previous tag-based declarations so that the classes beat the tags in
+ // the CSS cascade, and thus <h1 class="h2"> will be styled like an h2.
+ .h1 { font-size: h1; }
+ .h2 { font-size: h2; }
+ .h3 { font-size: h3; }
+ .h4 { font-size: h4; }
+ .h5 { font-size: h5; }
+ .h6 { font-size: h6; }
+
+ .lead {
+   font-size: $lead-font-size;
+   font-weight: $lead-font-weight;
+   font-family: $lead-font;
+ }
+
+ // Type display classes
+ .display-1 {
+   font-size: 1;
+   font-weight: $display-weight;
+ }
+ .display-2 {
+   font-size: 2;
+   font-weight: $display-weight;
+ }
+ .display-3 {
+   font-size: 3;
+   font-weight: $display-weight;
+ }
+ .display-4 {
+   font-size: 4;
+   font-weight: $display-weight;
+ }
+
+
+ //
+ // Horizontal rules
+ //
+
+ hr {
+   margin-top: $offset-sm;
+   margin-bottom: $offset-sm;
+   border: 0;
+   border-top: $hr-border-width solid $hr-border-color;
+   border-bottom: $hr-border-width solid $hr-border-color;
+   border-left: none;
+   border-right: none;
+ }
+
+
+ //
+ // Emphasis
+ //
+
+ small,
+ .small {
+   font-size: $font-size-sm;
+   font-weight: normal;
+ }
+
+ small #copyright {
+   font-size: $font-size-sm;
+   font-family: $footer-text-font;
+   font-weight: bold;
+
+ }
+
+ mark,
+ .mark {
+   padding: .2em;
+   background-color: $alert-bg;
+ }
+
+
+ //
+ // Lists
+ //
+
+ .list-unstyled {
+   @include list-unstyled;
+ }
+
+ // Inline turns list items into inline-block
+ .list-inline {
+   @include list-unstyled;
+ }
+ .list-inline-item {
+   display: inline-block;
+
+   &:not(:last-child) {
+     margin-right: $list-inline-padding;
+   }
+ }
+
+ // Horizontal description lists w/ grid classes
+ .dl-horizontal {
+   margin-right: -$grid-gutter;
+   margin-left: -$grid-gutter;
+   @include clearfix;
+ }
+
+
+ //
+ // Misc
+ //
+
+ // Builds on `abbr`
+ .initialism {
+   font-size: 90%;
+   text-transform: uppercase;
+ }

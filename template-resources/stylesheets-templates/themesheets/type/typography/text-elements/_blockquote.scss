@@ -1,0 +1,42 @@
+// Blockquotes
+.blockquote {
+  font-family: $blockquote-font-family;
+  padding: divide($base-unit, 2) $base-unit;
+  margin-bottom: $base-unit 0;
+  font-size: $blockquote-font-size;
+  border-left: .25 solid $blockquote-border-color;
+  p:last-child{
+    padding-bottom: 0;
+  }
+}
+
+.blockquote-footer {
+  font-family: $emphasis-text-font;
+  display: block;
+  font-size: $blockquote-footer-font-size;
+  line-height: $line-height-base;
+  color: $blockquote-text-footer-color;
+
+  &::before {
+    content: "\2014 \00A0"; // em dash, nbsp
+  }
+}
+
+// Opposite alignment of blockquote
+.blockquote-reverse {
+  font-family: $emphasis-text-font;
+  padding-right: $base-unit;
+  padding-left: 0;
+  text-align: right;
+  border-right: .25 solid $blockquote-border-color;
+  border-left: 0;
+}
+
+.blockquote-reverse .blockquote-footer {
+  &::before {
+    content: "";
+  }
+  &::after {
+    content: "\00A0 \2014"; // nbsp, em dash
+  }
+}

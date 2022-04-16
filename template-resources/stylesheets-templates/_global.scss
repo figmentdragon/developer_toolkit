@@ -1,0 +1,12 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.125rem;
+}
+
+.container {
+  width: 100%;
+  max-width: $content-max;
+  margin: 0 auto;
+  padding: 0 30px;
+  box-sizing: border-box;
+}

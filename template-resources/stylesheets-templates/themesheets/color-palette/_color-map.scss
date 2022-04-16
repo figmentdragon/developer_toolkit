@@ -1,0 +1,74 @@
+$colors: ();
+$colors            : merge-maps(
+    (
+    "blue"             : $blue,
+    "indigo"           : $indigo,
+    "purple"           : $purple,
+    "pink"             : $pink,
+    "red"              : $red,
+    "yellow"           : $yellow,
+    "orange"           : $orange,
+    "green"            : $green,
+    "teal"             : $teal,
+    "cyan"             : $cyan
+    ) $colors
+);
+
+$custom-color: ();
+$custom-color: merge-maps(
+    (
+        "silver"           : $silver,
+        "chocolate"        : $chocolate,
+        "camel"            : $camel,
+        "saltpan"          : $saltpan,
+        "white-chocolate"  : $white-chocolate,
+        "dark-vanilla"     : $dark-vanilla,
+        "ghost-white"      : $ghost-white,
+        "deep-sky-blue"    : $deep-sky-blue,
+        "coral"            : $coral,
+        "maroon"           : $maroon,
+        "light-cyan"       : $light-cyan, /* Light Green */
+        "neon-blue"        : $neon-blue, /* light blue */
+        "salomie"          : $salomie, /* light orange */
+        "wild-watermelon"  : $wild-watermelon, /* light red */
+        "hot-pink"         : $hot-pink
+        )
+    $custom-color
+);
+
+$theme-colors: ();
+$theme-colors      : merge-maps(
+  "primary-color"  : $primary-color,
+  "secondary-color": $secondary-color,
+  "accent-color"   : $accent-color,
+  "valid-color"    : $valid-color,
+  "info-color"     : $info-color,
+  "alert-color"    : $alert-color,
+  "invalid-color"  : $invalid-color,
+  "attention-color": $attention-color
+) $theme-colors
+);
+$grays: (
+  100: $gray-100,
+  200: $gray-200,
+  300: $gray-300,
+  400: $gray-400,
+  500: $gray-500,
+  600: $gray-600,
+  700: $gray-700,
+  800: $gray-800,
+  900: $gray-900
+);
+
+$colors:(
+  blue:            $blue,
+  indigo:          $indigo,
+  purple:          $purple,
+  pink:            $pink,
+  red:             $red,
+  orange:          $orange,
+  yellow:          $yellow,
+  green:           $green,
+  teal:            $teal,
+  cyan:            $cyan
+);
