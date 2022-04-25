@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "Euphorigenic";
+  font-style: normal;
+  font-weight: 400;
+  src: local url( "'get_template_directory_uri() . '/src/fonts/euphorigenic/EuphorigenicW00Regular.woof'")
+    format("woff");
+  src: local url("<?php echo get_template_directory(); ?>/src/sass/typography/src/fonts/euphorigenic/euphorigenic.woff")
+    format("woff");
+  src: local url("<?php echo get_template_directory(); ?>/src/sass/typography/src/fonts/euphorigenic/euphorigenic.eot")
+    fosass/typography/at("eot");
+  src: local url("<?php echo get_template_directory(); ?>/src/sass/typography/src/fonts/euphorigenic/euphorigenic.svg")
+    format("svg");
+}

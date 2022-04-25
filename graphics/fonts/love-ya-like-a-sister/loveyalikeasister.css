@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "Love Ya Like A Sister";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Love Ya Like A Sister"), url("https://fonts.cdnfonts.com/s/15064/LoveYaLikeASister.woff") format("woff");
+}
+@font-face {
+  font-family: "Love Ya Like A Sister Solid";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Love Ya Like A Sister Solid"), url("https://fonts.cdnfonts.com/s/15064/LoveYaLikeASisterSolid.woff") format("woff");
+}
+
+/*# sourceMappingURL=loveyalikeasister.css.map */

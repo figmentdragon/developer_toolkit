@@ -92,7 +92,7 @@ function customizer_library_get_google_font_uri( $fonts ) {
 	}
 
 	// Load the font subset
-	$subset = get_theme_mod( 'creativity_font_subset' );
+	$subset = get_theme_mod( 'themename_font_subset' );
 	if (!empty($subsets)) {
 		if (!is_array($subset)) {
 			$subset = explode(",", $subset);
@@ -302,7 +302,7 @@ function customizer_library_get_google_fonts() {
 	$webfonts = array();
 	foreach ($decoded_google_fonts['items'] as $key => $value) {
 		$add_font = false;
-		$subsets = creativity_option('creativity_font_subset');
+		$subsets = themename_option('themename_font_subset');
 		if (!empty($subsets)) {
 			if (!is_array($subsets)) {
 				$subsets = explode(',', $subsets);

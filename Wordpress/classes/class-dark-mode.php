@@ -3,8 +3,8 @@
  * Dark Mode Class
  *
  * @package WordPress
- * @subpackage creativity
- * @since creativity 1.0
+ * @subpackage themename
+ * @since themename 1.0
  */
 
 /**
@@ -15,7 +15,7 @@ class Dark_Mode {
 	/**
 	 * Instantiate the object.
 	 *
-	 * @since creativity 1.0
+	 * @since themename 1.0
 	 */
 	public function __construct() {
 
@@ -47,7 +47,7 @@ class Dark_Mode {
 	/**
 	 * Editor custom color variables & scripts.
 	 *
-	 * @since creativity 1.0
+	 * @since themename 1.0
 	 *
 	 * @return void
 	 */
@@ -60,12 +60,12 @@ class Dark_Mode {
 		if ( $should_respect_color_scheme && Custom_Colors::get_relative_luminance_from_hex( $background_color ) > 127 ) {
 			// Add Dark Mode variable overrides.
 			wp_add_inline_style(
-				'creativity-custom-color-overrides',
+				'themename-custom-color-overrides',
 				'.is-dark-theme.is-dark-theme .editor-styles-wrapper { --global--color-background: var(--global--color-dark-gray); --global--color-primary: var(--global--color-light-gray); --global--color-secondary: var(--global--color-light-gray); --button--color-text: var(--global--color-background); --button--color-text-hover: var(--global--color-secondary); --button--color-text-active: var(--global--color-secondary); --button--color-background: var(--global--color-secondary); --button--color-background-active: var(--global--color-background); --global--color-border: #9ea1a7; --table--stripes-border-color: rgba(240, 240, 240, 0.15); --table--stripes-background-color: rgba(240, 240, 240, 0.15); }'
 			);
 		}
 		wp_enqueue_script(
-			'creativity-dark-mode-support-toggle',
+			'themename-dark-mode-support-toggle',
 			get_template_directory_uri() . '/assets/js/dark-mode-toggler.js',
 			array(),
 			'1.0.0',
@@ -73,9 +73,9 @@ class Dark_Mode {
 		);
 
 		wp_enqueue_script(
-			'creativity-editor-dark-mode-support',
+			'themename-editor-dark-mode-support',
 			get_template_directory_uri() . '/assets/js/editor-dark-mode-support.js',
-			array( 'creativity-dark-mode-support-toggle' ),
+			array( 'themename-dark-mode-support-toggle' ),
 			'1.0.0',
 			true
 		);
@@ -84,7 +84,7 @@ class Dark_Mode {
 	/**
 	 * Enqueue scripts and styles.
 	 *
-	 * @since creativity 1.0
+	 * @since themename 1.0
 	 *
 	 * @return void
 	 */
@@ -96,13 +96,13 @@ class Dark_Mode {
 		if ( is_rtl() ) {
 			$url = get_template_directory_uri() . '/assets/css/style-dark-mode-rtl.css';
 		}
-		wp_enqueue_style( 'tt1-dark-mode', $url, array( 'creativity-style' ), wp_get_theme()->get( 'Version' ) ); // @phpstan-ignore-line. Version is always a string.
+		wp_enqueue_style( 'tt1-dark-mode', $url, array( 'themename-style' ), wp_get_theme()->get( 'Version' ) ); // @phpstan-ignore-line. Version is always a string.
 	}
 
 	/**
 	 * Enqueue scripts for the customizer.
 	 *
-	 * @since creativity 1.0
+	 * @since themename 1.0
 	 *
 	 * @return void
 	 */
@@ -111,9 +111,9 @@ class Dark_Mode {
 			return;
 		}
 		wp_enqueue_script(
-			'creativity-customize-controls',
+			'themename-customize-controls',
 			get_template_directory_uri() . '/assets/js/customize.js',
-			array( 'customize-base', 'customize-controls', 'underscore', 'jquery', 'creativity-customize-helpers' ),
+			array( 'customize-base', 'customize-controls', 'underscore', 'jquery', 'themename-customize-helpers' ),
 			'1.0.0',
 			true
 		);
@@ -122,7 +122,7 @@ class Dark_Mode {
 	/**
 	 * Register customizer options.
 	 *
-	 * @since creativity 1.0
+	 * @since themename 1.0
 	 *
 	 * @param WP_Customize_Manager $wp_customize Theme Customizer object.
 	 * @return void
@@ -131,11 +131,11 @@ class Dark_Mode {
 
 		$colors_section = $wp_customize->get_section( 'colors' );
 		if ( is_object( $colors_section ) ) {
-			$colors_section->title = __( 'Colors & Dark Mode', 'creativity' );
+			$colors_section->title = __( 'Colors & Dark Mode', 'themename' );
 		}
 
 		// Custom notice control.
-		include_once get_theme_file_path( 'classes/class-creativity-customize-notice-control.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
+		include_once get_theme_file_path( 'classes/class-themename-customize-notice-control.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 
 		$wp_customize->add_setting(
 			'respect_user_color_preference_notice',
@@ -173,19 +173,19 @@ class Dark_Mode {
 
 		$description  = '<p>';
 		$description .= sprintf(
-			/* translators: %s: creativity support article URL. */
-			__( 'Dark Mode is a device setting. If a visitor to your site requests it, your site will be shown with a dark background and light text. <a href="%s">Learn more about Dark Mode.</a>', 'creativity' ),
-			esc_url( __( 'https://wordpress.org/support/article/creativity/#dark-mode-support', 'creativity' ) )
+			/* translators: %s: themename support article URL. */
+			__( 'Dark Mode is a device setting. If a visitor to your site requests it, your site will be shown with a dark background and light text. <a href="%s">Learn more about Dark Mode.</a>', 'themename' ),
+			esc_url( __( 'https://wordpress.org/support/article/themename/#dark-mode-support', 'themename' ) )
 		);
 		$description .= '</p>';
-		$description .= '<p>' . __( 'Dark Mode can also be turned on and off with a button that you can find in the bottom corner of the page.', 'creativity' ) . '</p>';
+		$description .= '<p>' . __( 'Dark Mode can also be turned on and off with a button that you can find in the bottom corner of the page.', 'themename' ) . '</p>';
 
 		$wp_customize->add_control(
 			'respect_user_color_preference',
 			array(
 				'type'            => 'checkbox',
 				'section'         => 'colors',
-				'label'           => esc_html__( 'Dark Mode support', 'creativity' ),
+				'label'           => esc_html__( 'Dark Mode support', 'themename' ),
 				'priority'        => 110,
 				'description'     => $description,
 				'active_callback' => static function( $value ) {
@@ -211,7 +211,7 @@ class Dark_Mode {
 	/**
 	 * Calculate classes for the main <html> element.
 	 *
-	 * @since creativity 1.0
+	 * @since themename 1.0
 	 *
 	 * @param string $classes The classes for <html> element.
 	 * @return string
@@ -233,7 +233,7 @@ class Dark_Mode {
 	/**
 	 * Adds a class to the <body> element in the editor to accommodate dark-mode.
 	 *
-	 * @since creativity 1.0
+	 * @since themename 1.0
 	 *
 	 * @param string $classes The admin body-classes.
 	 * @return string
@@ -253,7 +253,7 @@ class Dark_Mode {
 			$background_color            = get_theme_mod( 'background_color', 'D1E4DD' );
 
 			if ( $should_respect_color_scheme && Custom_Colors::get_relative_luminance_from_hex( $background_color ) > 127 ) {
-				$classes .= ' creativity-supports-dark-theme';
+				$classes .= ' themename-supports-dark-theme';
 			}
 		}
 
@@ -263,7 +263,7 @@ class Dark_Mode {
 	/**
 	 * Determine if we want to print the dark-mode switch or not.
 	 *
-	 * @since creativity 1.0
+	 * @since themename 1.0
 	 *
 	 * @return bool
 	 */
@@ -279,7 +279,7 @@ class Dark_Mode {
 	/**
 	 * Add night/day switch.
 	 *
-	 * @since creativity 1.0
+	 * @since themename 1.0
 	 *
 	 * @return void
 	 */
@@ -296,7 +296,7 @@ class Dark_Mode {
 	 *
 	 * Inspired from https://codepen.io/aaroniker/pen/KGpXZo (MIT-licensed)
 	 *
-	 * @since creativity 1.0
+	 * @since themename 1.0
 	 *
 	 * @param array $attrs The attributes to add to our <button> element.
 	 * @return void
@@ -318,7 +318,7 @@ class Dark_Mode {
 		echo '>';
 		printf(
 			/* translators: %s: On/Off */
-			esc_html__( 'Dark Mode: %s', 'creativity' ),
+			esc_html__( 'Dark Mode: %s', 'themename' ),
 			'<span aria-hidden="true"></span>'
 		);
 		echo '</button>';
@@ -328,10 +328,10 @@ class Dark_Mode {
 				margin-<?php echo is_rtl() ? 'right' : 'left'; ?>: 5px;
 			}
 			#dark-mode-toggler > span::before {
-				content: '<?php esc_attr_e( 'Off', 'creativity' ); ?>';
+				content: '<?php esc_attr_e( 'Off', 'themename' ); ?>';
 			}
 			#dark-mode-toggler[aria-pressed="true"] > span::before {
-				content: '<?php esc_attr_e( 'On', 'creativity' ); ?>';
+				content: '<?php esc_attr_e( 'On', 'themename' ); ?>';
 			}
 			<?php if ( is_admin() || wp_is_json_request() ) : ?>
 				.components-editor-notices__pinned ~ .edit-post-visual-editor #dark-mode-toggler {
@@ -354,7 +354,7 @@ class Dark_Mode {
 	/**
 	 * Print the dark-mode switch script.
 	 *
-	 * @since creativity 1.0
+	 * @since themename 1.0
 	 *
 	 * @return void
 	 */
@@ -367,7 +367,7 @@ class Dark_Mode {
 	/**
 	 * Adds information to the privacy policy.
 	 *
-	 * @since creativity 1.0
+	 * @since themename 1.0
 	 *
 	 * @return void
 	 */
@@ -375,10 +375,10 @@ class Dark_Mode {
 		if ( ! function_exists( 'wp_add_privacy_policy_content' ) ) {
 			return;
 		}
-		$content = '<p class="privacy-policy-tutorial">' . __( 'creativity uses LocalStorage when Dark Mode support is enabled.', 'creativity' ) . '</p>'
-				. '<strong class="privacy-policy-tutorial">' . __( 'Suggested text:', 'creativity' ) . '</strong> '
-				. __( 'This website uses LocalStorage to save the setting when Dark Mode support is turned on or off.<br> LocalStorage is necessary for the setting to work and is only used when a user clicks on the Dark Mode button.<br> No data is saved in the database or transferred.', 'creativity' );
-		wp_add_privacy_policy_content( 'creativity', wp_kses_post( wpautop( $content, false ) ) );
+		$content = '<p class="privacy-policy-tutorial">' . __( 'themename uses LocalStorage when Dark Mode support is enabled.', 'themename' ) . '</p>'
+				. '<strong class="privacy-policy-tutorial">' . __( 'Suggested text:', 'themename' ) . '</strong> '
+				. __( 'This website uses LocalStorage to save the setting when Dark Mode support is turned on or off.<br> LocalStorage is necessary for the setting to work and is only used when a user clicks on the Dark Mode button.<br> No data is saved in the database or transferred.', 'themename' );
+		wp_add_privacy_policy_content( 'themename', wp_kses_post( wpautop( $content, false ) ) );
 	}
 
 }

@@ -50,7 +50,7 @@
 	} );
 
 	// Copyright text.
-	api( 'copyright_text', function ( value ) {
+	api( 'creativitycopyright_text', function ( value ) {
 		value.bind( function ( to ) {
 			$( '.site-info' ).text( to );
 		} );

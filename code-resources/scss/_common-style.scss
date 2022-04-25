@@ -1,0 +1,18 @@
+//------------------------------------------------------------------------------
+// 2.2.0 Common Styles
+//------------------------------------------------------------------------------
+
+/* If you want to give a common style to all of the titles in your theme, here's a place to do it (you can style them individually later) */
+.site-title,
+.entry-title,
+.page-title,
+.entry-content,
+.entry-summary,
+.widget-title,
+.comments-title,
+.comment .reply,
+.comment-meta,
+.comment-author,
+#reply-title {
+	font-family: Georgia, 'Times New Roman', serif;
+}

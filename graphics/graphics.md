@@ -1,0 +1,3 @@
+Grabbing every free resource you come across on the Web is tempting, whether it is vector art, Photoshop brushes and actions, bitmap textures and backgrounds, fonts, etc. But the downside of amassing such a huge collection is that it can become overwhelming and can lead to a lot of wasted time looking for just the right resource. If you are a download junkie, like me, then be prepared to pare down your collection, and put the ones you love and trust into a separate folder from all of the others, which you can review from time to time. Think of this separate folder as a special place where only the best assets and resources go.
+
+source: https://www.smashingmagazine.com/2013/07/building-portable-design-toolkit/

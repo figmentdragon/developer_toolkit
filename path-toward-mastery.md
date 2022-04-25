@@ -1,0 +1,5 @@
+If you look at the portfolios of designers you admire, you will see common elements and ideas that unite each person’s work. This applies not only to Web designers but to graphic designers, architects, industrial designers and visual artists. While the work evolves over time, a common thread — and a conscious decision to set self-imposed limits of exploration — runs through it all. Each creator has developed and refined their own design process, which defines the resulting work, the designer’s style. Poor designers will leap from one style to another, from one way of working to another. Lacking conviction, they will follow trends and the latest fancy technique, rather than develop their own style.
+
+Learn to limit your choices and set parameters. These are not constraints, but rather guidelines to lead you to better work. Building a toolkit and developing a playbook is a way to help you define your own style and to master the tools you need to make your work unique, personal and memorable.
+
+source: https://www.smashingmagazine.com/2013/07/building-portable-design-toolkit/

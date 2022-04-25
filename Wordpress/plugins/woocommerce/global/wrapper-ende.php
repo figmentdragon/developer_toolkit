@@ -41,7 +41,7 @@ switch( $template ) {
 	case 'twentysixteen' :
 		echo '</div></main>';
 		break;
-	case 'creativity' :
+	case 'themename' :
         echo '</div>';
         get_sidebar('right');
         echo '</div>';

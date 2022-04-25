@@ -10,9 +10,9 @@
  *
  */
 
- add_action('widgets_init', 'register_cta_simple_widget');
+ add_action('widgets_init', 'themename_register_cta_simple_widget');
 
- function register_cta_simple_widget() {
+ function themename_register_cta_simple_widget() {
      register_widget('call_to_action_widget');
  }
 
@@ -23,8 +23,8 @@ class Call_To_Action_Widget extends WP_Widget {
     public function __construct() {
         parent::__construct(
                 'call_to_action_widget', // Root id for all widgets of this type.
-                __('Call to Action Widget', 'creativity'), // Name for this widget type.
-                array('description' => __('A text widget with a Call to Action button.', 'creativity'),)// Option array passed to wp_register_sidebar_widget()
+                __('Call to Action Widget', 'themename'), // Name for this widget type.
+                array('description' => __('A text widget with a Call to Action button.', 'themename'),)// Option array passed to wp_register_sidebar_widget()
         );
     }
 
@@ -62,7 +62,7 @@ class Call_To_Action_Widget extends WP_Widget {
    * @param	array	$new_instance	Values just sent to be aved.
    * @param	array	$old_instance	Previously saved values from database.
    *
-   * @uses	widgets_updated_field_value()		defined in widget-fields.php
+   * @uses	themename_widgets_updated_field_value()		defined in widget-fields.php
    *
    * @return	array Updated safe values to be saved.
    */
@@ -83,29 +83,29 @@ class Call_To_Action_Widget extends WP_Widget {
    *
    * @param	array $instance Previously saved values from database.
    *
-   * @uses	widgets_show_widget_field()		defined in widget-fields.php
+   * @uses	themename_widgets_show_widget_field()		defined in widget-fields.php
    */
     public function form($instance) {
 
         $title = isset($instance['title']) ? $instance['title'] : '';
         $content = isset($instance['content']) ? $instance['content'] : '';
-        $button_text = isset($instance['button_text']) ? $instance['button_text'] : __('Click Here', 'creativity');
-        $button_link = isset($instance['button_link']) ? $instance['button_link'] : __('#', 'creativity');
+        $button_text = isset($instance['button_text']) ? $instance['button_text'] : __('Click Here', 'themename');
+        $button_link = isset($instance['button_link']) ? $instance['button_link'] : __('#', 'themename');
         ?>
         <p>
-            <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'creativity'); ?></label>
+            <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'themename'); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" />
         </p>
         <p>
-            <label for="<?php echo $this->get_field_id('content'); ?>"><?php _e('Content:', 'creativity'); ?></label>
+            <label for="<?php echo $this->get_field_id('content'); ?>"><?php _e('Content:', 'themename'); ?></label>
             <textarea class="widefat" rows="10" cols="20" id="<?php echo $this->get_field_id('content'); ?>" name="<?php echo $this->get_field_name('content'); ?>"><?php echo esc_attr($content); ?></textarea>
         </p>
         <p>
-            <label for="<?php echo $this->get_field_id('button_text'); ?>"><?php _e('Button Text:', 'creativity'); ?></label>
+            <label for="<?php echo $this->get_field_id('button_text'); ?>"><?php _e('Button Text:', 'themename'); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id('button_text'); ?>" name="<?php echo $this->get_field_name('button_text'); ?>" type="text" value="<?php echo esc_attr($button_text); ?>" />
         </p>
         <p>
-            <label for="<?php echo $this->get_field_id('button_link'); ?>"><?php _e('Button Link:', 'creativity'); ?></label>
+            <label for="<?php echo $this->get_field_id('button_link'); ?>"><?php _e('Button Link:', 'themename'); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id('button_link'); ?>" name="<?php echo $this->get_field_name('button_link'); ?>" type="text" value="<?php echo esc_attr($button_link); ?>" />
         </p>
         <?php
@@ -118,19 +118,19 @@ class Call_To_Action_Widget extends WP_Widget {
     private function widget_fields() {
       $fields = array(
         'cta_simple_title' => array(
-          'widgets_name' => 'cta_simple_title',
-          'widgets_title' => __('Title', 'creativity'),
-          'widgets_field_type' => 'text',
+          'themename_widgets_name' => 'cta_simple_title',
+          'themename_widgets_title' => __('Title', 'themename'),
+          'themename_widgets_field_type' => 'text',
         ),
         'cta_simple_btn_text' => array(
-          'widgets_name' => 'cta_simple_btn_text',
-          'widgets_title' => __('Button Text', 'creativity'),
-          'widgets_field_type' => 'text',
+          'themename_widgets_name' => 'cta_simple_btn_text',
+          'themename_widgets_title' => __('Button Text', 'themename'),
+          'themename_widgets_field_type' => 'text',
         ),
         'cta_simple_btn_url' => array(
-          'widgets_name' => 'cta_simple_btn_url',
-          'widgets_title' => __('Button Url', 'creativity'),
-          'widgets_field_type' => 'text'
+          'themename_widgets_name' => 'cta_simple_btn_url',
+          'themename_widgets_title' => __('Button Url', 'themename'),
+          'themename_widgets_field_type' => 'text'
         )
       );
     return $fields;

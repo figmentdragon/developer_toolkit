@@ -1,0 +1,113 @@
+//------------------------------------------------------------------------------
+// 2.11.0 Widgets
+//------------------------------------------------------------------------------
+
+.widget-area { /* All of the sidebar container divs get this common class */
+
+}
+.widget { /* The individual widget */
+	font-size: 12px;
+	font-size: 1.2rem;
+	line-height: 1.8;
+	margin: 0 0 1.5em;
+}
+.widget-title {
+	color: #999;
+	font-size: 20px;
+	font-size: 2rem;
+	font-style: italic;
+}
+.widget ul { /* Unordered lists inside widgets */
+	list-style: none;
+	margin: 0;
+}
+.widget ul li { /* Unordered list items inside widgets */
+	margin-bottom: 0.25em;
+}
+
+/* Search widget */
+#searchsubmit {
+	display: none;
+}
+.widget_search #s {
+
+}
+
+/* Sub-Items in Menu & Categories Widgets. These classes are useful if you want to add special styling, such as indention, to sub-items in your menu and categories widgets. */
+.widget-area .sub-menu,
+.widget-area .children {
+	margin-left:  1.5em;
+}
+.widget-area .sub-menu li,
+.widget-area .children li {
+
+}
+
+/* Text Widgets */
+.widget p,
+.textwidget {
+
+}
+.widget p a,
+.textwidget a {
+
+}
+
+/* Cloud Widgets */
+.wp_widget_tag_cloud div,
+.widget_tag_cloud div {
+	line-height: 1.5;
+	padding: 0.231em 0;
+}
+
+/* RSS Widget */
+.rsswidget img { /* This is the orange RSS icon to the left of the RSS widget title */
+	margin: 0;
+	vertical-align: text-top;
+}
+.rss-date {
+
+}
+.rssSummary {
+
+}
+
+/* Calendar Widget */
+#wp-calendar {
+	width: 100%;
+}
+#wp-calendar caption {
+	font-style: italic;
+}
+#wp-calendar thead th {
+	text-align: center;
+}
+#wp-calendar tbody,
+#wp-calendar tbody td {
+	border: 1px solid #000;
+}
+#wp-calendar tbody {
+	border-left-width: 0;
+}
+#wp-calendar tbody td {
+  	border-width: 1px 0 0 0;
+}
+#wp-calendar tbody td a {
+	font-weight: bold;
+}
+#wp-calendar tbody td:hover {
+
+}
+#wp-calendar tfoot #next {
+	text-align: right;
+}
+#wp-calendar #today {
+	font-weight: bold;
+}
+#wp-calendar #prev,
+#wp-calendar #next {
+
+}
+#wp-calendar tbody .pad {
+
+}

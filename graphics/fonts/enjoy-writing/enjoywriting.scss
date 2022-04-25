@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'Enjoy Writing';
+    font-style: normal;
+    font-weight: 400;
+    src: local url('<?php get_template_directory() ;?>/src/fonts/enjoy-writing/enjoywrting.woff')
+      format('woff');
+}

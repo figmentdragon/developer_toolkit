@@ -1,25 +1,25 @@
 <?php
-add_action("admin_init", "post_meta_boxes");
+add_action("admin_init", "themename_post_meta_boxes");
 
-function post_meta_boxes() {
+function themename_post_meta_boxes() {
     $global_types = array('post','page');
     $types = array('post', 'page');
 
     // add meta box for commons options in posts and pages
 
-    add_meta_box("post_options", sprintf(__('%s - Post Options.', 'writing'), theme_name), "posts_meta_options", "post", "normal", "core");
+    add_meta_box("post_options", sprintf(__('%s - Post Options.', 'writing'), theme_name), "themename_posts_meta_options", "post", "normal", "core");
 
-    add_meta_box("Page_options", sprintf(__('%s - Page Options.', 'writing'), theme_name), "page_options", "page", "normal", "core");
+    add_meta_box("Page_options", sprintf(__('%s - Page Options.', 'writing'), theme_name), "themename_page_options", "page", "normal", "core");
 
-    add_meta_box("blog_template_box", sprintf(__('%s - Blog Template Options.', 'writing'), theme_name), "page_blog_template_options", "page", "normal", "high");
-    add_meta_box("authorslist_template_box", sprintf(__('%s - Authors List Options.', 'writing'), theme_name), "page_authorslist_template_options", "page", "normal", "high");
+    add_meta_box("themename_blog_template_box", sprintf(__('%s - Blog Template Options.', 'writing'), theme_name), "page_blog_template_options", "page", "normal", "high");
+    add_meta_box("themename_authorslist_template_box", sprintf(__('%s - Authors List Options.', 'writing'), theme_name), "page_authorslist_template_options", "page", "normal", "high");
 
     foreach ($global_types as $type) {
-        add_meta_box("general_page_options", sprintf(__('%s - General Page Options.', 'writing'), theme_name), "global_options", $type, "normal", "core");
+        add_meta_box("themename_general_page_options", sprintf(__('%s - General Page Options.', 'writing'), theme_name), "themename_global_options", $type, "normal", "core");
     }
 }
 
-function post_options($value, $validation = "") {
+function themename_post_options($value, $validation = "") {
     global $post;
 
     $depends_on_templates = "";
@@ -33,7 +33,7 @@ function post_options($value, $validation = "") {
     }
     ?>
 
-    <div class="option-item post_option_item" id="<?php echo esc_attr($value['id']) ?>-item" <?php echo esc_attr($depends_on_templates); ?> >
+    <div class="option-item themename_post_option_item" id="<?php echo esc_attr($value['id']) ?>-item" <?php echo esc_attr($depends_on_templates); ?> >
         <span class="label"><?php echo esc_attr($value['name']); ?></span>
         <?php
         $id = esc_attr($value['id']);
@@ -64,7 +64,7 @@ function post_options($value, $validation = "") {
 
             case 'color':
                 ?>
-                <input class="color" name="<?php echo esc_attr($value['id']); ?>" id="<?php echo esc_attr($value['id']); ?>" type="text" value="<?php echo esc_attr($current_value) ?>"  />
+                <input class="themename_color" name="<?php echo esc_attr($value['id']); ?>" id="<?php echo esc_attr($value['id']); ?>" type="text" value="<?php echo esc_attr($current_value) ?>"  />
                 <?php
                 break;
 
@@ -122,11 +122,11 @@ function post_options($value, $validation = "") {
 }
 
 
-function page_options() {
+function themename_page_options() {
 
-    post_options(
+    themename_post_options(
             array("name" => __("Show Title", 'writing'),
-                "id" => "show_title",
+                "id" => "themename_show_title",
                 "type" => "select",
                 "options" => array(
                     false => __('Same as site options', 'writing'),
@@ -134,9 +134,9 @@ function page_options() {
                     'no' => __('No', 'writing')
     )));
 
-    post_options(
+    themename_post_options(
       array("name" => __("Set Pages Title Style like Posts Title Style", 'writing'),
-      "id" => "plain_page_title",
+      "id" => "themename_plain_page_title",
       "type" => "select",
       "options" => array(
         false => __('Same as site options', 'writing'),
@@ -144,9 +144,9 @@ function page_options() {
         'no' => __('No', 'writing')
       )));
 
-    post_options(
+    themename_post_options(
             array("name" => __("Show Share Icons", 'writing'),
-                "id" => "show_share",
+                "id" => "themename_show_share",
                 "type" => "select",
                 "options" => array(
                     false => __('Same as site options', 'writing'),
@@ -154,7 +154,7 @@ function page_options() {
                     'no' => __('No', 'writing')
     )));
 
-    post_options(
+    themename_post_options(
             array("name" => __("Show Author Box", 'writing'),
                 "id" => "show_author_box",
                 "type" => "select",
@@ -164,16 +164,16 @@ function page_options() {
                     'no' => __('No', 'writing')
     )));
 
-    post_options(
+    themename_post_options(
             array("name" => __("Enable Facebook Comments", 'writing'),
-                "id" => "enable_facebook_comments",
+                "id" => "themename_enable_facebook_comments",
                 "type" => "select",
                 "options" => array(
                     'no' => __('No', 'writing'),
                     'yes' => __('Yes', 'writing'),
     )));
 
-    wp_nonce_field( basename( __FILE__ ), 'page_options' );
+    wp_nonce_field( basename( __FILE__ ), 'themename_page_options' );
 
 }
 
@@ -184,7 +184,7 @@ function save_page_options() {
     if ( isset($post) ) : // check if post is exists
 
     /* Verify the nonce before proceeding. */
-    if ( !isset( $_POST['page_options'] ) || !wp_verify_nonce( $_POST['page_options'], basename( __FILE__ ) ) )
+    if ( !isset( $_POST['themename_page_options'] ) || !wp_verify_nonce( $_POST['themename_page_options'], basename( __FILE__ ) ) )
         return $post->ID;
 
     /* Get the post type object. */
@@ -195,11 +195,11 @@ function save_page_options() {
         return $post->ID;
 
         $custom_meta_fields = array(
-          'show_title',
-          'plain_page_title',
-          'show_share',
+          'themename_show_title',
+          'themename_plain_page_title',
+          'themename_show_share',
           'show_author_box',
-          'enable_facebook_comments',
+          'themename_enable_facebook_comments',
         );
 
     foreach ($custom_meta_fields as $custom_meta_field) {
@@ -218,9 +218,9 @@ function save_page_options() {
 
 function page_authorslist_template_options() {
 
-    post_options(
+    themename_post_options(
             array("name" => __("Order Users by", 'writing'),
-                "id" => "author_orderby_list",
+                "id" => "themename_author_orderby_list",
                 "type" => "select",
                 "options" => array(
                     'registered' => __('Registration Order', 'writing'),
@@ -235,14 +235,14 @@ function page_authorslist_template_options() {
     foreach ($users as $user) {
       $users_array[$user->ID] = $user->display_name;
     }
-    post_options(
+    themename_post_options(
             array("name" => __("Users to Show", 'writing'),
-                "id" => "author_ids_list",
+                "id" => "themename_author_ids_list",
                 "type" => "multiselect",
                 "options" => $users_array,
               ));
 
-    post_options(
+    themename_post_options(
             array("name" => __("Show Author's posts", 'writing'),
                 "id" => "show_author_posts_list",
                 "type" => "select",
@@ -273,15 +273,15 @@ function save_page_authorslist_template_options() {
         return $post->ID;
 
         $custom_meta_fields = array(
-          'author_ids_list',
-          'author_orderby_list',
+          'themename_author_ids_list',
+          'themename_author_orderby_list',
           'show_author_posts_list',
         );
 
     foreach ($custom_meta_fields as $custom_meta_field) {
 
         if (isset($_POST[$custom_meta_field])):
-					if ($custom_meta_field == 'author_ids_list') {
+					if ($custom_meta_field == 'themename_author_ids_list') {
             $array = implode(',', $_POST[$custom_meta_field]);
             update_post_meta($post->ID, $custom_meta_field, htmlspecialchars(stripslashes($array)));
           } else {
@@ -297,11 +297,11 @@ function save_page_authorslist_template_options() {
     endif; // end if check if post is exists
 }
 
-function posts_meta_options() {
+function themename_posts_meta_options() {
 
-    post_options(
+    themename_post_options(
             array("name" => __("Show Title", 'writing'),
-                "id" => "show_title",
+                "id" => "themename_show_title",
                 "type" => "select",
                 "options" => array(
                     false => __('Same as site options', 'writing'),
@@ -309,9 +309,9 @@ function posts_meta_options() {
                     'no' => __('No', 'writing')
     )));
 
-    post_options(
+    themename_post_options(
             array("name" => __("Show Meta Info", 'writing'),
-                "id" => "show_meta",
+                "id" => "themename_show_meta",
                 "type" => "select",
                 "options" => array(
                     false => __('Same as site options', 'writing'),
@@ -319,9 +319,9 @@ function posts_meta_options() {
                     'no' => __('No', 'writing')
     )));
 
-    post_options(
+    themename_post_options(
             array("name" => __("Show Share Icons", 'writing'),
-                "id" => "show_share",
+                "id" => "themename_show_share",
                 "type" => "select",
                 "options" => array(
                     false => __('Same as site options', 'writing'),
@@ -329,7 +329,7 @@ function posts_meta_options() {
                     'no' => __('No', 'writing')
     )));
 
-    post_options(
+    themename_post_options(
             array("name" => __("Show Author Box", 'writing'),
                 "id" => "show_author_box",
                 "type" => "select",
@@ -339,24 +339,24 @@ function posts_meta_options() {
                     'no' => __('No', 'writing')
     )));
 
-    post_options(
+    themename_post_options(
             array("name" => __("Custom Description", 'writing'),
-                "id" => "custom_description",
+                "id" => "themename_custom_description",
                 "type" => "textarea",
                 "default" => "",
                 ));
 
-    wp_nonce_field( basename( __FILE__ ), 'posts_meta_options' );
+    wp_nonce_field( basename( __FILE__ ), 'themename_posts_meta_options' );
 }
 
-add_action('save_post', 'save_post');
+add_action('save_post', 'themename_save_post');
 
-function save_post() {
+function themename_save_post() {
     global $post;
 
     if ( isset($post) ) : // check if post is exists
     /* Verify the nonce before proceeding. */
-    if ( !isset( $_POST['posts_meta_options'] ) || !wp_verify_nonce( $_POST['posts_meta_options'], basename( __FILE__ ) ) )
+    if ( !isset( $_POST['themename_posts_meta_options'] ) || !wp_verify_nonce( $_POST['themename_posts_meta_options'], basename( __FILE__ ) ) )
         return $post->ID;
 
     /* Get the post type object. */
@@ -367,11 +367,11 @@ function save_post() {
         return $post->ID;
 
     $custom_meta_fields = array(
-      'show_meta',
-      'show_share',
-      'show_title',
+      'themename_show_meta',
+      'themename_show_share',
+      'themename_show_title',
       'show_author_box',
-      'custom_description',
+      'themename_custom_description',
     );
     foreach ($custom_meta_fields as $custom_meta_field) {
 
@@ -387,9 +387,9 @@ function save_post() {
 }
 
 function page_blog_template_options() {
-    post_options(
+    themename_post_options(
             array("name" => __("Pagination Style", 'writing'),
-                "id" => "pagination_style",
+                "id" => "themename_pagination_style",
                 "type" => "select",
                 "templates" => array('blog'),
                 "options" => array(
@@ -399,9 +399,9 @@ function page_blog_template_options() {
                     'ajax' => __('Ajax', 'writing')
     )));
 
-    post_options(
+    themename_post_options(
             array("name" => __("Blog Style", 'writing'),
-                "id" => "blog_style",
+                "id" => "themename_blog_style",
                 "type" => "select",
                 "templates" => array('blog'),
                 "options" => array(
@@ -414,9 +414,9 @@ function page_blog_template_options() {
                     'banner_list' => __('List with Featured Post', 'writing'),
     )));
 
-    post_options(
+    themename_post_options(
             array("name" => __("Number of Posts (Leave blank for default)", 'writing'),
-                "id" => "blog_page_posts_number",
+                "id" => "themename_blog_page_posts_number",
                 "type" => "text",
                 "templates" => array('blog'),
                 "default" => "",
@@ -429,9 +429,9 @@ function page_blog_template_options() {
     foreach ($cats as $cat) {
       $cat_array[$cat->term_id] = $cat->name;
     }
-    post_options(
+    themename_post_options(
             array("name" => __("Category", 'writing'),
-                "id" => "blog_page_cat",
+                "id" => "themename_blog_page_cat",
                 "type" => "multiselect",
                 "templates" => array('blog'),
                 "options" => $cat_array,
@@ -460,16 +460,16 @@ function save_blog_template() {
         return $post->ID;
 
     $custom_meta_fields = array(
-        'blog_style',
-        'pagination_style',
-        'blog_page_cat',
-        'blog_page_posts_number',
+        'themename_blog_style',
+        'themename_pagination_style',
+        'themename_blog_page_cat',
+        'themename_blog_page_posts_number',
     );
 
     foreach ($custom_meta_fields as $custom_meta_field) {
 
         if (isset($_POST[$custom_meta_field])):
-          if ($custom_meta_field == 'blog_page_cat') {
+          if ($custom_meta_field == 'themename_blog_page_cat') {
             $array = implode(',', $_POST[$custom_meta_field]);
             update_post_meta($post->ID, $custom_meta_field, htmlspecialchars(stripslashes($array)));
           } else {
@@ -487,48 +487,48 @@ function save_blog_template() {
 
 
 
-function global_options() {
+function themename_global_options() {
 
 	?>
 	<script type="text/javascript">
 	jQuery(window).on('load', function () {
 		var selector = jQuery('.editor-page-attributes__template select').attr('value');
 		if (selector === 'page-templates/blog.php') {
-			jQuery('#blog_template_box').show();
+			jQuery('#themename_blog_template_box').show();
 			jQuery('#Page_options').hide();
-			jQuery('#authorslist_template_box').hide();
+			jQuery('#themename_authorslist_template_box').hide();
 		} else if (selector == 'page-templates/authors_list.php'){
-			jQuery('#blog_template_box').hide();
+			jQuery('#themename_blog_template_box').hide();
 			jQuery('#Page_options').hide();
-			jQuery('#authorslist_template_box').show();
+			jQuery('#themename_authorslist_template_box').show();
 		} else if (selector == '') {
-			jQuery('#authorslist_template_box').hide();
-			jQuery('#blog_template_box').hide();
+			jQuery('#themename_authorslist_template_box').hide();
+			jQuery('#themename_blog_template_box').hide();
 			jQuery('#Page_options').show();
 		}
 	});
 	jQuery(document).on('change', '.editor-page-attributes__template select', function () {
 		var selector = jQuery('.editor-page-attributes__template select').attr('value');
 		if (selector === 'page-templates/blog.php') {
-			jQuery('#blog_template_box').show();
+			jQuery('#themename_blog_template_box').show();
 			jQuery('#Page_options').hide();
-			jQuery('#authorslist_template_box').hide();
+			jQuery('#themename_authorslist_template_box').hide();
 		} else if (selector == 'page-templates/authors_list.php'){
-			jQuery('#blog_template_box').hide();
+			jQuery('#themename_blog_template_box').hide();
 			jQuery('#Page_options').hide();
-			jQuery('#authorslist_template_box').show();
+			jQuery('#themename_authorslist_template_box').show();
 		} else if (selector == '') {
-			jQuery('#authorslist_template_box').hide();
-			jQuery('#blog_template_box').hide();
+			jQuery('#themename_authorslist_template_box').hide();
+			jQuery('#themename_blog_template_box').hide();
 			jQuery('#Page_options').show();
 		}
 	});
 	</script>
 	<?php
 
-    post_options(
+    themename_post_options(
             array("name" => __("Sidebar Position", 'writing'),
-                "id" => "sidebar_position",
+                "id" => "themename_sidebar_position",
                 "type" => "select",
                 "options" => array(
                     false => __('Same as site options', 'writing'),
@@ -537,9 +537,9 @@ function global_options() {
                     'none' => __('No Sidebar', 'writing'),
     )));
 
-    post_options(
+    themename_post_options(
             array("name" => __("Sliding Sidebar", 'writing'),
-                "id" => "enable_sliding_sidebar",
+                "id" => "themename_enable_sliding_sidebar",
                 "type" => "select",
                 "options" => array(
                     false => __('Same as site options', 'writing'),
@@ -547,9 +547,9 @@ function global_options() {
                     'no' => __('Hide', 'writing'),
     )));
 
-    post_options(
+    themename_post_options(
             array("name" => __("Enable Sticky Menu", 'writing'),
-                "id" => "sticky_menu",
+                "id" => "themename_sticky_menu",
                 "type" => "select",
                 "options" => array(
                     false => __('Same as site options', 'writing'),
@@ -558,7 +558,7 @@ function global_options() {
     )));
 
 
-    wp_nonce_field( basename( __FILE__ ), 'global_options' );
+    wp_nonce_field( basename( __FILE__ ), 'themename_global_options' );
 }
 
 add_action('save_post', 'save_global');
@@ -568,7 +568,7 @@ function save_global() {
     if ( isset($post) ) : // check if post is exists
 
     /* Verify the nonce before proceeding. */
-    if ( !isset( $_POST['global_options'] ) || !wp_verify_nonce( $_POST['global_options'], basename( __FILE__ ) ) )
+    if ( !isset( $_POST['themename_global_options'] ) || !wp_verify_nonce( $_POST['themename_global_options'], basename( __FILE__ ) ) )
         return $post->ID;
 
     /* Get the post type object. */
@@ -579,9 +579,9 @@ function save_global() {
         return $post->ID;
 
     $custom_meta_fields = array(
-        'sidebar_position',
-        'enable_sliding_sidebar',
-        'sticky_menu'
+        'themename_sidebar_position',
+        'themename_enable_sliding_sidebar',
+        'themename_sticky_menu'
     );
 
     foreach ($custom_meta_fields as $custom_meta_field) {

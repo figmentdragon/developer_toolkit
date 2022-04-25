@@ -1,0 +1,65 @@
+//------------------------------------------------------------------------------
+// 2.3.0 Structure
+//------------------------------------------------------------------------------
+
+/* Refer to the HTML structure graphic (http://themeshaper.com/wp-content/uploads/2012/10/html-visual.png) to see how these elements are nested in the mark-up.
+
+Use this section to set widths and margins, and to build a layout. For examples of layouts that you can copy and paste into this section, see:
+https://github.com/Automattic/_s/blob/master/layouts/
+*/
+
+.site { /* The the outer-most container, wraps the entire site */
+
+}
+.site-header { /* The container for the entire header area */
+
+}
+
+#main,
+.main-navigation,
+.site-title,
+.site-description { /* The container for #primary, #secondary, and #tertiary */
+  margin: 0 auto;
+  max-width: 1050px;
+}
+
+#main {
+  clear: both;
+  overflow: hidden;
+}
+
+#primary { /* The container for your primary content.*/
+  float: left;
+	margin: 0 -27% 0 0;
+	padding: 2em;
+	width: 90%;
+}
+#content { /* The container for your post and page content. */
+	margin: 0 27% 0 0;
+}
+#secondary { /* Container for your first widget area */
+  background: #ede8df;
+  float: right;
+  margin: 1em 1em 0;
+  padding: 2em 2em 0;
+  position: relative;
+  width: 20%;
+}
+#tertiary { /* Container for your second widget area */
+  background: #ede8df;
+  float: right;
+  margin: 1em 1em 0;
+  padding: 2em 2em 0;
+  position: relative;
+  width: 20%;
+	padding-top: 0;
+}
+#colophon {
+  @include clearfix;width: 100%;
+  display: block;
+  width: 100%;
+}
+.site-footer { /* Container for the entire site footer area */
+  clear: both;
+	width: 100%;
+}

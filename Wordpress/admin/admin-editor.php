@@ -16,47 +16,47 @@ function my_mce_buttons_2($buttons) {
 add_filter('mce_buttons_2', 'my_mce_buttons_2');
 
 // Customize the format dropdown items
-function creativity_custom_editor_styles($settings) {
+function themename_custom_editor_styles($settings) {
     $style_formats = array(
         array(
-            'title' => __('Default Style', 'creativity'),
+            'title' => __('Default Style', 'themename'),
             'format' => 'p'
         ),
 //        array(
-//            'title' => __('Drop Cap', 'creativity'),
+//            'title' => __('Drop Cap', 'themename'),
 //            'block' => 'p',
 //            'classes' => 'dropcap',
 //            'remove' => 'all'
 //        ),
 //        array(
-//            'title' => __('Button', 'creativity'),
+//            'title' => __('Button', 'themename'),
 //            'selector' => 'a',
 //            'classes' => 'button',
 //            'remove' => 'all'
 //        ),
         array(
-            'title' => __('Message Boxes', 'creativity'),
+            'title' => __('Message Boxes', 'themename'),
             'items' => array(
                 array(
-                    'title' => __('Success', 'creativity'),
+                    'title' => __('Success', 'themename'),
                     'block' => 'p',
                     'classes' => 'alert alert-success',
                     'remove' => 'all'
                 ),
                 array(
-                    'title' => __('Info', 'creativity'),
+                    'title' => __('Info', 'themename'),
                     'block' => 'p',
                     'classes' => 'alert alert-info',
                     'remove' => 'all'
                 ),
                 array(
-                    'title' => __('Warning', 'creativity'),
+                    'title' => __('Warning', 'themename'),
                     'block' => 'p',
                     'classes' => 'alert alert-warning',
                     'remove' => 'all'
                 ),
                 array(
-                    'title' => __('Danger', 'creativity'),
+                    'title' => __('Danger', 'themename'),
                     'block' => 'p',
                     'classes' => 'alert alert-danger',
                     'remove' => 'all'
@@ -69,4 +69,4 @@ function creativity_custom_editor_styles($settings) {
     return $settings;
 }
 
-add_filter('tiny_mce_before_init', 'creativity_custom_editor_styles');
+add_filter('tiny_mce_before_init', 'themename_custom_editor_styles');

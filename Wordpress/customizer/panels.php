@@ -12,7 +12,7 @@
  *
  * @param WP_Customize_Manager $wp_customize Instance of WP_Customize_Class.
  */
-function customize_panels( $wp_customize ) {
+function creativitycustomize_panels( $wp_customize ) {
 	// Register a new panel.
 	$wp_customize->add_panel(
 		'site-options',
@@ -26,4 +26,4 @@ function customize_panels( $wp_customize ) {
 	);
 }
 
-add_action( 'customize_register', 'customize_panels' );
+add_action( 'customize_register', 'creativitycustomize_panels' );

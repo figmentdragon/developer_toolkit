@@ -1,0 +1,37 @@
+$width: 100%;
+
+.span-1 {
+  flex-basis: divide($width, $grid-columns);}
+.span-2 {
+  flex-basis: divide($width, $grid-columns);}
+.span-3 {
+  flex-basis: divide($width, $grid-columns);}
+.span-4 {
+  flex-basis: divide($width, $grid-columns);}
+.span-5 {
+  flex-basis: divide($width, $grid-columns);}
+.span-6 {
+  flex-basis: divide($width, $grid-columns);}
+.span-7 {
+  flex-basis: divide($width, $grid-columns);}
+.span-8 {
+  flex-basis: divide($width, $grid-columns);}
+.span-9 {
+  flex-basis: divide($width, $grid-columns);}
+.span-10 {
+  flex-basis: divide($width, $grid-columns);}
+.span-11 {
+  flex-basis: divide($width, $grid-columns);}
+.span-12 {
+  flex-basis: divide($width, $grid-columns);}
+.span-13 {
+  flex-basis: divide($width, $grid-columns);}
+.span-14 {
+  flex-basis: divide($width, $grid-columns);}
+.span-15 {
+  flex-basis: divide($width, $grid-columns);
+}
+.span-16 {
+  flex-basis: divide($width, $grid-columns);
+  width: $width;
+ }

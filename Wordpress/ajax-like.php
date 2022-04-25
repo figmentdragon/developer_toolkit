@@ -3,7 +3,7 @@
 $post_id        = isset($_POST['page_id']) ? $_POST['page_id'] : '';
 $like_status           = isset($_POST['like_status']) ? $_POST['like_status'] : 'liked';
 
-$likes = get_post_meta($post_id, 'creativity_post_likes', true);
+$likes = get_post_meta($post_id, 'themename_post_likes', true);
 
 if ($like_status == 'liked' && $likes > 0) {
 	$likes++;
@@ -13,7 +13,7 @@ if ($like_status == 'liked' && $likes > 0) {
 	$likes = 1;
 }
 
-update_post_meta($post_id, 'creativity_post_likes', $likes);
+update_post_meta($post_id, 'themename_post_likes', $likes);
 
 echo $likes;
 

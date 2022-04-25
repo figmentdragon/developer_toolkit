@@ -3,22 +3,22 @@
  * Customizer settings for this theme.
  *
  * @package WordPress
- * @subpackage creativity
- * @since creativity 1.0
+ * @subpackage themename
+ * @since themename 1.0
  */
 
 if ( ! class_exists( 'Customize' ) ) {
 	/**
 	 * Customizer Settings.
 	 *
-	 * @since creativity 1.0
+	 * @since themename 1.0
 	 */
 	class Customize {
 
 		/**
 		 * Constructor. Instantiate the object.
 		 *
-		 * @since creativity 1.0
+		 * @since themename 1.0
 		 */
 		public function __construct() {
 			add_action( 'customize_register', array( $this, 'register' ) );
@@ -27,7 +27,7 @@ if ( ! class_exists( 'Customize' ) ) {
 		/**
 		 * Register customizer options.
 		 *
-		 * @since creativity 1.0
+		 * @since themename 1.0
 		 *
 		 * @param WP_Customize_Manager $wp_customize Theme Customizer object.
 		 * @return void
@@ -72,7 +72,7 @@ if ( ! class_exists( 'Customize' ) ) {
 				array(
 					'type'    => 'checkbox',
 					'section' => 'title_tagline',
-					'label'   => esc_html__( 'Display Site Title & Tagline', 'creativity' ),
+					'label'   => esc_html__( 'Display Site Title & Tagline', 'themename' ),
 				)
 			);
 
@@ -82,7 +82,7 @@ if ( ! class_exists( 'Customize' ) ) {
 			$wp_customize->add_section(
 				'excerpt_settings',
 				array(
-					'title'    => esc_html__( 'Excerpt Settings', 'creativity' ),
+					'title'    => esc_html__( 'Excerpt Settings', 'themename' ),
 					'priority' => 120,
 				)
 			);
@@ -103,17 +103,17 @@ if ( ! class_exists( 'Customize' ) ) {
 				array(
 					'type'    => 'radio',
 					'section' => 'excerpt_settings',
-					'label'   => esc_html__( 'On Archive Pages, posts show:', 'creativity' ),
+					'label'   => esc_html__( 'On Archive Pages, posts show:', 'themename' ),
 					'choices' => array(
-						'excerpt' => esc_html__( 'Summary', 'creativity' ),
-						'full'    => esc_html__( 'Full text', 'creativity' ),
+						'excerpt' => esc_html__( 'Summary', 'themename' ),
+						'full'    => esc_html__( 'Full text', 'themename' ),
 					),
 				)
 			);
 
 			// Background color.
 			// Include the custom control class.
-			include_once get_theme_file_path( 'classes/class-creativity-customize-color-control.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
+			include_once get_theme_file_path( 'classes/class-themename-customize-color-control.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 
 			// Register the custom control.
 			$wp_customize->register_control_type( 'Customize_Color_Control' );
@@ -135,7 +135,7 @@ if ( ! class_exists( 'Customize' ) ) {
 					$wp_customize,
 					'background_color',
 					array(
-						'label'   => esc_html_x( 'Background color', 'Customizer control', 'creativity' ),
+						'label'   => esc_html_x( 'Background color', 'Customizer control', 'themename' ),
 						'section' => 'colors',
 						'palette' => $colors,
 					)
@@ -146,7 +146,7 @@ if ( ! class_exists( 'Customize' ) ) {
 		/**
 		 * Sanitize boolean for checkbox.
 		 *
-		 * @since creativity 1.0
+		 * @since themename 1.0
 		 *
 		 * @param bool $checked Whether or not a box is checked.
 		 * @return bool
@@ -158,7 +158,7 @@ if ( ! class_exists( 'Customize' ) ) {
 		/**
 		 * Render the site title for the selective refresh partial.
 		 *
-		 * @since creativity 1.0
+		 * @since themename 1.0
 		 *
 		 * @return void
 		 */
@@ -169,7 +169,7 @@ if ( ! class_exists( 'Customize' ) ) {
 		/**
 		 * Render the site tagline for the selective refresh partial.
 		 *
-		 * @since creativity 1.0
+		 * @since themename 1.0
 		 *
 		 * @return void
 		 */

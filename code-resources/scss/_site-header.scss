@@ -1,0 +1,25 @@
+//------------------------------------------------------------------------------
+// 2.4.0 Site-Header
+//------------------------------------------------------------------------------
+
+/* Style elements inside of the .site-header container */
+
+.site-header hgroup { /* Container for site title and description */
+  background: #33605a;
+	padding: 1.5em 2em;
+}
+.site-title,
+.site-title a {
+  font-size: 45px;
+	font-size: 4.5rem;
+	font-style: italic;
+}
+.site-description { /* This is the tagline */
+  font-size: 13px;
+	font-size: 1.3rem;
+}
+
+.site-title a,
+.site-description {
+	color: #e9e0d1;
+}

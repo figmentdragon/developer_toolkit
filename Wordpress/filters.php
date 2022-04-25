@@ -15,28 +15,28 @@
  * @link http://adambrown.info/p/wp_hooks
  */
 
-add_filter('excerpt_length', 'creativity_excerpt_length');
-add_filter('excerpt_more', 'creativity_excerpt_more');
-add_filter('body_class', 'creativity_body_classes');
-add_filter('wp_title', 'creativity_wp_title', 10, 2);
-add_filter('the_content', 'creativity_anchor_content_h2');
-add_filter('the_content', 'creativity_replace_ptags_around_images_with_figure');
-add_filter('the_content', 'creativity_remove_ptags_around_embeds');
-add_filter('img_caption_shortcode', 'creativity_img_caption_shortcode_filter', 10, 3);
-add_filter('comment_form_defaults', 'creativity_remove_comment_allowed_tags_notes');
-add_filter('post_class', 'creativity_remove_hentry_from_homepage');
+add_filter('excerpt_length', 'themename_excerpt_length');
+add_filter('excerpt_more', 'themename_excerpt_more');
+add_filter('body_class', 'themename_body_classes');
+add_filter('wp_title', 'themename_wp_title', 10, 2);
+add_filter('the_content', 'themename_anchor_content_h2');
+add_filter('the_content', 'themename_replace_ptags_around_images_with_figure');
+add_filter('the_content', 'themename_remove_ptags_around_embeds');
+add_filter('img_caption_shortcode', 'themename_img_caption_shortcode_filter', 10, 3);
+add_filter('comment_form_defaults', 'themename_remove_comment_allowed_tags_notes');
+add_filter('post_class', 'themename_remove_hentry_from_homepage');
 add_filter( 'embed_oembed_html', 'creatvity_embed_html', 10, 2 );
 add_filter( 'video_embed_html', 'creatvity_embed_html', 10, 2 ); // Jetpack
-add_filter( 'document_title_separator', 'creativity_remove_sep_home_notagline', 99 );
-add_filter( 'nav_menu_link_attributes', 'creativity_schema_url', 10 );
+add_filter( 'document_title_separator', 'themename_remove_sep_home_notagline', 99 );
+add_filter( 'nav_menu_link_attributes', 'themename_schema_url', 10 );
 add_filter( 'post_comments_feed_link', 'primary_post_comments_feed_link');
-add_filter( 'wp_enqueue_scripts', 'creativity_defer_scripts', 10, 3 );
-add_filter( 'document_title_separator', 'creativity_document_title_separator' );
+add_filter( 'wp_enqueue_scripts', 'themename_defer_scripts', 10, 3 );
+add_filter( 'document_title_separator', 'themename_document_title_separator' );
 // This theme uses its own gallery styles.
 add_filter( 'use_default_gallery_style', '__return_false');
-add_filter( 'the_title', 'creativity_title' );
+add_filter( 'the_title', 'themename_title' );
 add_filter( 'post_comments_feed_link', 'primary_post_comments_feed_link');
-add_filter( 'avatar_defaults', 'creativitygravatar' ); // Custom Gravatar in Settings > Discussion
+add_filter( 'avatar_defaults', 'themenamegravatar' ); // Custom Gravatar in Settings > Discussion
 add_filter( 'body_class', 'add_slug_to_body_class' ); // Add slug to body class (Starkers build)
 add_filter( 'widget_text', 'do_shortcode' ); // Allow shortcodes in Dynamic Sidebar
 add_filter( 'widget_text', 'shortcode_unautop' ); // Remove <p> tags in Dynamic Sidebars (better!)
@@ -47,16 +47,16 @@ add_filter( 'wp_nav_menu_args', 'my_wp_nav_menu_args' ); // Remove surrounding <
 add_filter( 'the_category', 'remove_category_rel_from_category_list' ); // Remove invalid rel attribute
 add_filter( 'the_excerpt', 'shortcode_unautop' ); // Remove auto <p> tags in Excerpt (Manual Excerpts only)
 add_filter( 'the_excerpt', 'do_shortcode' ); // Allows Shortcodes to be executed in Excerpt (Manual Excerpts only)
-add_filter( 'excerpt_more', 'creativity_view_article' ); // Add 'View Article' button instead of [...] for Excerpts
+add_filter( 'excerpt_more', 'themename_view_article' ); // Add 'View Article' button instead of [...] for Excerpts
 add_filter( 'show_admin_bar', 'remove_admin_bar' ); // Remove Admin bar
-add_filter( 'style_loader_tag', 'creativity_style_remove' ); // Remove 'text/css' from enqueued stylesheet
+add_filter( 'style_loader_tag', 'themename_style_remove' ); // Remove 'text/css' from enqueued stylesheet
 add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10 ); // Remove width and height dynamic attributes to thumbnails
 add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 ); // Remove width and height dynamic attributes to post images
 add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 ); // Remove width and height dynamic attributes to post images
-add_filter( 'document_title_separator', 'creativity_remove_sep_home_notagline', 99 );
+add_filter( 'document_title_separator', 'themename_remove_sep_home_notagline', 99 );
 
 // fix title issue when no tagline exists
-function creativity_remove_sep_home_notagline($sep) {
+function themename_remove_sep_home_notagline($sep) {
 	$tagline = get_bloginfo( 'description', 'display' );
 	if (is_home() && strlen(trim($tagline)) == 0) {
 		return '';
@@ -72,16 +72,16 @@ function creativity_remove_sep_home_notagline($sep) {
  * @return int set post excerpt length
  * @link http://codex.wordpress.org/Function_Reference/the_excerpt
  */
-function creativity_excerpt_length($length) {
+function themename_excerpt_length($length) {
     return 23; // Just for Jordan
 }
 /**
  *  add ... and return excerpt more
  */
-function creativity_excerpt_more($more) {
+function themename_excerpt_more($more) {
     return ' &hellip;';
 }
-if (!function_exists('creativity_the_attached_image')) :
+if (!function_exists('themename_the_attached_image')) :
 
     /**
      * Print the attached image with a link to the next attached image.
@@ -89,10 +89,10 @@ if (!function_exists('creativity_the_attached_image')) :
      *
      * @return void
      */
-    function creativity_the_attached_image() {
+    function themename_the_attached_image() {
         $post = get_post();
         /**
-         * Filter the default creativity attachment size.
+         * Filter the default themename attachment size.
          *
          *
          * @param array $dimensions {
@@ -102,7 +102,7 @@ if (!function_exists('creativity_the_attached_image')) :
          *     @type int $width  Width of the image in pixels. Default 810.
          * }
          */
-        $attachment_size = apply_filters('creativity_attachment_size', array(960, 640));
+        $attachment_size = apply_filters('themename_attachment_size', array(960, 640));
         $next_attachment_url = wp_get_attachment_url();
         /*
          * Grab the IDs of all the image attachments in a gallery so we can get the URL
@@ -152,7 +152,7 @@ endif;
  * @param string $sep Optional separator.
  * @return string The filtered title.
  */
-function creativity_wp_title($title, $sep) {
+function themename_wp_title($title, $sep) {
     global $paged, $page;
     if (is_feed()) {
         return $title;
@@ -166,14 +166,14 @@ function creativity_wp_title($title, $sep) {
     }
     // Add a page number if necessary.
     if ($paged >= 2 || $page >= 2) {
-        $title = "$title $sep " . sprintf(__('Page %s', 'creativity'), max($paged, $page));
+        $title = "$title $sep " . sprintf(__('Page %s', 'themename'), max($paged, $page));
     }
     return $title;
 }
 
 // This function adds nice anchor with id attribute to our h2 tags for reference
 // Ref: http://www.w3.org/TR/html4/struct/links.html#h-12.2.3
-function creativity_anchor_content_h2($content) {
+function themename_anchor_content_h2($content) {
 
     // Pattern that we want to match
     $pattern = '/<h2>(.*?)<\/h2>/';
@@ -204,7 +204,7 @@ function creativity_anchor_content_h2($content) {
  * @link http://regexone.com/lesson/
  * @link https://www.debuggex.com/r/Xt9Qvb0_3FKQc4BF
  */
-function creativity_replace_ptags_around_images_with_figure($content) {
+function themename_replace_ptags_around_images_with_figure($content) {
     /* For images with default WordPress alignement */
     $content = preg_replace('/<p.*?>\s?(<span .*>)?\s*(<a .*>)?\s*(<img[^>]+class="(?:.+\s)?(aligncenter|alignnone|alignleft|alignright)(?:\s.+)?"([^"]+)".*>)\s*(<\/a>)?\s*(<\/span>)?\s*<\/p>/iU', '<figure class="\4">\2\3\6</figure>', $content);
     /* For images copied with formatting that does not follow WordPress alignement and everything else */
@@ -219,7 +219,7 @@ function creativity_replace_ptags_around_images_with_figure($content) {
  *
  * @param string $content
  */
-function creativity_remove_ptags_around_embeds($content) {
+function themename_remove_ptags_around_embeds($content) {
     $content = preg_replace('/<p.*?>\s?(<object .*>*.<\/object>)\s*<\/p>/iU', '\1', $content);
     $content = preg_replace('/<p.*?>\s?(<embed .*>*.<\/embed>)\s*<\/p>/iU', '\1', $content);
     $content = preg_replace('/<p.*?>\s?(<iframe .*>*.<\/iframe>)\s*<\/p>/iU', '\1', $content);
@@ -236,7 +236,7 @@ function creativity_remove_ptags_around_embeds($content) {
  * @link http://codex.wordpress.org/Plugin_API/Filter_Reference/img_caption_shortcode
  * @link http://joostkiens.com/improving-wp-caption-shortcode/
  */
-function creativity_img_caption_shortcode_filter($val, $attr, $content = null) {
+function themename_img_caption_shortcode_filter($val, $attr, $content = null) {
     extract(shortcode_atts(array(
         'id' => '',
         'align' => 'aligncenter',
@@ -265,7 +265,7 @@ function creativity_img_caption_shortcode_filter($val, $attr, $content = null) {
  * @return array    Returns the $defaults array.
  * @link http://wordpress.org/support/topic/remove-html-tags-and-attributes?replies=35#post-2429820
  */
-function creativity_remove_comment_allowed_tags_notes($defaults) {
+function themename_remove_comment_allowed_tags_notes($defaults) {
     $defaults['comment_notes_after'] = '';
     return $defaults;
 }
@@ -274,7 +274,7 @@ function creativity_remove_comment_allowed_tags_notes($defaults) {
  * Remove 'hentry' from post_class()
  * @link https://gist.github.com/jaredatch/1629862
  */
-function creativity_remove_hentry_from_homepage($class) {
+function themename_remove_hentry_from_homepage($class) {
     if(is_front_page()){
         $class = array_diff($class, array('hentry'));
     }
@@ -295,13 +295,13 @@ function creatvity_embed_html( $html, $url ) {
   return $html;
 }
 
-function creativity_filter_lazyload_images( $content, $type = 'ratio' ) {
+function themename_filter_lazyload_images( $content, $type = 'ratio' ) {
 
         if ( is_feed()
             || intval( get_query_var( 'print' ) ) == 1
             || intval( get_query_var( 'printpage' ) ) == 1
             || strpos( $_SERVER['HTTP_USER_AGENT'], 'Opera Mini' ) == false
-						|| ('creativity_lazyload_image_banner') == false
+						|| ('themename_lazyload_image_banner') == false
         ) {
             return $content;
         }
@@ -337,7 +337,7 @@ function creativity_filter_lazyload_images( $content, $type = 'ratio' ) {
                     '<img$1src=' . $placeholder_image . ' data-src=', $imgHTML );
 
                 $replaceHTML = preg_replace( '/srcset=/i', $respReplace, $replaceHTML );
-								$newClass = ('lazyload ' . 'creativity_lazyload_effect');
+								$newClass = ('lazyload ' . 'themename_lazyload_effect');
 
 								$pattern1 = "/class='([^']*)'/";
 								$pattern2 = '/class="([^"]*)"/';
@@ -380,7 +380,7 @@ function creativity_filter_lazyload_images( $content, $type = 'ratio' ) {
 
         return $content;
     }
-		if ('creativity_lazyload_image_banner' == true ) {
-			add_filter( 'the_content', 'creativity_filter_lazyload_images', 99 );
-			apply_filters( 'widget_custom_html_content', 'creativity_filter_lazyload_images' );
+		if ('themename_lazyload_image_banner' == true ) {
+			add_filter( 'the_content', 'themename_filter_lazyload_images', 99 );
+			apply_filters( 'widget_custom_html_content', 'themename_filter_lazyload_images' );
 		}

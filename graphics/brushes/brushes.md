@@ -1,0 +1,3 @@
+Brushes (which are customizable plugins to apply paint effects in applications such as Photoshop, CorelDraw and Painter) are another resource for which too wide a choice would be overwhelming and inefficient — you’d find yourself scrolling through a huge list trying to find the one you’ve used before. Don’t be afraid to trim down the brush sets that you download, deleting the ones you have no use for. Save a consolidated set of brushes as a new set to your mobile toolkit and you’ll be good to go. The same approach can be applied to symbol libraries for Illustrator and Photoshop.
+
+source: https://www.smashingmagazine.com/2013/07/building-portable-design-toolkit/

@@ -1,5 +1,5 @@
 <?php
-    function creativity_slide_page($page_id) {
+    function themename_slide_page($page_id) {
         if($page_id){
             $pg_query = new WP_Query( array( 'page_id' => $page_id, 'posts_per_page' => 1 ) );
             if($pg_query->have_posts()) :
@@ -24,19 +24,19 @@
         }
     }
 
-    function creativity_slide_service() {
+    function themename_slide_service() {
         ?>
         <div class="s-panel-inner">
             <div class="container">
             <header class="entry-header">
-                <?php $service_title = creativity_allow_span(get_theme_mod('creativity_service_title', 'We Are Expert - <span>In Our Service</span>')); ?>
+                <?php $service_title = themename_allow_span(get_theme_mod('themename_service_title', 'We Are Expert - <span>In Our Service</span>')); ?>
                 <h1 class="entry-title"><?php echo wp_kses_post($service_title); ?></h1>
             </header><!-- .entry-header -->
 
             <div class="service-tab-wrap">
             <?php
                 for ($i = 1; $i <= 4; $i++) :
-                    $service_page = absint(get_theme_mod( 'creativity_service_block_'.$i.'_page'));
+                    $service_page = absint(get_theme_mod( 'themename_service_block_'.$i.'_page'));
                     if($service_page):
                         $args = array( 'page_id'=>$service_page );
                         $query = new WP_Query($args);
@@ -63,7 +63,7 @@
             <div class="service-content-wrap">
             <?php
                 for ($i = 1; $i <= 4; $i++) :
-                    $service_page = absint(get_theme_mod( 'creativity_service_block_'.$i.'_page'));
+                    $service_page = absint(get_theme_mod( 'themename_service_block_'.$i.'_page'));
                     if($service_page):
                         $args = array( 'page_id'=>$service_page );
                         $query = new WP_Query($args);
@@ -90,22 +90,22 @@
         <?php
     }
 
-    function creativity_slide_portfolio() {
+    function themename_slide_portfolio() {
         ?>
         <div class="s-panel-inner">
             <div class="container">
                 <header class="entry-header">
-                    <?php $section_title = creativity_allow_span(get_theme_mod('creativity_portfolio_title', 'What we have done - <span>Our Works</span>')); ?>
+                    <?php $section_title = themename_allow_span(get_theme_mod('themename_portfolio_title', 'What we have done - <span>Our Works</span>')); ?>
                     <h1 class="entry-title"><?php echo wp_kses_post($section_title); ?></h1>
                 </header><!-- .entry-header -->
 
 
-                <?php $creativity_page = absint(get_theme_mod( 'creativity_portfolio_page' )); ?>
-                <?php if( isset( $creativity_page ) && $creativity_page != 0  ) : ?>
+                <?php $themename_page = absint(get_theme_mod( 'themename_portfolio_page' )); ?>
+                <?php if( isset( $themename_page ) && $themename_page != 0  ) : ?>
                 <div id="portfolio-wrap">
                     <?php
                         $cat_args = array(
-                            'cat' => $creativity_page,
+                            'cat' => $themename_page,
                             'order' => 'ASC',
                             'posts_per_page' => -1,
                             'post_status' => 'publish'
@@ -124,7 +124,7 @@
                                     if( $i == 2 || $i == 5 || $i == 9 || $i == 13 ) {
                                         $mas_class = 'wide';
                                     }
-                                    $img_crop = 'creativity-grid-large';
+                                    $img_crop = 'themename-grid-large';
 
                                     $img_src = wp_get_attachment_image_src( get_post_thumbnail_id(), $img_crop );
                                     $img_src_full = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
@@ -168,18 +168,18 @@
         <?php
     }
 
-    function creativity_slide_clients() {
+    function themename_slide_clients() {
         ?>
         <div class="s-panel-inner">
             <div class="container">
                 <header class="entry-header">
-                    <?php $section_title = creativity_allow_span(get_theme_mod('creativity_client_title', 'We Have Some - <span>Great Clients</span>')); ?>
+                    <?php $section_title = themename_allow_span(get_theme_mod('themename_client_title', 'We Have Some - <span>Great Clients</span>')); ?>
                     <h1 class="entry-title"><?php echo wp_kses_post($section_title); ?></h1>
                 </header><!-- .entry-header -->
                 <?php
-                $creativity_page = absint(get_theme_mod('creativity_clients_category'));
-                if (isset($creativity_page) && $creativity_page != 0) {
-                    $cat_args = array('cat' => $creativity_page, 'posts_per_page' => -1);
+                $themename_page = absint(get_theme_mod('themename_clients_category'));
+                if (isset($themename_page) && $themename_page != 0) {
+                    $cat_args = array('cat' => $themename_page, 'posts_per_page' => -1);
                     $cat_query = new WP_Query($cat_args);
                     if ($cat_query->have_posts()) {
                         echo '<div class="client-slider clearfix">';
@@ -193,7 +193,7 @@
                                 <div class="client-sub">
                                     <div class="client-sub-inner">
                                         <div class="client-table-outer">
-                                            <?php $link_to_inpage = esc_attr(get_theme_mod('creativity_linkto_inpage', 1)); ?>
+                                            <?php $link_to_inpage = esc_attr(get_theme_mod('themename_linkto_inpage', 1)); ?>
 
                                             <?php if($link_to_inpage) : ?>
                                             <a href="<?php the_permalink(); ?>">
@@ -225,8 +225,8 @@
         <?php
     }
 
-    function creativity_slide_contact() {
-        $con_page = absint(get_theme_mod('creativity_contact_page', 0));
+    function themename_slide_contact() {
+        $con_page = absint(get_theme_mod('themename_contact_page', 0));
 
         $pg_query = new WP_Query( array( 'post_type' => 'page', 'post__in' => array( $con_page ), 'posts_per_page' => 1 ) );
         if($pg_query->have_posts()) :
@@ -236,9 +236,9 @@
 
             <div class="container">
                 <div class="clearfix">
-                    <?php if(is_dynamic_sidebar('creativity-gmap')) : ?>
-                    <div id="creativity-map-canvas">
-                        <?php dynamic_sidebar('creativity-gmap'); ?>
+                    <?php if(is_dynamic_sidebar('themename-gmap')) : ?>
+                    <div id="themename-map-canvas">
+                        <?php dynamic_sidebar('themename-gmap'); ?>
                     </div>
                     <?php endif; ?>
 
@@ -252,14 +252,14 @@
                             <?php the_content(); ?>
                             <?php
                             wp_link_pages(array(
-                                'before' => '<div class="page-links">' . esc_html__('Pages:', 'creativity'),
+                                'before' => '<div class="page-links">' . esc_html__('Pages:', 'themename'),
                                 'after' => '</div>',
                             ));
                             ?>
                         </div><!-- .entry-content -->
 
                         <footer class="entry-footer">
-                            <?php edit_post_link(esc_html__('Edit', 'creativity'), '<span class="edit-link">', '</span>'); ?>
+                            <?php edit_post_link(esc_html__('Edit', 'themename'), '<span class="edit-link">', '</span>'); ?>
                         </footer><!-- .entry-footer -->
                     </article><!-- #post-## -->
                 </div>
@@ -270,18 +270,18 @@
         endif; // $pg_query if end
     }
 
-    function creativity_slide_blog() {
+    function themename_slide_blog() {
         ?>
         <div class="s-panel-inner">
             <div class="container">
                 <header class="entry-header">
-                    <?php $section_title = creativity_allow_span(get_theme_mod('creativity_blog_title', 'Know What We Are - <span>Upto</span>')); ?>
+                    <?php $section_title = themename_allow_span(get_theme_mod('themename_blog_title', 'Know What We Are - <span>Upto</span>')); ?>
                     <h1 class="entry-title"><?php echo wp_kses_post($section_title); ?></h1>
                 </header><!-- .entry-header -->
 
                 <?php
-                    $blog_cat = absint(get_theme_mod('creativity_blog_cat', 0));
-                    $blog_readmore_txt = sanitize_text_field(get_theme_mod('creativity_blog_readmore_txt', 'Read More'));
+                    $blog_cat = absint(get_theme_mod('themename_blog_cat', 0));
+                    $blog_readmore_txt = sanitize_text_field(get_theme_mod('themename_blog_readmore_txt', 'Read More'));
                 ?>
                 <?php if(isset($blog_cat) || $blog_cat != 0) : ?>
                     <?php
@@ -296,7 +296,7 @@
                         <?php while($blog_query->have_posts()) : $blog_query->the_post(); ?>
                             <div class="sl-blog-post-wrap">
                                 <?php if(has_post_thumbnail()) : ?>
-                                <?php $img = wp_get_attachment_image_src(get_post_thumbnail_id(), 'creativity-bpost-image'); $img_src = $img[0]; ?>
+                                <?php $img = wp_get_attachment_image_src(get_post_thumbnail_id(), 'themename-bpost-image'); $img_src = $img[0]; ?>
                                 <div class="sl-blog-post-img">
                                     <a href="<?php the_permalink(); ?>">
                                         <img src="<?php echo esc_url($img_src); ?>" alt="<?php the_title_attribute(); ?>" title="<?php the_title_attribute(); ?>" />
@@ -333,7 +333,7 @@
     }
 
 // Modify main menu attribute
-class creativity_Menu_Attibute_Walker extends Walker_Nav_Menu
+class themename_Menu_Attibute_Walker extends Walker_Nav_Menu
 {
     function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0)
     {
@@ -438,7 +438,7 @@ class creativity_Menu_Attibute_Walker extends Walker_Nav_Menu
     }
 }
 
-function creativity_is_realy_woocommerce_page () {
+function themename_is_really_woocommerce_page () {
         if(  function_exists ( "is_woocommerce" ) && is_woocommerce()){
                 return true;
         }

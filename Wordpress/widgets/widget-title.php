@@ -1,7 +1,7 @@
 <?php
 
 /**
- * creativity Title Widget
+ * themename Title Widget
  * 
  * Because sometimes all you need is just a title and nothing else.
  * @output <h4>$title</h4>
@@ -11,8 +11,8 @@ class Title_Widget extends WP_Widget {
     function __construct() {
         parent::__construct(
                 'title_widget', // Root id for all widgets of this type.
-                __('Title Widget', 'creativity'), // Name for this widget type.
-                array('description' => __('Widget Adds Title with a Heading tag', 'creativity'),) // Option array passed to wp_register_sidebar_widget()
+                __('Title Widget', 'themename'), // Name for this widget type.
+                array('description' => __('Widget Adds Title with a Heading tag', 'themename'),) // Option array passed to wp_register_sidebar_widget()
         );
     }
 
@@ -31,10 +31,10 @@ class Title_Widget extends WP_Widget {
     }
 
     public function form($instance) {
-        $title = isset($instance['title']) ? strip_tags(trim($instance['title'])) : __('Title', 'creativity');
+        $title = isset($instance['title']) ? strip_tags(trim($instance['title'])) : __('Title', 'themename');
         ?>
         <p>
-            <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'creativity'); ?></label>
+            <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'themename'); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" />
         </p>
         <?php

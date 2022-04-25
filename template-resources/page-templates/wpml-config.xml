@@ -1,0 +1,11 @@
+<wpml-config>
+<admin-texts>
+<key name="theme_mods_THEMENAME">
+    <key name="THEMENAME_service_title" />
+    <key name="THEMENAME_portfolio_title" />
+    <key name="THEMENAME_client_title" />
+    <key name="THEMENAME_contact_title" />
+    <key name="THEMENAME_blog_title" />
+</key>
+</admin-texts>
+</wpml-config>

@@ -1,26 +1,26 @@
 <?php
 /**
- * creativity Number Counter Widgets
+ * themename Number Counter Widgets
  *
- * @package creativity
+ * @package themename
  */
 
-add_action( 'widgets_init', 'creativity_register_number_counter_widgets' );
-function creativity_register_number_counter_widgets() {
-    register_widget( 'WP_creativity_Number_Counter' );
+add_action( 'widgets_init', 'themename_register_number_counter_widgets' );
+function themename_register_number_counter_widgets() {
+    register_widget( 'WP_themename_Number_Counter' );
 }
 
-class WP_creativity_Number_Counter extends WP_Widget {
+class WP_themename_Number_Counter extends WP_Widget {
 
     /* Register Widget with WordPress */
     function __construct() {
         parent::__construct(
-            'creativity-number-counter',
-            __( 'AP: Number Counter', 'creativity' ),
-            array( 'classname' => 'creativity-number-counter', 'description' => __( 'Number Animation Conter', 'creativity' ) )
+            'themename-number-counter',
+            __( 'AP: Number Counter', 'themename' ),
+            array( 'classname' => 'themename-number-counter', 'description' => __( 'Number Animation Conter', 'themename' ) )
         );
     }
-
+    
     /**
 	 * Helper function that holds widget fields
 	 * Array is used in update and form functions
@@ -28,17 +28,17 @@ class WP_creativity_Number_Counter extends WP_Widget {
 	 private function widget_fields() {
 		$fields = array(
 			'counter_title' => array(
-                'creativity_widgets_name' => 'counter_title',
-                'creativity_widgets_title' => __('Title','creativity'),
-                'creativity_widgets_field_type' => 'text'
+                'themename_widgets_name' => 'counter_title',
+                'themename_widgets_title' => __('Title','themename'),
+                'themename_widgets_field_type' => 'text'
             ),
             'counter' => array(
-                'creativity_widgets_name' => 'counter',
-                'creativityc_widgets_title' => __('Counter','creativity'),
-                'creativity_widgets_field_type' => 'number'
+                'themename_widgets_name' => 'counter',
+                'themenamec_widgets_title' => __('Counter','themename'),
+                'themename_widgets_field_type' => 'number'
             ),
 		);
-
+		
 		return $fields;
 	 }
 
@@ -54,11 +54,11 @@ class WP_creativity_Number_Counter extends WP_Widget {
     public function widget( $args, $instance ) {
         echo wp_kses_post($args['before_widget']);
         echo '<div class="counter-container">';
-
+        
         $title     = isset( $instance['counter_title'] ) ? esc_attr( $instance['counter_title'] ) : '';
         $counter     = isset( $instance['counter'] ) ? absint( $instance['counter'] ) : 0;
         ?>
-            <div class="counter-wrap widget_creativity-number-counter clearfix">
+            <div class="counter-wrap widget_themename-number-counter clearfix">
                 <div class="counter-text"><?php echo esc_html($title); ?></div>
                 <div class="counter-img clearfix">
                     <input type="text" data-width="100" data-fgColor="#df2c45" data-bgColor="#212c35" data-height="50" value="0" data-number="<?php echo esc_html($counter); ?>" min="0" max="100" class="ak-counter clearfix">
@@ -83,21 +83,21 @@ class WP_creativity_Number_Counter extends WP_Widget {
         ?>
             <p>
             <label for="<?php echo esc_attr($this->get_field_id( 'counter_title' )); ?>">
-            <?php esc_html__('Counter Title', 'creativity'); ?>
+            <?php esc_html__('Counter Title', 'themename'); ?>
             </label>
-
+            
             <input class="widefat" id="<?php echo esc_attr($this->get_field_id( 'counter_title' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'counter_title' )); ?>" type="text" value="<?php echo esc_html($title); ?>" />
             </p>
 
             <p>
             <label for="<?php echo esc_attr($this->get_field_id( 'counter' )); ?>">
-            <?php esc_html__('Counter Number', 'creativity'); ?>
+            <?php esc_html__('Counter Number', 'themename'); ?>
             </label>
-
+            
             <input class="widefat" id="<?php echo esc_attr($this->get_field_id( 'counter' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'counter' )); ?>" type="number" value="<?php echo esc_html($counter); ?>" />
             </p>
 
-            <div class="startKnob" style="display: none;"><?php esc_html__( 'start', 'creativity' ); ?></div>
+            <div class="startKnob" style="display: none;"><?php esc_html__( 'start', 'themename' ); ?></div>
 
     <?php
     }
@@ -114,7 +114,7 @@ class WP_creativity_Number_Counter extends WP_Widget {
      */
     public function update( $new_instance, $old_instance ) {
         $instance = $old_instance;
-
+        
         $instance['counter_title']= sanitize_text_field( $new_instance['counter_title']);
         $instance['counter']= absint($new_instance['counter']);
         return $instance;

@@ -1,12 +1,5 @@
 <?php
 /**
- * This is file for all of your custom functions for the project
- */
- /**
-  * Enables the Link Manager that existed in WordPress until version 3.5.
-  */
-  add_filter('pre_option_link_manager_enabled', '__return_true');
-/**
  * Get Pages by Template
 */
 function get_pages_by_template( $template_page = null ){
@@ -99,3 +92,5 @@ function get_alt_text( $post_block ) {
 *	return apply_filters( 'wpml_permalink', $dynamic_url);
 * }
 */
+
+

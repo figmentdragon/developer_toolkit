@@ -1,0 +1,14 @@
+﻿/* @font-face kit by Fonts2u (https://fonts2u.com) */
+@font-face             {
+  font-family: "Avdira";
+  src: url("<?php echo get_template_directory(); ?>/src/fonts/avdira/Avdira_R.woff")
+    format("woff");
+  src: url("<?php echo get_template_directory(); ?>/src/fonts/avdira/Avdira_R.svg");
+    format:("svg");
+  src: url("<?php echo get_template_directory(); ?>/src/fonts/avdira/Avdira_R.ttf");
+      format:("ttf");
+  src: url("<?php echo get_template_directory(); ?>/src/fonts/avdira/avdira.eot");
+      format:("eot");
+  font-weight: normal;
+  font-style: normal;
+}

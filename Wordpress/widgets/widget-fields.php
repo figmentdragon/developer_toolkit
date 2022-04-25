@@ -1,52 +1,52 @@
 <?php
 /**
- * @package creativity
+ * @package themename
  */
 
-function creativity_widgets_show_widget_field($instance = '', $widget_field = '', $athm_field_value = '') {
+function themename_widgets_show_widget_field($instance = '', $widget_field = '', $athm_field_value = '') {
     // Store Posts in array
-    $creativity_postlist[0] = array(
+    $themename_postlist[0] = array(
         'value' => 0,
         'label' => '--choose--'
     );
     $arg = array('posts_per_page' => -1);
-    $creativity_posts = get_posts($arg);
-    foreach ($creativity_posts as $creativity_post) :
-        $creativity_postlist[$creativity_post->ID] = array(
-            'value' => $creativity_post->ID,
-            'label' => $creativity_post->post_title
+    $themename_posts = get_posts($arg);
+    foreach ($themename_posts as $themename_post) :
+        $themename_postlist[$themename_post->ID] = array(
+            'value' => $themename_post->ID,
+            'label' => $themename_post->post_title
         );
     endforeach;
 
     extract($widget_field);
 
-    switch ($creativity_widgets_field_type) {
+    switch ($themename_widgets_field_type) {
 
         // Standard text field
         case 'text' :
             ?>
             <p>
-                <label for="<?php echo esc_attr($instance->get_field_id($creativity_widgets_name)); ?>"><?php echo esc_html($creativity_widgets_title); ?>:</label>
-                <input class="widefat" id="<?php echo esc_attr($instance->get_field_id($creativity_widgets_name)); ?>" name="<?php echo esc_attr($instance->get_field_name($creativity_widgets_name)); ?>" type="text" value="<?php echo esc_html($athm_field_value); ?>" />
+                <label for="<?php echo esc_attr($instance->get_field_id($themename_widgets_name)); ?>"><?php echo esc_html($themename_widgets_title); ?>:</label>
+                <input class="widefat" id="<?php echo esc_attr($instance->get_field_id($themename_widgets_name)); ?>" name="<?php echo esc_attr($instance->get_field_name($themename_widgets_name)); ?>" type="text" value="<?php echo esc_html($athm_field_value); ?>" />
 
-                <?php if (isset($creativity_widgets_description)) { ?>
+                <?php if (isset($themename_widgets_description)) { ?>
                     <br />
-                    <small><?php echo esc_textarea($creativity_widgets_description); ?></small>
+                    <small><?php echo esc_textarea($themename_widgets_description); ?></small>
                 <?php } ?>
             </p>
             <?php
             break;
-
+            
         // Standard text field
         case 'textfield' :
             ?>
             <p>
-                <label for="<?php echo esc_attr($instance->get_field_id($creativity_widgets_name)); ?>"><?php echo esc_html($creativity_widgets_title); ?>:</label>
-                <input class="widefat" id="<?php echo esc_attr($instance->get_field_id($creativity_widgets_name)); ?>" name="<?php echo esc_attr($instance->get_field_name($creativity_widgets_name)); ?>" type="text" value="<?php echo esc_html($athm_field_value); ?>" />
+                <label for="<?php echo esc_attr($instance->get_field_id($themename_widgets_name)); ?>"><?php echo esc_html($themename_widgets_title); ?>:</label>
+                <input class="widefat" id="<?php echo esc_attr($instance->get_field_id($themename_widgets_name)); ?>" name="<?php echo esc_attr($instance->get_field_name($themename_widgets_name)); ?>" type="text" value="<?php echo esc_html($athm_field_value); ?>" />
 
-                <?php if (isset($creativity_widgets_description)) { ?>
+                <?php if (isset($themename_widgets_description)) { ?>
                     <br />
-                    <small><?php echo esc_textarea($creativity_widgets_description); ?></small>
+                    <small><?php echo esc_textarea($themename_widgets_description); ?></small>
                 <?php } ?>
             </p>
             <?php
@@ -56,12 +56,12 @@ function creativity_widgets_show_widget_field($instance = '', $widget_field = ''
         case 'url' :
             ?>
             <p>
-                <label for="<?php echo esc_attr($instance->get_field_id($creativity_widgets_name)); ?>"><?php echo esc_html($creativity_widgets_title); ?>:</label>
-                <input class="widefat" id="<?php echo esc_attr($instance->get_field_id($creativity_widgets_name)); ?>" name="<?php echo esc_attr($instance->get_field_name($creativity_widgets_name)); ?>" type="text" value="<?php echo esc_url($athm_field_value); ?>" />
+                <label for="<?php echo esc_attr($instance->get_field_id($themename_widgets_name)); ?>"><?php echo esc_html($themename_widgets_title); ?>:</label>
+                <input class="widefat" id="<?php echo esc_attr($instance->get_field_id($themename_widgets_name)); ?>" name="<?php echo esc_attr($instance->get_field_name($themename_widgets_name)); ?>" type="text" value="<?php echo esc_url($athm_field_value); ?>" />
 
-                <?php if (isset($creativity_widgets_description)) { ?>
+                <?php if (isset($themename_widgets_description)) { ?>
                     <br />
-                    <small><?php echo esc_textarea($creativity_widgets_description); ?></small>
+                    <small><?php echo esc_textarea($themename_widgets_description); ?></small>
                 <?php } ?>
             </p>
             <?php
@@ -71,11 +71,11 @@ function creativity_widgets_show_widget_field($instance = '', $widget_field = ''
         case 'textarea' :
             ?>
             <p>
-                <label for="<?php echo esc_attr($instance->get_field_id($creativity_widgets_name)); ?>"><?php echo esc_html($creativity_widgets_title); ?>:</label>
-                <textarea class="widefat" id="<?php echo esc_attr($instance->get_field_id($creativity_widgets_name)); ?>" name="<?php echo esc_attr($instance->get_field_name($creativity_widgets_name)); ?>"><?php echo esc_textarea($athm_field_value); ?></textarea>
+                <label for="<?php echo esc_attr($instance->get_field_id($themename_widgets_name)); ?>"><?php echo esc_html($themename_widgets_title); ?>:</label>
+                <textarea class="widefat" id="<?php echo esc_attr($instance->get_field_id($themename_widgets_name)); ?>" name="<?php echo esc_attr($instance->get_field_name($themename_widgets_name)); ?>"><?php echo esc_textarea($athm_field_value); ?></textarea>
             </p>
-            <?php if (isset($creativity_widgets_description)) { ?>
-            <small><?php echo esc_textarea($creativity_widgets_description); ?></small>
+            <?php if (isset($themename_widgets_description)) { ?>
+            <small><?php echo esc_textarea($themename_widgets_description); ?></small>
         <?php } ?>
             <?php
             break;
@@ -85,12 +85,12 @@ function creativity_widgets_show_widget_field($instance = '', $widget_field = ''
             ?>
             <p>
 
-                <input id="<?php echo esc_attr($instance->get_field_id($creativity_widgets_name)); ?>" name="<?php echo esc_attr($instance->get_field_name($creativity_widgets_name)); ?>" type="checkbox" value="1" <?php checked('1', $athm_field_value); ?>/>
-                <label for="<?php echo esc_attr($instance->get_field_id($creativity_widgets_name)); ?>"><?php  echo esc_html($creativity_widgets_title); ?></label>
+                <input id="<?php echo esc_attr($instance->get_field_id($themename_widgets_name)); ?>" name="<?php echo esc_attr($instance->get_field_name($themename_widgets_name)); ?>" type="checkbox" value="1" <?php checked('1', $athm_field_value); ?>/>
+                <label for="<?php echo esc_attr($instance->get_field_id($themename_widgets_name)); ?>"><?php  echo esc_html($themename_widgets_title); ?></label>
 
-                <?php if (isset($creativity_widgets_description)) { ?>
+                <?php if (isset($themename_widgets_description)) { ?>
                     <br />
-                    <small><?php echo esc_textarea($creativity_widgets_description); ?></small>
+                    <small><?php echo esc_textarea($themename_widgets_description); ?></small>
                 <?php } ?>
             </p>
             <?php
@@ -101,17 +101,17 @@ function creativity_widgets_show_widget_field($instance = '', $widget_field = ''
             ?>
             <p>
                 <?php
-                echo esc_html($creativity_widgets_title);
+                echo esc_html($themename_widgets_title);
                 echo '<br />';
-                foreach ($creativity_widgets_field_options as $athm_option_name => $athm_option_title) {
+                foreach ($themename_widgets_field_options as $athm_option_name => $athm_option_title) {
                     ?>
-                    <input id="<?php echo esc_attr($instance->get_field_id($athm_option_name)); ?>" name="<?php echo esc_attr($instance->get_field_name($creativity_widgets_name)); ?>" type="radio" value="<?php echo esc_attr($athm_option_name); ?>" <?php checked($athm_option_name, $athm_field_value); ?> />
+                    <input id="<?php echo esc_attr($instance->get_field_id($athm_option_name)); ?>" name="<?php echo esc_attr($instance->get_field_name($themename_widgets_name)); ?>" type="radio" value="<?php echo esc_attr($athm_option_name); ?>" <?php checked($athm_option_name, $athm_field_value); ?> />
                     <label for="<?php echo esc_attr($instance->get_field_id($athm_option_name)); ?>"><?php echo esc_html($athm_option_title); ?></label>
                     <br />
                 <?php } ?>
 
-                <?php if (isset($creativity_widgets_description)) { ?>
-                    <small><?php echo esc_textarea($creativity_widgets_description); ?></small>
+                <?php if (isset($themename_widgets_description)) { ?>
+                    <small><?php echo esc_textarea($themename_widgets_description); ?></small>
                 <?php } ?>
             </p>
             <?php
@@ -121,16 +121,16 @@ function creativity_widgets_show_widget_field($instance = '', $widget_field = ''
         case 'select' :
             ?>
             <p>
-                <label for="<?php echo esc_attr($instance->get_field_id($creativity_widgets_name)); ?>"><?php echo esc_html($creativity_widgets_title); ?>:</label>
-                <select name="<?php echo esc_attr($instance->get_field_name($creativity_widgets_name)); ?>" id="<?php echo esc_attr($instance->get_field_id($creativity_widgets_name)); ?>" class="widefat">
-                    <?php foreach ($creativity_widgets_field_options as $athm_option_name => $athm_option_title) { ?>
+                <label for="<?php echo esc_attr($instance->get_field_id($themename_widgets_name)); ?>"><?php echo esc_html($themename_widgets_title); ?>:</label>
+                <select name="<?php echo esc_attr($instance->get_field_name($themename_widgets_name)); ?>" id="<?php echo esc_attr($instance->get_field_id($themename_widgets_name)); ?>" class="widefat">
+                    <?php foreach ($themename_widgets_field_options as $athm_option_name => $athm_option_title) { ?>
                         <option value="<?php echo esc_attr($athm_option_name); ?>" id="<?php echo esc_attr($instance->get_field_id($athm_option_name)); ?>" <?php selected($athm_option_name, $athm_field_value); ?>><?php echo esc_html($athm_option_title); ?></option>
                     <?php } ?>
                 </select>
 
-                <?php if (isset($creativity_widgets_description)) { ?>
+                <?php if (isset($themename_widgets_description)) { ?>
                     <br />
-                    <small><?php echo esc_textarea($creativity_widgets_description); ?></small>
+                    <small><?php echo esc_textarea($themename_widgets_description); ?></small>
                 <?php } ?>
             </p>
             <?php
@@ -139,12 +139,12 @@ function creativity_widgets_show_widget_field($instance = '', $widget_field = ''
         case 'number' :
             ?>
             <p>
-                <label for="<?php echo esc_attr($instance->get_field_id($creativity_widgets_name)); ?>"><?php echo esc_html($creativity_widgets_title); ?>:</label><br />
-                <input name="<?php echo esc_attr($instance->get_field_name($creativity_widgets_name)); ?>" type="number" step="1" min="1" id="<?php echo esc_attr($instance->get_field_id($creativity_widgets_name)); ?>" value="<?php echo absint($athm_field_value); ?>" class="small-text" />
+                <label for="<?php echo esc_attr($instance->get_field_id($themename_widgets_name)); ?>"><?php echo esc_html($themename_widgets_title); ?>:</label><br />
+                <input name="<?php echo esc_attr($instance->get_field_name($themename_widgets_name)); ?>" type="number" step="1" min="1" id="<?php echo esc_attr($instance->get_field_id($themename_widgets_name)); ?>" value="<?php echo absint($athm_field_value); ?>" class="small-text" />
 
-                <?php if (isset($creativity_widgets_description)) { ?>
+                <?php if (isset($themename_widgets_description)) { ?>
                     <br />
-                    <small><?php echo esc_textarea($creativity_widgets_description); ?></small>
+                    <small><?php echo esc_textarea($themename_widgets_description); ?></small>
                 <?php } ?>
             </p>
             <?php
@@ -154,16 +154,16 @@ function creativity_widgets_show_widget_field($instance = '', $widget_field = ''
         case 'selectpost' :
             ?>
             <p>
-                <label for="<?php echo esc_attr($instance->get_field_id($creativity_widgets_name)); ?>"><?php echo esc_html($creativity_widgets_title); ?>:</label>
-                <select name="<?php echo esc_attr($instance->get_field_name($creativity_widgets_name)); ?>" id="<?php echo esc_attr($instance->get_field_id($creativity_widgets_name)); ?>" class="widefat">
-                    <?php foreach ($creativity_postlist as $creativity_single_post) { ?>
-                        <option value="<?php echo esc_attr($creativity_single_post['value']); ?>" id="<?php echo esc_attr($instance->get_field_id($creativity_single_post['label'])); ?>" <?php selected($creativity_single_post['value'], $athm_field_value); ?>><?php echo esc_html($creativity_single_post['label']); ?></option>
+                <label for="<?php echo esc_attr($instance->get_field_id($themename_widgets_name)); ?>"><?php echo esc_html($themename_widgets_title); ?>:</label>
+                <select name="<?php echo esc_attr($instance->get_field_name($themename_widgets_name)); ?>" id="<?php echo esc_attr($instance->get_field_id($themename_widgets_name)); ?>" class="widefat">
+                    <?php foreach ($themename_postlist as $themename_single_post) { ?>
+                        <option value="<?php echo esc_attr($themename_single_post['value']); ?>" id="<?php echo esc_attr($instance->get_field_id($themename_single_post['label'])); ?>" <?php selected($themename_single_post['value'], $athm_field_value); ?>><?php echo esc_html($themename_single_post['label']); ?></option>
                     <?php } ?>
                 </select>
 
-                <?php if (isset($creativity_widgets_description)) { ?>
+                <?php if (isset($themename_widgets_description)) { ?>
                     <br />
-                    <small><?php echo esc_textarea($creativity_widgets_description); ?></small>
+                    <small><?php echo esc_textarea($themename_widgets_description); ?></small>
                 <?php } ?>
             </p>
             <?php
@@ -171,11 +171,11 @@ function creativity_widgets_show_widget_field($instance = '', $widget_field = ''
 
         case 'upload' :
 
-            $id = $instance->get_field_id($creativity_widgets_name);
+            $id = $instance->get_field_id($themename_widgets_name);
             $class = '';
             $int = '';
             $value = $athm_field_value;
-            $name = $instance->get_field_name($creativity_widgets_name);
+            $name = $instance->get_field_name($themename_widgets_name);
 
 
             if ($value) {
@@ -183,22 +183,22 @@ function creativity_widgets_show_widget_field($instance = '', $widget_field = ''
             }
             ?>
             <div class="sub-option widget-upload">
-            <label for="<?php echo esc_attr($instance->get_field_id($creativity_widgets_name)); ?>"><?php echo esc_html($creativity_widgets_title); ?></label><br/>
-            <input id="<?php echo esc_attr($id); ?>" class="upload <?php echo esc_attr($class); ?>" type="text" name="<?php echo esc_attr($name); ?>" value="<?php echo esc_url($value); ?>" placeholder="<?php echo esc_attr_e('No file chosen', 'creativity'); ?>" />
+            <label for="<?php echo esc_attr($instance->get_field_id($themename_widgets_name)); ?>"><?php echo esc_html($themename_widgets_title); ?></label><br/>
+            <input id="<?php echo esc_attr($id); ?>" class="upload <?php echo esc_attr($class); ?>" type="text" name="<?php echo esc_attr($name); ?>" value="<?php echo esc_url($value); ?>" placeholder="<?php echo esc_attr_e('No file chosen', 'themename'); ?>" />
             <?php
             if (function_exists('wp_enqueue_media')) {
                 if (( $value == '')) {
                     ?>
-                    <input id="upload-<?php echo esc_attr($id); ?>" class="upload-button button" type="button" value="<?php esc_attr_e('Upload', 'creativity'); ?>" />
+                    <input id="upload-<?php echo esc_attr($id); ?>" class="upload-button button" type="button" value="<?php esc_attr_e('Upload', 'themename'); ?>" />
                     <?php
                 } else {
                     ?>
-                    <input id="remove-<?php echo esc_attr($id); ?>" class="remove-file button" type="button" value="<?php esc_attr_e('Remove', 'creativity'); ?>" />
+                    <input id="remove-<?php echo esc_attr($id); ?>" class="remove-file button" type="button" value="<?php esc_attr_e('Remove', 'themename'); ?>" />
                     <?php
                 }
             } else {
                 ?>
-                <p><i><?php esc_html_e('Upgrade your version of WordPress for full media support.', 'creativity'); ?></i></p>
+                <p><i><?php esc_html_e('Upgrade your version of WordPress for full media support.', 'themename'); ?></i></p>
                 <?php
             }
             ?>
@@ -219,7 +219,7 @@ function creativity_widgets_show_widget_field($instance = '', $widget_field = ''
                     }
 
                     // Standard generic output if it's not an image.
-                    $title = esc_html__('View File', 'creativity');
+                    $title = esc_html__('View File', 'themename');
                     ?>
                     <div class="no-image"><span class="file_link"><a href="<?php echo esc_url($value); ?>" target="_blank" rel="external"><?php esc_html($title); ?></a></span></div>
                     <?php
@@ -235,13 +235,13 @@ function creativity_widgets_show_widget_field($instance = '', $widget_field = ''
             add_thickbox();
             ?>
             <p>
-                <label for="<?php echo esc_attr($instance->get_field_id($creativity_widgets_name)); ?>"><?php echo esc_html($creativity_widgets_title); ?>:</label><br />
+                <label for="<?php echo esc_attr($instance->get_field_id($themename_widgets_name)); ?>"><?php echo esc_html($themename_widgets_title); ?>:</label><br />
                 <span class="icon-receiver"><i class="<?php echo esc_attr($athm_field_value); ?>"></i></span>
-                <input class="hidden-icon-input" name="<?php echo esc_attr($instance->get_field_name($creativity_widgets_name)); ?>" type="hidden" id="<?php echo esc_attr($instance->get_field_id($creativity_widgets_name)); ?>" value="<?php echo esc_attr($athm_field_value); ?>" />
+                <input class="hidden-icon-input" name="<?php echo esc_attr($instance->get_field_name($themename_widgets_name)); ?>" type="hidden" id="<?php echo esc_attr($instance->get_field_id($themename_widgets_name)); ?>" value="<?php echo esc_attr($athm_field_value); ?>" />
 
-                <?php if (isset($creativity_widgets_description)) { ?>
+                <?php if (isset($themename_widgets_description)) { ?>
                     <br />
-                    <small><?php echo esc_textarea($creativity_widgets_description); ?></small>
+                    <small><?php echo esc_textarea($themename_widgets_description); ?></small>
                 <?php } ?>
             </p>
 
@@ -735,31 +735,31 @@ function creativity_widgets_show_widget_field($instance = '', $widget_field = ''
 }
 
 
-function creativity_widgets_updated_field_value($widget_field, $new_field_value) {
+function themename_widgets_updated_field_value($widget_field, $new_field_value) {
 
     extract($widget_field);
 
     // Allow only integers in number fields
-    if ($creativity_widgets_field_type == 'number') {
+    if ($themename_widgets_field_type == 'number') {
         return absint($new_field_value);
 
         // Allow some tags in textareas
-    } elseif ($creativity_widgets_field_type == 'textarea') {
+    } elseif ($themename_widgets_field_type == 'textarea') {
         // Check if field array specifed allowed tags
-        if (!isset($creativity_widgets_allowed_tags)) {
+        if (!isset($themename_widgets_allowed_tags)) {
             // If not, fallback to default tags
-            $creativity_widgets_allowed_tags = '<p><strong><em><a><li>';
+            $themename_widgets_allowed_tags = '<p><strong><em><a><li>';
         }
-        return strip_tags($new_field_value, $creativity_widgets_allowed_tags);
+        return strip_tags($new_field_value, $themename_widgets_allowed_tags);
 
         // No allowed tags for all other fields
-    } elseif($creativity_widgets_field_type == 'textfield'){
-        if (!isset($creativity_widgets_allowed_tags)) {
+    } elseif($themename_widgets_field_type == 'textfield'){
+        if (!isset($themename_widgets_allowed_tags)) {
             // If not, fallback to default tags
-            $creativity_widgets_allowed_tags = '<span>';
+            $themename_widgets_allowed_tags = '<span>';
         }
-        return strip_tags($new_field_value, $creativity_widgets_allowed_tags);
-    } elseif ($creativity_widgets_field_type == 'url') {
+        return strip_tags($new_field_value, $themename_widgets_allowed_tags);
+    } elseif ($themename_widgets_field_type == 'url') {
         return esc_url_raw($new_field_value);
     } else {
         return strip_tags($new_field_value);

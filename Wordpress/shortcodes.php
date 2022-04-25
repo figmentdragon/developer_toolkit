@@ -1,7 +1,7 @@
 <?php
 
 /**
- * creativity Custom Shortcodes
+ * themename Custom Shortcodes
  * @link http://codex.wordpress.org/Shortcode_API
  */
 
@@ -12,17 +12,17 @@
  * [button link="http://bigemployee.com/" class="big fa-angle-right"]Big Employee[/button]
  * @return: <a href="http://bigemployee.com/" class="button big fa-angle-right">Big Employee</a>
  */
-function creativity_add_shortcode_button($atts, $content = null) {
+function themename_add_shortcode_button($atts, $content = null) {
     extract(
             shortcode_atts(
                     array(
         'link' => '#',
         'class' => 'button',
                     ), $atts));
-    return creativity_render_button($content, $link, false, $class);
+    return themename_render_button($content, $link, false, $class);
 }
 
-function creativity_render_button($content = 'new link', $link = '#', $echo = true, $class = 'button') {
+function themename_render_button($content = 'new link', $link = '#', $echo = true, $class = 'button') {
     $class = strip_tags(trim($class));
     if (strpos($class, 'button') === FALSE) {
         $class = 'button ' . $class;
@@ -32,7 +32,7 @@ function creativity_render_button($content = 'new link', $link = '#', $echo = tr
     echo '<a href="' . $link . '" class="' . $class . '">' . do_shortcode($content) . '</a>';
 }
 
-add_shortcode('button', 'creativity_add_shortcode_button');
+add_shortcode('button', 'themename_add_shortcode_button');
 
 /*
  * Hide Email from Spam Bots using a short code place this in your functions file
@@ -42,11 +42,11 @@ add_shortcode('button', 'creativity_add_shortcode_button');
  * @link http://codex.wordpress.org/Function_Reference/antispambot
  */
 
-function creativity_hide_email($atts, $content = null) {
+function themename_hide_email($atts, $content = null) {
     if (!is_email($content))
         return;
 
     return '<a href="mailto:' . antispambot($content) . '">' . antispambot($content) . '</a>';
 }
 
-add_shortcode('email', 'creativity_hide_email');
+add_shortcode('email', 'themename_hide_email');

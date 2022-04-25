@@ -2,18 +2,18 @@
 /**
  * Check and setup theme's default settings
  *
- * @package Understrap
+ * @package themename
  */
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-if ( ! function_exists( 'setup_theme_default_settings' ) ) {
+if ( ! function_exists( 'themename_setup_theme_default_settings' ) ) {
 	/**
 	 * Store default theme settings in database.
 	 */
-	function setup_theme_default_settings() {
-		$defaults = get_theme_default_settings();
+	function themename_setup_theme_default_settings() {
+		$defaults = themename_get_theme_default_settings();
 		$settings = get_theme_mods();
 		foreach ( $defaults as $setting_id => $default_value ) {
 			// Check if setting is set, if not set it to its default value.
@@ -24,17 +24,17 @@ if ( ! function_exists( 'setup_theme_default_settings' ) ) {
 	}
 }
 
-if ( ! function_exists( 'get_theme_default_settings' ) ) {
+if ( ! function_exists( 'themename_get_theme_default_settings' ) ) {
 	/**
 	 * Retrieve default theme settings.
 	 *
 	 * @return array
 	 */
-	function get_theme_default_settings() {
+	function themename_get_theme_default_settings() {
 		$defaults = array(
-			'posts_index_style' => 'default',   // Latest blog posts style.
-			'sidebar_position'  => 'right',     // Sidebar position.
-			'container_type'    => 'container', // Container width.
+			'themename_posts_index_style' => 'default',   // Latest blog posts style.
+			'themename_sidebar_position'  => 'right',     // Sidebar position.
+			'themename_container_type'    => 'container', // Container width.
 		);
 
 		/**
@@ -42,6 +42,6 @@ if ( ! function_exists( 'get_theme_default_settings' ) ) {
 		 *
 		 * @param array $defaults Array of default theme settings.
 		 */
-		return apply_filters( 'theme_default_settings', $defaults );
+		return apply_filters( 'themename_theme_default_settings', $defaults );
 	}
 }

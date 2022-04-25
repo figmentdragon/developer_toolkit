@@ -3,14 +3,14 @@
  * Customize API: WP_Customize_Color_Control class
  *
  * @package WordPress
- * @subpackage creativity
- * @since creativity 1.0
+ * @subpackage themename
+ * @since themename 1.0
  */
 
 /**
  * Customize Color Control class.
  *
- * @since creativity 1.0
+ * @since themename 1.0
  *
  * @see WP_Customize_Control
  */
@@ -18,16 +18,16 @@ class Customize_Color_Control extends WP_Customize_Color_Control {
 	/**
 	 * The control type.
 	 *
-	 * @since creativity 1.0
+	 * @since themename 1.0
 	 *
 	 * @var string
 	 */
-	public $type = 'creativity-color';
+	public $type = 'themename-color';
 
 	/**
 	 * Colorpicker palette
 	 *
-	 * @since creativity 1.0
+	 * @since themename 1.0
 	 *
 	 * @var array
 	 */
@@ -36,7 +36,7 @@ class Customize_Color_Control extends WP_Customize_Color_Control {
 	/**
 	 * Enqueue control related scripts/styles.
 	 *
-	 * @since creativity 1.0
+	 * @since themename 1.0
 	 *
 	 * @return void
 	 */
@@ -45,7 +45,7 @@ class Customize_Color_Control extends WP_Customize_Color_Control {
 
 		// Enqueue the script.
 		wp_enqueue_script(
-			'creativity-control-color',
+			'themename-control-color',
 			get_theme_file_uri( 'assets/js/palette-colorpicker.js' ),
 			array( 'customize-controls', 'jquery', 'customize-base', 'wp-color-picker' ),
 			wp_get_theme()->get( 'Version' ),
@@ -56,7 +56,7 @@ class Customize_Color_Control extends WP_Customize_Color_Control {
 	/**
 	 * Refresh the parameters passed to the JavaScript via JSON.
 	 *
-	 * @since creativity 1.0
+	 * @since themename 1.0
 	 *
 	 * @uses WP_Customize_Control::to_json()
 	 *

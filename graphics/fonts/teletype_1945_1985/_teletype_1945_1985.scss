@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "TELETYPE 1945-1985";
+  src: local url("<?php get_template_directory() ./src/fonts/teletype_1945_1985/TELETYPE1945-1985.woff")
+    format("woff");
+    font-weight: normal;
+    font-style: normal;
+  src: url("//db.onlinewebfonts.com/t/83dc401685732778308fc7cdfe8af34e.eot");
+  src: url("//db.onlinewebfonts.com/t/83dc401685732778308fc7cdfe8af34e.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/83dc401685732778308fc7cdfe8af34e.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/83dc401685732778308fc7cdfe8af34e.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/83dc401685732778308fc7cdfe8af34e.svg#TELETYPE 1945-1985")
+      format("svg");
+}

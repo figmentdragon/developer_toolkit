@@ -1,0 +1,16 @@
+//------------------------------------------------------------------------------
+// 2.1.0 Links
+//------------------------------------------------------------------------------
+a,
+a:visited {
+	color: #748a81;
+	text-decoration: none;
+	transition: all .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+}
+a:hover,
+a:focus,
+a:active {
+	color: #33605a;
+}

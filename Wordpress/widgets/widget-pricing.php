@@ -2,24 +2,24 @@
 /**
  * Pricing Widget
  *
- * @package creativity
+ * @package themename
  */
 
-add_action('widgets_init', 'creativity_register_pricing_widget');
+add_action('widgets_init', 'themename_register_pricing_widget');
 
-function creativity_register_pricing_widget() {
-    register_widget('creativity_pricing');
+function themename_register_pricing_widget() {
+    register_widget('themename_pricing');
 }
 
-class creativity_Pricing extends WP_Widget {
+class themename_Pricing extends WP_Widget {
 
     /**
      * Register widget with WordPress.
      */
     public function __construct() {
         parent::__construct(
-            'creativity_pricing', 'AP : Pricing Table', array(
-                'description' => __('A widget that shows Pricing Table', 'creativity')
+            'themename_pricing', 'AP : Pricing Table', array(
+                'description' => __('A widget that shows Pricing Table', 'themename')
             )
         );
     }
@@ -33,118 +33,118 @@ class creativity_Pricing extends WP_Widget {
             // This widget has no title
             // Other fields
             'pricing_plan' => array(
-                'creativity_widgets_name' => 'pricing_plan',
-                'creativity_widgets_title' => __('Plan Name', 'creativity'),
-                'creativity_widgets_field_type' => 'text',
+                'themename_widgets_name' => 'pricing_plan',
+                'themename_widgets_title' => __('Plan Name', 'themename'),
+                'themename_widgets_field_type' => 'text',
             ),
             'pricing_plan_sub_text' => array(
-                'creativity_widgets_name' => 'pricing_plan_sub_text',
-                'creativity_widgets_title' => __('Sub Text', 'creativity'),
-                'creativity_widgets_field_type' => 'text',
+                'themename_widgets_name' => 'pricing_plan_sub_text',
+                'themename_widgets_title' => __('Sub Text', 'themename'),
+                'themename_widgets_field_type' => 'text',
             ),
             'pricing_price_currency' => array(
-                'creativity_widgets_name' => 'pricing_price_currency',
-                'creativity_widgets_title' => __('Currency', 'creativity'),
-                'creativity_widgets_field_type' => 'text',
+                'themename_widgets_name' => 'pricing_price_currency',
+                'themename_widgets_title' => __('Currency', 'themename'),
+                'themename_widgets_field_type' => 'text',
             ),
 
             'pricing_price' => array(
-                'creativity_widgets_name' => 'pricing_price',
-                'creativity_widgets_title' => __('Price', 'creativity'),
-                'creativity_widgets_field_type' => 'text',
+                'themename_widgets_name' => 'pricing_price',
+                'themename_widgets_title' => __('Price', 'themename'),
+                'themename_widgets_field_type' => 'text',
             ),
             'pricing_price_decimal' => array(
-                'creativity_widgets_name' => 'pricing_price_decimal',
-                'creativity_widgets_title' => __('Decimal Value', 'creativity'),
-                'creativity_widgets_field_type' => 'text',
+                'themename_widgets_name' => 'pricing_price_decimal',
+                'themename_widgets_title' => __('Decimal Value', 'themename'),
+                'themename_widgets_field_type' => 'text',
             ),
             'pricing_price_per' => array(
-                'creativity_widgets_name' => 'pricing_price_per',
-                'creativity_widgets_title' => __('Price Per', 'creativity'),
-                'creativity_widgets_field_type' => 'text',
+                'themename_widgets_name' => 'pricing_price_per',
+                'themename_widgets_title' => __('Price Per', 'themename'),
+                'themename_widgets_field_type' => 'text',
             ),
             'pricing_feature1' => array(
-                'creativity_widgets_name' => 'pricing_feature1',
-                'creativity_widgets_title' => __('Feature 1', 'creativity'),
-                'creativity_widgets_field_type' => 'text',
+                'themename_widgets_name' => 'pricing_feature1',
+                'themename_widgets_title' => __('Feature 1', 'themename'),
+                'themename_widgets_field_type' => 'text',
             ),
             'pricing_feature1_font_a' => array(
-                'creativity_widgets_name' => 'pricing_feature1_font_a',
-                'creativity_widgets_title' => __('Feature 1 Font Awesome', 'creativity'),
-                'creativity_widgets_field_type' => 'text',
+                'themename_widgets_name' => 'pricing_feature1_font_a',
+                'themename_widgets_title' => __('Feature 1 Font Awesome', 'themename'),
+                'themename_widgets_field_type' => 'text',
             ),
             'pricing_feature2' => array(
-                'creativity_widgets_name' => 'pricing_feature2',
-                'creativity_widgets_title' => __('Feature 2', 'creativity'),
-                'creativity_widgets_field_type' => 'text',
+                'themename_widgets_name' => 'pricing_feature2',
+                'themename_widgets_title' => __('Feature 2', 'themename'),
+                'themename_widgets_field_type' => 'text',
             ),
             'pricing_feature2_font_a' => array(
-                'creativity_widgets_name' => 'pricing_feature2_font_a',
-                'creativity_widgets_title' => __('Feature 2 Font Awesome', 'creativity'),
-                'creativity_widgets_field_type' => 'text',
+                'themename_widgets_name' => 'pricing_feature2_font_a',
+                'themename_widgets_title' => __('Feature 2 Font Awesome', 'themename'),
+                'themename_widgets_field_type' => 'text',
             ),
             'pricing_feature3' => array(
-                'creativity_widgets_name' => 'pricing_feature3',
-                'creativity_widgets_title' => __('Feature 3', 'creativity'),
-                'creativity_widgets_field_type' => 'text',
+                'themename_widgets_name' => 'pricing_feature3',
+                'themename_widgets_title' => __('Feature 3', 'themename'),
+                'themename_widgets_field_type' => 'text',
             ),
             'pricing_feature3_font_a' => array(
-                'creativity_widgets_name' => 'pricing_feature3_font_a',
-                'creativity_widgets_title' => __('Feature 3 Font Awesome', 'creativity'),
-                'creativity_widgets_field_type' => 'text',
+                'themename_widgets_name' => 'pricing_feature3_font_a',
+                'themename_widgets_title' => __('Feature 3 Font Awesome', 'themename'),
+                'themename_widgets_field_type' => 'text',
             ),
             'pricing_feature4' => array(
-                'creativity_widgets_name' => 'pricing_feature4',
-                'creativity_widgets_title' => __('Feature 4', 'creativity'),
-                'creativity_widgets_field_type' => 'text',
+                'themename_widgets_name' => 'pricing_feature4',
+                'themename_widgets_title' => __('Feature 4', 'themename'),
+                'themename_widgets_field_type' => 'text',
             ),
             'pricing_feature4_font_a' => array(
-                'creativity_widgets_name' => 'pricing_feature4_font_a',
-                'creativity_widgets_title' => __('Feature 4 Font Awesome', 'creativity'),
-                'creativity_widgets_field_type' => 'text',
+                'themename_widgets_name' => 'pricing_feature4_font_a',
+                'themename_widgets_title' => __('Feature 4 Font Awesome', 'themename'),
+                'themename_widgets_field_type' => 'text',
             ),
             'pricing_feature5' => array(
-                'creativity_widgets_name' => 'pricing_feature5',
-                'creativity_widgets_title' => __('Feature 5', 'creativity'),
-                'creativity_widgets_field_type' => 'text',
+                'themename_widgets_name' => 'pricing_feature5',
+                'themename_widgets_title' => __('Feature 5', 'themename'),
+                'themename_widgets_field_type' => 'text',
             ),
             'pricing_feature5_font_a' => array(
-                'creativity_widgets_name' => 'pricing_feature5_font_a',
-                'creativity_widgets_title' => __('Feature 5 Font Awesome', 'creativity'),
-                'creativity_widgets_field_type' => 'text',
+                'themename_widgets_name' => 'pricing_feature5_font_a',
+                'themename_widgets_title' => __('Feature 5 Font Awesome', 'themename'),
+                'themename_widgets_field_type' => 'text',
             ),
             'pricing_feature6' => array(
-                'creativity_widgets_name' => 'pricing_feature6',
-                'creativity_widgets_title' => __('Feature 6', 'creativity'),
-                'creativity_widgets_field_type' => 'text',
+                'themename_widgets_name' => 'pricing_feature6',
+                'themename_widgets_title' => __('Feature 6', 'themename'),
+                'themename_widgets_field_type' => 'text',
             ),
             'pricing_feature6_font_a' => array(
-                'creativity_widgets_name' => 'pricing_feature6_font_a',
-                'creativity_widgets_title' => __('Feature 6 Font Awesome', 'creativity'),
-                'creativity_widgets_field_type' => 'text',
+                'themename_widgets_name' => 'pricing_feature6_font_a',
+                'themename_widgets_title' => __('Feature 6 Font Awesome', 'themename'),
+                'themename_widgets_field_type' => 'text',
             ),
 
             'pricing_desc' => array(
-                'creativity_widgets_name' => 'pricing_desc',
-                'creativity_widgets_title' => __( 'Description', 'creativity' ),
-                'creativity_widgets_field_type' => 'textarea',
-                'creativity_widgets_row' => '6'
+                'themename_widgets_name' => 'pricing_desc',
+                'themename_widgets_title' => __( 'Description', 'themename' ),
+                'themename_widgets_field_type' => 'textarea',
+                'themename_widgets_row' => '6'
             ),
             'pricing_button_text' => array(
-                'creativity_widgets_name' => 'pricing_button_text',
-                'creativity_widgets_title' => __('Button Text', 'creativity'),
-                'creativity_widgets_desc' => __('Leave Empty not to show', 'creativity'),
-                'creativity_widgets_field_type' => 'text',
+                'themename_widgets_name' => 'pricing_button_text',
+                'themename_widgets_title' => __('Button Text', 'themename'),
+                'themename_widgets_desc' => __('Leave Empty not to show', 'themename'),
+                'themename_widgets_field_type' => 'text',
             ),
             'pricing_button_link' => array(
-                'creativity_widgets_name' => 'pricing_button_link',
-                'creativity_widgets_title' => __('Button Link', 'creativity'),
-                'creativity_widgets_field_type' => 'url',
+                'themename_widgets_name' => 'pricing_button_link',
+                'themename_widgets_title' => __('Button Link', 'themename'),
+                'themename_widgets_field_type' => 'url',
             ),
             'pricing_featured' => array(
-                'creativity_widgets_name' => 'pricing_featured',
-                'creativity_widgets_title' => __('Featured', 'creativity'),
-                'creativity_widgets_field_type' => 'checkbox',
+                'themename_widgets_name' => 'pricing_featured',
+                'themename_widgets_title' => __('Featured', 'themename'),
+                'themename_widgets_field_type' => 'checkbox',
             ),
         );
 
@@ -261,7 +261,7 @@ class creativity_Pricing extends WP_Widget {
      * @param	array	$new_instance	Values just sent to be saved.
      * @param	array	$old_instance	Previously saved values from database.
      *
-     * @uses	creativity_widgets_updated_field_value()		defined in widget-fields.php
+     * @uses	themename_widgets_updated_field_value()		defined in widget-fields.php
      *
      * @return	array Updated safe values to be saved.
      */
@@ -276,7 +276,7 @@ class creativity_Pricing extends WP_Widget {
             extract($widget_field);
 
             // Use helper function to get updated field values
-            $instance[$creativity_widgets_name] = creativity_widgets_updated_field_value($widget_field, $new_instance[$creativity_widgets_name]);
+            $instance[$themename_widgets_name] = themename_widgets_updated_field_value($widget_field, $new_instance[$themename_widgets_name]);
         }
 
         return $instance;
@@ -289,7 +289,7 @@ class creativity_Pricing extends WP_Widget {
      *
      * @param	array $instance Previously saved values from database.
      *
-     * @uses	creativity_widgets_show_widget_field()		defined in widget-fields.php
+     * @uses	themename_widgets_show_widget_field()		defined in widget-fields.php
      */
     public function form($instance) {
         $widget_fields = $this->widget_fields();
@@ -299,8 +299,8 @@ class creativity_Pricing extends WP_Widget {
 
             // Make array elements available as variables
             extract($widget_field);
-            $creativity_widgets_field_value = !empty($instance[$creativity_widgets_name]) ? esc_attr($instance[$creativity_widgets_name]) : '';
-            creativity_widgets_show_widget_field($this, $widget_field, $creativity_widgets_field_value);
+            $themename_widgets_field_value = !empty($instance[$themename_widgets_name]) ? esc_attr($instance[$themename_widgets_name]) : '';
+            themename_widgets_show_widget_field($this, $widget_field, $themename_widgets_field_value);
         }
     }
 

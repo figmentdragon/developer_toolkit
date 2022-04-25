@@ -1,0 +1,111 @@
+//------------------------------------------------------------------------------
+// 2.10.0 Comments
+//------------------------------------------------------------------------------
+
+#comments { /* Container for the comments section */
+	clear: both;
+}
+.bypostauthor { /* Gives post author comments thier own style */
+
+}
+.comments-title,
+#reply-title {
+	font-size: 20px;
+	font-size: 2rem;
+}
+.commentlist li {
+	list-style: none;
+}
+.commentlist,
+.children {
+	list-style: none;
+	margin: 0;
+}
+.children { /* Nested comments */
+	margin: 0 0 0 6%;
+}
+.commentlist li.comment {  /* Individual top-level comments */
+	border-bottom: 1px solid rgba( 0, 0, 0, 0.2 );
+	padding-left: 2.5em;
+}
+.commentlist li.pingback {  /* Individual top-level pingbacks */
+	border-bottom: 1px solid rgba( 0, 0, 0, 0.2 );
+	padding-left: 2.5em;
+}
+.commentlist li:last-of-type { /* Do you want to style the last comment differently, such as remove borders? */
+	border: none;
+}
+.commentlist .children li { /* Contains individual nested comments */
+	border: none;
+}
+article.comment,
+li.pingback {
+	overflow: hidden;
+	padding: 2.5em 0 0.7em;
+  position: relative;
+}
+.children article.comment,
+.children li.pingback { /* Nexted comments and pingbacks */
+	padding-top: 1.0em;
+}
+.comment .avatar { /* Comment author's gravatar image */
+	float: left;
+	margin-right: 1.25em;
+}
+.comment-author { /* Comment author's name */
+	font-size: 14px;
+	font-size: 1.4rem;
+}
+.comment-meta { /* Comment date, time, etc */
+	font-size: 12px;
+	font-size: 1.2rem;
+}
+.comment-content { /* Actual comment text */
+	font-size: 13px;
+	font-size: 1.3rem;
+	margin: 1em 0 0 4.5em;
+}
+.comment .reply { /* The "Reply" link under each comment */
+	font-size: 12px;
+	font-size: 1.2rem;
+	text-align: right;
+}
+
+li.pingback {
+	font-weight: bold;
+}
+li.pingback a {
+	font-weight: normal;
+}
+
+
+/* Comment Form */
+.comment-notes,
+#commentform .form-allowed-tags,
+p.nocomments,
+p.logged-in-as,
+#commentform label {
+	font-size: 13px;
+	font-size: 1.3rem;
+}
+.required { /* The little asterisk next to a required comment field */
+	color: #880000;
+}
+#commentform label { /* The text next to each comment form field */
+	font-weight: bold;
+	padding: 1em 0;
+}
+#commentform input[type="text"] {
+	margin-left: 0.5em;
+}
+#commentform #comment { /* The comment form textarea */
+	margin-top: 0.6em;
+}
+#commentform .form-allowed-tags,
+#commentform .form-allowed-tags code {
+	font-size: 11px;
+	font-size: 1.1rem;
+}
+p.nocomments { /* Message displayed when there are no comments */
+	margin: 2.5em;
+}

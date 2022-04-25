@@ -23,13 +23,13 @@ defined( 'ABSPATH' ) || exit;
  */
 
 /* Check if Class Exists. */
-if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
+if ( ! class_exists( 'themename_WP_Bootstrap_Navwalker' ) ) {
 	/**
 	 * WP_Bootstrap_Navwalker class.
 	 *
 	 * @extends Walker_Nav_Menu
 	 */
-	class WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
+	class themename_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 
 		/**
 		 * Starts the list before the elements are added.
@@ -182,7 +182,7 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 			}
 
 			$atts['target'] = ! empty( $item->target ) ? $item->target : '';
-			if ( '_blank' === $item->target && empty( $item->xfn ) ) { // Thanks to LukaszJaro, see https://github.com/understrap/understrap/issues/973.
+			if ( '_blank' === $item->target && empty( $item->xfn ) ) { // Thanks to LukaszJaro, see https://github.com/themename/themename/issues/973.
 				$atts['rel'] = 'noopener noreferrer';
 			} else {
 				$atts['rel'] = $item->xfn;
@@ -374,7 +374,7 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 				if ( $menu_class ) {
 					$fallback_output .= ' class="' . esc_attr( $menu_class ) . '"'; }
 				$fallback_output .= '>';
-				$fallback_output .= '<li><a href="' . esc_url( admin_url( 'nav-menus.php' ) ) . '" title="' . esc_attr__( 'Add a menu', 'understrap' ) . '">' . esc_html__( 'Add a menu', 'understrap' ) . '</a></li>';
+				$fallback_output .= '<li><a href="' . esc_url( admin_url( 'nav-menus.php' ) ) . '" title="' . esc_attr__( 'Add a menu', 'themename' ) . '">' . esc_html__( 'Add a menu', 'themename' ) . '</a></li>';
 				$fallback_output .= '</ul>';
 				if ( $container ) {
 					$fallback_output .= '</' . esc_attr( $container ) . '>';
@@ -506,14 +506,14 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 		 *
 		 * @since 4.0.0
 		 *
-		 * @param string $body-color the string of text to be wrapped in a screen reader class.
+		 * @param string $text the string of text to be wrapped in a screen reader class.
 		 * @return string      the string wrapped in a span with the class.
 		 */
-		private function wrap_for_screen_reader( $body-color = '' ) {
-			if ( $body-color ) {
-				$body-color = '<span class="screen-reader-text">' . $body-color . '</span>';
+		private function wrap_for_screen_reader( $text = '' ) {
+			if ( $text ) {
+				$text = '<span class="screen-reader-text">' . $text . '</span>';
 			}
-			return $body-color;
+			return $text;
 		}
 
 		/**

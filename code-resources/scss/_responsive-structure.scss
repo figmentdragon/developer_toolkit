@@ -1,0 +1,27 @@
+//------------------------------------------------------------------------------
+// 2.13.0 Responsive Structures
+//------------------------------------------------------------------------------
+
+@media only screen and (max-width: 768px) {
+	#main {
+		overflow: visible;
+	}
+	#content,
+	#primary,
+	#secondary,
+	#tertiary { /* Remove floats on all structural elements for smaller screens */
+		background: none;
+		float: none;
+		margin: 0;
+		padding: 0;
+	}
+	#primary,
+	#secondary,
+	#tertiary { /* Make all structural elements full-width */
+		width: 100%;
+	}
+	.site-header hgroup,
+	#main {
+		padding: 0.8em;
+	}
+}

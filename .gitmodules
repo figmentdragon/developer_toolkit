@@ -4,6 +4,6 @@
 [submodule "vendors/git-project-template"]
 	path = vendors/git-project-template
 	url = https://github.com/Josee9988/project-template.git
-[submodule "code-resources/css"]
-	path = code-resources/css
+[submodule "code-resources/css/claycss"]
+	path = code-resources/css/claycss
 	url = https://github.com/codeAdrian/clay.css.git

@@ -14,7 +14,7 @@
  *
  * @param array $args The scaffolding defaults.
  */
-function display_scaffolding_section( $args = [] ) {
+function creativitydisplay_scaffolding_section( $args = [] ) {
 	// Set defaults.
 	$defaults = [
 		'title'       => '', // The scaffolding title.
@@ -29,7 +29,7 @@ function display_scaffolding_section( $args = [] ) {
 	$args = wp_parse_args( $args, $defaults );
 
 	// Grab our allowed tags.
-	$allowed_tags = scaffolding_allowed_html();
+	$allowed_tags = creativityscaffolding_allowed_html();
 
 	// Add a unique class to the wrapper.
 	$class = 'scaffolding-' . str_replace( ' ', '-', strtolower( $args['title'] ) ); ?>
@@ -104,7 +104,7 @@ function display_scaffolding_section( $args = [] ) {
  *
  * @return array The allowed tags and attributes.
  */
-function scaffolding_allowed_html() {
+function creativityscaffolding_allowed_html() {
 	// Add additional HTML tags to the wp_kses() allowed html filter.
 	return array_merge(
 		wp_kses_allowed_html( 'post' ),
@@ -164,7 +164,7 @@ function scaffolding_allowed_html() {
  *
  * @param array $args The array of colors or fonts.
  */
-function display_global_scaffolding_section( $args = [] ) {
+function creativitydisplay_global_scaffolding_section( $args = [] ) {
 	// Set defaults.
 	$defaults = [
 		'global_type' => '', // Can be 'colors' or 'fonts'.
@@ -243,7 +243,7 @@ function display_global_scaffolding_section( $args = [] ) {
  *
  * @author Carrie Forde
  */
-function hook_theme_scaffolding() {
+function creativityhook_theme_scaffolding() {
 	$template_dir = 'template-parts/scaffolding/scaffolding';
 
 	get_template_part( $template_dir, 'globals' );
@@ -255,4 +255,4 @@ function hook_theme_scaffolding() {
 	get_template_part( $template_dir, 'elements' );
 }
 
-add_action( 'scaffolding_content', 'hook_theme_scaffolding' );
+add_action( 'creativityscaffolding_content', 'creativityhook_theme_scaffolding' );

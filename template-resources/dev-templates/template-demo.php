@@ -29,7 +29,7 @@
 			<!-- article -->
 			<article>
 
-				<h2><?php esc_html_e( 'Sorry, nothing to display.', 'architectcore' ); ?></h2>
+				<h2><?php esc_html_e( 'Sorry, nothing to display.', 'creativity' ); ?></h2>
 
 			</article>
 			<!-- /article -->

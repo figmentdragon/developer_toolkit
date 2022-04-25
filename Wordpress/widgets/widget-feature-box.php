@@ -2,26 +2,26 @@
 /**
  * Featured Box widget
  *
- * @package creativity
+ * @package themename
  */
 /**
- * Adds creativity_Feature Textbox widget.
+ * Adds themename_Feature Textbox widget.
  */
-add_action('widgets_init', 'creativity_register_feature_box_widget');
+add_action('widgets_init', 'themename_register_feature_box_widget');
 
-function creativity_register_feature_box_widget() {
-    register_widget('creativity_feature_box');
+function themename_register_feature_box_widget() {
+    register_widget('themename_feature_box');
 }
 
-class creativity_Feature_Box extends WP_Widget {
+class themename_Feature_Box extends WP_Widget {
 
     /**
      * Register widget with WordPress.
      */
     public function __construct() {
         parent::__construct(
-            'creativity_feature_box', 'AP : Feature Textbox', array(
-                'description' => __('A widget to display feature textbox', 'creativity')
+            'themename_feature_box', 'AP : Feature Textbox', array(
+                'description' => __('A widget to display feature textbox', 'themename')
             )
         );
     }
@@ -33,29 +33,29 @@ class creativity_Feature_Box extends WP_Widget {
     private function widget_fields() {
         $fields = array(
             'featurebox_title' => array(
-                'creativity_widgets_name' => 'featurebox_title',
-                'creativity_widgets_title' => __('Title', 'creativity'),
-                'creativity_widgets_field_type' => 'textfield',
+                'themename_widgets_name' => 'featurebox_title',
+                'themename_widgets_title' => __('Title', 'themename'),
+                'themename_widgets_field_type' => 'textfield',
             ),
             'featurebox_image' => array(
-                'creativity_widgets_name' => 'featurebox_image',
-                'creativity_widgets_title' => __('Image', 'creativity'),
-                'creativity_widgets_field_type' => 'upload',
+                'themename_widgets_name' => 'featurebox_image',
+                'themename_widgets_title' => __('Image', 'themename'),
+                'themename_widgets_field_type' => 'upload',
             ),
             'featurebox_content' => array(
-                'creativity_widgets_name' => 'featurebox_content',
-                'creativity_widgets_title' => __('Content', 'creativity'),
-                'creativity_widgets_field_type' => 'textarea',
+                'themename_widgets_name' => 'featurebox_content',
+                'themename_widgets_title' => __('Content', 'themename'),
+                'themename_widgets_field_type' => 'textarea',
             ),
             'featurebox_link' => array(
-                'creativity_widgets_name' => 'featurebox_link',
-                'creativity_widgets_title' => __('Link URL', 'creativity'),
-                'creativity_widgets_field_type' => 'url',
+                'themename_widgets_name' => 'featurebox_link',
+                'themename_widgets_title' => __('Link URL', 'themename'),
+                'themename_widgets_field_type' => 'url',
             ),
             'featurebox_innewtab' => array(
-                'creativity_widgets_name' => 'featurebox_innewtab',
-                'creativity_widgets_title' => __('Open Link new tab.', 'creativity'),
-                'creativity_widgets_field_type' => 'checkbox',
+                'themename_widgets_name' => 'featurebox_innewtab',
+                'themename_widgets_title' => __('Open Link new tab.', 'themename'),
+                'themename_widgets_field_type' => 'checkbox',
             ),
         );
 
@@ -81,7 +81,7 @@ class creativity_Feature_Box extends WP_Widget {
         $featurebox_innewtab = isset($instance['featurebox_innewtab']) ? $instance['featurebox_innewtab'] : 0;
 
         $attachment_id = attachment_url_to_postid($featurebox_image);
-        $image_array = wp_get_attachment_image_src($attachment_id, 'creativity-featbox-image');
+        $image_array = wp_get_attachment_image_src($attachment_id, 'themename-featbox-image');
 
         echo wp_kses_post($before_widget);
         ?>
@@ -134,7 +134,7 @@ class creativity_Feature_Box extends WP_Widget {
      * @param	array	$new_instance	Values just sent to be saved.
      * @param	array	$old_instance	Previously saved values from database.
      *
-     * @uses	creativity_widgets_updated_field_value()		defined in widget-fields.php
+     * @uses	themename_widgets_updated_field_value()		defined in widget-fields.php
      *
      * @return	array Updated safe values to be saved.
      */
@@ -148,9 +148,9 @@ class creativity_Feature_Box extends WP_Widget {
 
             extract($widget_field);
 
-            if(isset($new_instance[$creativity_widgets_name])){
+            if(isset($new_instance[$themename_widgets_name])){
             // Use helper function to get updated field values
-                $instance[$creativity_widgets_name] = creativity_widgets_updated_field_value($widget_field, $new_instance[$creativity_widgets_name]);
+                $instance[$themename_widgets_name] = themename_widgets_updated_field_value($widget_field, $new_instance[$themename_widgets_name]);
             }
         }
 
@@ -164,7 +164,7 @@ class creativity_Feature_Box extends WP_Widget {
      *
      * @param	array $instance Previously saved values from database.
      *
-     * @uses	creativity_widgets_show_widget_field()		defined in widget-fields.php
+     * @uses	themename_widgets_show_widget_field()		defined in widget-fields.php
      */
     public function form($instance) {
         $widget_fields = $this->widget_fields();
@@ -174,8 +174,8 @@ class creativity_Feature_Box extends WP_Widget {
 
             // Make array elements available as variables
             extract($widget_field);
-            $creativity_widgets_field_value = !empty($instance[$creativity_widgets_name]) ? esc_attr($instance[$creativity_widgets_name]) : '';
-            creativity_widgets_show_widget_field($this, $widget_field, $creativity_widgets_field_value);
+            $themename_widgets_field_value = !empty($instance[$themename_widgets_name]) ? esc_attr($instance[$themename_widgets_name]) : '';
+            themename_widgets_show_widget_field($this, $widget_field, $themename_widgets_field_value);
         }
     }
 

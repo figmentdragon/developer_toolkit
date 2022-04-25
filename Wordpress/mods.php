@@ -12,16 +12,16 @@ function demo_fonts() {
 
 		// Font options
 		$fonts = array(
-			get_theme_mod( 'creativity_logo_font_type'),
-			get_theme_mod( 'creativity_main_font_type'),
-			get_theme_mod( 'creativity_tagline_font_type'),
-			get_theme_mod( 'creativity_head_font_type'),
-			get_theme_mod( 'creativity_blog_font_type'),
-			get_theme_mod( 'creativity_menu_font_type'),
-			get_theme_mod( 'creativity_bloglist_title_font_type'),
-			get_theme_mod( 'creativity_blogsingle_title_font_type'),
-			get_theme_mod( 'creativity_metainfo_font_type'),
-			get_theme_mod( 'creativity_widgettitle_font_type'),
+			get_theme_mod( 'themename_logo_font_type'),
+			get_theme_mod( 'themename_main_font_type'),
+			get_theme_mod( 'themename_tagline_font_type'),
+			get_theme_mod( 'themename_head_font_type'),
+			get_theme_mod( 'themename_blog_font_type'),
+			get_theme_mod('themename_menu_font_type'),
+			get_theme_mod('themename_bloglist_title_font_type'),
+			get_theme_mod('themename_blogsingle_title_font_type'),
+			get_theme_mod('themename_metainfo_font_type'),
+			get_theme_mod('themename_widgettitle_font_type'),
 		);
 
 		$font_uri = customizer_library_get_google_font_uri( $fonts );
@@ -44,16 +44,16 @@ function writing_googlefonts_async($tag, $handle) {
 function writing_preconnect_prefetch() {
 		// Font options
 		$fonts = array(
-			get_theme_mod( 'creativity_logo_font_type'),
-			get_theme_mod( 'creativity_main_font_type'),
-			get_theme_mod( 'creativity_tagline_font_type'),
-			get_theme_mod( 'creativity_head_font_type'),
-			get_theme_mod( 'creativity_blog_font_type'),
-			get_theme_mod('creativity_menu_font_type'),
-			get_theme_mod('creativity_bloglist_title_font_type'),
-			get_theme_mod('creativity_blogsingle_title_font_type'),
-			get_theme_mod('creativity_metainfo_font_type'),
-			get_theme_mod('creativity_widgettitle_font_type'),
+			get_theme_mod( 'themename_logo_font_type'),
+			get_theme_mod( 'themename_main_font_type'),
+			get_theme_mod( 'themename_tagline_font_type'),
+			get_theme_mod( 'themename_head_font_type'),
+			get_theme_mod( 'themename_blog_font_type'),
+			get_theme_mod('themename_menu_font_type'),
+			get_theme_mod('themename_bloglist_title_font_type'),
+			get_theme_mod('themename_blogsingle_title_font_type'),
+			get_theme_mod('themename_metainfo_font_type'),
+			get_theme_mod('themename_widgettitle_font_type'),
 		);
 
 		$font_uri = customizer_library_get_google_font_uri( $fonts );
@@ -62,7 +62,7 @@ function writing_preconnect_prefetch() {
 	echo '<link rel="preload" as="style" href="'.$font_uri.'" />';
 }
 
-if (creativity_option('creativity_async_google_fonts')) {
+if (themename_option('themename_async_google_fonts')) {
 	add_filter('style_loader_tag', 'writing_googlefonts_async', 10, 2);
 	add_action('wp_head', 'writing_preconnect_prefetch');
 }

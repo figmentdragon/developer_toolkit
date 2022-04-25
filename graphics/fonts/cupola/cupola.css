@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "Cupola";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Cupola"), url("https://fonts.cdnfonts.com/s/17820/CupolaRegular.woff") format("woff");
+}
+@font-face {
+  font-family: "Cupola";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Cupola"), url("https://fonts.cdnfonts.com/s/17820/CupolaSmallCaps.woff") format("woff");
+}
+@font-face {
+  font-family: "Cupola";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Cupola"), url("https://fonts.cdnfonts.com/s/17820/CupolaItalic.woff") format("woff");
+}
+@font-face {
+  font-family: "Cupola";
+  font-weight: 700;
+  font-style: normal;
+  src: local("Cupola"), url("https://fonts.cdnfonts.com/s/17820/CupolaBold.woff") format("woff");
+}
+@font-face {
+  font-family: "Cupola";
+  font-weight: 700;
+  font-style: italic;
+  src: local("Cupola"), url("https://fonts.cdnfonts.com/s/17820/CupolaBoldItalic.woff") format("woff");
+}
+
+/*# sourceMappingURL=cupola.css.map */

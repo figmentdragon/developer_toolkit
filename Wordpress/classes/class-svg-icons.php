@@ -3,8 +3,8 @@
  * SVG Icons class
  *
  * @package WordPress
- * @subpackage creativity
- * @since creativity 1.0
+ * @subpackage themename
+ * @since themename 1.0
  */
 
 /**
@@ -17,14 +17,14 @@
  * All icons are assumed to have equal width and height, hence the option
  * to only specify a `$size` parameter in the svg methods.
  *
- * @since creativity 1.0
+ * @since themename 1.0
  */
 class SVG_Icons {
 
 	/**
 	 * User Interface icons – svg sources.
 	 *
-	 * @since creativity 1.0
+	 * @since themename 1.0
 	 *
 	 * @var array
 	 */
@@ -40,7 +40,7 @@ class SVG_Icons {
 	/**
 	 * Social Icons – svg sources.
 	 *
-	 * @since creativity 1.0
+	 * @since themename 1.0
 	 *
 	 * @var array
 	 */
@@ -91,7 +91,7 @@ class SVG_Icons {
 	 * By default, each Icon ID is matched against a .com TLD. To override this behavior,
 	 * specify all the domains it covers (including the .com TLD too, if applicable).
 	 *
-	 * @since creativity 1.0
+	 * @since themename 1.0
 	 *
 	 * @var array
 	 */
@@ -144,7 +144,7 @@ class SVG_Icons {
 	 *
 	 * @static
 	 *
-	 * @since creativity 1.0
+	 * @since themename 1.0
 	 *
 	 * @param string $group The icon group.
 	 * @param string $icon  The icon.
@@ -162,12 +162,12 @@ class SVG_Icons {
 		}
 
 		/**
-		 * Filters creativitys's array of icons.
+		 * Filters themenames's array of icons.
 		 *
 		 * The dynamic portion of the hook name, `$group`, refers to
 		 * the name of the group of icons, either "ui" or "social".
 		 *
-		 * @since creativity 1.0
+		 * @since themename 1.0
 		 *
 		 * @param array $arr Array of icons.
 		 */
@@ -189,7 +189,7 @@ class SVG_Icons {
 	 *
 	 * @static
 	 *
-	 * @since creativity 1.0
+	 * @since themename 1.0
 	 *
 	 * @param string $uri  Social link.
 	 * @param int    $size The icon-size in pixels.
@@ -202,21 +202,21 @@ class SVG_Icons {
 			$regex_map = array();
 
 			/**
-			 * Filters creativitys's array of domain mappings for social icons.
+			 * Filters themenames's array of domain mappings for social icons.
 			 *
 			 * By default, each Icon ID is matched against a .com TLD. To override this behavior,
 			 * specify all the domains it covers (including the .com TLD too, if applicable).
 			 *
-			 * @since creativity 1.0
+			 * @since themename 1.0
 			 *
 			 * @param array $social_icons_map Array of default social icons.
 			 */
 			$map = apply_filters( 'social_icons_map', self::$social_icons_map );
 
 			/**
-			 * Filters creativity's array of social icons.
+			 * Filters themename's array of social icons.
 			 *
-			 * @since creativity 1.0
+			 * @since themename 1.0
 			 *
 			 * @param array $social_icons Array of default social icons.
 			 */

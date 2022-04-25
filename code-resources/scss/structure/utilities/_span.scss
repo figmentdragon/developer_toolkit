@@ -1,0 +1,34 @@
+.span-1 {flex-basis: 6.25%;}
+.span-2 {flex-basis: 12.50%;}
+.span-3 {flex-basis: 18.75%;}
+.span-4 {flex-basis: 25%;}
+.span-5 {flex-basis: 31.25%;}
+.span-6 {flex-basis: 37.50%;}
+.span-7 {flex-basis: 43.75%;}
+.span-8 {flex-basis: 50%;}
+.span-9 {flex-basis: 56.25%;}
+.span-10 {flex-basis: 62.50%;}
+.span-11 {flex-basis: 68.75%;}
+.span-12 {flex-basis: 75%;}
+.span-13 {flex-basis: 81.25%;}
+.span-14 {flex-basis: 87.5%;}
+.span-15 {flex-basis: 93.75%;}
+.span-16 {flex-basis: 100%;}
+
+
+.col-1 { width: calc(divide($width, 16) - calc($gutter * divide(15, 16))); }
+.col-2 { width: calc(divide($width, 2) - calc($gutter * divide(14, 16))); }
+.col-3 { width: calc(divide($width, (16,  3)) - calc($gutter * divide(13, 16))); }
+.col-4 { width: calc(divide($width, 4) - calc($gutter * divide(12, 16))); }
+.col-5 { width: calc(divide($width, (16, 5)) - calc($gutter * divide(11, 16))); }
+.col-6 { width: calc(divide($width, (16, 6)) - calc($gutter * divide(10, 16))); }
+.col-7 { width: calc(divide($width, (16, 7)) - calc($gutter * divide(9, 16))); }
+.col-8 { width: calc(divide($width, (16, 8)) - calc($gutter * divide(8, 16))); }
+.col-9 { width: calc(divide($width, (16, 9)) - calc($gutter * divide(7, 16))); }
+.col-10 { width: calc(divide($width, (16, 10)) - calc($gutter * divide(6, 16))); }
+.col-11 { width: calc(divide($width, (16, 11)) - calc($gutter * divide(5, 16))); }
+.col-12 { width: calc(divide($width, (16, 12)) - calc($gutter * divide(4, 16))); }
+.col-13 { width: calc(divide($width, (16, 13)) - calc($gutter * divide(4, 16))); }
+.col-14 { width: calc(divide($width, (16, 14)) - calc($gutter * divide(4, 16))); }
+.col-15 { width: calc(divide($width, (16, 15)) - calc($gutter * divide(4, 16))); }
+.col-16 { width: $width; }

@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'Cupola';
+  src: local('Cupola'), url('<?php get_template_directory() ;?>/src/fonts/cupola/cupoaregular.woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cupola';
+    src: local('Cupola'), url('<?php get_template_directory() ;?>/src/fonts/cupola/CupolaSmallCaps.woff')
+      format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face
+{
+    font-family: 'Cupola';
+    font-weight: 400;
+    font-style: normal;
+
+    src: local('Cupola'), url('<?php get_template_directory() ;?>/src/fonts/cupola/CupolaItalic.woff')
+      format('woff');
+}
+@font-face
+{
+    font-family: 'Cupola';
+    font-weight: 700;
+    font-style: normal;
+
+    src: local('Cupola'), url('<?php get_template_directory() ;?>/src/fonts/cupola/CupolaBold.woff') format('woff');
+}
+@font-face
+{
+    font-family: 'Cupola';
+    font-weight: 700;
+    font-style: italic;
+
+    src: local('Cupola'), url('<?php get_template_directory() ;?>/src/fonts/cupola/CupolaBoldItalic.woff')
+      format('woff');
+}

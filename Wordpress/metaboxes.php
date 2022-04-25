@@ -1,25 +1,25 @@
 <?php
 /**
- * creativity Custom Metabox
+ * themename Custom Metabox
  *
- * @package creativity
+ * @package themename
  */
 
-add_action('add_meta_boxes', 'creativity_add_metabox');
-function creativity_add_metabox()
+add_action('add_meta_boxes', 'themename_add_metabox');
+function themename_add_metabox()
 {
     add_meta_box(
-        'creativity_sidebar_layout', // $id
+        'themename_sidebar_layout', // $id
         'Sidebar Layout', // $title
-        'creativity_sidebar_layout_callback', // $callback
+        'themename_sidebar_layout_callback', // $callback
         'post', // $page
         'normal', // $context
         'high'); // $priority
 
     add_meta_box(
-        'creativity_sidebar_layout', // $id
+        'themename_sidebar_layout', // $id
         'Sidebar Layout', // $title
-        'creativity_sidebar_layout_callback', // $callback
+        'themename_sidebar_layout_callback', // $callback
         'page', // $page
         'normal', // $context
         'high'); // $priority
@@ -27,7 +27,7 @@ function creativity_add_metabox()
 }
 
 
-$creativity_sidebar_layout = array(
+$themename_sidebar_layout = array(
     'right-sidebar' => array(
         'value' => 'right_sidebar',
         'thumbnail' => get_template_directory_uri() . '/images/right-sidebar.png'
@@ -43,30 +43,30 @@ $creativity_sidebar_layout = array(
 
 );
 
-function creativity_sidebar_layout_callback()
+function themename_sidebar_layout_callback()
 {
-    global $post , $creativity_sidebar_layout;
-    wp_nonce_field( basename( __FILE__ ), 'creativity_sidebar_layout_nonce' );
+    global $post , $themename_sidebar_layout;
+    wp_nonce_field( basename( __FILE__ ), 'themename_sidebar_layout_nonce' );
     ?>
 
     <table class="form-table page-meta-box">
         <tr>
-            <td colspan="4"><?php esc_html_e( 'Choose Sidebar Template', 'creativity' ); ?></td>
+            <td colspan="4"><?php esc_html_e( 'Choose Sidebar Template', 'themename' ); ?></td>
         </tr>
 
         <tr>
             <td>
                 <?php
-                foreach ($creativity_sidebar_layout as $field) {
-                    $creativity_sidebar_metalayout = get_post_meta( $post->ID, 'creativity_sidebar_layout', true );
-                    if(!$creativity_sidebar_metalayout){
-                        $creativity_sidebar_metalayout = 'right_sidebar';
+                foreach ($themename_sidebar_layout as $field) {
+                    $themename_sidebar_metalayout = get_post_meta( $post->ID, 'themename_sidebar_layout', true );
+                    if(!$themename_sidebar_metalayout){
+                        $themename_sidebar_metalayout = 'right_sidebar';
                     }
                     ?>
 
                     <div style="float:left; margin-right:30px;">
                         <label>
-                            <input id="<?php echo esc_attr($field['value']); ?>" type="radio" name="creativity_sidebar_layout" value="<?php echo esc_attr($field['value']); ?>" <?php checked($field['value'], $creativity_sidebar_metalayout ); ?>/>
+                            <input id="<?php echo esc_attr($field['value']); ?>" type="radio" name="themename_sidebar_layout" value="<?php echo esc_attr($field['value']); ?>" <?php checked($field['value'], $themename_sidebar_metalayout ); ?>/>
 
                             <img src="<?php echo esc_url( $field['thumbnail'] ); ?>" />
                         </label>
@@ -84,11 +84,11 @@ function creativity_sidebar_layout_callback()
  * save the custom metabox data
  * @hooked to save_post hook
  */
-function creativity_save_sidebar_layout( $post_id ) {
-    global $creativity_sidebar_layout, $post;
+function themename_save_sidebar_layout( $post_id ) {
+    global $themename_sidebar_layout, $post;
 
     // Verify the nonce before proceeding.
-    if ( !isset( $_POST[ 'creativity_sidebar_layout_nonce' ] ) || !wp_verify_nonce( sanitize_text_field(wp_unslash($_POST[ 'creativity_sidebar_layout_nonce' ])), basename( __FILE__ ) ) )
+    if ( !isset( $_POST[ 'themename_sidebar_layout_nonce' ] ) || !wp_verify_nonce( sanitize_text_field(wp_unslash($_POST[ 'themename_sidebar_layout_nonce' ])), basename( __FILE__ ) ) )
         return;
 
     // Stop WP from clearing custom fields on autosave
@@ -103,16 +103,16 @@ function creativity_save_sidebar_layout( $post_id ) {
     }
 
 
-    foreach ($creativity_sidebar_layout as $field) {
+    foreach ($themename_sidebar_layout as $field) {
         //Execute this saving function
-        $old = get_post_meta( $post_id, 'creativity_sidebar_layout', true);
-        $new = isset( $_POST['creativity_sidebar_layout'] ) ? sanitize_text_field( wp_unslash( $_POST['creativity_sidebar_layout'] ) ) : '';
+        $old = get_post_meta( $post_id, 'themename_sidebar_layout', true);
+        $new = isset( $_POST['themename_sidebar_layout'] ) ? sanitize_text_field( wp_unslash( $_POST['themename_sidebar_layout'] ) ) : '';
         if ($new && $new != $old) {
-            update_post_meta($post_id, 'creativity_sidebar_layout', $new);
+            update_post_meta($post_id, 'themename_sidebar_layout', $new);
         } elseif ('' == $new && $old) {
-            delete_post_meta($post_id,'creativity_sidebar_layout', $old);
+            delete_post_meta($post_id,'themename_sidebar_layout', $old);
         }
     } // end foreach
 
 }
-add_action('save_post', 'creativity_save_sidebar_layout');
+add_action('save_post', 'themename_save_sidebar_layout');

@@ -8,7 +8,7 @@
  * @link https://make.wordpress.org/themes/2020/07/06/printing-navigation-block-html-from-a-legacy-menu-in-themes/
  *
  * @package WordPress
- * @subpackage creativity
+ * @subpackage themename
  * @since Twenty Twenty-One 1.0
  */
 
@@ -24,19 +24,19 @@
  * @param object $args   Nav menu args.
  * @return string Nav menu item start element.
  */
-function creativity_add_sub_menu_toggle( $output, $item, $depth, $args ) {
+function themename_add_sub_menu_toggle( $output, $item, $depth, $args ) {
 	if ( 0 === $depth && in_array( 'menu-item-has-children', $item->classes, true ) ) {
 
 		// Add toggle button.
-		$output .= '<button class="sub-menu-toggle" aria-expanded="false" onClick="creativityExpandSubMenu(this)">';
-		$output .= '<span class="icon-plus">' . creativity_get_icon_svg( 'ui', 'plus', 18 ) . '</span>';
-		$output .= '<span class="icon-minus">' . creativity_get_icon_svg( 'ui', 'minus', 18 ) . '</span>';
-		$output .= '<span class="screen-reader-text">' . esc_html__( 'Open menu', 'creativity' ) . '</span>';
+		$output .= '<button class="sub-menu-toggle" aria-expanded="false" onClick="themenameExpandSubMenu(this)">';
+		$output .= '<span class="icon-plus">' . themename_get_icon_svg( 'ui', 'plus', 18 ) . '</span>';
+		$output .= '<span class="icon-minus">' . themename_get_icon_svg( 'ui', 'minus', 18 ) . '</span>';
+		$output .= '<span class="screen-reader-text">' . esc_html__( 'Open menu', 'themename' ) . '</span>';
 		$output .= '</button>';
 	}
 	return $output;
 }
-add_filter( 'walker_nav_menu_start_el', 'creativity_add_sub_menu_toggle', 10, 4 );
+add_filter( 'walker_nav_menu_start_el', 'themename_add_sub_menu_toggle', 10, 4 );
 
 /**
  * Detects the social network from a URL and returns the SVG code for its icon.
@@ -47,8 +47,8 @@ add_filter( 'walker_nav_menu_start_el', 'creativity_add_sub_menu_toggle', 10, 4 
  * @param int    $size The icon size in pixels.
  * @return string
  */
-function creativity_get_social_link_svg( $uri, $size = 24 ) {
-	return creativity_SVG_Icons::get_social_link_svg( $uri, $size );
+function themename_get_social_link_svg( $uri, $size = 24 ) {
+	return themename_SVG_Icons::get_social_link_svg( $uri, $size );
 }
 
 /**
@@ -62,10 +62,10 @@ function creativity_get_social_link_svg( $uri, $size = 24 ) {
  * @param stdClass $args        An object of wp_nav_menu() arguments.
  * @return string The menu item output with social icon.
  */
-function creativity_nav_menu_social_icons( $item_output, $item, $depth, $args ) {
+function themename_nav_menu_social_icons( $item_output, $item, $depth, $args ) {
 	// Change SVG icon inside social links menu if there is supported URL.
 	if ( 'footer' === $args->theme_location ) {
-		$svg = creativity_get_social_link_svg( $item->url, 24 );
+		$svg = themename_get_social_link_svg( $item->url, 24 );
 		if ( ! empty( $svg ) ) {
 			$item_output = str_replace( $args->link_before, $svg, $item_output );
 		}
@@ -74,7 +74,7 @@ function creativity_nav_menu_social_icons( $item_output, $item, $depth, $args ) 
 	return $item_output;
 }
 
-add_filter( 'walker_nav_menu_start_el', 'creativity_nav_menu_social_icons', 10, 4 );
+add_filter( 'walker_nav_menu_start_el', 'themename_nav_menu_social_icons', 10, 4 );
 
 /**
  * Filters the arguments for a single nav menu item.
@@ -86,7 +86,7 @@ add_filter( 'walker_nav_menu_start_el', 'creativity_nav_menu_social_icons', 10, 
  * @param int      $depth Depth of menu item. Used for padding.
  * @return stdClass
  */
-function creativity_add_menu_description_args( $args, $item, $depth ) {
+function themename_add_menu_description_args( $args, $item, $depth ) {
 	if ( '</span>' !== $args->link_after ) {
 		$args->link_after = '';
 	}
@@ -98,4 +98,4 @@ function creativity_add_menu_description_args( $args, $item, $depth ) {
 
 	return $args;
 }
-add_filter( 'nav_menu_item_args', 'creativity_add_menu_description_args', 10, 3 );
+add_filter( 'nav_menu_item_args', 'themename_add_menu_description_args', 10, 3 );

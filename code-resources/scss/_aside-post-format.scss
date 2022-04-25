@@ -1,0 +1,10 @@
+//------------------------------------------------------------------------------
+// 2.7.0 Aside Post Format
+//------------------------------------------------------------------------------
+
+/* Just put ".format-aside" before any of the above classes to create special formatting for Aside posts */
+
+.format-aside .entry-content {
+	border-left: 4px solid #000;
+	padding-left: 1em;
+}
