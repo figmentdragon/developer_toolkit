@@ -4,9 +4,9 @@
 *
 * The template for displaying 404 pages (not found)
 *
-* @package WordPress
-* @subpackage Twenty_Fourteen
-* @since Twenty Fourteen 1.0
+* @package Pentapolis of the Valley
+* @subpackage
+* @since
 *
 */
  get_header(); ?>

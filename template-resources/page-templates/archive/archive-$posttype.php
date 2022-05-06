@@ -1,5 +1,7 @@
 <?php
 /**
+ * Template Name: Archive
+ *
  * The template for displaying Archive-$posttype pages.
  *
  * @package WordPress
