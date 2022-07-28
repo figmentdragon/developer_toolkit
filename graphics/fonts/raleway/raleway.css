@@ -1,69 +1,69 @@
 @font-face {
   font-family: 'Raleway';
   font-style: normal;
-  src: local("<?php get_stylesheet_directory(); ?> . /src/sass/typography/fonts/raleway/Raleway-Thin.woff") format("woff");
+  src: local("<?php get_stylesheet_directory(); ?> . /scss/fonts/raleway/Raleway-Thin.woff") format("woff");
 }
 
 @font-face {
   font-family: 'Raleway-ExtraLight';
   font-style: normal;
   font-weight: 275;
-  src: local("<?php get_stylesheet_directory(); ?> . /src/sass/typography/fonts/raleway/Raleway-ExtraLight.woff") format("woff");
+  src: local("<?php get_stylesheet_directory(); ?> . /scss/fonts/raleway/Raleway-ExtraLight.woff") format("woff");
 }
 
 @font-face {
   font-family: 'Raleway-Light';
   font-style: normal;
   font-weight: 300;
-  src: local("<?php get_stylesheet_directory(); ?> . /src/sass/typography/fonts/raleway/Raleway-Light.woff") format("woff");
+  src: local("<?php get_stylesheet_directory(); ?> . /scss/fonts/raleway/Raleway-Light.woff") format("woff");
 }
 
 @font-face {
   font-family: 'Raleway-Italic';
   font-style: italic;
   font-weight: 400;
-  src: local("<?php get_stylesheet_directory(); ?> . /src/sass/typography/fonts/raleway/Raleway-Italic.woff") format("woff");
+  src: local("<?php get_stylesheet_directory(); ?> . /scss/fonts/raleway/Raleway-Italic.woff") format("woff");
 }
 
 @font-face {
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 500;
-  src: local("<?php get_stylesheet_directory(); ?> . /src/sass/typography/fonts/raleway/Raleway-Medium.woff") format("woff");
+  src: local("<?php get_stylesheet_directory(); ?> . /scss/fonts/raleway/Raleway-Medium.woff") format("woff");
 }
 
 @font-face {
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 600;
-  src: local("<?php get_stylesheet_directory(); ?> . /src/sass/typography/fonts/raleway/Raleway-SemiBold.woff") format("woff");
+  src: local("<?php get_stylesheet_directory(); ?> . /scss/fonts/raleway/Raleway-SemiBold.woff") format("woff");
 }
 
 @font-face {
   font-family: 'Raleway-Bold';
   font-style: normal;
   font-weight: 700;
-  src: local("<?php get_stylesheet_directory(); ?> . /src/sass/typography/fonts/raleway/Raleway-Bold.woff") format("woff");
+  src: local("<?php get_stylesheet_directory(); ?> . /scss/fonts/raleway/Raleway-Bold.woff") format("woff");
 }
 
 @font-face {
   font-family: 'Raleway-ExtraBold';
   font-style: normal;
   font-weight: 800;
-  src: local("<?php get_stylesheet_directory(); ?> . /src/sass/typography/fonts/raleway/Raleway-ExtraBold.woff") format("woff");
+  src: local("<?php get_stylesheet_directory(); ?> . /scss/fonts/raleway/Raleway-ExtraBold.woff") format("woff");
 }
 
 @font-face {
   font-family: 'Raleway-Black';
   font-style: normal;
   font-weight: 900;
-  src: local("<?php get_stylesheet_directory(); ?> . /src/sass/typography/fonts/raleway/Raleway-Black.woff") format("woff");
+  src: local("<?php get_stylesheet_directory(); ?> . /scss/fonts/raleway/Raleway-Black.woff") format("woff");
 }
 
 @font-face {
   font-family: 'raleway-blackitalic';
   font-style: italic;
   font-weight: 900;
-  src: local("<?php get_stylesheet_directory(); ?> . /src/sass/typography/fonts/raleway/raleway-blackitalic.woff") format("woff");
+  src: local("<?php get_stylesheet_directory(); ?> . /scss/fonts/raleway/raleway-blackitalic.woff") format("woff");
 }
 /*# sourceMappingURL=raleway.css.map */
