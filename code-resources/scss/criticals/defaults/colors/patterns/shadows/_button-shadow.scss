@@ -1,0 +1,4 @@
+/* BUTTON SHADOW */
+$button-shadow: inset 0 1px 0 rgba($white, .15), 0 1px 1px $shadow-button, .075;
+$button-shadow-focus: inset 0 -1px 0 rgba($white, .15), 0 -1px 1px $shadow-button, .075;
+$button-box-shadow: inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075);

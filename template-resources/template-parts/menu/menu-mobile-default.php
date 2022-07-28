@@ -2,7 +2,7 @@
 /**
  * Default mobile menu.
  *
- * @package TheCreativityArchitect
+ * @package TheThemeName
  * @subpackage Template Parts
  */
 
@@ -22,8 +22,8 @@ defined( 'ABSPATH' ) || die( "Can't access directly" );
 
 		<div class="menu-toggle-container">
 
-			<a id="mobile-menu-toggle" href="javascript:void(0)" class="mobile-menu-toggle button button-full" aria-label="<?php _e( 'Mobile Site Navigation', 'TheCreativityArchitect' ); ?>" aria-controls="navigation" aria-expanded="false" aria-haspopup="true" role="button">
-				<?php echo apply_filters( 'mobile_menu_text', __( 'Menu', 'TheCreativityArchitect' ) ); ?>
+			<a id="mobile-menu-toggle" href="javascript:void(0)" class="mobile-menu-toggle button button-full" aria-label="<?php _e( 'Mobile Site Navigation', 'TheThemeName' ); ?>" aria-controls="navigation" aria-expanded="false" aria-haspopup="true" role="button">
+				<?php echo apply_filters( 'mobile_menu_text', __( 'Menu', 'TheThemeName' ) ); ?>
 			</a>
 
 		</div>

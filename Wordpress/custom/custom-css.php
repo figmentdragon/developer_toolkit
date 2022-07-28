@@ -3,14 +3,14 @@
  * Custom CSS
  *
  * @package WordPress
- * @subpackage Twenty_Twenty_One
- * @since Twenty Twenty-One 1.0
+ * @subpackage THEMENAME
+ * @since THEMENAME 1.0
  */
 
 /**
  * Generate CSS.
  *
- * @since Twenty Twenty-One 1.0
+ * @since THEMENAME 1.0
  *
  * @param string $selector The CSS selector.
  * @param string $style    The CSS style.
@@ -20,7 +20,7 @@
  * @param bool   $echo     Echo the styles.
  * @return string
  */
-function twenty_twenty_one_generate_css( $selector, $style, $value, $prefix = '', $suffix = '', $echo = true ) {
+function THEMENAME_generate_css( $selector, $style, $value, $prefix = '', $suffix = '', $echo = true ) {
 
 	// Bail early if there is no $selector elements or properties and $value.
 	if ( ! $value || ! $selector ) {

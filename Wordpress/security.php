@@ -29,7 +29,7 @@ add_filter( 'xmlrpc_enabled', '__return_false' );
  * @author WebDevStudios
  * @see https://w3c.github.io/webappsec-cors-for-developers/#avoid-returning-access-control-allow-origin-null
  */
-function creativitycors_control() {
+function ca_cors_control() {
 	header( 'Access-Control-Allow-Origin: *' );
 }
-add_action( 'rest_api_init', 'creativitycors_control' );
+add_action( 'rest_api_init', 'ca_cors_control' );

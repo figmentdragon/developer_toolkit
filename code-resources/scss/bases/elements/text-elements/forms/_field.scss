@@ -1,0 +1,27 @@
+/* Form Elements */
+*:focus {
+  outline: 0;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0; // 1
+  font-family: inherit;
+  @include font-size(inherit);
+  line-height: inherit;
+}
+
+@import 'fields/button';
+@import 'fields/fieldset';
+@import 'fields/form';
+@import 'fields/input';
+@import 'fields/label';
+@import 'fields/legend';
+@import 'fields/optgroup';
+@import 'fields/output';
+@import 'fields/progress';
+@import 'fields/select';
+@import 'fields/textarea';

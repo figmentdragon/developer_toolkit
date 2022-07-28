@@ -1,0 +1,966 @@
+/**
+ * WordPress adds dynamic classes to the post elements as well. Here is a list of some of the most popular ones:
+ */
+
+.post,
+.page {
+ 	margin: 0 0 1.5em;
+}
+
+.post {
+	margin: 0 0 40px auto;
+  &-id {
+  }
+  :last-child {
+    margin-bottom: 0;
+  }
+  .post-content {
+    background-color: #fafafa;
+    padding: 50px 50px 40px;
+  }
+}
+
+.page {
+  padding-top: 2vh;
+  padding-right: .5vw;
+  padding-bottom: 2vh;
+  padding-left: 3vw;
+  height: 100%;
+
+	&-links {
+		clear: both;
+		margin: 0 0 1.5em
+	}
+	&-content {
+		margin: 1.5em 0 0;
+		.wp-siley {
+			border: none;
+			margin-bottom: 0;
+			margin-top: 0;
+			padding: 0;
+		}
+	}
+}
+
+.attachment {}
+
+.sticky { /* Style your sticky posts. This class is applied to the same element as .hentry below. */
+  display: block;
+}
+
+.hentry { /* The wrapper for individual posts */
+	margin: 0 0 1.5em;
+	padding-bottom: 1.5em;
+}
+
+.category {
+
+  &-misc {}
+
+  &-example {}
+
+}
+
+.tag {
+
+  &-news {}
+
+  &-wordpress {}
+
+  &-markup {}
+}
+
+.format {
+
+  &-image {}
+
+  &-gallery {}
+
+  &-chat {}
+
+  &-link {}
+
+  &-quote {}
+
+  &-status {}
+
+  &-video {}
+}
+
+// * Default Menu Styles
+
+.current {
+
+  &_page_item {// Class for Current Page
+  }
+
+  &-cat { // Class for Current Category
+  }
+
+  &-menu-item {// Class for any other current Menu Item
+  }
+}
+
+.menu-item {
+
+  &-type-taxonomy {}   // Class for a Category
+
+  &-type-post_type {}  // Class for Pages
+
+  &-type-custom {}     // Class for any custom item that you added
+
+  &-home {}            // Class for the Home Link
+}
+
+// * Default WISIWYG Editor Styles
+
+.entry-content { /* Container for the post body/excerpt text */
+	margin: 1.5em 0 0;
+  text-align: right;
+	.wp-smiley {
+		border: none;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+	}
+	img {
+		max-width: 100%;/* Fluid images for posts, comments, and widgets */
+		width: auto; /* Prevent stretching of full-size images with height and width attributes in IE8 */
+		height: auto;  /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+		>.wp-smiley { /* Remove borders and backgrounds from WP smileys */
+			border: none;
+			margin-bottom: 0;
+			margin-top: 0;
+			padding: 0;
+		}
+	}
+	.wp-smiley {
+		border: none;
+		margin-bottom: 0;
+		margin-top: 0;
+		padding: 0;
+	}
+}
+
+.alignleft,
+.float-left ,
+img.alignleft {
+  display: inline;
+
+    /*rtl:ignore*/
+    float: left;
+
+    /*rtl:ignore*/
+    margin-right: 1.5em;
+	  margin-right: 15px;
+    margin-bottom: 1.5em;
+}
+
+.alignright,
+.float-right,
+img.alignright {
+  display: inline;
+  /*rtl:ignore*/
+  float: right;
+
+  /*rtl:ignore*/
+  margin-left: 1.5em;
+  margin-left: 15px;
+	margin-bottom: 1em;
+  img & {
+      margin-left: $size-md;
+  }
+}
+
+.aligncenter,
+.float-center,
+img.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5em;
+  img & {
+		margin-bottom: $base-unit;
+	}
+}
+
+.alignnone,
+img.alignnone {
+  margin: $vertical-spacer $horizontal-spacer-lg $vertical-spacer-lg 0;
+}
+
+.wp-caption { /* The container for image captions */
+  display: block;
+  margin: 0 auto 1.5em auto;
+  background: $body-bg;
+  border: thin solid $border;
+  max-width: 100%; /* When images are too wide for containing element, force them to fit. */
+  height: auto; /* Override height to match resized width for correct aspect ratio. */
+  padding: $horizontal-offset $vertical-offset;
+  text-align: center;
+
+	>.aligncenter,
+	>.alignleft,
+	>.alignright,
+	>.alignnone { /* Add spacing around captions and post text */
+		margin-bottom: 1.5em;
+	}
+
+  img[class*="wp-image-"] {
+    @include center-block;
+    display: block;
+    margin: 0 auto;
+  }
+
+  img { /* The image inside the caption container */
+    display: block;
+  	margin: 1.2% auto 0;
+    width: auto;
+		max-width: 98%;
+    height: auto;
+    border: 0 none;
+    @include reset-box;
+  }
+
+  &-text {
+		text-align: center;
+  }
+	.wp-caption-text {
+    margin: .5em;
+	}
+}
+
+.wp-caption-text {
+    text-align: center;
+}
+
+p.wp-caption-text,
+.gallery-caption {
+  margin: 0;
+  padding: 0 $horizontal-offset $vertical-offset;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+	display: block;
+}
+
+.wp-smiley {}
+
+blockquote {
+  font-family: $accent-font;
+  position: relative;
+	font-style: italic;
+  padding-left: $offset-y;
+  margin-bottom: $quote-margin-y;
+  font-size: $quote-font-size;
+  border-left: 10px solid $quote-border;
+  padding: 0 0 0 40px;
+  overflow: hidden;
+  small {
+    display: block;
+    line-height: 1.7em;
+    font-size: $sm-font-size;
+  }
+  p:first-child {
+  	margin-top: 0;
+  }
+  p:last-child{
+    padding-bottom: 0;
+  }
+  footer,
+  cite {
+    display: block;
+    font-size: $sm-font-size;
+    color: $quote-footer-color;
+    font-weight: $bold-font-weight;
+    :before {
+      content: "\2014 \0020";
+      color: #333333;
+    }
+    :after {
+      content: ' ';
+      color: #333333;
+    }
+    a,
+    a:visited {
+      color: $link-visited;
+    }
+  }
+
+  &.left {}
+
+  &.right {}
+}
+
+.gallery {
+  margin-bottom: 1.5em;
+  margin-bottom: 15px;
+	display: grid;
+	grid-gap: 1.5em;
+
+  dl {
+
+    a {}
+
+    img {}
+  }
+
+  dt {}
+
+  dd {}
+
+  &-caption {
+		display: block;
+		font-style: italic;
+	}
+	&-item {
+		display: inline-block;
+		text-align: center;
+		vertical-align: top;
+		width: 100%;
+	}
+}
+
+// Loops to enumerate the classes for gallery columns.
+@for $i from 2 through 9 {
+	.gallery-columns-#{$i} {
+		grid-template-columns: repeat($i, 1fr);
+	}
+}
+
+.size {
+
+  &-full {}
+
+  &-large {}
+
+  &-medium {}
+
+  &-thumbnail {}
+}
+
+// * Default WordPress Widget Styles
+.widget {
+  display: block;
+	margin: 0 0 1.5em;
+	&-title {
+
+	}
+	&_search {
+		.search-submit {
+			display: block;
+		}
+    #s {  }
+  }
+	&_meta {
+
+    ul {
+
+      li {
+
+        a {
+
+        }
+      }
+    }
+  }
+	&_links {
+
+    ul {
+
+      li {
+
+        a {
+
+        }
+      }
+    }
+  }
+	&_archive {
+
+    ul {
+
+      li {
+
+        a {
+
+        }
+      }
+    }
+		select {}
+
+    option {}
+  }
+	&_pages {
+
+    ul {
+
+      li {
+
+        a {
+
+        }
+      }
+    }
+  }
+	&_links {
+
+    li {
+
+      &:after {}
+
+      &:before {}
+    }
+  }
+	&_tag_cloud {
+
+    a {
+
+      &:after {}
+
+      &:before {}
+    }
+  }
+	&_categories {
+
+    ul {
+
+      li {}
+
+      &.children {}
+    }
+
+    a {}
+
+    select {
+
+      &#cat {}
+
+      .postform {}
+    }
+
+    option {}
+
+    .level-0 {}
+
+    .level-1 {}
+
+    .level-2 {}
+
+    .level-3 {}
+  }
+	&_recent_comments {}
+	&_recent_entries {
+
+    ul {
+
+      li {
+
+        a {}
+      }
+    }
+  }
+	&_text {}
+	&-area {/* All of the sidebar container divs get this common class */
+    .widget_search {
+      overflow: hidden;
+      input {
+        float: left;
+      }
+    }
+		.widget-title {
+			font-size: 22px;
+	    text-transform: uppercase;
+	    margin-bottom: 20px;
+		}
+		.sub-menu,
+		.children {
+			margin-left:  1.5em;
+			li {
+
+			}
+		}
+		ul,
+		ol {
+			margin: 0;
+	    padding: 0;
+	    list-style: none;
+			ul,
+			ol {
+				border-top: 1px solid #F9F9F9;
+		    padding-top: 8px;
+		    margin-top: 8px;
+		    margin-left: 10px;
+			}
+		}
+	}
+	ul { /* Unordered lists inside widgets */
+   	list-style: none;
+   	margin: 0;
+		ul {
+			margin-left: 10px;
+		}
+    li { /* Unordered list items inside widgets */
+     	margin-bottom: 0.25em;
+    }
+  }
+	li {
+		padding-bottom: 8px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #F9F9F9;
+    line-height: 1.3;
+		:last-child {
+			border-bottom: 0;
+	    padding-bottom: 0;
+	    margin-bottom: 0;
+		}
+	}
+  select {	// Make sure select elements fit in widgets.
+  	max-width: 100%;
+  }
+	a {
+    color: inherit;
+		:hover {
+			color: #df2c45
+		}
+	}
+	img {
+		max-width: 100%; /* Fluid images for posts, comments, and widgets */
+		height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+		max-width: 100%;
+		width: auto; /* Prevent stretching of full-size images with height and width attributes in IE8 */
+	}
+	p {
+		a {}
+	}
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text, .assistive-text, .sr-only {
+  position: absolute !important;
+
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+
+	 width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  word-wrap: normal !important;
+  border: 0;
+
+	clip-path: inset(50%);
+	// Many screen reader and browser combinations announce broken words as they would appear visually.
+  word-break: normal;
+
+  :hover,
+  :active,
+  :focus {
+    background-color: $muted;
+
+    border-radius: $sm-border-radius;
+
+    box-shadow: 0 0 2px 2px rgba($shadow, 0.6);
+
+    clip: auto !important;
+    color: $body-color;
+    display: block;
+    font-size: $base-font-size;
+    font-weight: $bold-font-weight;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+  }
+}
+
+/* Do not show the outline on the skip link target. */
+#primary[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+#searchform {
+  label {
+    display: none;
+  }
+  input#s {
+    width: 60%;
+  }
+}
+
+#calendar_wrap {
+
+  caption {
+    font-style: italic;
+  }
+
+  th {}
+
+  tr {
+
+    td {
+
+    }
+  }
+
+  td {
+
+  }
+
+  a {}
+
+  #today {
+    font-weight: $semibold-font-weight;
+  }
+
+  #prev {
+
+    a {}
+  }
+
+  #next {
+
+    a {}
+  }
+}
+
+.textwidget {
+
+  p {
+		a {}
+	}
+}
+
+.recentcomments {}
+
+#recentcomments {
+
+  li {
+
+    a {}
+  }
+}
+
+
+
+// * Default Comment Form Styles
+.comments-list,
+.commentlist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+	ol {
+		margin: 0 0 0 20px;
+    padding: 0;
+	}
+
+  li {
+    :before {
+      display: none;
+    }
+
+    p {}
+
+    ul {
+
+      &.children {
+
+        li {
+
+          &.alt {}
+
+          &.byuser {}
+
+          &.comment {}
+
+          &.bypostauthor {}
+
+          &.comment-author-admin {}
+        }
+
+        .alt {}
+
+        .odd {}
+
+        .even {}
+      }
+    }
+  }
+
+  .reply {
+
+    a {}
+  }
+
+  .alt {}
+
+  .odd {}
+
+  .even {}
+
+  .thread {
+
+    &-alt {}
+
+    &-odd {}
+
+    &-even {}
+  }
+
+  .vcard {
+
+    cite.fn {
+
+      a.url {}
+    }
+
+    span.says {}
+
+    img {
+
+      &.photo {}
+
+      &.avatar {}
+    }
+  }
+
+  .comment-meta {
+
+    a {}
+  }
+
+  .commentmetadata {
+
+    a {}
+  }
+
+  .parent {}
+
+  .comment {
+    border-top: 1px solid #e9e9e9;
+  }
+
+  .children {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .comment-respond {
+    margin-bottom: 50px;
+  }
+
+  .pingback {}
+
+  .bypostauthor {}
+
+  .comment-author {}
+
+  .comment-author-admin {}
+
+}
+
+#cancel-comment-reply {
+
+  a {}
+}
+
+// Comment Form
+#respond {
+  margin-top: 40px;
+  input[type=text] {
+    display: block;
+    width: 60%;
+  }
+  textarea {
+    display: block;
+    margin: 0 0 1em;
+    width: 80%;
+  }
+  .form-allowed-tags {
+    @include clearfix;
+    width: 80%;
+    code {
+      display: block;
+    }
+  }
+}
+
+#reply-title {}
+
+#cancel-comment-reply-link {}
+
+#commentform {
+  /* Message displayed when there are no comments */
+  color: #5b5b5b;
+  font-size: 14px;
+  margin-top: 5px;
+  label { /* The text next to each comment form field */
+  	padding: 1em 0;
+  }
+  input[type="text"] { }
+  #comment { /* The comment form textarea */ }
+}
+
+#author {}
+
+#email {}
+
+#url {}
+
+#comment,
+#comments,
+#respond { /* Container for the comments section */
+	clear: both;
+  padding-top: 30px;
+  border-top: 1px solid #ababab;
+  margin-top: 40px;
+}
+
+#submit {}
+
+.comment-notes {
+    font-style: italic;
+}
+
+.required { /* The little asterisk next to a required comment field */
+  color: $alert;
+}
+
+.comment-form {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px auto;
+  max-width: 648px;
+	> * {
+		flex-basis: 100%;
+		margin-bottom: $offset-y;
+	}
+	&-author {
+		flex-basis: 0;
+		flex-grow: 1;
+		@include media(mobile-only) {
+			flex-basis: 100%;
+		}
+	}
+  &-email {
+		flex-basis: 0;
+		flex-grow: 1;
+		@include media(mobile-only) {
+			flex-basis: 100%;
+		}
+	}
+	&-url {
+		width: 100%;
+		margin-bottom: 35px;
+	}
+	&-comment {
+		width: 100%;
+	}
+	&-cookies-consent {
+		padding: 0 15px;
+		display: none;
+	}
+	p {
+		margin-bottom: 20px;
+		.form-submit {
+			margin-bottom: 0;
+		}
+	}
+	.comment-form-author,
+	.comment-form-email {
+		&-cookies-consent {
+			padding: 0 15px;
+			display: flex;
+			> label,
+			.comment-notes {
+				font-size: $sm-font-size;
+				font-weight: normal;
+				margin-left: 5px;
+				display: inline;
+			}
+		}
+	}
+	.comment-notes {
+		font-size: $sm-font-size;
+	}
+	.comment-form-comment {
+		margin-bottom: 30px;
+	}
+	.comment-form-url {
+		margin-bottom: 35px;
+	}
+	#wp-comment-cookies-consent {
+		margin: 0 10px 0 0;
+	}
+  .comment-form-cookies-consent label {
+    display: inline;
+  }
+  > p {
+    margin-bottom: $offset-y;
+
+  	&:first-of-type {
+  		margin-top: 0;
+  	}
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    label,
+  	input[type="email"],
+  	input[type="text"],
+  	input[type="url"],
+  	textarea {
+  		display: block;
+  		font-size: $sm-font-size;
+  		margin-bottom: .5 * $offset-y;
+  		width: 100%;
+  		font-weight: $form-label-font-weight;
+  	}
+    &.comment-form-cookies-consent {
+
+  	}
+  }
+  .submit {
+    display: inline-block;
+    min-width: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    height: 36px;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    :hover {
+      opacity: 0.5;
+    }
+  }
+  label {
+    text-transform: uppercase;
+    line-height: 2.15;
+    font-weight: 700;
+  }
+  @include media(mobile) {
+		&.comment-form-author {
+			margin-right: 1.5 * $offset-x;
+		}
+		&.comment-notes,
+		&.logged-in-as {
+			display: block;
+		}
+	}
+}
+
+.form-allowed-tags {}
+
+.form-submit {
+  margin: 0;
+  text-align: center;
+}

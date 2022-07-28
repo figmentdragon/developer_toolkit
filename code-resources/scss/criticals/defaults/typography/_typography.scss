@@ -1,0 +1,112 @@
+$font-size-root:              null !default;
+$base-font-size:              1rem !default; // Assumes the browser default, typically `16px`
+$sm-font-size:                $base-font-size * $sm !default;
+$lg-font-size:                $base-font-size * $lg !default;
+
+$lighter-font-weight:         lighter !default;
+$light-font-weight:           300 !default;
+$normal-font-weight:          400 !default;
+$bold-font-weight:            700 !default;
+$bolder-font-weight:          bolder !default;
+
+$base-font-weight:            $normal-font-weight !default;
+
+$base-line-height:            1.5 !default;
+$sm-line-height:              1.25 !default;
+$lg-line-height:              2 !default;
+
+$h1-font-size:                $base-font-size * 2.5 !default;
+$h2-font-size:                $base-font-size * 2 !default;
+$h3-font-size:                $base-font-size * 1.75 !default;
+$h4-font-size:                $base-font-size * 1.5 !default;
+$h5-font-size:                $base-font-size * 1.25 !default;
+$h6-font-size:                $base-font-size !default;
+
+// scss-docs-start font-sizes
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size
+) !default;
+// scss-docs-end font-sizes
+
+// scss-docs-start headings-variables
+$headings-margin-bottom:      $spacer * .5 !default;
+$headings-font-family:        null !default;
+$headings-font-style:         null !default;
+$headings-font-weight:        bolder !default;
+$headings-line-height:        1.2 !default;
+$headings-color:              null !default;
+// scss-docs-end headings-variables
+
+// scss-docs-start display-headings
+$display-font-size-1: 5rem;
+$display-font-size-2: 4.5rem;
+$display-font-size-3: 4rem;
+$display-font-size-4: 3.5rem;
+$display-font-size-5: 3rem;
+$display-font-size-6: 2.5rem;
+
+$display-font-sizes: (
+  1: 5rem,
+  2: 4.5rem,
+  3: 4rem,
+  4: 3.5rem,
+  5: 3rem,
+  6: 2.5rem
+) !default;
+
+// scss-docs-start display-headings
+$display-font-weight-1: 900 !default;
+$display-font-weight-2: 700 !default;
+$display-font-weight-3: 500 !default;
+$display-font-weight-4: 300 !default;
+$display-line-height: $headings-line-height !default;
+// scss-docs-end display-headings
+
+$emphasis-font-weight:        600;
+
+// scss-docs-start type-variables
+$lead-font-size:              $base-font-size * 1.25 !default;
+$lead-font-weight:            300 !default;
+
+$small-font-size:             $sm-font-size !default;
+
+$sub-sup-font-size:          $base-font-size * $xs !default;
+$big-font-size: $base-font-size * $lg;
+
+$initialism-font-size:        $small-font-size !default;
+
+$blockquote-margin-y:         $spacer !default;
+$blockquote-font-size:        $base-font-size * 1.25 !default;
+$blockquote-footer-font-size: $small-font-size !default;
+
+$hr-margin-y:                 $spacer !default;
+$hr-color:                    inherit !default;
+
+// fusv-disable
+$hr-bg-color:                 currentColor !default;// Deprecated in v5.2.0
+$hr-height:                   null !default;// Deprecated in v5.2.0
+// fusv-enable
+
+$hr-border-color:             null !default;// Allows for inherited colors
+
+$hr-opacity:                  .25 !default;
+
+$legend-margin-bottom:        .5rem !default;
+$legend-font-size:            1.5rem !default;
+$legend-font-weight:          null !default;
+
+$mark-padding:                .2em !default;
+
+$dt-font-weight:              $bold-font-weight !default;
+
+$nested-kbd-font-weight:      $bold-font-weight !default;
+
+$list-inline-padding:         .5rem !default;
+
+$mark-bg:                     #fcf8e3 !default;
+// scss-docs-end type-variables

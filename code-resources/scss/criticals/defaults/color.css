@@ -1,0 +1,22 @@
+/*********************
+COLOR FUNCTIONS
+These are helpful when you're working
+with shadows and such things. It's essentially
+a quicker way to write RGBA.
+
+Example:
+box-shadow: 0 0 4px black(0.3);
+compiles to:
+box-shadow: 0 0 4px rgba(0,0,0,0.3);
+*********************/
+/*! _______________________________________________________ CHANGEpercentage */
+/* ______________________________________________________ BACKGROUNDS */
+/* Theme BG Colors */
+/* Background */
+/* Utilities */
+/* UTILITIES */
+/* GLOBAL */
+.footer-gradient { width: 100%; background-image: linear-gradient(to right, transparent, rgba(228, 237, 244, 0.1) 5%, rgba(228, 237, 244, 0.2) 15%, rgba(228, 237, 244, 0.3) 25%, rgba(10, 186, 181, 0.4) 35%, rgba(10, 186, 181, 0.5) 45%, rgba(10, 186, 181, 0.6) 55%, rgba(10, 186, 181, 0.7) 65%, rgba(10, 186, 181, 0.8) 75%, rgba(10, 186, 181, 0.9) 85%); }
+
+/* THEME */
+/*# sourceMappingURL=color.css.map */

@@ -1,7 +1,7 @@
 <?php
 /**
  * Author: Robert DeVore | @deviorobert
- * URL: creativityarchitect-.com | @creativityarchitect-
+ * URL: themename-.com | @themename-
  * Custom functions, support, custom post types and more.
  */
 
@@ -90,15 +90,15 @@ if ( function_exists( 'add_theme_support' ) ) {
     add_image_size( 'medium', 250, '', true ); // Medium Thumbnail.
     add_image_size( 'small', 120, '', true ); // Small Thumbnail.
     add_image_size( 'custom-size', 700, 200, true ); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
-		add_image_size( 'creativityarchitect-block-image', 606, 404, true ); //
-		add_image_size( 'creativityarchitect-single-post-page', 1920, 440, true );
-    add_image_size( 'creativityarchitect-slider', 1920, 1080, true ); // Ratio 16:9
-		add_image_size( 'creativityarchitect-portfolio', 1920, 9999, true ); // Flexible Height
+		add_image_size( 'themename-block-image', 606, 404, true ); //
+		add_image_size( 'themename-single-post-page', 1920, 440, true );
+    add_image_size( 'themename-slider', 1920, 1080, true ); // Ratio 16:9
+		add_image_size( 'themename-portfolio', 1920, 9999, true ); // Flexible Height
   add_theme_support( 'responsive-embeds' );
   add_theme_support( 'title-tag' );
 
   // Localisation Support.
-  load_theme_textdomain( 'creativityarchitect', get_template_directory() . '/languages' );
+  load_theme_textdomain( 'themename', get_template_directory() . '/languages' );
 }
 
 /*------------------------------------*\
@@ -118,7 +118,7 @@ if ( 'light' === get_theme_mod( 'editor_color_scheme', 'dark' ) ) {
 }
 
 // Creativity Architect navigation
-function creativityarchitect_nav() {
+function themename_nav() {
     wp_nav_menu(
     array(
         'theme_location'  => 'header-menu',
@@ -142,10 +142,10 @@ function creativityarchitect_nav() {
 }
 
 // Register Creativity Architect Navigation
-function register_creativityarchitect_menu() {
+function register_themename_menu() {
     register_nav_menus( array( // Using array to specify more menus if needed
-        'header-menu'  => esc_html( 'Header Menu', 'creativityarchitect' ), // Main Navigation
-        'extra-menu'   => esc_html( 'Extra Menu', 'creativityarchitect' ) // Extra Navigation if needed (duplicate as many as you need!)
+        'header-menu'  => esc_html( 'Header Menu', 'themename' ), // Main Navigation
+        'extra-menu'   => esc_html( 'Extra Menu', 'themename' ) // Extra Navigation if needed (duplicate as many as you need!)
     ) );
 }
 
@@ -190,8 +190,8 @@ function remove_width_attribute( $html ) {
 
 // If Dynamic Sidebar Exists
 register_sidebar( array(
-  'name'          => esc_html( 'Widget Area 1', 'creativityarchitect' ),
-  'description'   => esc_html( 'Description for this widget-area...', 'creativityarchitect' ),
+  'name'          => esc_html( 'Widget Area 1', 'themename' ),
+  'description'   => esc_html( 'Description for this widget-area...', 'themename' ),
   'id'            => 'widget-area-1',
   'before_widget' => '<div id="%1$s" class="%2$s">',
   'after_widget'  => '</div>',
@@ -202,8 +202,8 @@ register_sidebar( array(
 
 // Define Sidebar Widget Area 2
 register_sidebar( array(
-  'name'          => esc_html( 'Widget Area 2', 'creativityarchitect' ),
-  'description'   => esc_html( 'Description for this widget-area...', 'creativityarchitect' ),
+  'name'          => esc_html( 'Widget Area 2', 'themename' ),
+  'description'   => esc_html( 'Description for this widget-area...', 'themename' ),
   'id'            => 'widget-area-2',
   'before_widget' => '<div id="%1$s" class="%2$s">',
   'after_widget'  => '</div>',
@@ -246,7 +246,7 @@ function my_remove_recent_comments_style() {
     }
 }
 
-function creativityarchitect_widgets_init() {
+function themename_widgets_init() {
 	$args = array(
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
@@ -255,45 +255,45 @@ function creativityarchitect_widgets_init() {
 	);
 
 	register_sidebar( array(
-		'name'        => esc_html__( 'Sidebar', 'creativityarchitect' ),
+		'name'        => esc_html__( 'Sidebar', 'themename' ),
 		'id'          => 'sidebar-1',
-		'description' => esc_html__( 'Add widgets here.', 'creativityarchitect' ),
+		'description' => esc_html__( 'Add widgets here.', 'themename' ),
 		) + $args
 	);
 
 	register_sidebar( array(
-		'name'        => esc_html__( 'Footer 1', 'creativityarchitect' ),
+		'name'        => esc_html__( 'Footer 1', 'themename' ),
 		'id'          => 'sidebar-2',
-		'description' => esc_html__( 'Add widgets here to appear in your footer.', 'creativityarchitect' ),
+		'description' => esc_html__( 'Add widgets here to appear in your footer.', 'themename' ),
 		) + $args
 	);
 
 	register_sidebar( array(
-		'name'        => esc_html__( 'Footer 2', 'creativityarchitect' ),
+		'name'        => esc_html__( 'Footer 2', 'themename' ),
 		'id'          => 'sidebar-3',
-		'description' => esc_html__( 'Add widgets here to appear in your footer.', 'creativityarchitect' ),
+		'description' => esc_html__( 'Add widgets here to appear in your footer.', 'themename' ),
 		) + $args
 	);
 
 	register_sidebar( array(
-		'name'        => esc_html__( 'Footer 3', 'creativityarchitect' ),
+		'name'        => esc_html__( 'Footer 3', 'themename' ),
 		'id'          => 'sidebar-4',
-		'description' => esc_html__( 'Add widgets here to appear in your footer.', 'creativityarchitect' ),
+		'description' => esc_html__( 'Add widgets here to appear in your footer.', 'themename' ),
 		) + $args
 	);
 
 	if ( class_exists( 'Catch_Instagram_Feed_Gallery_Widget' ) ||  class_exists( 'Catch_Instagram_Feed_Gallery_Widget_Pro' ) ) {
 		register_sidebar( array(
-			'name'        => esc_html__( 'Instagram', 'creativityarchitect' ),
+			'name'        => esc_html__( 'Instagram', 'themename' ),
 			'id'          => 'sidebar-instagram',
-			'description' => esc_html__( 'Appears above footer. This sidebar is only for Widget from plugin Catch Instagram Feed Gallery Widget and Catch Instagram Feed Gallery Widget Pro', 'creativityarchitect' ),
+			'description' => esc_html__( 'Appears above footer. This sidebar is only for Widget from plugin Catch Instagram Feed Gallery Widget and Catch Instagram Feed Gallery Widget Pro', 'themename' ),
 			) + $args
 		);
 	}
 }
 
 // Pagination for paged posts, Page 1, Page 2, Page 3, with Next and Previous Links, No plugin
-function creativityarchitectwp_pagination() {
+function themenamewp_pagination() {
     global $wp_query;
     $big = 999999999;
     echo paginate_links( array(
@@ -304,18 +304,18 @@ function creativityarchitectwp_pagination() {
     ) );
 }
 
-// Create 20 Word Callback for Index page Excerpts, call using creativityarchitectwp_excerpt('creativityarchitectwp_index');
-function creativityarchitectwp_index( $length ) {
+// Create 20 Word Callback for Index page Excerpts, call using themenamewp_excerpt('themenamewp_index');
+function themenamewp_index( $length ) {
     return 20;
 }
 
-// Create 40 Word Callback for Custom Post Excerpts, call using creativityarchitectwp_excerpt('creativityarchitectwp_custom_post');
-function creativityarchitectwp_custom_post( $length ) {
+// Create 40 Word Callback for Custom Post Excerpts, call using themenamewp_excerpt('themenamewp_custom_post');
+function themenamewp_custom_post( $length ) {
     return 40;
 }
 
 // Create the Custom Excerpts callback
-function creativityarchitectwp_excerpt( $length_callback = '', $more_callback = '' ) {
+function themenamewp_excerpt( $length_callback = '', $more_callback = '' ) {
     global $post;
     if ( function_exists( $length_callback ) ) {
         add_filter( 'excerpt_length', $length_callback );
@@ -331,9 +331,9 @@ function creativityarchitectwp_excerpt( $length_callback = '', $more_callback = 
 }
 
 // Custom View Article link to Post
-function creativityarchitect_view_article( $more ) {
+function themename_view_article( $more ) {
     global $post;
-    return '... <a class="view-article" href="' . get_permalink( $post->ID ) . '">' . esc_html_e( 'View Article', 'creativityarchitect' ) . '</a>';
+    return '... <a class="view-article" href="' . get_permalink( $post->ID ) . '">' . esc_html_e( 'View Article', 'themename' ) . '</a>';
 }
 
 // Remove Admin bar
@@ -342,7 +342,7 @@ function remove_admin_bar() {
 }
 
 // Remove 'text/css' from our enqueued stylesheet
-function creativityarchitect_style_remove( $tag ) {
+function themename_style_remove( $tag ) {
     return preg_replace( '~\s+type=["\'][^"\']++["\']~', '', $tag );
 }
 
@@ -353,13 +353,13 @@ function remove_thumbnail_dimensions( $html ) {
 }
 
 // Custom Gravatar in Settings > Discussion
-function creativityarchitect_gravatar ( $avatar_defaults ) {
+function themename_gravatar ( $avatar_defaults ) {
     $myavatar                   = get_template_directory_uri() . '/img/gravatar.jpg';
     $avatar_defaults[$myavatar] = 'Custom Gravatar';
     return $avatar_defaults;
 }
 
-function creativityarchitect_javascript_detection() {
+function themename_javascript_detection() {
 	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
 }
 
@@ -372,7 +372,7 @@ function enable_threaded_comments() {
 }
 
 // Custom Comments Callback
-function creativityarchitect_comments( $comment, $args, $depth ) {
+function themename_comments( $comment, $args, $depth ) {
     $GLOBALS['comment'] = $comment;
     extract( $args, EXTR_SKIP );
 
@@ -417,7 +417,7 @@ function creativityarchitect_comments( $comment, $args, $depth ) {
 \*------------------------------------*/
 
 // Load Creativity Architect scripts (header.php)
-function creativityarchitect_header_scripts() {
+function themename_header_scripts() {
   $min  = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
   $path = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? 'assets/js/source/' : 'assets/js/';
 
@@ -427,39 +427,39 @@ function creativityarchitect_header_scripts() {
       wp_register_script( 'jquery', get_template_directory_uri() . '/src/js/lib/jquery.js', array(), '1.11.1' );
       wp_register_script( 'conditionizr', get_template_directory_uri() . '/src/js/lib/conditionizr-4.3.0.min.js', array(), '4.3.0' );
       wp_register_script( 'modernizr', get_template_directory_uri() . '/src/js/lib/modernizr.js', array(), '2.8.3' );
-      wp_register_script( 'creativityarchitect-scripts', get_template_directory_uri() . '/src/js/scripts.js',
+      wp_register_script( 'themename-scripts', get_template_directory_uri() . '/src/js/scripts.js',
         array(
           'conditionizr',
           'modernizr',
           'jquery'
         ),
         '1.0.0' );
-      wp_enqueue_script( 'creativityarchitect-scripts' );
+      wp_enqueue_script( 'themename-scripts' );
     } else {
-      wp_register_script( 'creativityarchitect-scripts-min', get_template_directory_uri() . '/src/js/scripts.min.js', array(), '1.0.0' );
-      wp_enqueue_script( 'creativityarchitect-scripts-min' );
+      wp_register_script( 'themename-scripts-min', get_template_directory_uri() . '/src/js/scripts.min.js', array(), '1.0.0' );
+      wp_enqueue_script( 'themename-scripts-min' );
     }
   }
 }
 
 
-function creativityarchitect_scripts() {
+function themename_scripts() {
   $dir_uri = get_template_directory_uri();
   $min  = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
   $path = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? 'src/js/source/' : 'src/js/';
 
-  wp_enqueue_script( 'creativityarchitect-html5',
+  wp_enqueue_script( 'themename-html5',
     get_theme_file_uri( $path . 'html5' . $min . '.js' ), array(), '3.7.3' );
-  wp_script_add_data( 'creativityarchitect-html5', 'conditional', 'lt IE 9' );
-  wp_enqueue_script( 'creativityarchitect-skip-link-focus-fix',
+  wp_script_add_data( 'themename-html5', 'conditional', 'lt IE 9' );
+  wp_enqueue_script( 'themename-skip-link-focus-fix',
     get_theme_file_uri( $path . 'skip-link-focus-fix' . $min . '.js' ), array(), '201800703', true );
-  wp_enqueue_script( 'creativityarchitect-menu', $dir_uri .  $path. "menu.js", array( 'jquery'), 'CREATIVITYARCHITECT_VERSION', true );
-  wp_enqueue_script( 'creativityarchitect-a11y', $dir_uri .  $path. "a11y.js", array(), 'CREATIVITYARCHITECT_VERSION', true );
-  wp_enqueue_script( 'creativityarchitect-menu-control', $dir_uri .  $path. "menu-control.js", array( 'jquery'), 'CREATIVITYARCHITECT_VERSION', true );
+  wp_enqueue_script( 'themename-menu', $dir_uri .  $path. "menu.js", array( 'jquery'), 'themename_VERSION', true );
+  wp_enqueue_script( 'themename-a11y', $dir_uri .  $path. "a11y.js", array(), 'themename_VERSION', true );
+  wp_enqueue_script( 'themename-menu-control', $dir_uri .  $path. "menu-control.js", array( 'jquery'), 'themename_VERSION', true );
 }
 
 // Load Creativity Architect conditional scripts
-function creativityarchitect_conditional_scripts() {
+function themename_conditional_scripts() {
   $min  = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
   $path = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? 'assets/js/source/' : 'assets/js/';
 
@@ -479,50 +479,50 @@ function creativityarchitect_conditional_scripts() {
 }
 
 // Load Creativity Architect styles
-function creativityarchitect_styles() {
-  $creativityarchitect_settings = wp_parse_args(
-    get_option( 'creativityarchitect_settings', array() ),
-    creativityarchitect_get_defaults()
+function themename_styles() {
+  $themename_settings = wp_parse_args(
+    get_option( 'themename_settings', array() ),
+    themename_get_defaults()
   );
   $suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
   $dir_uri = get_template_directory_uri();
   if ( SCRIPT_DEBUG ) {
     wp_register_style( 'normalize', get_template_directory_uri() . '/css/lib/normalize.css', array(), '7.0.0' );
 
-    wp_enqueue_style( 'creativityarchitect', get_template_directory_uri() . '/style.css', array( 'normalize' ), '1.0' );
+    wp_enqueue_style( 'themename', get_template_directory_uri() . '/style.css', array( 'normalize' ), '1.0' );
 
-    wp_enqueue_style( 'creativityarchitect' );
+    wp_enqueue_style( 'themename' );
   } else {
-      wp_register_style( 'creativityarchitect-cssmin', get_template_directory_uri() . '/style.css', array(), '1.0' );
-      wp_enqueue_style( 'creativityarchitect-cssmin' );
+      wp_register_style( 'themename-cssmin', get_template_directory_uri() . '/style.css', array(), '1.0' );
+      wp_enqueue_style( 'themename-cssmin' );
 
-      wp_enqueue_style( 'creativityarchitect-style-grid', $dir_uri . "/css/unsemantic-grid{$suffix}.css", false, 'CREATIVITYARCHITECT_VERSION', 'all' );
-      wp_enqueue_style( 'creativityarchitect-style', $dir_uri . "/style{$suffix}.css", array( 'creativityarchitect-style-grid' ), 'CREATIVITYARCHITECT_VERSION', 'all' );
-      wp_enqueue_style( 'creativityarchitect-mobile-style', $dir_uri . "/css/mobile{$suffix}.css", array( 'creativityarchitect-style' ), 'CREATIVITYARCHITECT_VERSION', 'all' );
+      wp_enqueue_style( 'themename-style-grid', $dir_uri . "/css/unsemantic-grid{$suffix}.css", false, 'themename_VERSION', 'all' );
+      wp_enqueue_style( 'themename-style', $dir_uri . "/style{$suffix}.css", array( 'themename-style-grid' ), 'themename_VERSION', 'all' );
+      wp_enqueue_style( 'themename-mobile-style', $dir_uri . "/css/mobile{$suffix}.css", array( 'themename-style' ), 'themename_VERSION', 'all' );
     }
 }
 
 // Enqueue scripts and styles.
-function creativityarchitect_enabled_scripts() {
-  $creativityarchitect_settings = wp_parse_args(
-    get_option( 'creativityarchitect_settings', array() ),
-    creativityarchitect_get_defaults()
+function themename_enabled_scripts() {
+  $themename_settings = wp_parse_args(
+    get_option( 'themename_settings', array() ),
+    themename_get_defaults()
   );
   $min  = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
   $path = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? 'src/js/source/' : 'src/js/';
   $dir_uri = get_template_directory_uri();
 
   $deps[] = 'jquery';
-  $enable_portfolio = get_theme_mod( 'creativityarchitect_portfolio_option', 'disabled' );
-  if ( creativityarchitect_check_section( $enable_portfolio ) ) {
+  $enable_portfolio = get_theme_mod( 'themename_portfolio_option', 'disabled' );
+  if ( themename_check_section( $enable_portfolio ) ) {
       $deps[] = 'jquery-masonry';
     }
 
-  $enable_featured_content = get_theme_mod( 'creativityarchitect_featured_content_option', 'disabled' );
+  $enable_featured_content = get_theme_mod( 'themename_featured_content_option', 'disabled' );
 
   //Slider Scripts
-  $enable_slider      = creativityarchitect_check_section( get_theme_mod( 'creativityarchitect_slider_option', 'disabled' ) );
-  $enable_testimonial_slider      = creativityarchitect_check_section( get_theme_mod( 'creativityarchitect_testimonial_option', 'disabled' ) ) && get_theme_mod( 'creativityarchitect_testimonial_slider', 1 );
+  $enable_slider      = themename_check_section( get_theme_mod( 'themename_slider_option', 'disabled' ) );
+  $enable_testimonial_slider      = themename_check_section( get_theme_mod( 'themename_testimonial_option', 'disabled' ) ) && get_theme_mod( 'themename_testimonial_slider', 1 );
 
   if ( $enable_slider || $enable_testimonial_slider ) {
       // Enqueue owl carousel css. Must load CSS before JS.
@@ -531,35 +531,35 @@ function creativityarchitect_enabled_scripts() {
       wp_enqueue_script( 'owl-carousel', get_theme_file_uri( $path . 'owl.carousel' . $min . '.js' ), array( 'jquery' ), '2.3.4', true );
       $deps[] = 'owl-carousel';
     }
-  wp_enqueue_script( 'creativityarchitect-script', get_theme_file_uri( $path . 'functions' . $min . '.js' ), $deps, '201800703', true );
-  wp_localize_script( 'creativityarchitect-script', 'creativityarchitectOptions',
+  wp_enqueue_script( 'themename-script', get_theme_file_uri( $path . 'functions' . $min . '.js' ), $deps, '201800703', true );
+  wp_localize_script( 'themename-script', 'themenameOptions',
       array(
         'screenReaderText' => array(
-          'expand'   => esc_html__( 'expand child menu', 'creativityarchitect' ),
-          'collapse' => esc_html__( 'collapse child menu', 'creativityarchitect' ),
-          'icon'     => creativityarchitect_get_svg(
+          'expand'   => esc_html__( 'expand child menu', 'themename' ),
+          'collapse' => esc_html__( 'collapse child menu', 'themename' ),
+          'icon'     => themename_get_svg(
             array(
               'icon'     => 'angle-down',
               'fallback' => true,
             )
           ),
         ),
-        'iconNavPrev'     => creativityarchitect_get_svg(
+        'iconNavPrev'     => themename_get_svg(
           array(
             'icon'     => 'angle-left',
             'fallback' => true,
           )
         ),
-        'iconNavNext'     => creativityarchitect_get_svg(
+        'iconNavNext'     => themename_get_svg(
           array(
             'icon'     => 'angle-right',
             'fallback' => true,
           )
         ),
-        'iconTestimonialNavPrev'     => '<span>' . esc_html__( 'PREV', 'creativityarchitect' ) . '</span>',
-        'iconTestimonialNavNext'     => '<span>' . esc_html__( 'NEXT', 'creativityarchitect' ) . '</span>',
+        'iconTestimonialNavPrev'     => '<span>' . esc_html__( 'PREV', 'themename' ) . '</span>',
+        'iconTestimonialNavNext'     => '<span>' . esc_html__( 'NEXT', 'themename' ) . '</span>',
         'rtl' => is_rtl(),
-        'dropdownIcon'     => creativityarchitect_get_svg(
+        'dropdownIcon'     => themename_get_svg(
           array(
             'icon' => 'angle-down',
             'fallback' => true
@@ -568,66 +568,66 @@ function creativityarchitect_enabled_scripts() {
       )
     );
 
-  if ( 'click' == $creativityarchitect_settings[ 'nav_dropdown_type' ] || 'click-arrow' == $creativityarchitect_settings[ 'nav_dropdown_type' ] ) {
-    wp_enqueue_script( 'creativityarchitect-dropdown-click', $dir_uri . $path . "dropdown-click.js", array( 'creativityarchitect-menu' ), 'CREATIVITYARCHITECT_VERSION', true );
+  if ( 'click' == $themename_settings[ 'nav_dropdown_type' ] || 'click-arrow' == $themename_settings[ 'nav_dropdown_type' ] ) {
+    wp_enqueue_script( 'themename-dropdown-click', $dir_uri . $path . "dropdown-click.js", array( 'themename-menu' ), 'themename_VERSION', true );
   }
 
-  if ( 'enable' == $creativityarchitect_settings['nav_search'] ) {
-    wp_enqueue_script( 'creativityarchitect-navigation-search', $dir_uri . $path. "navigation-search.js", array( 'creativityarchitect-menu' ), 'CREATIVITYARCHITECT_VERSION', true );
+  if ( 'enable' == $themename_settings['nav_search'] ) {
+    wp_enqueue_script( 'themename-navigation-search', $dir_uri . $path. "navigation-search.js", array( 'themename-menu' ), 'themename_VERSION', true );
   }
 
-  if ( 'enable' == $creativityarchitect_settings['back_to_top'] ) {
-    wp_enqueue_script( 'creativityarchitect-back-to-top', $dir_uri .  $path . "back-to-top.js", array(), 'CREATIVITYARCHITECT_VERSION', true );
+  if ( 'enable' == $themename_settings['back_to_top'] ) {
+    wp_enqueue_script( 'themename-back-to-top', $dir_uri .  $path . "back-to-top.js", array(), 'themename_VERSION', true );
   }
 
   $magic_cursor  = 'enable';
-  if ( isset( $creativityarchitect_settings['magic_cursor'] ) ) {
-    $magic_cursor = $creativityarchitect_settings['magic_cursor'];
+  if ( isset( $themename_settings['magic_cursor'] ) ) {
+    $magic_cursor = $themename_settings['magic_cursor'];
   }
 
   if ( $magic_cursor != 'disable' ) {
-    wp_enqueue_style( 'creativityarchitect-magic-mouse', esc_url( $dir_uri ) . "/css/magic-mouse.min.css", false, 'CREATIVITYARCHITECT_VERSION', 'all' );
-    wp_enqueue_script( 'creativityarchitect-magic-mouse', $dir_uri . $path . "magic-mouse.min.js", array( 'jquery'), 'CREATIVITYARCHITECT_VERSION', true );
+    wp_enqueue_style( 'themename-magic-mouse', esc_url( $dir_uri ) . "/css/magic-mouse.min.css", false, 'themename_VERSION', 'all' );
+    wp_enqueue_script( 'themename-magic-mouse', $dir_uri . $path . "magic-mouse.min.js", array( 'jquery'), 'themename_VERSION', true );
   }
 
   $type_effect		 = 'enable';
-  if ( isset( $creativityarchitect_settings['type_effect'] ) ) {
-    $type_effect = $creativityarchitect_settings['type_effect'];
+  if ( isset( $themename_settings['type_effect'] ) ) {
+    $type_effect = $themename_settings['type_effect'];
   }
 
   if ( $type_effect != 'disable' ) {
-    wp_enqueue_script( 'creativityarchitect-t', esc_url( get_stylesheet_directory_uri() ) . "$dir_uri .  $path " . "t.min.js", array( 'jquery'), 'CREATIVITYARCHITECT_VERSION', true );
+    wp_enqueue_script( 'themename-t', esc_url( get_stylesheet_directory_uri() ) . "$dir_uri .  $path " . "t.min.js", array( 'jquery'), 'themename_VERSION', true );
   }
 
   $cursor		 = 'enable';
   $preloader   = 'enable';
-  if ( isset( $creativityarchitect_settings['cursor'] ) ) {
-      $cursor = $creativityarchitect_settings['cursor'];
+  if ( isset( $themename_settings['cursor'] ) ) {
+      $cursor = $themename_settings['cursor'];
     }
-  if ( isset( $creativityarchitect_settings['creativityarchitect_preloader'] ) ) {
-    $preloader = $creativityarchitect_settings['creativityarchitect_preloader'];
+  if ( isset( $themename_settings['themename_preloader'] ) ) {
+    $preloader = $themename_settings['themename_preloader'];
   }
 }
 
-add_action( 'wp_enqueue_scripts', 'creativityarchitect_enabled_scripts' );
+add_action( 'wp_enqueue_scripts', 'themename_enabled_scripts' );
 
 /*------------------------------------*\
     Actions + Filters + ShortCodes
 \*------------------------------------*/
 
 // Add Actions
-add_action( 'wp_enqueue_scripts', 'creativityarchitect_enabled_scripts' ); // Add Custom Scripts to wp_head
-add_action( 'wp_header', 'creativityarchitect_header_scripts' );
-add_action( 'wp_enqueue_scripts', 'creativityarchitect_scripts' );
-add_action( 'wp_print_scripts', 'creativityarchitect_conditional_scripts' ); // Add Conditional Page Scripts
+add_action( 'wp_enqueue_scripts', 'themename_enabled_scripts' ); // Add Custom Scripts to wp_head
+add_action( 'wp_header', 'themename_header_scripts' );
+add_action( 'wp_enqueue_scripts', 'themename_scripts' );
+add_action( 'wp_print_scripts', 'themename_conditional_scripts' ); // Add Conditional Page Scripts
 add_action( 'get_header', 'enable_threaded_comments' ); // Enable Threaded Comments
-add_action( 'wp_enqueue_scripts', 'creativityarchitect_styles' ); // Add Theme Stylesheet
-add_action( 'init', 'register_creativityarchitect_menu' ); // Add Creativity Architect Menu
-add_action( 'init', 'create_post_type_creativityarchitect' ); // Add our Creativity Architect Custom Post Type
+add_action( 'wp_enqueue_scripts', 'themename_styles' ); // Add Theme Stylesheet
+add_action( 'init', 'register_themename_menu' ); // Add Creativity Architect Menu
+add_action( 'init', 'create_post_type_themename' ); // Add our Creativity Architect Custom Post Type
 add_action( 'widgets_init', 'my_remove_recent_comments_style' ); // Remove inline Recent Comment Styles from wp_head()
-add_action( 'widgets_init', 'creativityarchitect_widgets_init' );
-add_action( 'init', 'creativityarchitectwp_pagination' );
-add_action( 'wp_head', 'creativityarchitect_javascript_detection', 0 );
+add_action( 'widgets_init', 'themename_widgets_init' );
+add_action( 'init', 'themenamewp_pagination' );
+add_action( 'wp_head', 'themename_javascript_detection', 0 );
 
 
 // Remove Actions
@@ -640,7 +640,7 @@ remove_action( 'wp_head', 'rel_canonical' );
 remove_action( 'wp_head', 'wp_shortlink_wp_head', 10, 0 );
 
 // Add Filters
-add_filter( 'avatar_defaults', 'creativityarchitect_gravatar' ); // Custom Gravatar in Settings > Discussion
+add_filter( 'avatar_defaults', 'themename_gravatar' ); // Custom Gravatar in Settings > Discussion
 add_filter( 'body_class', 'add_slug_to_body_class' ); // Add slug to body class (Starkers build)
 add_filter( 'widget_text', 'do_shortcode' ); // Allow shortcodes in Dynamic Sidebar
 add_filter( 'widget_text', 'shortcode_unautop' ); // Remove <p> tags in Dynamic Sidebars (better!)
@@ -651,9 +651,9 @@ add_filter( 'page_css_class', 'my_css_attributes_filter', 100, 1 ); // Remove Na
 add_filter( 'the_category', 'remove_category_rel_from_category_list' ); // Remove invalid rel attribute
 add_filter( 'the_excerpt', 'shortcode_unautop' ); // Remove auto <p> tags in Excerpt (Manual Excerpts only)
 add_filter( 'the_excerpt', 'do_shortcode' ); // Allows Shortcodes to be executed in Excerpt (Manual Excerpts only)
-add_filter( 'excerpt_more', 'creativityarchitect_view_article' ); // Add 'View Article' button instead of [...] for Excerpts
+add_filter( 'excerpt_more', 'themename_view_article' ); // Add 'View Article' button instead of [...] for Excerpts
 add_filter( 'show_admin_bar', 'remove_admin_bar' ); // Remove Admin bar
-add_filter( 'style_loader_tag', 'creativityarchitect_style_remove' ); // Remove 'text/css' from enqueued stylesheet
+add_filter( 'style_loader_tag', 'themename_style_remove' ); // Remove 'text/css' from enqueued stylesheet
 add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10 ); // Remove width and height dynamic attributes to thumbnails
 add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 ); // Remove width and height dynamic attributes to post images
 add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 ); // Remove width and height dynamic attributes to post images
@@ -662,35 +662,35 @@ add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 ); // Remove wi
 remove_filter( 'the_excerpt', 'wpautop' ); // Remove <p> tags from Excerpt altogether
 
 // Shortcodes
-add_shortcode( 'creativityarchitect_shortcode_demo', 'creativityarchitect_shortcode_demo' ); // You can place [creativityarchitect_shortcode_demo] in Pages, Posts now.
-add_shortcode( 'creativityarchitect_shortcode_demo_2', 'creativityarchitect_shortcode_demo_2' ); // Place [creativityarchitect_shortcode_demo_2] in Pages, Posts now.
+add_shortcode( 'themename_shortcode_demo', 'themename_shortcode_demo' ); // You can place [themename_shortcode_demo] in Pages, Posts now.
+add_shortcode( 'themename_shortcode_demo_2', 'themename_shortcode_demo_2' ); // Place [themename_shortcode_demo_2] in Pages, Posts now.
 
 // Shortcodes above would be nested like this -
-// [creativityarchitect_shortcode_demo] [creativityarchitect_shortcode_demo_2] Here's the page title! [/creativityarchitect_shortcode_demo_2] [/creativityarchitect_shortcode_demo]
+// [themename_shortcode_demo] [themename_shortcode_demo_2] Here's the page title! [/themename_shortcode_demo_2] [/themename_shortcode_demo]
 
 /*------------------------------------*\
     Custom Post Types
 \*------------------------------------*/
 
 // Create 1 Custom Post type for a Demo, called Creativity Core
-function create_post_type_creativityarchitect() {
-    register_taxonomy_for_object_type( 'category', 'creativityarchitect' ); // Register Taxonomies for Category
-    register_taxonomy_for_object_type( 'post_tag', 'creativityarchitect' );
-    register_post_type( 'creativityarchitect', // Register Custom Post Type
+function create_post_type_themename() {
+    register_taxonomy_for_object_type( 'category', 'themename' ); // Register Taxonomies for Category
+    register_taxonomy_for_object_type( 'post_tag', 'themename' );
+    register_post_type( 'themename', // Register Custom Post Type
         array(
         'labels'       => array(
-            'name'               => esc_html( 'Creativity Architect Custom Post', 'creativityarchitect' ), // Rename these to suit
-            'singular_name'      => esc_html( 'Creativity Architect Custom Post', 'creativityarchitect' ),
-            'add_new'            => esc_html( 'Add New', 'creativityarchitect' ),
-            'add_new_item'       => esc_html( 'Add New Creativity Architect Custom Post', 'creativityarchitect' ),
-            'edit'               => esc_html( 'Edit', 'creativityarchitect' ),
-            'edit_item'          => esc_html( 'Edit Creativity Architect Custom Post', 'creativityarchitect' ),
-            'new_item'           => esc_html( 'New Creativity Architect Custom Post', 'creativityarchitect' ),
-            'view'               => esc_html( 'View Creativity Architect Custom Post', 'creativityarchitect' ),
-            'view_item'          => esc_html( 'View Creativity Architect Custom Post', 'creativityarchitect' ),
-            'search_items'       => esc_html( 'Search Creativity Architect Custom Post', 'creativityarchitect' ),
-            'not_found'          => esc_html( 'No Creativity Architect Custom Posts found', 'creativityarchitect' ),
-            'not_found_in_trash' => esc_html( 'No Creativity Architect Custom Posts found in Trash', 'creativityarchitect' ),
+            'name'               => esc_html( 'Creativity Architect Custom Post', 'themename' ), // Rename these to suit
+            'singular_name'      => esc_html( 'Creativity Architect Custom Post', 'themename' ),
+            'add_new'            => esc_html( 'Add New', 'themename' ),
+            'add_new_item'       => esc_html( 'Add New Creativity Architect Custom Post', 'themename' ),
+            'edit'               => esc_html( 'Edit', 'themename' ),
+            'edit_item'          => esc_html( 'Edit Creativity Architect Custom Post', 'themename' ),
+            'new_item'           => esc_html( 'New Creativity Architect Custom Post', 'themename' ),
+            'view'               => esc_html( 'View Creativity Architect Custom Post', 'themename' ),
+            'view_item'          => esc_html( 'View Creativity Architect Custom Post', 'themename' ),
+            'search_items'       => esc_html( 'Search Creativity Architect Custom Post', 'themename' ),
+            'not_found'          => esc_html( 'No Creativity Architect Custom Posts found', 'themename' ),
+            'not_found_in_trash' => esc_html( 'No Creativity Architect Custom Posts found in Trash', 'themename' ),
         ),
         'public'       => true,
         'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
@@ -714,11 +714,11 @@ function create_post_type_creativityarchitect() {
 \*------------------------------------*/
 
 // Shortcode Demo with Nested Capability
-function creativityarchitect_shortcode_demo( $atts, $content = null ) {
+function themename_shortcode_demo( $atts, $content = null ) {
     return '<div class="shortcode-demo">' . do_shortcode( $content ) . '</div>'; // do_shortcode allows for nested Shortcodes
 }
 
 // Demo Heading H2 shortcode, allows for nesting within above element. Fully expandable.
-function creativityarchitect_shortcode_demo_2( $atts, $content = null ) {
+function themename_shortcode_demo_2( $atts, $content = null ) {
     return '<h2>' . $content . '</h2>';
 }

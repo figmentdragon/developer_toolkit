@@ -1,0 +1,13 @@
+// Progress bars
+
+// scss-docs-start progress-variables
+$progress-height:                   1rem;
+$progress-font-size:                $base-font-size * .75;
+$progress-bg:                       $gray-200;
+$progress-border-radius:            $border-radius;
+$progress-box-box-shadow:               $box-shadow-inset;
+$progress-bar-color:                $white;
+$progress-bar-bg:                   $primary;
+$progress-bar-animation-timing:     1s linear infinite;
+$progress-bar-transition:           width .6s ease;
+// scss-docs-end progress-variables

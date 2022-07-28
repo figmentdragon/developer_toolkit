@@ -3,8 +3,8 @@
  * Custom Colors Class
  *
  * @package WordPress
- * @subpackage themename
- * @since themename 1.0
+ * @subpackage TheThemeName
+ * @since TheThemeName 1.0
  */
 
 /**
@@ -15,7 +15,7 @@ class Custom_Colors {
 	/**
 	 * Instantiate the object.
 	 *
-	 * @since themename 1.0
+	 * @since TheThemeName 1.0
 	 */
 	public function __construct() {
 
@@ -32,7 +32,7 @@ class Custom_Colors {
 	/**
 	 * Determine the luminance of the given color and then return #fff or #000 so that the text is always readable.
 	 *
-	 * @since themename 1.0
+	 * @since TheThemeName 1.0
 	 *
 	 * @param string $background_color The background color.
 	 * @return string (hex color)
@@ -48,7 +48,7 @@ class Custom_Colors {
 	 * Both text and link colors needs to be updated.
 	 * The code below needs to be updated, because the colors are no longer theme mods.
 	 *
-	 * @since themename 1.0
+	 * @since TheThemeName 1.0
 	 *
 	 * @param string|null $context Can be "editor" or null.
 	 * @return string
@@ -79,34 +79,34 @@ class Custom_Colors {
 	/**
 	 * Customizer & frontend custom color variables.
 	 *
-	 * @since themename 1.0
+	 * @since TheThemeName 1.0
 	 *
 	 * @return void
 	 */
 	public function custom_color_variables() {
 		if ( 'd1e4dd' !== strtolower( get_theme_mod( 'background_color', 'D1E4DD' ) ) ) {
-			wp_add_inline_style( 'themename-style', $this->generate_custom_color_variables() );
+			wp_add_inline_style( 'style', $this->generate_custom_color_variables() );
 		}
 	}
 
 	/**
 	 * Editor custom color variables.
 	 *
-	 * @since themename 1.0
+	 * @since TheThemeName 1.0
 	 *
 	 * @return void
 	 */
 	public function editor_custom_color_variables() {
 		wp_enqueue_style(
-			'themename-custom-color-overrides',
-			get_theme_file_uri( 'assets/css/custom-color-overrides.css' ),
+			'custom-color-overrides',
+			get_theme_file_uri( 'assets/scripts/css/custom-color-overrides.css' ),
 			array(),
 			wp_get_theme()->get( 'Version' )
 		);
 
 		$background_color = get_theme_mod( 'background_color', 'D1E4DD' );
 		if ( 'd1e4dd' !== strtolower( $background_color ) ) {
-			wp_add_inline_style( 'themename-custom-color-overrides', $this->generate_custom_color_variables( 'editor' ) );
+			wp_add_inline_style( 'custom-color-overrides', $this->generate_custom_color_variables( 'editor' ) );
 		}
 	}
 
@@ -115,7 +115,7 @@ class Custom_Colors {
 	 *
 	 * @static
 	 *
-	 * @since themename 1.0
+	 * @since TheThemeName 1.0
 	 *
 	 * @param string $hex The HEX color.
 	 * @return int Returns a number (0-255).
@@ -143,7 +143,7 @@ class Custom_Colors {
 	/**
 	 * Adds a class to <body> if the background-color is dark.
 	 *
-	 * @since themename 1.0
+	 * @since TheThemeName 1.0
 	 *
 	 * @param array $classes The existing body classes.
 	 * @return array

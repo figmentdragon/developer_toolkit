@@ -1,0 +1,25 @@
+// Shades of grey
+$gray-light: #ECF0F3;
+$gray-100: #fafbfe;
+$gray-200: #e6e7ee;
+$gray-300: #D1D9E6;
+$gray-400: #b1bcce;
+$gray-500: #93a5be;
+$gray-600: #66799e;
+$gray-700: #525480;
+$gray-800: #44476A;
+$gray-900: #31344b;
+$gray-dark: #262833;
+
+$grays: () !default;
+$grays: map-merge((
+                    'gray-100': $gray-100,
+                    'gray-200': $gray-200,
+                    'gray-300': $gray-300,
+                    'gray-400': $gray-400,
+                    'gray-500': $gray-500,
+                    'gray-600': $gray-600,
+                    'gray-700': $gray-700,
+                    'gray-800': $gray-800,
+                    'gray-900': $gray-900),
+                    $grays);

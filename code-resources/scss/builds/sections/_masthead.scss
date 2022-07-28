@@ -1,0 +1,91 @@
+.#{$default-prefix}masthead {
+  padding: 3rem 0;
+  // stylelint-disable
+  background-image:
+    linear-gradient(180deg, rgba($body-bg, .01), rgba($body-bg, 1) 85%),
+    radial-gradient(ellipse at top left, rgba($default, .5), transparent 50%),
+    radial-gradient(ellipse at top right, rgba($default-accent, .5), transparent 50%),
+    radial-gradient(ellipse at center right, rgba($default-light, .5), transparent 50%),
+    radial-gradient(ellipse at center left, rgba($default-dark, .5), transparent 50%);
+  // stylelint-enable
+
+  h1 {
+    @include font-size(4rem);
+    line-height: 1;
+  }
+
+  .lead {
+    @include font-size(1rem);
+    font-weight: 400;
+    color: $gray-700;
+  }
+
+  .#{$default-prefix}code-snippet {
+    margin: 0;
+    @include border-radius(.5rem);
+  }
+
+  .highlight {
+    padding: .5rem 4rem .5rem 1rem;
+    line-height: 1.25;
+    background-color: rgba(var(--bs-body-color-rgb), .075);
+    @include border-radius(.5rem);
+  }
+  .btn-clipboard {
+    margin-top: .4rem;
+    background-color: transparent;
+  }
+
+  #carbonads { // stylelint-disable-line selector-max-id
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @include media-breakpoint-up(md) {
+    .lead {
+      @include font-size(1.5rem);
+    }
+  }
+}
+
+.masthead-followup {
+  .lead {
+    @include font-size(1rem);
+  }
+
+  .highlight {
+    @include border-radius(.5rem);
+  }
+
+  @include media-breakpoint-up(md) {
+    .lead {
+      @include font-size(1.25rem);
+    }
+  }
+}
+
+.#{$default-prefix}btn-lg {
+  padding: .8rem 2rem;
+}
+
+.masthead-followup-icon {
+  padding: 1rem;
+  color: rgba(var(--bg-rgb), 1);
+  background-color: rgba(var(--bg-rgb), .1);
+  background-blend-mode: multiple;
+  @include border-radius(1rem);
+  mix-blend-mode: darken;
+
+  svg {
+    filter: drop-shadow(0 1px 1px #fff);
+  }
+}
+
+.masthead-followup-svg {
+  filter: drop-shadow(0 1px 0 rgba(0, 0, 0, .125));
+}
+
+.masthead-notice {
+  background-color: var(--bd-accent);
+  box-shadow: inset 0 -1px 1px rgba(var(--bs-body-color-rgb), .15), 0 .25rem 1.5rem rgba($body-bg, .75);
+}

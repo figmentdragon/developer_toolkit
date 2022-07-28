@@ -1,0 +1,32 @@
+/**
+ * ## Z-Index
+ =========================*/
+$z-index-html: 25;
+$z-index-body: 50;
+$z-index-page: 100;
+
+$z-index-main: 300;
+
+$z-index-article: 400;
+
+$z-index-page-title: 475;
+$z-index-header: 500;
+$z-index-logo: $z-index-main - 50;
+$z-index-hgroup: 550;
+$z-index-site-title: 575;
+
+$z-index-footer: 900;
+$z-index-sidebar: 980;
+$z-index-nav: 1000;
+
+$z-index-dropdown: 1000;
+$z-index-sticky: 1020;
+$z-index-fixed: 1030;
+$z-index-offcanvas-backdrop: 1040;
+$z-index-offcanvas: 1045;
+$z-index-modal-backdrop: 1050;
+$z-index-modal: 1055;
+$z-index-popover: 1070;
+$z-index-tooltip: 1080;
+
+$z-index-page-container: 1400;

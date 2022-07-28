@@ -12,10 +12,10 @@
  *
  * @param WP_Customize_Manager $wp_customize Instance of WP_Customize_Manager.
  */
-function creativitycustomize_additional_scripts( $wp_customize ) {
+function ca_customize_additional_scripts( $wp_customize ) {
 	// Register a setting.
 	$wp_customize->add_setting(
-		'creativityheader_scripts',
+		'ca_header_scripts',
 		[
 			'default'           => '',
 			'sanitize_callback' => 'force_balance_tags',
@@ -24,18 +24,18 @@ function creativitycustomize_additional_scripts( $wp_customize ) {
 
 	// Create the setting field.
 	$wp_customize->add_control(
-		'creativityheader_scripts',
+		'ca_header_scripts',
 		[
-			'label'       => esc_attr__( 'Header Scripts', 'creativityarchitect' ),
-			'description' => esc_attr__( 'Additional scripts to add to the header. Basic HTML tags are allowed.', 'creativityarchitect' ),
-			'section'     => 'creativityadditional_scripts_section',
+			'label'       => esc_attr__( 'Header Scripts', 'themename' ),
+			'description' => esc_attr__( 'Additional scripts to add to the header. Basic HTML tags are allowed.', 'themename' ),
+			'section'     => 'ca_additional_scripts_section',
 			'type'        => 'textarea',
 		]
 	);
 
 	// Register a setting.
 	$wp_customize->add_setting(
-		'creativityfooter_scripts',
+		'ca_footer_scripts',
 		[
 			'default'           => '',
 			'sanitize_callback' => 'force_balance_tags',
@@ -44,17 +44,17 @@ function creativitycustomize_additional_scripts( $wp_customize ) {
 
 	// Create the setting field.
 	$wp_customize->add_control(
-		'creativityfooter_scripts',
+		'ca_footer_scripts',
 		[
-			'label'       => esc_attr__( 'Footer Scripts', 'creativityarchitect' ),
-			'description' => esc_attr__( 'Additional scripts to add to the footer. Basic HTML tags are allowed.', 'creativityarchitect' ),
-			'section'     => 'creativityadditional_scripts_section',
+			'label'       => esc_attr__( 'Footer Scripts', 'themename' ),
+			'description' => esc_attr__( 'Additional scripts to add to the footer. Basic HTML tags are allowed.', 'themename' ),
+			'section'     => 'ca_additional_scripts_section',
 			'type'        => 'textarea',
 		]
 	);
 }
 
-add_action( 'customize_register', 'creativitycustomize_additional_scripts' );
+add_action( 'customize_register', 'ca_customize_additional_scripts' );
 
 /**
  * Register a social icons setting.
@@ -63,7 +63,7 @@ add_action( 'customize_register', 'creativitycustomize_additional_scripts' );
  *
  * @param WP_Customize_Manager $wp_customize Instance of WP_Customize_Manager.
  */
-function creativitycustomize_social_icons( $wp_customize ) {
+function ca_customize_social_icons( $wp_customize ) {
 	// Create an array of our social links for ease of setup.
 	$social_networks = [
 		'facebook',
@@ -77,7 +77,7 @@ function creativitycustomize_social_icons( $wp_customize ) {
 
 		// Register a setting.
 		$wp_customize->add_setting(
-			'creativity' . $network . '_link',
+			'ca_' . $network . '_link',
 			[
 				'default'           => '',
 				'sanitize_callback' => 'esc_url',
@@ -86,17 +86,17 @@ function creativitycustomize_social_icons( $wp_customize ) {
 
 		// Create the setting field.
 		$wp_customize->add_control(
-			'creativity' . $network . '_link',
+			'ca_' . $network . '_link',
 			[
-				'label'   => /* translators: the social network name. */ sprintf( esc_attr__( '%s URL', 'creativityarchitect' ), ucwords( $network ) ),
-				'section' => 'creativitysocial_links_section',
+				'label'   => /* translators: the social network name. */ sprintf( esc_attr__( '%s URL', 'themename' ), ucwords( $network ) ),
+				'section' => 'ca_social_links_section',
 				'type'    => 'text',
 			]
 		);
 	}
 }
 
-add_action( 'customize_register', 'creativitycustomize_social_icons' );
+add_action( 'customize_register', 'ca_customize_social_icons' );
 
 /**
  * Register copyright text setting.
@@ -105,10 +105,10 @@ add_action( 'customize_register', 'creativitycustomize_social_icons' );
  *
  * @param WP_Customize_Manager $wp_customize Instance of WP_Customize_Manager.
  */
-function creativitycustomize_copyright_text( $wp_customize ) {
+function ca_customize_copyright_text( $wp_customize ) {
 	// Register a setting.
 	$wp_customize->add_setting(
-		'creativitycopyright_text',
+		'ca_copyright_text',
 		[
 			'default'           => '',
 			'sanitize_callback' => 'wp_kses_post',
@@ -119,15 +119,15 @@ function creativitycustomize_copyright_text( $wp_customize ) {
 	$wp_customize->add_control(
 		new Text_Editor_Custom_Control(
 			$wp_customize,
-			'creativitycopyright_text',
+			'ca_copyright_text',
 			[
-				'label'       => esc_attr__( 'Copyright Text', 'creativityarchitect' ),
-				'description' => esc_attr__( 'The copyright text will be displayed in the footer. Basic HTML tags allowed.', 'creativityarchitect' ),
-				'section'     => 'creativityfooter_section',
+				'label'       => esc_attr__( 'Copyright Text', 'themename' ),
+				'description' => esc_attr__( 'The copyright text will be displayed in the footer. Basic HTML tags allowed.', 'themename' ),
+				'section'     => 'ca_footer_section',
 				'type'        => 'textarea',
 			]
 		)
 	);
 }
 
-add_action( 'customize_register', 'creativitycustomize_copyright_text' );
+add_action( 'customize_register', 'ca_customize_copyright_text' );

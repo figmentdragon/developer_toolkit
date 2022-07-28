@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,UAAU,GAEN,WAAW,EAAE,iBAAiB,EAC9B,WAAW,EAAE,GAAG,EAChB,UAAU,EAAE,MAAM,EAClB,GAAG,EAAE,2GAA2G,CAAC,cAAc",
+    "sources": [
+        "handtypewriter.scss"
+    ],
+    "names": [],
+    "file": "handtypewriter.css"
+}

@@ -13,11 +13,11 @@
 
 	<?php
 	// SVG Icon.
-	ca_display_scaffolding_section(
+	display_scaffolding_section(
 		[
 			'title'       => 'SVG',
 			'description' => 'Display inline SVGs.',
-			'usage'       => '<?php ca_display_svg( array(
+			'usage'       => '<?php display_svg( array(
 				\'icon\'   => \'facebook-square\',
 				\'title\'  => \'Facebook Icon\',
 				\'desc\'   => \'Facebook social icon svg\',
@@ -36,7 +36,7 @@
 				'height' => '(optional) The height of the icon. Default: none',
 				'width'  => '(optional) The width of the icon. Default: none',
 			],
-			'output'      => ca_get_svg(
+			'output'      => get_svg(
 				[
 					'icon'   => 'facebook-square',
 					'title'  => 'Facebook Icon',

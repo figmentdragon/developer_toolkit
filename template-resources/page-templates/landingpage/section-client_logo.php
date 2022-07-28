@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * @package creativityarchitect
+ * @package themename
  */
 if (get_theme_mod('theme_client_logo_section_disable') != 'on') {
     ?>

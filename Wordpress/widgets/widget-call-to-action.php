@@ -1,25 +1,16 @@
 <?php
 
 /**
- *  Call to Action Widget
+ * Creativity Architect Call to Action Widget
  *
  * I only have 3 word for you:
  * A. Always
  * B. BE
  * C. Closing
- *
+ * 
  */
-
- add_action('widgets_init', 'themename_register_cta_simple_widget');
-
- function themename_register_cta_simple_widget() {
-     register_widget('call_to_action_widget');
- }
-
 class Call_To_Action_Widget extends WP_Widget {
-  /**
-   * Register widget with WordPress.
-   */
+
     public function __construct() {
         parent::__construct(
                 'call_to_action_widget', // Root id for all widgets of this type.
@@ -28,14 +19,6 @@ class Call_To_Action_Widget extends WP_Widget {
         );
     }
 
-  /**
-   * Front-end display of widget.
-   *
-   * @see WP_Widget::widget()
-   *
-   * @param array $args     Widget arguments.
-   * @param array $instance Saved values from database.
-   */
     public function widget($args, $instance) {
         extract($args);
         $title = apply_filters('widget_title', $instance['title']);
@@ -54,18 +37,6 @@ class Call_To_Action_Widget extends WP_Widget {
         echo $after_widget;
     }
 
-  /**
-   * Sanitize widget form values as they are saved.
-   *
-   * @see WP_Widget::update()
-   *
-   * @param	array	$new_instance	Values just sent to be aved.
-   * @param	array	$old_instance	Previously saved values from database.
-   *
-   * @uses	themename_widgets_updated_field_value()		defined in widget-fields.php
-   *
-   * @return	array Updated safe values to be saved.
-   */
     public function update($new_instance, $old_instance) {
         $instance = array();
         $instance['title'] = $new_instance['title'];
@@ -76,15 +47,6 @@ class Call_To_Action_Widget extends WP_Widget {
         return $instance;
     }
 
-  /**
-   * Back-end widget form.
-   *
-   * @see WP_Widget::form()
-   *
-   * @param	array $instance Previously saved values from database.
-   *
-   * @uses	themename_widgets_show_widget_field()		defined in widget-fields.php
-   */
     public function form($instance) {
 
         $title = isset($instance['title']) ? $instance['title'] : '';
@@ -111,28 +73,4 @@ class Call_To_Action_Widget extends WP_Widget {
         <?php
     }
 
-  /**
-   * Helper function that holds widget fields
-   * Array is used in update and form functions
-   */
-    private function widget_fields() {
-      $fields = array(
-        'cta_simple_title' => array(
-          'themename_widgets_name' => 'cta_simple_title',
-          'themename_widgets_title' => __('Title', 'themename'),
-          'themename_widgets_field_type' => 'text',
-        ),
-        'cta_simple_btn_text' => array(
-          'themename_widgets_name' => 'cta_simple_btn_text',
-          'themename_widgets_title' => __('Button Text', 'themename'),
-          'themename_widgets_field_type' => 'text',
-        ),
-        'cta_simple_btn_url' => array(
-          'themename_widgets_name' => 'cta_simple_btn_url',
-          'themename_widgets_title' => __('Button Url', 'themename'),
-          'themename_widgets_field_type' => 'text'
-        )
-      );
-    return $fields;
-  }
 }

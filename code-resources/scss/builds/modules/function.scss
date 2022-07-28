@@ -1,0 +1,87 @@
+// Bootstrap functions
+//
+// Utility mixins and functions for evaluating source code across our variables, maps, and mixins.
+
+@import "core/functions/assert-ascending";
+
+@import "core/functions/assert-at-zero";
+
+@import "core/functions/breakpoint-viewport";
+
+@import "core/functions/color-to-rgb";
+
+@import "core/functions/map-loop";
+
+@import "core/functions/varify";
+
+@import "core/functions/negativify-map";
+
+@import "core/functions/map-get-multiple";
+
+@import "core/functions/map-merge-multiple";
+
+@import "core/functions/maps/map-deep-get";
+
+@import "core/functions/maps/map-deep-set";
+
+@import "core/functions/maps/map-depth";
+
+@import "core/functions/maps/map-extend-jquerystyle";
+
+@import "core/functions/maps/map-extend";
+
+@import "core/functions/maps/map-has-keys";
+
+@import "core/functions/maps/map-has-nested-keys";
+
+@import "core/functions/maps/map-multiple";
+
+@import "core/functions/maps/map-zip";
+
+@import "core/functions/str-replace";
+
+@import "core/functions/escape-svg";
+
+@import "core/functions/color-yiq";
+
+@import "core/functions/luminance-list";
+
+@import "core/functions/color";
+
+@import "core/functions/theme-color";
+
+@import "core/functions/gray";
+
+@import "core/functions/theme-color-level";
+
+@import "core/functions/color-contrast";
+
+@import "core/functions/contrast-ratio";
+
+@import "core/functions/luminance";
+
+@import "core/functions/opaque-color";
+
+@import "core/functions/tint-color";
+
+@import "core/functions/shade-color";
+
+@import "core/functions/shift-color";
+
+@import "core/functions/color-function";
+
+@import "core/functions/strip-number";
+
+@import "core/functions/calc-percentage";
+
+@import "core/functions/addition";
+
+@import "core/functions/subtract";
+
+@import "core/functions/divide";
+
+@import "core/functions/url/font-url";
+
+@import "core/functions/url/image-url";
+
+@import "core/functions/url/wrapper-url";

@@ -157,7 +157,7 @@ span.version {
     border: 1px solid #ccc;
     padding: 20px;
     line-height: 25px;
-    box-shadow: 0 0 5px #ccc;
+    box-box-shadow: 0 0 5px #ccc;
 }
 .feature-section.more_wp h3.choose-demo-title {
     margin-bottom: 0;
@@ -177,7 +177,7 @@ span.version {
 .step-1-right {
     float: right;
     width: 35%;
-    box-shadow: 0 0 5px #ccc;
+    box-box-shadow: 0 0 5px #ccc;
     padding: 20px;
 }
 
@@ -245,7 +245,7 @@ span.version {
     padding: 8px 15px;
     font-weight: 600;
     border-radius: 3px;
-    box-shadow: none !important;
+    box-box-shadow: none !important;
     border: none;
     line-height: 1;
     height: auto;
@@ -295,8 +295,8 @@ a.deactivate.button:hover{
     padding-right: 0;
     padding-left: 0;
     outline: none;
-    -webkit-box-shadow: unset;
-    box-shadow: unset;
+    -webkit-box-box-shadow: unset;
+    box-box-shadow: unset;
 }
 .nav-tab-wrapper .nav-tab {
     border-bottom: 3px solid transparent;
@@ -344,14 +344,14 @@ a.deactivate.button:hover{
 
 .welcome-section {
     padding: 20px 20px 10px;
-    box-shadow: 0 0 10px -5px rgba(0,0,0,0.5);
+    box-box-shadow: 0 0 10px -5px rgba(0,0,0,0.5);
     background-color: #fff !important;
     width: calc(100% - 370px);
 }
 .notice-sidebar {
     width: 350px;
     background-color: #FFF;
-    box-shadow: 0 0 10px -5px rgba(0,0,0,0.5);
+    box-box-shadow: 0 0 10px -5px rgba(0,0,0,0.5);
     padding: 40px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -418,7 +418,7 @@ a.deactivate.button:hover{
     border: 1px solid #ccc;
     padding: 20px;
     line-height: 25px;
-    box-shadow: 0 0 5px #ccc;
+    box-box-shadow: 0 0 5px #ccc;
     text-align: center;
 }
 .about-wrap .feature-section p {
@@ -534,8 +534,8 @@ h3.choose-demo-title {
     padding: 10px 30px;
     line-height: 1;
     height: auto;
-    -webkit-box-shadow: none;
-            box-shadow: none;
+    -webkit-box-box-shadow: none;
+            box-box-shadow: none;
     background: #01a3e7;
     color: #fff;
     border: 1px solid #01a3e7;
@@ -566,7 +566,7 @@ p.plugin-info {
     line-height: 1.6;
 }
 .recom-plugin-wrap .button {
-    box-shadow: none;
+    box-box-shadow: none;
     vertical-align: top;
     padding: 5px 12px;
     line-height: 1;
@@ -638,7 +638,7 @@ p.plugin-info {
     padding: 8px 15px;
     font-weight: 600;
     border-radius: 3px;
-    box-shadow: none !important;
+    box-box-shadow: none !important;
     border: none;
     line-height: 1;
     height: auto;

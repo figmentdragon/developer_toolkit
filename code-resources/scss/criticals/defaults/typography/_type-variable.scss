@@ -1,0 +1,17 @@
+// scss-docs-start type-variables
+@import 'variables/lead-variable';
+
+@import 'variables/emphasis-variable';
+
+@import 'variables/quote-variable';
+
+@import 'variables/hr-variable';
+
+@import 'variables/legend-variable';
+
+$dt-font-weight:              $bold-font-weight;
+
+$list-inline-offset:         .5rem;
+
+@import 'variables/mark-variable';
+// scss-docs-end type-variables

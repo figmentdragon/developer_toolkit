@@ -1,0 +1,55 @@
+.blockquote {
+  font-family: $accent-font;
+  padding: divide($offset-x, 2) $offset-y;
+  margin-bottom: $blockquote-margin-y;
+  font-size: $blockquote-font-size;
+  border-left: .25 solid $blockquote-border-color;
+
+  p:last-child{
+    padding-bottom: 0;
+  }
+
+  cite {
+    display: block;
+    font-size: $base-font-size;
+    color: tint($body-text, $caption-percentage);
+    :before {
+      content: "\2014 \0020";
+    }
+    a,
+    a:visited {
+      color: tint($quote, $visited-percentage);
+    }
+  }
+}
+
+.blockquote-footer {
+  font-family: $accent-font;
+  display: block;
+  font-size: $blockquote-footer-font-size;
+  line-height: $base-line-height;
+  color: $blockquote-footer-color;
+
+  &::before {
+    content: "\2014 \00A0"; // em dash, nbsp
+  }
+}
+
+// Opposite alignment of blockquote
+.blockquote-reverse {
+  font-family: $accent-font;
+  padding-right: $offset-y;
+  padding-left: 0;
+  text-align: right;
+  border-right: .25 solid $blockquote-border-color;
+  border-left: 0;
+}
+
+.blockquote-reverse .blockquote-footer {
+  &::before {
+    content: "";
+  }
+  &::after {
+    content: "\00A0 \2014"; // nbsp, em dash
+  }
+}

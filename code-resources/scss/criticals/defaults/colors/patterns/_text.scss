@@ -1,0 +1,14 @@
+
+
+$body-text:          tint($primary, $body-percentage);
+$text-muted:         tint($body-text, $muted-percentage);
+
+$quote-text-color:   tint($accent, $quote-percentage);
+$caption-text-color: tint($accent, $caption-percentage);
+$comment-text-color: tint($accent, $comment-percentage);
+
+$heading-text-color: tint($body-text, $heading-percentage);
+$lead-text-color:    tint($heading-text-color, $heading-percentage);
+$post-title-color:   tint($heading-text-color, $heading-percentage);
+$page-title-color:   tint($heading-text-color, $heading-percentage);
+$site-title-color:   tint($heading-text-color, $heading-percentage);

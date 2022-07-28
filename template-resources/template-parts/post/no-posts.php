@@ -1,4 +1,7 @@
-	<div class="alert alert-warning">
-		<?php _e( 'Sorry, no results were found.', 'dev7' ); ?>
-	</div>
-	<?php get_search_form(); ?>
+<div class="row">
+
+	<article class="col-md-12">
+		<p><?php esc_html_e( 'We can not find any posts by your search criteria, sorry...', 'starter-kit' ); ?></p>
+	</article>
+
+</div>

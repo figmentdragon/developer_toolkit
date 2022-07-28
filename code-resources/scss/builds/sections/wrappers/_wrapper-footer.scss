@@ -1,0 +1,75 @@
+/**
+ * partials/wrapper
+ * ---
+ */
+
+
+ .innerwrapper {
+   max-width: 900px;
+   margin: 0 auto;
+   padding-left: 30px;
+   padding-right: 30px;
+   @include border-box;
+ }
+
+#contentwrapper {
+ 	max-width: 100%;
+ 	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+ }
+
+#sidebar-wrapper {
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   left: 1.5vw;
+   z-index: $z-index-header;
+   max-width: 4vw;
+   height: 100%;
+}
+
+.wrapper-content {
+   position: relative;
+   background: green;
+
+   margin-top: 0;
+   margin-right: 4vw;
+   margin-bottom: 0;
+   margin-left: 1vw;
+
+   width: 100%;
+}
+
+
+.wrapper-nav {
+   @include container-overflow;
+   position: relative;
+   top: 2vh;
+   right: 89vw;
+   bottom: 2vh;
+   left: 6vw;
+   z-index: $z-index-nav;
+
+   height: 100%;
+
+   background: blue;
+}
+
+#primary-search-wrapper .menu-toggle-wrapper {
+    padding: 0;
+}
+
+.homewrapper {
+	max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  box-sizing: border-box;
+}
+
+.wrapper,
+.custom-header-content,
+.archive .site-footer .wrapper {
+    margin: 0 auto;
+    max-width: 1500px;
+    width: 100%;
+}

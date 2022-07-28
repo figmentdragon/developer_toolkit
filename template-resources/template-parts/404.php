@@ -4,7 +4,7 @@
  *
  * Construct the theme 404 page.
  *
- * @package TheCreativityArchitect
+ * @package TheThemeName
  * @subpackage Template Parts
  */
 
@@ -24,11 +24,11 @@ defined( 'ABSPATH' ) || die( "Can't access directly" );
 
 			<div class="text-center">
 
-				<?php echo '<h1 class="entry-title" itemprop="headline">' . apply_filters( '404_headline', __( "404 - This page couldn't be found.", 'TheCreativityArchitect' ) ) . '</h1>'; ?>
+				<?php echo '<h1 class="entry-title" itemprop="headline">' . apply_filters( '404_headline', __( "404 - This page couldn't be found.", 'TheThemeName' ) ) . '</h1>'; ?>
 
 				<div class="container-center medium-1-2" itemprop="text">
 
-					<?php echo '<p>' . apply_filters( '404_text', __( "Oops! We're sorry, this page couldn't be found!", 'TheCreativityArchitect' ) ) . '</p>'; ?>
+					<?php echo '<p>' . apply_filters( '404_text', __( "Oops! We're sorry, this page couldn't be found!", 'TheThemeName' ) ) . '</p>'; ?>
 
 					<?php get_search_form(); ?>
 

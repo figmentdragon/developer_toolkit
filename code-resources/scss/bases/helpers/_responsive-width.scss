@@ -1,0 +1,13 @@
+
+// Responsive width
+.w-responsive {
+  width: 75%;
+
+  @media (max-width: 740px) {
+    width: 100%;
+  }
+}
+
+.w-header {
+  width: 3.2rem;
+}

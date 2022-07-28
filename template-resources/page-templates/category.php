@@ -4,7 +4,7 @@
 		<!-- section -->
 		<section>
 
-			<h1><?php esc_html_e( 'Category: ', 'creativityarchitect' ); single_cat_title(); ?></h1>
+			<h1><?php esc_html_e( 'Category: ', 'themename' ); single_cat_title(); ?></h1>
 
 			<?php get_template_part( 'loop' ); ?>
 

@@ -1,0 +1,53 @@
+
+.entry-content img {}
+
+.alignnone, img.alignnone {}
+
+  .wp-caption-text {
+		margin: 0.8075em 0;
+    padding: 0 $horizontal-offset $vertical-offset;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+	}
+}
+.wp-caption img {
+  width: auto;
+  max-width: 98.5%;
+  height: auto;
+  border: 0 none;
+  @include reset-box;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+p.wp-caption-text,
+.gallery-caption {
+
+}
+
+
+.wp-smiley {}
+
+blockquote.left {}
+blockquote.right {}
+
+.gallery dl {}
+.gallery dt {}
+.gallery dd {}
+.gallery dl a {}
+.gallery dl img {}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+}
+
+
+
+.size-full {}
+.size-large {}
+.size-medium {}
+.size-thumbnail {}

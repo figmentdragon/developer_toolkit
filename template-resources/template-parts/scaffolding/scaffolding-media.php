@@ -14,7 +14,7 @@ global $wp_embed;
 
 	<?php
 	// Right-aligned Image.
-	ca_display_scaffolding_section(
+	display_scaffolding_section(
 		[
 			'title'       => 'Right-aligned Image',
 			'description' => 'Display a right-aligned image.',
@@ -30,7 +30,7 @@ global $wp_embed;
 	);
 
 	// Left-aligned Image.
-	ca_display_scaffolding_section(
+	display_scaffolding_section(
 		[
 			'title'       => 'Left-aligned Image',
 			'description' => 'Display a left-aligned image.',
@@ -46,7 +46,7 @@ global $wp_embed;
 	);
 
 	// Center-aligned Image.
-	ca_display_scaffolding_section(
+	display_scaffolding_section(
 		[
 			'title'       => 'Center-aligned Image',
 			'description' => 'Display a center-aligned image.',
@@ -62,7 +62,7 @@ global $wp_embed;
 	);
 
 	// Image with caption.
-	ca_display_scaffolding_section(
+	display_scaffolding_section(
 		[
 			'title'       => 'Image with Caption',
 			'description' => 'Display an image with a caption.',
@@ -78,7 +78,7 @@ global $wp_embed;
 	);
 
 	// Youtube embed.
-	ca_display_scaffolding_section(
+	display_scaffolding_section(
 		[
 			'title'       => 'Youtube Embed',
 			'description' => 'Display a youtube video.',
@@ -88,7 +88,7 @@ global $wp_embed;
 	);
 
 	// Youtube embed.
-	ca_display_scaffolding_section(
+	display_scaffolding_section(
 		[
 			'title'       => 'Vimeo Embed',
 			'description' => 'Display a vimeo video.',

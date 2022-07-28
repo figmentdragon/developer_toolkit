@@ -1,0 +1,10 @@
+// #Demarcating edits
+// These elements let you provide indications that specific parts of the text have been altered.
+
+// Ins
+//The <ins> HTML element represents a range of text that has been added to a document. You can use the del element to similarly represent a range of text that has been deleted from the document.
+
+ins {
+  background: tint($secondary, $color-interval);
+  text-decoration: none;
+}

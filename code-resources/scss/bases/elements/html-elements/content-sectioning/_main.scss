@@ -1,0 +1,20 @@
+// Main - The <main> HTML element represents the dominant content of the body of a document. The main content area consists of content that is directly related to or expands upon the central topic of a document, or the central functionality of an application.
+
+$duration: .7s;
+
+main {
+  display: block;
+  align-items: flex-start;
+  align-content: stretch;
+
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+
+  padding-top: 4vh;
+  padding-bottom: 5rem;
+
+  width: 100%;
+  height: 100%;
+}

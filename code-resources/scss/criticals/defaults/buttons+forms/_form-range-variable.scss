@@ -1,0 +1,27 @@
+// Range
+//
+// Style range inputs the same across browsers. Vendor-specific rules for pseudo
+// elements cannot be mixed. As such, there are no shared styles for focus or
+// active states on prefixed selectors.
+
+// scss-docs-start form-range-variables
+$form-range-track-width: 100%;
+$form-range-track-height: .5rem;
+$form-range-track-cursor: pointer;
+$form-range:                 mix(black, $info, $form-percentage);
+$form-range-track-bg: $primary;
+$form-range-track-border-radius: 1rem;
+$form-range-track-box-box-shadow: $box-shadow;
+
+$form-range-thumb-width: 1rem;
+$form-range-thumb-height: $form-range-thumb-width;
+$form-range-thumb-bg: mix(white, $form-range, $background-percentage);
+$form-range-thumb-border: 0;
+$form-range-thumb-border-radius: 1rem;
+$form-range-thumb-box-box-shadow: 0 .1rem .25rem rgba($form-range, .1);
+$form-range-thumb-focus-box-box-shadow: 0 0 0 1px $body-bg, $input-focus-box-shadow;
+$form-range-thumb-focus-box-shadow-width: $input-focus-width; // For focus box shadow issue in Edge
+$form-range-thumb-active-bg: $form-range-thumb-bg;
+$form-range-thumb-disabled-bg: mix(white, $form-range, $inactive-percentage);
+$form-range-thumb-transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+// scss-docs-end form-range-variables

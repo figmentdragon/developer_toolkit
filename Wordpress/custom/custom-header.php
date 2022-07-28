@@ -1,78 +1,51 @@
 <?php
 /**
- * Sample implementation of the Custom Header feature
+ * Custom Header
  *
- * You can add an optional custom header image to header.php like so ...
- *
-	<?php the_header_image_tag(); ?>
- *
- * @link https://developer.wordpress.org/themes/functionality/custom-headers/
- *
- * @package _s
+ * @package creativity
  */
 
 /**
- * Set up the WordPress core custom header feature.
- *
- * @uses _s_header_style()
+ * Setup the WordPress core custom header feature.
  */
-function _s_custom_header_setup() {
+function creativity_custom_header_setup() {
 	add_theme_support(
 		'custom-header',
 		apply_filters(
-			'_s_custom_header_args',
+			'creativity_custom_header_args',
 			array(
-				'default-image'      => '',
-				'default-text-color' => '000000',
-				'width'              => 1000,
-				'height'             => 250,
-				'flex-height'        => true,
-				'wp-head-callback'   => '_s_header_style',
+				'width'              => 700,
+				'height'             => 832,
+				'uploads'            => true,
+				'default-text-color' => 'cccccc',
+				'wp-head-callback'   => 'creativity_header_style',
 			)
 		)
 	);
 }
-add_action( 'after_setup_theme', '_s_custom_header_setup' );
+add_action( 'after_setup_theme', 'creativity_custom_header_setup' );
 
-if ( ! function_exists( '_s_header_style' ) ) :
+if ( ! function_exists( 'creativity_header_style' ) ) :
 	/**
-	 * Styles the header image and text displayed on the blog.
-	 *
-	 * @see _s_custom_header_setup().
+	 * Style for site title and tagline.
 	 */
-	function _s_header_style() {
+	function creativity_header_style() {
+		wp_enqueue_style( 'creativity-style', get_stylesheet_uri(), array(), '1.0' );
 		$header_text_color = get_header_textcolor();
-
-		/*
-		 * If no custom options for text are set, let's bail.
-		 * get_header_textcolor() options: Any hex value, 'blank' to hide text. Default: add_theme_support( 'custom-header' ).
-		 */
-		if ( get_theme_support( 'custom-header', 'default-text-color' ) === $header_text_color ) {
-			return;
+		$position          = 'absolute';
+		$clip              = 'rect(1px, 1px, 1px, 1px)';
+		if ( ! display_header_text() ) {
+			$custom_css = 'a h1.site-title, h2.site-description {
+				position: ' . $position . ';
+				clip: ' . $clip . ';
+			}';
+		} else {
+			$custom_css = 'h1.site-title, h2.site-description  {
+				color: #' . esc_attr( $header_text_color ) . ';
+			}';
 		}
-
-		// If we get this far, we have custom styles. Let's do this.
-		?>
-		<style type="text/css">
-		<?php
-		// Has the text been hidden?
-		if ( ! display_header_text() ) :
-			?>
-			.site-title,
-			.site-description {
-				position: absolute;
-				clip: rect(1px, 1px, 1px, 1px);
-				}
-			<?php
-			// If the user has set a custom color for the text use that.
-		else :
-			?>
-			.site-title a,
-			.site-description {
-				color: #<?php echo esc_attr( $header_text_color ); ?>;
-			}
-		<?php endif; ?>
-		</style>
-		<?php
+		wp_add_inline_style( 'creativity-style', $custom_css );
 	}
+	add_action( 'wp_enqueue_scripts', 'creativity_header_style' );
+
 endif;

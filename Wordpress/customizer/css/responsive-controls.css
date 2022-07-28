@@ -1,0 +1,61 @@
+﻿/* Responsive Control */
+.responsive-options {
+	margin-bottom: 5px;
+}
+
+.responsive-options li {
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.responsive-options li button {
+	display: inline-block;
+	background: #fff;
+	text-align: center;
+	padding: 0;
+	border-radius: 100%;
+	cursor: pointer;
+	border: 1px solid #ccc;
+	outline: 0;
+}
+
+.responsive-options li button i {
+	font-size: 16px;
+	width: 33px;
+	height: 33px;
+	line-height: 33px;
+}
+
+.responsive-options li button:hover {
+	background: #ccc;
+}
+
+.responsive-options li:hover {
+}
+
+.responsive-options li button.active {
+	background: #ccc;
+}
+
+.control-desktop, .control-tablet, .control-mobile {
+	display: none;
+}
+
+.control-desktop.active, .control-tablet.active, .control-mobile.active {
+	display: block !important;
+}
+
+/* Padding Control */
+.control-padding-top, .control-padding-right, .control-padding-bottom, .control-padding-left {
+	width: 21.5%;
+	float: left;
+	margin-right: 1%;
+	text-align: center;
+}
+
+.customize-control-padding .px,
+.customize-control-responsive-padding .px {
+	line-height: 18px;
+	float: left;
+	padding: 3px 5px;
+}

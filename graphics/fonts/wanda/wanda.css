@@ -1,26 +1,7 @@
 @font-face {
-  font-family: "Wanda";
-  font-weight: 400;
-  font-style: normal;
-  src: local("Wanda"), url("https://fonts.cdnfonts.com/s/4594/WANDA___.woff") format("woff");
-}
-@font-face {
-  font-family: "Wanda";
-  font-weight: 400;
-  font-style: normal;
-  src: local("Wanda"), url("https://fonts.cdnfonts.com/s/4594/WANDA___.woff") format("woff");
-}
-@font-face {
-  font-family: "Wanda";
+  font-family: 'Wanda';
   font-weight: 700;
   font-style: normal;
-  src: local("Wanda"), url("https://fonts.cdnfonts.com/s/4594/WANDB___.woff") format("woff");
+  src: local("<?php get_stylesheet_directory() . /src/sass/typography/fonts/wanda/wanda.woff") format("woff");
 }
-@font-face {
-  font-family: "Wanda";
-  font-weight: 700;
-  font-style: normal;
-  src: local("Wanda"), url("https://fonts.cdnfonts.com/s/4594/WANDB___.woff") format("woff");
-}
-
 /*# sourceMappingURL=wanda.css.map */

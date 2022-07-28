@@ -1,0 +1,24 @@
+// Nav - The <nav> HTML element represents a section of a page whose purpose is to provide navigation links, either within the current document or to other documents. Common examples of navigation sections are menus, tables of contents, and indexes.
+
+nav {
+  position: fixed;
+  margin-right: 5vw;
+  margin-left: 0vw;
+
+  padding-top: 4vh;
+  padding-bottom: 4vh;
+
+  overflow: visible;
+  text-align: left;
+  display: block;
+}
+
+@include media-breakpoint-up(lg) {
+  .social-icons {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 2.5rem;
+    width: auto;
+  }
+}

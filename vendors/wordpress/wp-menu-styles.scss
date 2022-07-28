@@ -1,0 +1,16 @@
+#header .main-menu{} // container class
+#header .main-menu ul {} // container class first unordered list
+#header .main-menu ul ul {} //unordered list within an unordered list
+#header .main-menu li {} // each navigation item
+#header .main-menu li a {} // each navigation item anchor
+#header .main-menu li ul {} // unordered list if there is drop down items
+#header .main-menu li li {} // each drop down navigation item
+#header .main-menu li li a {} // each drap down navigation item anchor
+
+.current_page_item{} // Class for Current Page
+.current-cat{} // Class for Current Category
+.current-menu-item{} // Class for any other current Menu Item
+.menu-item-type-taxonomy{} // Class for a Category
+.menu-item-type-post_type{} // Class for Pages
+.menu-item-type-custom{} // Class for any custom item that you added
+.menu-item-home{} // Class for the Home Link

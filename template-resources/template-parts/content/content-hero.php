@@ -2,12 +2,12 @@
 /**
  * The template used for displaying hero content
  *
- * @package creativity
+ * @package themename
  */
 
-$enable_section = get_theme_mod( 'creativity__hero_content_visibility', 'disabled' );
+$enable_section = get_theme_mod( 'themename_hero_content_visibility', 'disabled' );
 
-if ( ! creativity_check_section( $enable_section ) ) {
+if ( ! themename_check_section( $enable_section ) ) {
 	// Bail if hero content is not enabled
 	return;
 }

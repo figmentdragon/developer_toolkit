@@ -1,0 +1,18 @@
+// Code
+$contrast-ratio: 5%;
+$code-font-size:                    $small-font-size;
+$code-color:                        $red-800;
+$code-bg:                           $gray-900;
+
+$kbd-offset-y:                     .1875rem;
+$kbd-offset-x:                     .375rem;
+$kbd-font-size:                     $small-font-size;
+$kbd-color:                         $red-800;
+$kbd-bg:                            $gray-900;
+$nested-kbd-font-weight:            null; // Deprecated in v5.2.0, removing in v6
+
+$pre-percentage: 7%;
+$pre-color:                         $pink-800;
+$pre-border-width:                  2;
+$pre-border-color:                  $pink-900;
+$pre-bg:                            $gray-900;

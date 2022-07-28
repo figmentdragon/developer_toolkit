@@ -1,0 +1,28 @@
+// Datepicker
+
+$datepicker-border-radius: $sm-border-radius;
+$datepicker-dropdown-offset: 20px 22px;
+
+$datepicker-cell-transition: $transition-base;
+$datepicker-cell-hover-background: $default;
+$datepicker-cell-border-radius: 50%;
+$datepicker-cell-width: 36px;
+$datepicker-cell-height: 36px;
+
+$datepicker-disabled-cell-color: $gray-300;
+$datepicker-disabled-old-new-color: $gray-500;
+
+$datepicker-header-cell-border-radius: $sm-border-radius;
+
+$datepicker-active-color: $white;
+$datepicker-active-background: $dark;
+$datepicker-active-box-shadow: none;
+
+$datepicker-range-background: theme-color("dark");
+$datepicker-range-cell-focused-background: darken($dark, 5%);
+$datepicker-range-color: $white;
+$datepicker-range-highlighted-bg: $gray-200;
+
+$datepicker-dropdown-border: lighten($gray-400, 40%);
+$datepicker-dropdown-bg: $white;
+$datepicker-highlighted-bg: $datepicker-active-background;

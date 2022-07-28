@@ -4,7 +4,7 @@
  *
  * Renders the featured image on posts & pages.
  *
- * @package TheCreativityArchitect
+ * @package TheThemeName
  * @subpackage Template Parts
  */
 

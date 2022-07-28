@@ -1,0 +1,140 @@
+/************************************************
+	Conditionals
+************************************************/
+
+/* Menu Color Brightness */
+
+.organic-horizon-bg-light .site-title a,
+.organic-horizon-bg-light .site-title a:link,
+.organic-horizon-bg-light .site-title a:visited {
+	color: #000000;
+}
+.organic-horizon-bg-dark .site-title a,
+.organic-horizon-bg-dark .site-title a:link,
+.organic-horizon-bg-dark .site-title a:visited {
+	color: #ffffff;
+}
+.organic-horizon-bg-dark button.menu-toggle svg {
+	fill: rgba(255, 255, 255, 0.6);
+}
+.organic-horizon-bg-dark button.menu-toggle:hover svg {
+	fill: rgba(255, 255, 255, 1);
+}
+.organic-horizon-bg-light .sidr-inner {
+	border-color: rgba(0, 0, 0, 0.12);
+}
+.organic-horizon-bg-light.sidr li a {
+	color: rgba(0, 0, 0, 0.6);
+	border-color: rgba(0, 0, 0, 0);
+}
+.organic-horizon-bg-light.sidr li a:hover {
+	color: rgba(0, 0, 0, 1);
+	border-color: rgba(0, 0, 0, 1);
+}
+
+/* Background Image Brightness */
+
+.organic-horizon-bg-dark h1, .organic-horizon-bg-dark h2, .organic-horizon-bg-dark h3,
+.organic-horizon-bg-dark h4, .organic-horizon-bg-dark h5, .organic-horizon-bg-dark h6,
+.organic-horizon-bg-dark .headline {
+	color: #ffffff;
+}
+.organic-horizon-bg-dark, .organic-horizon-bg-dark p, .organic-horizon-bg-dark blockquote {
+	color: rgba(255, 255, 255, 0.8);
+}
+.organic-horizon-bg-light h1, .organic-horizon-bg-light h2, .organic-horizon-bg-light h3,
+.organic-horizon-bg-light h4, .organic-horizon-bg-light h5, .organic-horizon-bg-light h6,
+.organic-horizon-bg-light .headline {
+	color: #000000;
+}
+.organic-horizon-bg-light, .organic-horizon-bg-light p, .organic-horizon-bg-light blockquote {
+	color: rgba(0, 0, 0, 0.6);
+}
+.banner-img.organic-horizon-bg-dark .post-meta {
+	color: rgba(255, 255, 255, 0.5);
+	background: rgba(0, 0, 0, 0.4);
+	padding: 2px 8px;
+	border-radius: 2px;
+}
+.banner-img.organic-horizon-bg-dark .post-meta a,
+.banner-img.organic-horizon-bg-dark .post-navigation a {
+	color: rgba(255, 255, 255, 0.7);
+}
+.banner-img.organic-horizon-bg-dark .post-meta a:hover,
+.banner-img.organic-horizon-bg-dark .post-navigation a:hover {
+	color: rgba(255, 255, 255, 1);
+}
+.single.horizon-has-img .banner-img.organic-horizon-bg-dark::before {
+	background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.90));
+	background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.90));
+	background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.90));
+	background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.90));
+	background-image: linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.90));
+}
+.single.horizon-has-img .banner-img.organic-horizon-bg-light::before {
+	background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.00), rgba(255, 255, 255, 0.90));
+	background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.00), rgba(255, 255, 255, 0.90));
+	background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.00), rgba(255, 255, 255, 0.90));
+	background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0.00), rgba(255, 255, 255, 0.90));
+	background-image: linear-gradient(top, rgba(255, 255, 255, 0.00), rgba(255, 255, 255, 0.90));
+}
+
+/* Body Class */
+
+.horizon-header-video-active .wp-custom-header {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	height: 0;
+}
+.horizon-header-video-active .wp-custom-header iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Elements */
+
+.organic-horizon-bg-dark table {
+	background: rgba(255, 255, 255, 0.04);
+}
+.organic-horizon-bg-dark table thead,
+.organic-horizon-bg-dark table tfoot,
+.organic-horizon-bg-dark table th,
+.organic-horizon-bg-dark table td {
+	border-color: rgba(255, 255, 255, 0.24);
+}
+.organic-horizon-bg-dark form input,
+.organic-horizon-bg-dark form input[type='url'],
+.organic-horizon-bg-dark form input[type='tel'],
+.organic-horizon-bg-dark form input[type='email'],
+.organic-horizon-bg-dark form input[type='text'],
+.organic-horizon-bg-dark form input[type='password'],
+.organic-horizon-bg-dark form input[type='number'],
+.organic-horizon-bg-dark form textarea {
+	color: #ffffff;
+	background-color: rgba(255, 255, 255, 0.06);
+	border-color: rgba(255, 255, 255, 0.24);
+}
+.organic-horizon-bg-dark select {
+	color: #ffffff;
+	background-color: rgba(255, 255, 255, 0.06);
+	text-shadow: 0 0 0 rgba(255, 255, 255, 0.4);
+	background-image:
+		linear-gradient(45deg, transparent 50%, white 50%),
+		linear-gradient(135deg, white 50%, transparent 50%),
+		linear-gradient(to right, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.24));
+}
+.organic-horizon-bg-dark .post-date,
+.organic-horizon-bg-dark .post-taxonomy,
+.organic-horizon-bg-dark .post-navigation {
+	border-color: rgba(255, 255, 255, 0.24);
+}
+.organic-horizon-bg-dark #searchform #s {
+	color: #ffffff;
+}
+.organic-horizon-bg-dark #searchform #s::placeholder {
+	color: rgba(255, 255, 255, 0.6);
+}
+

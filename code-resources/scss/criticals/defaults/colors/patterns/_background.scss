@@ -1,0 +1,37 @@
+/* ______________________________________________________ BACKGROUNDS */
+  /* Theme BG Colors */
+  $primary-bg                : tint($primary, $background-percentage);
+  $secondary-bg              : tint($secondary, $background-percentage);
+  $accent-bg                 : tint($accent, $background-percentage);
+  $valid-bg                  : tint($valid, $background-percentage);
+  $invalid-bg                : tint($invalid, $background-percentage);
+  $warning-bg                  : tint($warning, $background-percentage);
+  $attention-bg              : tint($attention, $background-percentage);
+  $info-bg                   : tint($info, $background-percentage);
+
+  $selection-bg: #04A4CC;
+
+  /* Background */
+  $body-bg                   : tint($primary, $background-percentage);
+  $page-bg                   : tint($secondary, $background-percentage);
+  $main-bg                   : tint($accent, $background-percentage);
+
+  /* Utilities */
+
+  $local-link    : tint($secondary, $local-link-percentage);
+  $target        : tint($secondary, $target-percentage);
+  $target-within : tint($secondary, $target-within-percentage);
+  $scope         : tint($secondary, $scope-percentage);
+  $visited       : tint($secondary, $visited-percentage);
+
+  $hover         : tint($primary, $hover-percentage);
+  $focus         : tint($primary, $focus-percentage);
+  $focus-visible : tint($primary, $focus-visible-percentage);
+  $focus-within  : tint($primary, $focus-within-percentage);
+
+
+@mixin gradient-bg {
+    background-image: radial-gradient( circle in bottom left, $primary-bg, $secondary-bg, $accent-bg, transparent);
+    height: 100vh;
+    width: 3vw;
+  }

@@ -1,0 +1,35 @@
+// scss-docs-start theme-color-variable
+
+$default: $default;
+$default-light: $default-light;
+$default-dark : $cjt-blue-dark;
+$default-accent: $cjt-accent;
+
+$success:       green;
+$info:          teal;
+$warning:       orange;
+$danger:        red;
+$gray:          $gray-600;
+$light:         $gray-200;
+$soft:          $gray-400;
+$dark:          $gray-800;
+
+
+// scss-docs-end theme-color-variable
+
+// scss-docs-start theme-colors-map
+$theme-colors: ();
+$theme-colors: map-merge((
+  'primary': $default,
+  'primary-light': $default-light,
+  'primary-dark' : $cjt-blue-dark,
+  'accent': $cjt-accent,
+  'success':    $success,
+  'info':       $info,
+  'warning':    $warning,
+  'danger':     $danger,
+  'light':      $light,
+  'dark':       $dark),
+$theme-colors);
+
+// scss-docs-end theme-colors-map

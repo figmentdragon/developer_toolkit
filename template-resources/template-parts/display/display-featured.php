@@ -2,32 +2,32 @@
 /**
  * The template for displaying featured content
  *
- * @package TheCreativityArchitect
+ * @package TheThemeName
  */
 
-$enable_content = get_theme_mod( 'TheCreativityArchitect_featured_content_option', 'disabled' );
+$enable_content = get_theme_mod( 'TheThemeName_featured_content_option', 'disabled' );
 
-if ( ! TheCreativityArchitect_check_section( $enable_content ) ) {
+if ( ! TheThemeName_check_section( $enable_content ) ) {
 	// Bail if featured content is disabled.
 	return;
 }
 
-$TheCreativityArchitect_title = get_option( 'featured_content_title', esc_html__( 'Contents', 'TheCreativityArchitect' ) );
+$TheThemeName_title = get_option( 'featured_content_title', esc_html__( 'Contents', 'TheThemeName' ) );
 $sub_title    = get_option( 'featured_content_content' );
 
 
-if( !$TheCreativityArchitect_title && !$sub_title ) {
+if( !$TheThemeName_title && !$sub_title ) {
 	$classes[] = 'no-section-heading';
 }
 ?>
 
 <div id="featured-content-section" class="section featured-content layout-three">
 	<div class="wrapper">
-		<?php if ( $TheCreativityArchitect_title || $sub_title ) : ?>
+		<?php if ( $TheThemeName_title || $sub_title ) : ?>
 			<div class="section-heading-wrapper featured-section-headline">
-				<?php if ( $TheCreativityArchitect_title ) : ?>
+				<?php if ( $TheThemeName_title ) : ?>
 					<div class="section-title-wrapper">
-						<h2 class="section-title"><?php echo wp_kses_post( $TheCreativityArchitect_title ); ?></h2>
+						<h2 class="section-title"><?php echo wp_kses_post( $TheThemeName_title ); ?></h2>
 					</div><!-- .section-title-wrapper -->
 				<?php endif; ?>
 

@@ -2,7 +2,7 @@
 /**
  * Full screen menu.
  *
- * @package TheCreativityArchitect
+ * @package TheThemeName
  * @subpackage Template Parts
  */
 
@@ -28,15 +28,15 @@ defined( 'ABSPATH' ) || die( "Can't access directly" );
 
 				<?php if ( svg_enabled() ) { ?>
 
-					<button id="menu-toggle" class="nav-item menu-toggle" aria-label="<?php _e( 'Site Navigation', 'TheCreativityArchitect' ); ?>" aria-controls="navigation" aria-expanded="false" aria-haspopup="true">
-						<span class="screen-reader-text"><?php _e( 'Menu Toggle', 'TheCreativityArchitect' ); ?></span>
+					<button id="menu-toggle" class="nav-item menu-toggle" aria-label="<?php _e( 'Site Navigation', 'TheThemeName' ); ?>" aria-controls="navigation" aria-expanded="false" aria-haspopup="true">
+						<span class="screen-reader-text"><?php _e( 'Menu Toggle', 'TheThemeName' ); ?></span>
 						<?php echo svg( 'hamburger' ); ?>
 					</button>
 
 				<?php } else { ?>
 
-					<button id="menu-toggle" class="nav-item menu-toggle TheCreativityArchitectf TheCreativityArchitectf-hamburger" aria-label="<?php _e( 'Site Navigation', 'TheCreativityArchitect' ); ?>" aria-controls="navigation" aria-expanded="false" aria-haspopup="true">
-						<span class="screen-reader-text"><?php _e( 'Menu Toggle', 'TheCreativityArchitect' ); ?></span>
+					<button id="menu-toggle" class="nav-item menu-toggle TheThemeNamef TheThemeNamef-hamburger" aria-label="<?php _e( 'Site Navigation', 'TheThemeName' ); ?>" aria-controls="navigation" aria-expanded="false" aria-haspopup="true">
+						<span class="screen-reader-text"><?php _e( 'Menu Toggle', 'TheThemeName' ); ?></span>
 					</button>
 
 				<?php } ?>
@@ -72,7 +72,7 @@ defined( 'ABSPATH' ) || die( "Can't access directly" );
 			<?php echo svg( 'times' ); ?>
 		</div>
 	<?php } else { ?>
-		<i class="close TheCreativityArchitectf TheCreativityArchitectf-times" aria-hidden="true"></i>
+		<i class="close TheThemeNamef TheThemeNamef-times" aria-hidden="true"></i>
 	<?php } ?>
 
 </div>

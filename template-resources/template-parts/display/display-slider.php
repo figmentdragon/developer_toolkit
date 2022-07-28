@@ -2,12 +2,12 @@
 /**
  * The template used for displaying slider
  *
- * @package TheCreativityArchitect
+ * @package TheThemeName
  */
 
-$enable_slider = get_theme_mod( 'TheCreativityArchitect_slider_option', 'disabled' );
+$enable_slider = get_theme_mod( 'TheThemeName_slider_option', 'disabled' );
 
-if ( ! TheCreativityArchitect_check_section( $enable_slider ) ) {
+if ( ! TheThemeName_check_section( $enable_slider ) ) {
 	return;
 }
 
@@ -20,8 +20,8 @@ if ( ! TheCreativityArchitect_check_section( $enable_slider ) ) {
 		</div><!-- .main-slider -->
 
 		<div class="scroll-down">
-			<span><?php esc_html_e( 'Scroll', 'TheCreativityArchitect' ); ?></span>
-			<?php echo TheCreativityArchitect_get_svg( array( 'icon' => 'angle-down' ) ); ?>
+			<span><?php esc_html_e( 'Scroll', 'TheThemeName' ); ?></span>
+			<?php echo TheThemeName_get_svg( array( 'icon' => 'angle-down' ) ); ?>
 		</div><!-- .scroll-down -->
 	</div><!-- .wrapper -->
 </div><!-- #feature-slider -->

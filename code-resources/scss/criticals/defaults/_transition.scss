@@ -1,0 +1,8 @@
+// Transitions
+$transition-base: all 0.2s ease-in-out !default;
+$transition-fade: opacity 0.15s linear !default;
+$transition-hoverable                        : all .55s ease-in-out !default;
+// scss-docs-start collapse-transition
+$transition-collapse: height 0.35s ease !default;
+$transition-collapse-width: width 0.35s ease !default;
+// scss-docs-end collapse-transition

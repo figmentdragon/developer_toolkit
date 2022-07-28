@@ -2,7 +2,7 @@
 /**
  * Displays footer widgets if assigned
  *
- * @package creativity
+ * @package creativityarchitect
  */
 
 if ( ! is_active_sidebar( 'sidebar-newsletter' ) ) {

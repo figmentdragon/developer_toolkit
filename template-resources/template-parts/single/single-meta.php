@@ -4,7 +4,7 @@
  *
  * Renders author/post meta on posts.
  *
- * @package TheCreativityArchitect
+ * @package TheThemeName
  * @subpackage Template Parts
  */
 

@@ -1,0 +1,20 @@
+$link-text:             mix($gray-400, $secondary, 8%);
+$link-text-active:      mix($gray-400, $secondary, $color-interval);
+$link-text-hover:       mix($gray-400, $secondary, $color-interval);
+$link-text-focus:       mix($gray-400, $secondary, $color-interval);
+$link-text-visited:     mix($gray-400, $secondary, $color-interval);
+$link-visited-hover:    mix($gray-400, $link-text-visited, $color-interval);
+
+$link-text-inactive:    mix($gray-400, $secondary, $color-interval);
+$link-inactive-hover:   mix($gray-400, $link-text-inactive, $color-interval);
+$link-inactive-focus:   mix($gray-400, $link-text-inactive, $color-interval);
+$link-inactive-visited: mix($gray-400, $link-text-inactive, $color-interval);
+
+$link-decoration: underline;
+$hover-decoration: underline bold;
+$visited-decoration: strike-through;
+$link-shade-percentage:                   20%;
+$emphasized-link-hover-darken-percentage: 15% !default;
+
+$stretched-link-pseudo-element:           after !default;
+$stretched-link-z-index:                  1 !default;

@@ -2,13 +2,13 @@
 /**
  * Pagination layout
  *
- * @package themename
+ * @package picostrap
  */
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-if ( ! function_exists( 'themename_pagination' ) ) {
+if ( ! function_exists( 'picostrap_pagination' ) ) {
 	/**
 	 * Displays the navigation to next/previous set of posts.
 	 *
@@ -39,7 +39,7 @@ if ( ! function_exists( 'themename_pagination' ) ) {
 	 * }
 	 * @param string       $class           (Optional) Classes to be added to the <ul> element. Default 'pagination'.
 	 */
-	function themename_pagination( $args = array(), $class = 'pagination' ) {
+	function picostrap_pagination( $args = array(), $class = 'pagination' ) {
 
 		if ( ! isset( $args['total'] ) && $GLOBALS['wp_query']->max_num_pages <= 1 ) {
 			return;
@@ -50,11 +50,11 @@ if ( ! function_exists( 'themename_pagination' ) ) {
 			array(
 				'mid_size'           => 2,
 				'prev_next'          => true,
-				'prev_text'          => __( '&laquo;', 'themename' ),
-				'next_text'          => __( '&raquo;', 'themename' ),
+				'prev_text'          => __( '&laquo;', 'picostrap' ),
+				'next_text'          => __( '&raquo;', 'picostrap' ),
 				'type'               => 'array',
 				'current'            => max( 1, get_query_var( 'paged' ) ),
-				'screen_reader_text' => __( 'Posts navigation', 'themename' ),
+				'screen_reader_text' => __( 'Posts navigation', 'picostrap' ),
 			)
 		);
 
@@ -67,7 +67,7 @@ if ( ! function_exists( 'themename_pagination' ) ) {
 
 		<nav aria-labelledby="posts-nav-label">
 
-			<h2 id="posts-nav-label" class="screen-reader-text">
+			<h2 id="posts-nav-label" class="visually-hidden">
 				<?php echo esc_html( $args['screen_reader_text'] ); ?>
 			</h2>
 

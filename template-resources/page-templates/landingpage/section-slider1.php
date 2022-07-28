@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * @package creativityarchitect
+ * @package themename
  */
 ?>
 <section class="main-slider-wrapper">

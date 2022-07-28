@@ -2,7 +2,7 @@
 /**
  * Blog Layout | Beside.
  *
- * @package TheCreativityArchitect
+ * @package TheThemeName
  * @subpackage Template Parts
  */
 
@@ -60,7 +60,7 @@ $post_classes[]         = 'post-style-' . $style;
 
 				<?php
 				wp_link_pages( array(
-					'before' => '<div class="page-links">' . __( 'Pages:', 'TheCreativityArchitect' ),
+					'before' => '<div class="page-links">' . __( 'Pages:', 'TheThemeName' ),
 					'after'  => '</div>',
 				) );
 				?>

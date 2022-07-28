@@ -1,0 +1,59 @@
+$input-bg-color :                  $white;
+
+$input-transition :                all .3s;
+$input-disabled-color :            rgba(0, 0, 0, .46);
+$input-md-focus-color :            $primary;
+$input-error-color :               $danger;
+$input-success-color :             $success;
+$input-label-after-top :           65px;
+$input-label-after-transition :    .2s opacity ease-out, .2s color ease-out;
+$input-border-color :              #ced4da;
+
+$input-label-transition :          .2s ease-out;
+$input-label-color :               #757575;
+$input-label-top :                 .65rem;
+$input-label-active-transform :    translateY(-14px);
+$input-prefix-transition :         color .2s;
+
+$input-md-form-margin-top :        1.5rem;
+$input-md-form-margin-bottom :     $input-md-form-margin-top;
+$input-label-font-size :           1rem;
+$input-label-active-font-size :    1rem;
+$input-prefix-top :                .25rem;
+$input-prefix-font-size :          1.75rem;
+$input-prefix-margin-left :        2.5rem;
+$input-prefix-width :              calc(100% - 2.5rem);
+$input-group-addon-font-size :     1.4rem;
+$input-form-text-ml :              2.6rem;
+$input-validate-mb :               2.5rem;
+$input-label-valid-top :           4.1rem;
+$input-label-invalid-top :         4rem;
+
+$input-label-font-size-lg :        1.25rem;
+$input-label-active-font-size-lg : 1.15rem;
+$input-prefix-top-lg :             .4rem;
+$input-prefix-font-size-lg :       2rem;
+$input-prefix-margin-left-lg :     3rem;
+$input-prefix-width-lg :           calc(100% - 3rem);
+$input-group-addon-font-size-lg :  1.65rem;
+$input-form-text-ml-lg :           3.1rem;
+$input-validate-mb-lg :            2.8rem;
+$input-label-valid-top-lg :        4.6rem;
+$input-label-invalid-top-lg :      4.6rem;
+
+$input-label-font-size-sm :        .875rem;
+$input-label-active-font-size-sm : .95rem;
+$input-prefix-top-sm :             .35rem;
+$input-prefix-font-size-sm :       1.5rem;
+$input-prefix-margin-left-sm :     2rem;
+$input-prefix-width-sm :           calc(100% - 2rem);
+$input-group-addon-font-size-sm :  1.15rem;
+$input-form-text-ml-sm :           2rem;
+$input-validate-mb-sm :            2.3rem;
+$input-label-valid-top-sm :        3.7rem;
+$input-label-invalid-top-sm :      3.6rem;
+
+$input-form-control-margin-bottom            : .5rem !default;
+$input-form-control-offset-top              : .6rem !default;
+$input-form-control-offset-bottom           : .4rem !default;
+$input-disabled-solid-color                  : #bdbdbd !default;

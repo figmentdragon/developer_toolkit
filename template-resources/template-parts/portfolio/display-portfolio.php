@@ -2,37 +2,37 @@
 /**
  * The template for displaying portfolio items
  *
- * @package creativity
+ * @package creativityarchitect
  */
 
-$enable = get_theme_mod( 'creativity_portfolio_option', 'disabled' );
+$enable = get_theme_mod( 'creativityarchitect_portfolio_option', 'disabled' );
 
-if ( ! creativity_check_section( $enable ) ) {
+if ( ! creativityarchitect_check_section( $enable ) ) {
 	// Bail if portfolio section is disabled.
 	return;
 }
 
-$creativity_title = get_option( 'jetpack_portfolio_title', esc_html__( 'Projects', 'creativity' ) );
+$creativityarchitect_title = get_option( 'jetpack_portfolio_title', esc_html__( 'Projects', 'creativityarchitect' ) );
 $sub_title    = get_option( 'jetpack_portfolio_content' );
 
 $classes[] = 'layout-three';
 $classes[] = 'jetpack-portfolio';
 $classes[] = 'section';
 
-if( !$creativity_title && !$sub_title ) {
+if( !$creativityarchitect_title && !$sub_title ) {
 	$classes[] = 'no-section-heading';
 }
 ?>
 
 <div id="portfolio-content-section" class="<?php echo esc_attr( implode( ' ', $classes ) ); ?>">
 	<div class="wrapper">
-		<?php if ( $creativity_title || $sub_title ) : ?>
+		<?php if ( $creativityarchitect_title || $sub_title ) : ?>
 			<div class="section-heading-wrapper portfolio-section-headline">
 				
 				<div class="heading-wrapper">
-					<?php if ( $creativity_title ) : ?>
+					<?php if ( $creativityarchitect_title ) : ?>
 						<div class="section-title-wrapper">
-							<h2 class="section-title"><?php echo wp_kses_post( $creativity_title ); ?></h2>
+							<h2 class="section-title"><?php echo wp_kses_post( $creativityarchitect_title ); ?></h2>
 						</div><!-- .section-title-wrapper -->
 					<?php endif; ?>
 

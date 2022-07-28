@@ -1,0 +1,433 @@
+//
+// General form controls (plus a few specific high-level interventions)
+//
+
+.form-control {
+  display: block;
+  width: 100%;
+  // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+  // height: $input-height;
+  padding: $input-offset $input-offset;
+  font-family: $input-font-family;
+  @include font-size($input-font-size);
+  font-weight: $input-font-weight;
+  line-height: $input-line-height;
+  color: $input-color;
+  background-color: $input-bg;
+  // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214.
+  background-clip: padding-box;
+  border: $input-border-width solid $input-border-color;
+  // Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
+  appearance: none; // Fix appearance for date inputs in Safari
+
+  // Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
+  @include border-radius($input-border-radius, 0);
+  @include box-shadow($input-box-shadow);
+  @include transition($input-transition);
+  @include transition($form-transition);
+  // Make inputs at least the height of their button counterpart (base line-height + padding + border).
+  // Only apply the height to textual inputs and some selects.
+  // &:not(textarea),
+  // &:not(select[size]),
+  // &:not(select[multiple]) {
+  //   height: $input-height;
+  // }
+
+  // Unstyle the caret on `<select>`s in IE10+.
+  &::-ms-expand {
+    background-color: transparent;
+    border: 0;
+  }
+
+  // Customize the `:focus` state to imitate native WebKit styles.
+  &[type="file"] {
+    overflow: hidden; // prevent pseudo element button overlap
+
+    &:not(:disabled):not([readonly]) {
+      cursor: pointer;
+    }
+  }
+
+  // Customize the `:focus` state to imitate native WebKit styles.
+  &:focus {
+    color: $input-focus-color;
+    background-color: $input-focus-bg;
+    border-color: $input-border-focus;
+    outline: 0;
+    @if $enable-shadows {
+      @include box-shadow($input-box-shadow, $input-focus-box-shadow);
+    } @else {
+      // Avoid using mixin so we can pass custom focus shadow properly
+      box-shadow: $input-focus-box-shadow;
+    }
+  }
+
+  // Add some height to date inputs on iOS
+  // https://github.com/twbs/bootstrap/issues/23307
+  // TODO: we can remove this workaround once https://bugs.webkit.org/show_bug.cgi?id=198959 is resolved
+  &::-webkit-date-and-time-value {
+    // Multiply line-height by 1em if it has no unit
+    height: if(unit($input-line-height) == "", $input-line-height * 1em, $input-line-height);
+  }
+
+  // Placeholder
+  &::placeholder {
+    color: $placeholder-color;
+    // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+    opacity: 1;
+  }
+
+  // Disabled and read-only inputs
+  //
+  // HTML5 says that controls under a fieldset > legend:first-child won't be
+  // disabled if the fieldset is disabled. Due to implementation difficulty, we
+  // don't honor that edge case; we style them as disabled anyway.
+  &:disabled,
+  &[readonly] {
+    background-color: $input-disabled-bg;
+    border-color: $input-disabled-color;
+    // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
+    opacity: 1;
+  }
+
+  // File input buttons theming
+  &::file-selector-button {
+    padding: $input-offset $input-offset;
+    margin: (-$input-offset) (-$input-offset);
+    margin-inline-end: $input-offset;
+    color: $form-file-button-color;
+    @include gradient-bg;
+    pointer-events: none;
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+    border-inline-end-width: $input-border-width;
+    border-radius: 0; // stylelint-disable-line property-disallowed-list
+    @include transition($btn-transition);
+  }
+
+  &:hover:not(:disabled):not([readonly])::file-selector-button {
+    background-color: $form-file-button-hover-bg;
+  }
+
+  &::-webkit-file-upload-button {
+    padding: $input-offset $input-offset;
+    margin: (-$input-offset) (-$input-offset);
+    margin-inline-end: $input-offset;
+    color: $form-file-button-color;
+    @include gradient-bg;
+    pointer-events: none;
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+    border-inline-end-width: $input-border-width;
+    border-radius: 0; // stylelint-disable-line property-disallowed-list
+    @include transition($btn-transition);
+  }
+
+  &:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
+    background-color: $form-file-button-hover-bg;
+  }
+  &:disabled {
+    cursor: cursor-disabled;
+  }
+}
+
+
+// Readonly controls as plain text
+//
+// Apply class to a readonly input to make it appear like regular plain
+// text (without any border, background color, focus indicator)
+
+.form-control-plaintext {
+  display: block;
+  width: 100%;
+  padding: $input-offset 0;
+  margin-bottom: 0; // match inputs if this class comes on inputs with default margins
+  line-height: $input-line-height;
+  color: $input-plaintext;
+  background-color: transparent;
+  border: solid transparent;
+  border-width: $input-border-width 0;
+
+  &.form-control-sm,
+  &.form-control-lg {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+// Form control sizing
+//
+// Build on `.form-control` with modifier classes to decrease or increase the
+// height and font-size of form controls.
+//
+// Repeated in `_input_group.scss` to avoid Sass extend issues.
+
+.form-control-sm {
+  min-height: $input-height-sm;
+  padding: $input-offset-sm $input-offset-sm;
+  @include font-size($input-sm-font-size);
+  @include border-radius($input-border-radius-sm);
+
+  &::file-selector-button {
+    padding: $input-offset-sm $input-offset-sm;
+    margin: (-$input-offset-sm) (-$input-offset-sm);
+    margin-inline-end: $input-offset-sm;
+  }
+
+  &::-webkit-file-upload-button {
+    padding: $input-offset-sm $input-offset-sm;
+    margin: (-$input-offset-sm) (-$input-offset-sm);
+    margin-inline-end: $input-offset-sm;
+  }
+}
+
+.form-control-lg {
+  min-height: $input-height-lg;
+  padding: $input-offset-lg $input-offset-lg;
+  @include font-size($input-large-font-size);
+  @include border-radius($input-border-radius-lg);
+
+  &::file-selector-button {
+    padding: $input-offset-lg $input-offset-lg;
+    margin: (-$input-offset-lg) (-$input-offset-lg);
+    margin-inline-end: $input-offset-lg;
+  }
+
+  &::-webkit-file-upload-button {
+    padding: $input-offset-lg $input-offset-lg;
+    margin: (-$input-offset-lg) (-$input-offset-lg);
+    margin-inline-end: $input-offset-lg;
+  }
+}
+
+// Make sure textareas don't shrink too much when resized
+// https://github.com/twbs/bootstrap/pull/29124
+// stylelint-disable selector-no-qualifying-type
+textarea {
+  &.form-control {
+    min-height: $input-height;
+  }
+
+  &.form-control-sm {
+    min-height: $input-height-sm;
+  }
+
+  &.form-control-lg {
+    min-height: $input-height-lg;
+  }
+}
+// stylelint-enable selector-no-qualifying-type
+
+.form-control-color {
+  width: $form-color-width;
+  height: auto; // Override fixed browser height
+  padding: $input-offset;
+
+  &:not(:disabled):not([readonly]) {
+    cursor: pointer;
+  }
+
+  &::-moz-color-swatch {
+    height: if(unit($input-line-height) == "", $input-line-height * 1em, $input-line-height);
+    @include border-radius($input-border-radius);
+  }
+
+  &::-webkit-color-swatch {
+    height: if(unit($input-line-height) == "", $input-line-height * 1em, $input-line-height);
+    @include border-radius($input-border-radius);
+  }
+}
+
+
+// Make file inputs better match text inputs by forcing them to new lines.
+.form-control-file,
+.form-control-range {
+  display: block;
+}
+
+//
+// Labels
+//
+
+// For use with horizontal and inline forms, when you need the label text to
+// align with the form controls.
+.form-control-label {
+  padding: $input-offset $input-offset;
+  margin-bottom: 0; // Override the `<label>` default
+}
+
+
+// Todo: clear this up
+
+// Special styles for iOS temporal inputs
+//
+// In Mobile Safari, setting `display: block` on temporal inputs causes the
+// text within the input to become vertically misaligned. As a workaround, we
+// set a pixel line-height that matches the given height of the input, but only
+// for Safari. See https://bugs.webkit.org/show_bug.cgi?id=139848
+//
+// Note that as of 8.3, iOS doesn't support `datetime` or `week`.
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  input[type="date"],
+  input[type="time"],
+  input[type="datetime-local"],
+  input[type="month"] {
+    &.form-control {
+      line-height: $input-height;
+    }
+
+    &.input-sm,
+    .input-group-sm &.form-control {
+      line-height: $input-height-sm;
+    }
+
+    &.input-lg,
+    .input-group-lg &.form-control {
+      line-height: $input-height-lg;
+    }
+  }
+}
+
+
+// Static form control text
+//
+// Apply class to an element to make any string of text align with labels in a
+// horizontal form layout.
+
+.form-control-static {
+  min-height: $input-height;
+  // Size it appropriately next to real form controls
+  padding-top: $input-offset;
+  padding-bottom: $input-offset;
+  // Remove default margin from `p`
+  margin-bottom: 0;
+
+  &.form-control-sm,
+  &.form-control-lg {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+
+// Form control sizing
+//
+// Build on `.form-control` with modifier classes to decrease or increase the
+// height and font-size of form controls.
+//
+// The `.form-group-* form-control` variations are sadly duplicated to avoid the
+// issue documented in https://github.com/twbs/bootstrap/issues/15074.
+
+.form-control-sm {
+  // height: $input-height-sm;
+  padding: $input-offset-sm $input-offset-sm;
+  font-size: $sm-font-size;
+  line-height: $sm-line-height;
+  @include border-radius($input-border-radius-sm);
+}
+
+.form-control-lg {
+  // height: $input-height-lg;
+  padding: $input-offset-lg $input-offset-lg;
+  font-size: $lg-font-size;
+  line-height: $lg-line-height;
+  @include border-radius($input-border-radius-lg);
+}
+
+
+// Form groups
+//
+// Designed to help with the organization and spacing of vertical forms. For
+// horizontal forms, use the predefined grid classes.
+
+.form-group {
+  margin-bottom: $form-label-margin-bottom;
+}
+
+
+// Checkboxes and radios
+//
+// Indent the labels to position radios/checkboxes as hanging controls.
+
+.radio,
+.checkbox {
+  position: relative;
+  display: block;
+  // margin-top:    ($spacer * .75);
+  margin-bottom: ($spacer * .75);
+
+  label {
+    padding-left: 1.25rem;
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+
+    // When there's no labels, don't position the input.
+    input:only-child {
+      position: static;
+    }
+  }
+}
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+  position: absolute;
+  margin-top: .25rem;
+  // margin-top: 4px \9;
+  margin-left: -1.25rem;
+}
+
+.radio + .radio,
+.checkbox + .checkbox {
+  // Move up sibling radios or checkboxes for tighter spacing
+  margin-top: -.25rem;
+}
+
+// Radios and checkboxes on same line
+.radio-inline,
+.checkbox-inline {
+  position: relative;
+  display: inline-block;
+  padding-left: 1.25rem;
+  margin-bottom: 0;
+  font-weight: normal;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.radio-inline + .radio-inline,
+.checkbox-inline + .checkbox-inline {
+  margin-top: 0;
+  margin-left: .75rem;
+}
+
+// Apply same disabled cursor tweak as for inputs
+// Some special care is needed because <label>s don't inherit their parent's `cursor`.
+//
+// Note: Neither radios nor checkboxes can be readonly.
+input[type="radio"],
+input[type="checkbox"] {
+  &:disabled,
+  &.disabled {
+    cursor: cursor-disabled;
+  }
+}
+// These classes are used directly on <label>s
+.radio-inline,
+.checkbox-inline {
+  &.disabled {
+    cursor: cursor-disabled;
+  }
+}
+// These classes are used on elements with <label> descendants
+.radio,
+.checkbox {
+  &.disabled {
+    label {
+      cursor: cursor-disabled;
+    }
+  }
+}

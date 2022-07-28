@@ -2,7 +2,7 @@
 /**
  * Off canvas mobile menu.
  *
- * @package TheCreativityArchitect
+ * @package TheThemeName
  * @subpackage Template Parts
  */
 
@@ -30,15 +30,15 @@ if ( get_theme_mod( 'mobile_menu_overlay' ) ) {
 
 			<?php if ( svg_enabled() ) { ?>
 
-				<button id="mobile-menu-toggle" class="mobile-nav-item mobile-menu-toggle" aria-label="<?php _e( 'Mobile Site Navigation', 'TheCreativityArchitect' ); ?>" aria-controls="navigation" aria-expanded="false" aria-haspopup="true">
-					<span class="screen-reader-text"><?php _e( 'Menu Toggle', 'TheCreativityArchitect' ); ?></span>
+				<button id="mobile-menu-toggle" class="mobile-nav-item mobile-menu-toggle" aria-label="<?php _e( 'Mobile Site Navigation', 'TheThemeName' ); ?>" aria-controls="navigation" aria-expanded="false" aria-haspopup="true">
+					<span class="screen-reader-text"><?php _e( 'Menu Toggle', 'TheThemeName' ); ?></span>
 					<?php echo svg( 'hamburger' ); ?>
 				</button>
 
 			<?php } else { ?>
 
-				<button id="mobile-menu-toggle" class="mobile-nav-item mobile-menu-toggle TheCreativityArchitectf TheCreativityArchitectf-hamburger" aria-label="<?php _e( 'Mobile Site Navigation', 'TheCreativityArchitect' ); ?>" aria-controls="navigation" aria-expanded="false" aria-haspopup="true">
-					<span class="screen-reader-text"><?php _e( 'Menu Toggle', 'TheCreativityArchitect' ); ?></span>
+				<button id="mobile-menu-toggle" class="mobile-nav-item mobile-menu-toggle TheThemeNamef TheThemeNamef-hamburger" aria-label="<?php _e( 'Mobile Site Navigation', 'TheThemeName' ); ?>" aria-controls="navigation" aria-expanded="false" aria-haspopup="true">
+					<span class="screen-reader-text"><?php _e( 'Menu Toggle', 'TheThemeName' ); ?></span>
 				</button>
 
 			<?php } ?>
@@ -70,7 +70,7 @@ if ( get_theme_mod( 'mobile_menu_overlay' ) ) {
 				<?php echo svg( 'times' ); ?>
 			</span>
 		<?php } else { ?>
-			<i class="close TheCreativityArchitectf TheCreativityArchitectf-times" aria-hidden="true"></i>
+			<i class="close TheThemeNamef TheThemeNamef-times" aria-hidden="true"></i>
 		<?php } ?>
 
 	</div>

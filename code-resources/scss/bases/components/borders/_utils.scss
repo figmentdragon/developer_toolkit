@@ -1,0 +1,27 @@
+// stylelint-disable property-disallowed-list, declaration-no-important
+
+@each $color, $value in $theme-colors {
+  .border-#{$color} {
+    border-color: $value !important;
+  }
+}
+
+.border-white {
+  border-color: $white !important;
+}
+
+@each $name, $value in $theme-colors {
+  @mixin color-scheme($name) {
+    border-color: mix($border, $value, $border-percentage);
+    background-color: mix($background, $value, $background-percentage);
+    color: mix($text, $value, $text-percentage);
+
+    a {
+      color: mix($link, $value, $link-percentage);
+      &:hover,
+      &:focus {
+        color: mix($focus, $color, $focus-percentage);
+      }
+    }
+  }
+}

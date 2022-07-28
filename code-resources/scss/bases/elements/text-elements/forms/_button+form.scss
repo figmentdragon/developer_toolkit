@@ -1,0 +1,36 @@
+// Buttons + Forms
+//
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+@import './../../../../critical/defaults/buttons+forms/input-btn-variable';
+
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background, and border color.
+@import './../../../../critical/defaults/buttons+forms/button-variable';
+
+// Forms
+@import './../../../../critical/defaults/buttons+forms/form-text-variable';
+
+@import './../../../../critical/defaults/buttons+forms/form-label-variable';
+
+@import './../../../../critical/defaults/buttons+forms/input-group-variable';
+
+@import './../../../../critical/defaults/buttons+forms/form-check-variable';
+
+@import './../../../../critical/defaults/buttons+forms/form-switch-variable';
+
+@import './../../../../critical/defaults/buttons+forms/form-input-variable';
+
+@import './../../../../critical/defaults/buttons+forms/form-select-variable';
+
+@import './../../../../critical/defaults/buttons+forms/form-range-variable';
+
+@import './../../../../critical/defaults/buttons+forms/form-file-variable';
+
+@import './../../../../critical/defaults/buttons+forms/form-floating-variable';
+
+// Form validation
+@import './../../../../critical/defaults/buttons+forms/form-feedback-tooltips';
+
+@import './../../../../critical/defaults/buttons+forms/form-validation-variable';

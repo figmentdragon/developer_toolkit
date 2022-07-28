@@ -2,17 +2,17 @@
 /**
  * The template for displaying testimonial items
  *
- * @package creativity
+ * @package creativityarchitect
  */
 
-$enable = get_theme_mod( 'creativity_testimonial_option', 'disabled' );
+$enable = get_theme_mod( 'creativityarchitect_testimonial_option', 'disabled' );
 
-if ( ! creativity_check_section( $enable ) ) {
+if ( ! creativityarchitect_check_section( $enable ) ) {
 	// Bail if featured content is disabled
 	return;
 }
 
-$headline    = get_option( 'jetpack_testimonial_title', esc_html__( 'Testimonials', 'creativity' ) );
+$headline    = get_option( 'jetpack_testimonial_title', esc_html__( 'Testimonials', 'creativityarchitect' ) );
 $subheadline = get_option( 'jetpack_testimonial_content' );
 
 

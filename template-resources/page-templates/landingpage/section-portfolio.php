@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * @package creativityarchitect
+ * @package themename
  */
 if (get_theme_mod('theme_section_disable') != 'on') {
     ?>
@@ -37,7 +37,7 @@ if (get_theme_mod('theme_section_disable') != 'on') {
                         $category_slug = "";
                         $category_slug = get_category($theme_cat_single);
                         if (is_object($category_slug)) {
-                            $category_slug = 'creativityarchitect-_s-' . $category_slug->term_id;
+                            $category_slug = 'themename-_s-' . $category_slug->term_id;
                             ?>
                             <div class="ht-_s-cat-name" data-filter=".<?php echo esc_attr($category_slug); ?>">
                                 <?php echo esc_html(get_cat_name($theme_cat_single)); ?>
@@ -63,14 +63,14 @@ if (get_theme_mod('theme_section_disable') != 'on') {
                                 $cat_slug = array();
 
                                 foreach ($categories as $category) {
-                                    $cat_slug[] = 'creativityarchitect-_s-' . $category->term_id;
+                                    $cat_slug[] = 'themename-_s-' . $category->term_id;
                                 }
 
                                 $category_slug = implode(" ", $cat_slug);
 
                                 if (has_post_thumbnail()) {
                                     $image_url = get_template_directory_uri() . '/images/_s-small-blank.png';
-                                    $theme_image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'creativityarchitect-_s-thumb');
+                                    $theme_image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'themename-_s-thumb');
                                     $theme_image_large = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large');
                                 } else {
                                     $image_url = get_template_directory_uri() . '/images/_s-small.png';

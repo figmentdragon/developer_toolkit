@@ -1,0 +1,45 @@
+$primary-100: #66f7f2;
+tint($primary, $color-interval * 3): #41f5ef;
+$primary-300: #1cf3ec;
+$primary-400: #0cddd6;
+$primary-500: hsl(178deg, 90%, 38%);
+shade($primary, $color-interval): #08938f;
+shade($primary, $color-interval * 2): #066e6b;
+$primary-800: #044a47;
+$primary-900: #022524;
+
+
+$secondary-100: #fff3ce;
+$secondary-200: #ffe9a7;
+$secondary-300: #ffdf81;
+$secondary-400: #ffd65a;
+$secondary-500: hsl(45deg, 100%, 60%);
+$secondary-600: #ffc20c;
+$secondary-700: #e4ab00;
+$secondary-800: #be8e00;
+$secondary-900: #977100;
+
+
+$accent-100: white;
+$accent-200: #f9f9f9;
+$accent-300: #e6e6e6;
+$accent-400: lightgray;
+$accent-500: hsl(0deg, 0%, 75%);
+$accent-600: #acacac;
+$accent-700: #989898;
+$accent-800: #858585;
+$accent-900: #727272;
+
+
+$tertiary-100: #ff8f16;
+$tertiary-200: #ef7b00;
+$tertiary-300: #c86700;
+$tertiary-400: #a15300;
+$tertiary-500: hsl(31deg, 100%, 24%);
+$tertiary-600: #542b00;
+$tertiary-700: #2d1700;
+$tertiary-800: #060300;
+$tertiary-900: black;
+
+
+/*# sourceMappingURL=primary-color$scss$map */

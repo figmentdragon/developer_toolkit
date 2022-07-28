@@ -1,0 +1,20 @@
+// scss-docs-start display-headings
+$display-font-size-1:               5rem;
+$display-font-size-2:               4.5rem;
+$display-font-size-3:               4rem;
+$display-font-size-4:               3.5rem;
+$display-font-size-5:                   3rem;
+$display-font-size-6: 2.5rem;
+
+$display-font-sizes: (
+  1: 5rem,
+  2: 4.5rem,
+  3: 4rem,
+  4: 3.5rem,
+  5: 3rem,
+  6: 2.5rem
+);
+
+$display-font-weight: $bold-font-weight;
+$display-line-height: $headings-line-height;
+// scss-docs-end display-headings

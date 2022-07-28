@@ -4,7 +4,7 @@
  *
  * Renders read more link on archives.
  *
- * @package TheCreativityArchitect
+ * @package TheThemeName
  * @subpackage Template Parts
  */
 
@@ -16,7 +16,7 @@ if ( 'primary' === get_theme_mod( 'blog_read_more_link' ) ) {
 	$read_more_class .= ' button-primary';
 }
 
-$read_more_text = apply_filters( 'read_more_text', __( 'Read more', 'TheCreativityArchitect' ) );
+$read_more_text = apply_filters( 'read_more_text', __( 'Read more', 'TheThemeName' ) );
 
 echo sprintf( '<a href="%1$s" class="%2$s">%3$s%4$s</a>',
 	esc_url( get_permalink() ),

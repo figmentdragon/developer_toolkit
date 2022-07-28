@@ -1,0 +1,67 @@
+.form-select {
+  display: block;
+  width: 100%;
+  padding: $form-select-offset $form-select-indicator-offset $form-select-offset form-select-offset;
+  // stylelint-disable-next-line property-no-vendor-prefix
+  -moz-padding-start: subtract(form-select-offset, 3px); // See https://github.com/twbs/bootstrap/issues/32636
+  font-family: $accent-font;
+  @include font-size($form-select-font-size);
+  font-weight: $form-select-font-weight;
+  line-height: $form-select-line-height;
+  color: $form-select-color;
+  background-color: $form-select-bg;
+  background-image: escape-svg($form-select-indicator);
+  background-repeat: no-repeat;
+  background-position: $form-select-bg-position;
+  background-size: $form-select-bg-size;
+  border: $form-select-border-width solid $form-select-border-color;
+  @include border-radius($form-select-border-radius, 0);
+  @include box-shadow($form-select-box-shadow);
+  @include transition($form-select-transition);
+  appearance: none;
+
+  &:focus {
+    border-color: $form-select-focus-border-color;
+    outline: 0;
+    @if $enable-shadows {
+      @include box-shadow($form-select-box-shadow, $form-select-focus-box-shadow);
+    } @else {
+      // Avoid using mixin so we can pass custom focus shadow properly
+      box-shadow: $form-select-focus-box-shadow;
+    }
+  }
+
+  &[multiple],
+  &[size]:not([size="1"]) {
+    padding-right: form-select-offset;
+    background-image: none;
+  }
+
+  &:inactive {
+    color: $form-select-inactive-color;
+    background-color: $form-select-inactive-bg;
+    border-color: $form-select-inactive-color;
+  }
+
+  // Remove outline from select box in FF
+  &:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 $form-select-color;
+  }
+}
+
+.form-select-sm {
+  padding-top: $form-select-offset;
+  padding-bottom: $form-select-offset;
+  padding-left: $form-select-offset;
+  @include font-size($form-select-sm-font-size);
+  @include border-radius($form-select-border-radius-sm);
+}
+
+.form-select-lg {
+  padding-top: $form-select-offset-lg;
+  padding-bottom: $form-select-offset-lg;
+  padding-left: $form-select-offset-x-lg;
+  @include font-size($form-select-large-font-size);
+  @include border-radius($form-select-border-radius-lg);
+}

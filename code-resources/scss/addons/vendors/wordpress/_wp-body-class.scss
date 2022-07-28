@@ -1,0 +1,277 @@
+//WORDPRESS BODY CLASSES - style a page via class
+//If, for example, you would like to style your search results page in a specific way you can use the “search-results” class to add your styling. WordPress only adds this class to the body tag when the search results page is active so it doesn’t affect any other pages.
+
+
+// # Function body_class() add some STATIC classes depends on the page, post, archive, blog, search, 404 etc.
+// # List of all default static classes which are added to
+
+.rtl
+{
+    /* for sites that are read right to left (i.e. hebrew) */
+}
+
+.admin-bar
+{
+    /* # Only in admin bar */
+}
+
+.archive
+{
+    /* For # Month, Year, Category, Author, Post Type archive */
+}
+
+.attachment
+{
+    /* #STATIC attatchment page */
+}
+.attachmentid-%post_id
+{
+    /* individual attatchment page (i.e. body.attachmentid-763) */
+}
+.attachment-%mime_type
+{
+    /* style mime type pages */
+    /* str_replace( $mime_prefix, '', $mime_type ) */
+}
+
+.author
+{
+    /* #STATIC author page */
+}
+.author-%nicename
+{
+    /* #DYNAMIC user nicename (i.e. body.author-samueladams) */
+    /* sanitize_html_class( $author->user_nicename, $author->ID ) */
+}
+.author-paged-%page
+{
+    /* paged author archives (i.e. body.author-paged-4) for page 4 */
+}
+.author-#id
+{
+    /* $author->ID */
+}
+
+.blog
+{
+    /* blog template page */
+    /* # Add if blog view homepage, otherwise false. */
+    position: relative;
+}
+
+.category
+{
+    /* # category page */
+}
+/* individual category page (i.e. body.category-6) */
+.category-paged-%page
+{
+    /* replace the number to the corresponding page number */
+}
+.category-%slug
+{
+    /* $cat->term_id */
+}
+.category-%cat_class
+{
+    /* $cat_class */
+}
+
+.custom-background
+{
+    /* # If theme support 'custom-background' or get_background_image() */
+}
+
+.date
+{
+    /* #STATIC For date archive */
+}
+.date-paged-%page
+{
+    /* replace the number to the corresponding page number */
+}
+
+.error404
+{
+    /* # On 404 page */
+}
+
+.front-page
+{
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    margin: 0;
+
+    @include elevation(5);
+    @include border-radius($lg-border-radius);
+}
+
+.home
+{
+    /* #STATIC home page */
+    /* # Depends on the site’s “Front page displays” Reading Settings ‘show_on_front’ and ‘page_on_front’. \n If you set a static page for the front page of your site, this function will return true when viewing that page. */
+    background-color: $body-bg;
+}
+
+.logged-in
+{
+    /* # Logged in user */
+    /* if user is logged in */
+}
+
+.no-customize-support
+{
+    /* # Only in admin bar */
+}
+
+.page
+{
+    /* # existing single page */
+}
+.page-child
+{
+    /* # Child page only */
+    /* child page template */
+}
+.page-parent
+{
+    /* # Parent page only */
+    /* parent page template */
+}
+.page-id-%page_id
+{
+    /* $page_id */
+}
+
+.paged
+{
+    /* # On paged result and not for the first page */
+    /* paged items like search results or archives */
+}
+.paged-%page
+{
+    /* individual paged (i.e. body.paged-3) */
+}
+.page-template
+{
+    /* # Page templates only */
+    /* custom page template page */
+}
+.page-template-default
+{
+    /* # Default page templates only */
+}
+.page-template-%template_slug
+{
+    /* sanitize_html_class( str_replace( '.', '-', $template_slug ) ) */
+}
+.page-template-%basename_php
+{
+    /* sanitize_html_class( str_replace( array( '.', '/' ), '-', basename( $part, '.php' ) ) ) */
+    /* individual page template (i.e. body.page-template-contact-php */
+}
+.page-paged-%page
+{
+    /* replace the number to the corresponding page number */
+}
+
+.parent-pageid-%post
+{
+    /* $post->post_parent */
+}
+.postid-%post_id
+{
+    /* $post_id */
+    /* individual post page by id (i.e. body.postid-73) */
+}
+
+.post-type-archive
+{
+    /* # post type archive page */
+}
+.post-type-archive-%post_type
+{
+    /* sanitize_html_class( $post_type ) */
+}
+.post-type-paged-%page
+{
+    /* $page */
+}
+
+.search
+{
+    /* search page */
+    /* #STATIC For search */
+}
+.search-results
+{
+    /* # If found posts in search result */
+}
+.search-no-results
+{
+    /* # If NOT found any posts in search result */
+}
+.search-paged-#{$i}
+{
+    /* individual paged search (i.e. body.search-paged-3) */
+}
+
+.single
+{
+    /* single post page */
+    /* # Add for any post type, except {attachments} and {pages} */
+}
+
+.single-paged-%page
+{
+    /* individual paged single (i.e. body.single-paged-3) */
+}
+.single-format-standard
+{
+    /* # standard post format */
+}
+.single-format-%post_format
+{
+    /* sanitize_html_class( $post_format ) */
+}
+
+.tag
+{
+    /* # Tags page */
+}
+.tag-%tag
+{
+    /* $tag->term_id*/
+}
+.tag-%tag_class
+{
+    /* individual tag page (i.e. body.tag-news) */
+}
+.tag-paged-%tag
+{
+    /* replace the number to the corresponding page number */
+}
+
+.tax
+{
+    /* sanitize_html_class( $term->taxonomy ) */
+}
+.term-%term_class
+{
+    /* $term_class */
+}
+.term-%term
+{
+    /* $term->term_id */
+}
+
+.wp-custom-logo
+{
+    /* # If the site has a custom logo. */
+}

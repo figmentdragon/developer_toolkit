@@ -1,0 +1,83 @@
+%button {
+  appearance: none;
+  overflow: visible;
+  display: inline-block;
+  font-family: $tertiary-font;
+  font-weight: $btn-font-weight;
+  line-height: $btn-line-height;
+  text-align: center;
+  text-transform: none;
+  white-space: $btn-white-space;
+  vertical-align: middle;
+  user-select: none;
+  border-width: $btn-border-width;
+  padding: $btn-offset-x $btn-offset-y;
+  @include border-radius(0);
+}
+
+button,
+.button {
+  @extend %button;
+}
+
+@each $name, $color in $theme-colors {
+  .button-#{$name} {
+    border-color: mix($gray-400, $color, $color-interval);
+    background-color: mix($gray-200, $color, $color-interval);
+    border-color: mix($gray-800, $color, $color-interval);
+    -webkit-font-smoothing: antialiased;
+    &:focus:not(:focus-visible) {
+      outline: 0;
+    }
+    &:active {
+      color: mix($gray-400, $color, $color-interval);
+      border-color: mix($gray-800, $color, $color-interval);
+      background-color: mix($gray-200, $color, $color-interval);
+    }
+    &:active,
+    &:focus,
+    &:hover {
+      border-width: $btn-focus-width;
+    }
+    &:focus,
+    &:hover {
+      color: $btn-link-hover;
+      font-weight: $btn-bold-font-weight;
+      @include box-shadow($btn-focus-box-shadow);
+    }
+    &:disabled,
+    &.inactive {
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+    &:-moz-focusring {
+      outline: $btn-border-width dotted $btn-border-color;
+    }
+    &::-moz-focus-inner {
+      border: 0;
+      padding: 0;
+    }
+  }
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+[role='button'] {
+  cursor: pointer;
+}
+
+button,
+[type='button'], // 1
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button; // 2
+
+  @if $enable-button-pointers {
+    &:not(:disabled) {
+      cursor: pointer; // 3
+    }
+  }
+}

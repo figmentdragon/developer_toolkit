@@ -1,0 +1,272 @@
+/************************************************
+	Conditionals
+************************************************/
+
+/* Gloal Color Brightness */
+
+body.organic-portfolio-bg-dark {
+	color: #cccccc;
+	color: rgba(255, 255, 255, 0.7);
+	border-color: rgba(255, 255, 255, 0.24);
+}
+.organic-portfolio-bg-dark h1, .organic-portfolio-bg-dark h2, .organic-portfolio-bg-dark h3,
+.organic-portfolio-bg-dark h4, .organic-portfolio-bg-dark h5, .organic-portfolio-bg-dark h6,
+.organic-portfolio-bg-dark #masthead .title {
+	color: #ffffff;
+	border-color: rgba(255, 255, 255, 0.24);
+}
+.organic-portfolio-bg-dark button, .organic-portfolio-bg-dark .button, .organic-portfolio-bg-dark a.button {
+	color: rgba(255, 255, 255, 0.6) !important;
+}
+.organic-portfolio-bg-dark button:hover, .organic-portfolio-bg-dark .button:hover, .organic-portfolio-bg-dark a.button:hover {
+	color: #ffffff !important;
+}
+.organic-portfolio-bg-dark blockquote,
+.organic-portfolio-bg-dark .headline,
+.organic-portfolio-bg-dark .article h1:first-child + p,
+.organic-portfolio-bg-dark .article h2:first-child + p,
+.organic-portfolio-bg-dark .article h2:first-child + .feature-img + p,
+.organic-portfolio-bg-dark .article > p:first-child {
+	color: #ffffff;
+	border-color: #ffffff;
+}
+.organic-portfolio-bg-dark .blog-template .page-holder,
+.organic-portfolio-bg-dark .post-intro .intro-padding,
+.organic-portfolio-bg-dark.single .flexslider,
+.organic-portfolio-bg-dark .previous-post {
+	border-color: rgba(255, 255, 255, 0.24);
+}
+
+/* Header Color Brightness */
+
+.organic-portfolio-bg-dark .site-title a,
+.organic-portfolio-bg-dark .site-title a:link,
+.organic-portfolio-bg-dark .site-title a:visited {
+	color: #ffffff;
+}
+.organic-portfolio-bg-dark .site-description {
+	color: rgba(255, 255, 255, 0.7);
+}
+.organic-portfolio-bg-dark .top-navigation,
+.organic-portfolio-bg-dark #masthead.full-width,
+.organic-portfolio-bg-dark.portfolio-not-single.portfolio-no-img.portfolio-has-desc #masthead,
+.organic-portfolio-bg-dark.portfolio-not-single.portfolio-no-img.portfolio-has-title #masthead  {
+	border-color: rgba(255, 255, 255, 0.12);
+}
+.organic-portfolio-bg-dark .social-menu,
+.organic-portfolio-bg-dark .social-icons li a {
+	color: rgba(255, 255, 255, 0.3);
+	border-color: rgba(255, 255, 255, 0.24);
+}
+.organic-portfolio-bg-dark .social-icons li a:hover {
+	color: #ffffff;
+}
+
+/* Content Color Brightness */
+
+.organic-portfolio-bg-dark .content .five.columns {
+	border-color: rgba(255, 255, 255, 0.24);
+}
+.organic-portfolio-bg-dark .flexslider .title,
+.organic-portfolio-bg-dark .flexslider .title a,
+.organic-portfolio-bg-dark .flexslider .title a:link,
+.organic-portfolio-bg-dark .flexslider .title a:visited {
+	color: rgba(255, 255, 255, 0.6);
+}
+.organic-portfolio-bg-dark .flexslider .title a:hover,
+.organic-portfolio-bg-dark .flexslider .title a:active,
+.organic-portfolio-bg-dark .flexslider .title a:focus {
+	color: #ffffff;
+}
+.organic-portfolio-bg-dark .wp-caption-dd,
+.organic-portfolio-bg-dark .wp-caption p.wp-caption-text,
+.organic-portfolio-bg-dark .post-navigation a,
+.organic-portfolio-bg-dark .post-navigation a:link,
+.organic-portfolio-bg-dark .post-navigation a:visited,
+.organic-portfolio-bg-dark .flex-direction-nav .flex-next i,
+.organic-portfolio-bg-dark .flex-direction-nav .flex-prev i,
+.organic-portfolio-bg-dark .flex-slide-count {
+	color: rgba(255, 255, 255, 0.4);
+}
+.organic-portfolio-bg-dark .post-navigation a:hover,
+.organic-portfolio-bg-dark .post-navigation a:active,
+.organic-portfolio-bg-dark .post-navigation a:focus,
+.organic-portfolio-bg-dark .flex-direction-nav .flex-next:hover i,
+.organic-portfolio-bg-dark .flex-direction-nav .flex-prev:hover i {
+	color: #ffffff;
+}
+.organic-portfolio-bg-dark .next-post,
+.organic-portfolio-bg-dark .flex-direction-nav .flex-next,
+.organic-portfolio-bg-dark #comments, .organic-portfolio-bg-dark table th, .organic-portfolio-bg-dark table td,
+.organic-portfolio-bg-dark table thead, .organic-portfolio-bg-dark table tfoot {
+	border-color: rgba(255, 255, 255, 0.24);
+}
+.organic-portfolio-bg-dark .flexslider .preloader {
+	border-bottom-color: rgba(255, 255, 255, 0.12);
+	border-left-color: rgba(255, 255, 255, 0.12);
+	border-right-color: rgba(255, 255, 255, 0.4);
+	border-top-color: rgba(255, 255, 255, 0.4);
+}
+.organic-portfolio-bg-dark .excerpt p:first-child,
+.organic-portfolio-bg-dark .article h1:first-child + p,
+.organic-portfolio-bg-dark .article > p:first-child,
+.organic-portfolio-bg-dark .article span + p {
+	color: #ffffff;
+}
+.organic-portfolio-bg-dark article.comment,
+.organic-portfolio-bg-dark .testimonial .information {
+	background-color: rgba(255, 255, 255, 0.04);
+}
+.organic-portfolio-bg-dark .post-meta,
+.organic-portfolio-bg-dark .testimonial .author {
+	color: #999999;
+	color: rgba(255, 255, 255, 0.4);
+}
+.organic-portfolio-bg-dark .post-meta::before,
+.organic-portfolio-bg-dark .blog-holder .article,
+.organic-portfolio-bg-dark .archive-holder .article {
+	border-color: rgba(255, 255, 255, 0.24);
+}
+.organic-portfolio-bg-dark .post-taxonomy a {
+	color: rgba(255, 255, 255, 0.4) !important;
+	border-color: rgba(255, 255, 255, 0.24);
+}
+.organic-portfolio-bg-dark .post-taxonomy a:hover {
+	color: #ffffff !important;
+}
+
+/* Form Color Brightness */
+
+.organic-portfolio-bg-dark form input,
+.organic-portfolio-bg-dark form select,
+.organic-portfolio-bg-dark form textarea {
+	color: #ffffff;
+	border-color: rgba(255, 255, 255, 0.24);
+}
+
+/* Button Color Brightness */
+
+.organic-portfolio-bg-dark button, .organic-portfolio-bg-dark .button, .organic-portfolio-bg-dark a.button, .organic-portfolio-bg-dark .reply a, .organic-portfolio-bg-dark #searchsubmit,
+.organic-portfolio-bg-dark #prevLink a, .organic-portfolio-bg-dark #nextLink a, .organic-portfolio-bg-dark a.more-link, .organic-portfolio-bg-dark #submit,
+.organic-portfolio-bg-dark input[type=submit], .organic-portfolio-bg-dark input#submit, .organic-portfolio-bg-dark input.button, .organic-portfolio-bg-dark #wrapper #infinite-handle span,
+.organic-portfolio-bg-dark .woocommerce #respond input#submit, .organic-portfolio-bg-dark .woocommerce a.button,
+.organic-portfolio-bg-dark .woocommerce button.button, .organic-portfolio-bg-dark .woocommerce input.button {
+	color: rgba(255, 255, 255, 0.4) !important;
+}
+.organic-portfolio-bg-dark button:hover, .organic-portfolio-bg-dark .button:hover, .organic-portfolio-bg-dark a.button:hover, .organic-portfolio-bg-dark .reply a:hover,
+.organic-portfolio-bg-dark #searchsubmit:hover, .organic-portfolio-bg-dark #prevLink a:hover, .organic-portfolio-bg-dark #nextLink a:hover, .organic-portfolio-bg-dark a.more-link:hover,
+.organic-portfolio-bg-dark input[type=submit]:hover, .organic-portfolio-bg-dark #submit:hover, .organic-portfolio-bg-dark input#submit:hover, .organic-portfolio-bg-dark input.button:hover,
+.organic-portfolio-bg-dark #wrapper #infinite-handle span:hover, .organic-portfolio-bg-dark .woocommerce #respond input#submit:hover,
+.organic-portfolio-bg-dark .woocommerce a.button:hover, .organic-portfolio-bg-dark .woocommerce button.button:hover, .organic-portfolio-bg-dark .woocommerce input.button:hover {
+	color: #ffffff !important;
+}
+
+/* Footer Color Brightness */
+
+.organic-portfolio-bg-dark .footer {
+	border-color: rgba(255, 255, 255, 0.24);
+}
+.organic-portfolio-bg-dark .footer-information p {
+	color: rgba(255, 255, 255, 0.4);
+}
+.organic-portfolio-bg-dark .footer-information a {
+	color: rgba(255, 255, 255, 0.7);
+}
+
+/* Menu Color Brightness */
+
+.organic-portfolio-bg-dark ul.menu li a,
+.organic-portfolio-bg-dark ul.menu li a:link,
+.organic-portfolio-bg-dark ul.menu li a:visited {
+	color: #cccccc;
+	color: rgba(255, 255, 255, 0.6);
+	border-color: rgba(255, 255, 255, 0);
+}
+.organic-portfolio-bg-dark ul.menu li a:focus,
+.organic-portfolio-bg-dark ul.menu li a:hover,
+.organic-portfolio-bg-dark ul.menu li a:active,
+.organic-portfolio-bg-dark ul.menu li.current-menu-item a,
+.organic-portfolio-bg-dark ul.menu li.current-menu-item a:link,
+.organic-portfolio-bg-dark ul.menu li.current-menu-item a:visited {
+	color: #ffffff;
+	border-color: #ffffff;
+}
+.organic-portfolio-bg-dark ul.menu li li a,
+.organic-portfolio-bg-dark ul.menu li li a:link,
+.organic-portfolio-bg-dark ul.menu li li a:visited,
+.organic-portfolio-bg-dark .footer-menu ul.menu li {
+	border-color: rgba(255, 255, 255, 0.24);
+}
+.organic-portfolio-bg-dark button.menu-toggle svg {
+	fill: rgba(255, 255, 255, 0.6);
+}
+.organic-portfolio-bg-dark button.menu-toggle:hover svg {
+	fill: rgba(255, 255, 255, 1);
+}
+
+/* Header Conditional Styles */
+
+#header.top-header {
+	display: none;
+	align-content: center;
+	justify-content: space-between;
+}
+.portfolio-lite-layout #header.top-header,
+.single-jetpack-portfolio #header.top-header,
+.single-jetpack-testimonial #header.top-header {
+	display: flex;
+}
+.portfolio-lite-layout #header.side-header,
+.single-jetpack-portfolio #header.side-header,
+.single-jetpack-testimonial #header.side-header {
+	display: none;
+}
+.portfolio-lite-layout .site-title,
+.single-jetpack-portfolio .site-title,
+.single-jetpack-testimonial .site-title {
+	margin-left: 12px;
+}
+.portfolio-lite-layout #masthead,
+.single-jetpack-portfolio #masthead,
+.single-jetpack-testimonial #masthead {
+	padding-top: 0px;
+}
+.portfolio-no-logo #header.side-header {
+	padding-top: 48px;
+}
+.single.single-product.portfolio-has-img #masthead,
+.portfolio-header-inactive.portfolio-no-img #masthead,
+.error404.portfolio-header-inactive.portfolio-has-desc #masthead,
+.error404.portfolio-header-inactive.portfolio-has-title #masthead,
+.blog.portfolio-header-inactive.portfolio-has-desc #masthead,
+.blog.portfolio-header-inactive.portfolio-has-title #masthead,
+.archive.portfolio-header-inactive.portfolio-has-desc #masthead,
+.archive.portfolio-header-inactive.portfolio-has-title #masthead,
+.search.portfolio-header-inactive.portfolio-has-desc #masthead,
+.search.portfolio-header-inactive.portfolio-has-title #masthead,
+.single.portfolio-no-img.portfolio-has-desc #masthead,
+.single.portfolio-no-img.portfolio-has-title #masthead,
+.page.portfolio-no-img.portfolio-has-desc #masthead,
+.page.portfolio-no-img.portfolio-has-title #masthead {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+.organic-portfolio-bg-dark.single.single-product.portfolio-has-img #masthead,
+.organic-portfolio-bg-dark.portfolio-header-inactive.portfolio-no-img #masthead,
+.organic-portfolio-bg-dark.error404.portfolio-header-inactive.portfolio-has-desc #masthead,
+.organic-portfolio-bg-dark.error404.portfolio-header-inactive.portfolio-has-title #masthead,
+.organic-portfolio-bg-dark.blog.portfolio-header-inactive.portfolio-has-desc #masthead,
+.organic-portfolio-bg-dark.blog.portfolio-header-inactive.portfolio-has-title #masthead,
+.organic-portfolio-bg-dark.archive.portfolio-header-inactive.portfolio-has-desc #masthead,
+.organic-portfolio-bg-dark.archive.portfolio-header-inactive.portfolio-has-title #masthead,
+.organic-portfolio-bg-dark.search.portfolio-header-inactive.portfolio-has-desc #masthead,
+.organic-portfolio-bg-dark.search.portfolio-header-inactive.portfolio-has-title #masthead,
+.organic-portfolio-bg-dark.single.portfolio-no-img.portfolio-has-desc #masthead,
+.organic-portfolio-bg-dark.single.portfolio-no-img.portfolio-has-title #masthead,
+.organic-portfolio-bg-dark.page.portfolio-no-img.portfolio-has-desc #masthead,
+.organic-portfolio-bg-dark.page.portfolio-no-img.portfolio-has-title #masthead {
+	border-color: rgba(255, 255, 255, 0.24);
+}
+.portfolio-slideshow #masthead {
+	border: none !important;
+}
+

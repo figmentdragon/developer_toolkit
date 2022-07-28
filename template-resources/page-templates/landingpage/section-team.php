@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * @package creativityarchitect
+ * @package themename
  */
 if (get_theme_mod('theme_team_section_disable') != 'on') {
     ?>
@@ -34,7 +34,7 @@ if (get_theme_mod('theme_team_section_disable') != 'on') {
                         $query = new WP_Query($args);
                         if ($query->have_posts()):
                             while ($query->have_posts()) : $query->the_post();
-                                $theme_image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'creativityarchitect-team-thumb');
+                                $theme_image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'themename-team-thumb');
                                 $theme_team_designation = get_theme_mod('theme_team_designation' . $i);
                                 $theme_team_facebook = get_theme_mod('theme_team_facebook' . $i);
                                 $theme_team_twitter = get_theme_mod('theme_team_twitter' . $i);
@@ -73,7 +73,7 @@ if (get_theme_mod('theme_team_section_disable') != 'on') {
                                                         echo esc_html(theme_excerpt(get_the_content(), 100));
                                                     }
                                                     ?>
-                                                    <div class="ht-team-detail"><?php esc_html_e('Detail', 'creativityarchitect') ?></div>
+                                                    <div class="ht-team-detail"><?php esc_html_e('Detail', 'themename') ?></div>
                                                 </div>
                                             </div>
                                         </a>

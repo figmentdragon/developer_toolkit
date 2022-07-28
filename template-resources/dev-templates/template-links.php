@@ -1,10 +1,10 @@
-<?php /* Template Name: Links */ ?>
+<?php /* Template Name: Links */ 
 /**
  * @package WordPress
  * @subpackage BoilerstrapWP
  */
 
-<?php get_header(); ?>
+ get_header(); ?>
 
 <div class="row">
 	<div class="span8">

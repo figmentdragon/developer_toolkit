@@ -1,0 +1,23 @@
+$link-text:                  tint($link, $body-percentage);
+$link-text-active:           tint($link-text, $active-percentage);
+$link-text-hover:            tint($link-text-active, $hover-percentage);
+$link-text-focus:            tint($link-text-active, $focus-percentage);
+$link-text-visited:          tint($link-text-active, $visited-percentage);
+
+$link-text-inactive:         shade($link-text, $inactive-percentage);
+$link-text-inactive-hover:   shade($link-text-inactive, $hover-percentage);
+$link-text-inactive-focus:   shade($link-text-inactive, $focus-percentage);
+$link-text-inactive-visited: shade($link-text-inactive, $visited-percentage);
+
+/* UTILITIES */
+
+$local-link:                 tint($secondary, $local-link-percentage);
+$target:                     tint($secondary, $target-percentage);
+$target-within:              tint($secondary, $target-within-percentage);
+$scope:                      tint($secondary, $scope-percentage);
+$visited:                    tint($secondary, $visited-percentage);
+
+$hover:                      tint($primary, $hover-percentage);
+$focus:                      tint($primary, $focus-percentage);
+$focus-visible:              tint($primary, $focus-visible-percentage);
+$focus-within:               tint($primary, $focus-within-percentage);

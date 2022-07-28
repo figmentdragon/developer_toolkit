@@ -1,0 +1,48 @@
+
+$custom-control-gutter:                 1.75rem;
+$custom-control-spacer-x:               1rem;
+$custom-control-line-height:            1;
+$custom-control-indicator-size:         1.25rem;
+
+$custom-control-bg:                     $gray-400;
+$custom-control-indicator-bg:           $white;
+$custom-control-border-width:           $border-width;
+$custom-control-border-color:           $input-border-color;
+$custom-control-box-shadow:             none;
+$custom-toggle-slider-indicator-bg:     $dark;
+
+
+
+$custom-control-indicator-hover-color:         $component-hover-color;
+$custom-control-indicator-hover-bg:            $default;
+$custom-control-indicator-hover-border-color:  $component-hover-border-color;
+
+$custom-control-indicator-active-color:         $component-active-color;
+$custom-control-indicator-active-border-color:  $component-active-border-color;
+$custom-control-indicator-active-bg:            transparent;
+
+
+$custom-control-indicator-checked-color:        $component-active-color;
+$custom-control-indicator-checked-bg:           $default;
+$custom-control-indicator-checked-border-color: $default;
+$custom-control-indicator-checked-disabled-bg:  rgba($default, .7);
+$custom-control-indicator-border-width:         1px;
+
+$custom-control-indicator-disabled-bg:          $gray-200;
+$custom-control-label-disabled-color:           $gray-800;
+
+$custom-checkbox-bg:                            $gray-400;
+$custom-checkbox-checked-bg:                    $default;
+$custom-checkbox-disabled-checked-bg:           rgba($dark, .7);
+$custom-checkbox-indicator-border-radius:       $circle-radius;
+$custom-checkbox-indicator-border-width:        $border-width-md;
+$square-checkbox-indicator-border-radius:       2px;
+$custom-checkbox-indicator-icon-checked:        $font-awesome-5;
+$custom-checkshadow-inset:                  inset 1px 2px 2px #afcbff, inset -5px -2px 4px #FFFFFF;
+
+$custom-switch-indicator-size:                  calc(#{$custom-control-indicator-size} - #{$custom-control-indicator-border-width * 4});
+
+//Switches
+$custom-switch-width:                           $custom-control-indicator-size * 2;
+$custom-switch-indicator-border-radius:         divid($custom-control-indicator-size, 2);
+$custom-switch-indicator-size:                  calc(#{$custom-control-indicator-size} - #{$custom-control-indicator-border-width * 4});

@@ -4,7 +4,7 @@
  *
  * Renders featured image on archives.
  *
- * @package TheCreativityArchitect
+ * @package TheThemeName
  * @subpackage Template Parts
  */
 

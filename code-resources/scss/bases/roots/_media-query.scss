@@ -1,0 +1,164 @@
+//
+// Root Media Query Variables
+//
+
+$default-width: 38.125rem;
+$max-content-width: 1240px;
+$responsive-horizontal-spacing: 1.05vw;
+$responsive-aligndefault-width: 100vw - $responsive-horizontal-spacing;
+$responsive-alignwide-width: 100vw - $responsive-horizontal-spacing;
+$responsive-alignfull-width: 100vw;
+
+/**
+ * Root Media Query Variables
+ */
+:root
+{
+    $horizontal-offset: 1.05vh;
+    $responsive-spacing-horizontal: calc((2 * $horizontal-offset) * .6);
+    $responsive-aligndefault-width: subtract(100vw, $responsive-spacing-horizontal);
+    $responsive-alignwide-width: subtract(100vw, $responsive-spacing-horizontal);
+    $responsive-alignfull-width: 100%;
+    $responsive-alignright-margin: $horizontal-offset;
+    $responsive-alignleft-margin: $horizontal-offset;
+}
+
+@include mobile
+{
+    :root
+    {
+        $horizontal-offset: 1vh;
+        $responsive-aligndefault-width: subtract(calc((100vw - 4 * $horizontal-offset)), $default-width);
+        $responsive-alignwide-width: calc(100vw - 4 * $horizontal-offset);
+        $responsive-alignright-margin: calc(.5 * (100vw - 33vw));
+        $responsive-alignleft-margin: calc(.5 * (100vw - 33vw));
+    }
+}
+
+@include desktop
+{
+    :root
+    {
+        $horizontal-offset: 1vh;
+        $responsive-aligndefault-width: subtract(calc(100vw - 8 * $horizontal-offset), $default-width);
+        $responsive-alignwide-width: subtract(calc(100vw - 8 * $horizontal-offset), $max-content-width);
+    }
+}
+
+/**
+ * Extends
+ */
+%responsive-aligndefault-width
+{
+    max-width: calc(100vw - 33vh);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+%responsive-alignwide-width
+{
+    max-width: calc(100vw - 4 * 1vh);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+%responsive-alignfull-width-mobile
+{
+    width: 100%;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@include mobile
+{
+    %responsive-alignfull-width
+    {
+        width: auto;
+        max-width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+%responsive-alignwide-width-nested
+{
+    width: 100%;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+%responsive-alignfull-width-nested
+{
+    width: calc(100vw) - calc(2 * 33vw);
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@include desktop
+{
+    %responsive-alignfull-width-nested
+    {
+        width: calc(100vw) - calc(4 * 33vw);
+        max-width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+
+%responsive-alignleft-mobile
+{
+    /*rtl:ignore*/
+    margin-right: 33vw;
+    /*rtl:ignore*/
+    margin-left: 0;
+}
+
+@include mobile
+{
+    %responsive-alignleft
+    {
+        /*rtl:ignore*/
+        margin-right: 1vh;
+        /*rtl:ignore*/
+        margin-left: 1vw;
+    }
+}
+
+%responsive-alignright-mobile
+{
+    /*rtl:ignore*/
+    margin-right: 0;
+    /*rtl:ignore*/
+    margin-left: 33vw;
+}
+
+@include mobile
+{
+    %responsive-alignright
+    {
+        /*rtl:ignore*/
+        margin-right: 1vw;
+        /*rtl:ignore*/
+        margin-left: 1vh;
+    }
+}
+
+// Output
+.default-max-width
+{
+    @extend %responsive-aligndefault-width;
+}
+
+.wide-max-width
+{
+    @extend %responsive-alignwide-width;
+}
+
+.full-max-width
+{
+    @extend %responsive-alignfull-width;
+}

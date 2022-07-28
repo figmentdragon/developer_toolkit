@@ -1,0 +1,54 @@
+@import './../../core/scss/base/components/cards/base-style-card';
+
+.card {
+  @extend %card;
+}
+.card-body {
+  // Enable `flex-grow: 1` for decks and groups so that card blocks take up
+  // as much space as possible, ensuring footers are aligned to the bottom.
+  flex: 1 1 auto;
+  // Workaround for the image size bug in IE
+  // See: https://github.com/twbs/bootstrap/pull/28855
+  min-height: 1px;
+  padding: var(--#{$prefix}card-spacer-y) var(--#{$prefix}card-spacer-x);
+  color: var(--#{$prefix}card-color);
+}
+
+.card-title {
+  margin-bottom: var(--#{$prefix}card-title-spacer-y);
+}
+
+.card-subtitle {
+  margin-top: calc(-.5 * var(--#{$prefix}card-title-spacer-y)); // stylelint-disable-line function-disallowed-list
+  margin-bottom: 0;
+}
+
+.card-text:last-child {
+  margin-bottom: 0;
+}
+
+.card-link {
+  @include hover() {
+    text-decoration: none;
+  }
+
+  + .card-link {
+    margin-left: var(--#{$prefix}card-spacer-x);
+  }
+}
+
+@import './../../core/scss/base/components/cards/textual-caps-card';
+
+@import './../../core/scss/base/components/cards/header-card';
+
+@import './../../core/scss/base/components/cards/pricing-card';
+
+@import './../../core/scss/base/components/cards/image-card';
+
+@import './../../core/scss/base/components/cards/deck-card';
+
+@import './../../core/scss/base/components/cards/group-card';
+
+@import './../../core/scss/base/components/cards/column-card';
+
+@import './../../core/scss/base/components/cards/accordion-card';

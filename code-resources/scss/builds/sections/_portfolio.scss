@@ -1,0 +1,81 @@
+/*--------------------------------------------------------------------------
+Our Work Section Starts
+----------------------------------------------------------------------------*/
+
+#portfolio-wrap {
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+.port-block {
+    height: 0;
+    width: 0;
+}
+.portfolio-thumb {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+}
+.port-title {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.38);
+    position: absolute;
+    visibility: hidden;
+    top: 0;
+    opacity: 0;
+    text-align: center;
+    padding: 10px;
+    z-index: 999;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+.portfolio-thumb:hover .port-title {
+    visibility: visible;
+    opacity: 1;
+}
+.port-title .port-text {
+    padding: 10px;
+    font-size: 20px;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    line-height: 1.2;
+    -ms-transform: translateY(-30%);
+    -webkit-transform: translateY(-30%);
+    transform: translateY(-30%);
+    text-align: center;
+    transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+}
+.portfolio-thumb:hover .port-title .port-text {
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.port-link-wrap {
+    margin-top: 10px;
+}
+.port-link-wrap a {
+    background: mix($gray-200, $default-light, $color-interval);
+    font-size: 13px;
+    height: 32px;
+    width: 32px;
+    text-align: center;
+    line-height: 32px;
+    color: #FFF;
+    display: inline-block;
+    font-weight: normal;
+}
+
+.port-link-wrap a:hover{
+    background: #000;
+}

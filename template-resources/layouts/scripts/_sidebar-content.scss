@@ -1,3 +1,9 @@
+/*
+ * Layout: Sidebar-Content
+ *
+ * Learn more: https://developer.wordpress.org/themes/basics/template-files/
+*/
+
 .site {
 	display: grid;
 	grid-template-columns: $grid-columns auto;
@@ -7,21 +13,32 @@
 		"footer footer";
 }
 
-.site-header {
-	grid-area: header;
+.content-area,
+#primary {
+	float: right;
+	margin: 0 0 0 (-$size__site-sidebar);
+	width: $size__site-main;
+	height: 100%;
+	white-space: nowrap;
 }
-
-.site-main {
-	grid-area: main;
+.site-main,
+#content {
+	margin: 0 0 0 $size__site-sidebar;
 	overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
 }
 
-.widget-area {
-	grid-area: sidebar;
+.site-content .widget-area,
+#secondary { /*sidebar 1*/
+	float: left;
+	overflow: hidden;
+	width: $size__site-sidebar;
+}
+
+#tertiary { /* Sidebar 2 */
+	clear: left;
 }
 
 .site-footer {
-	grid-area: footer;
+	clear: both;
+	width: $size__site-main;
 }
-
-@import "no-sidebar";

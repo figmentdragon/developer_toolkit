@@ -2,7 +2,7 @@
 /**
  * Vertical menu left.
  *
- * @package TheCreativityArchitect
+ * @package TheThemeName
  * @subpackage Template Parts
  */
 

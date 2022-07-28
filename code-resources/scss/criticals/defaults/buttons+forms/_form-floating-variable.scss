@@ -1,0 +1,11 @@
+// scss-docs-start form-floating-variables
+$form-floating-height: add(3.5rem, $input-height-border);
+$form-floating-line-height: 1.25;
+$form-floating-offset: $input-offset;
+$form-floating-offset: 1rem;
+$form-floating-input-offset-t: 1.625rem;
+$form-floating-input-offset-b: .625rem;
+$form-floating-label-opacity: .65;
+$form-floating-label-transform: scale(.85) translateY(-.5rem) translateX(.15rem);
+$form-floating-transition: opacity .1s ease-in-out, transform .1s ease-in-out;
+// scss-docs-end form-floating-variables

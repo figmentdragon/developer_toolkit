@@ -1,50 +1,24 @@
-<?php
-/*
-The comments page for Bones
-*/
+<div id="comments" class="comments">
+	<?php if ( post_password_required() ) : ?>
+	<p><?php esc_html_e( 'Post is password protected. Enter the password to view any comments.', 'TheThemeName' ); ?></p>
+</div>
 
-// don't load it if you can't comment
-if ( post_password_required() ) {
-  return;
-}
+	<?php return; endif; ?>
 
-?>
+<?php if ( have_comments() ) : ?>
 
-<?php // You can start editing here. ?>
+	<h2><?php comments_number(); ?></h2>
 
-  <?php if ( have_comments() ) : ?>
+	<ul>
+		<?php wp_list_comments( 'type=comment&callback=TheThemeNamecomments' ); // Custom callback in functions.php. ?>
+	</ul>
 
-    <h3 id="comments-title" class="h2"><?php comments_number( __( '<span>No</span> Comments', 'theme' ), __( '<span>One</span> Comment', 'theme' ), __( '<span>%</span> Comments', 'theme' ) );?></h3>
+<?php elseif ( ! comments_open() && ! is_page() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
 
-    <section class="commentlist">
-      <?php
-        wp_list_comments( array(
-          'style'             => 'div',
-          'short_ping'        => true,
-          'avatar_size'       => 40,
-          'callback'          => 'bones_comments',
-          'type'              => 'all',
-          'reply_text'        => __('Reply', 'theme'),
-          'page'              => '',
-          'per_page'          => '',
-          'reverse_top_level' => null,
-          'reverse_children'  => ''
-        ) );
-      ?>
-    </section>
+	<p><?php esc_html_e( 'Comments are closed here.', 'TheThemeName' ); ?></p>
 
-    <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
-    	<nav class="navigation comment-navigation" role="navigation">
-      	<div class="comment-nav-prev"><?php previous_comments_link( __( '&larr; Previous Comments', 'theme' ) ); ?></div>
-      	<div class="comment-nav-next"><?php next_comments_link( __( 'More Comments &rarr;', 'theme' ) ); ?></div>
-    	</nav>
-    <?php endif; ?>
+<?php endif; ?>
 
-    <?php if ( ! comments_open() ) : ?>
-    	<p class="no-comments"><?php _e( 'Comments are closed.' , 'theme' ); ?></p>
-    <?php endif; ?>
+<?php comment_form(); ?>
 
-  <?php endif; ?>
-
-  <?php comment_form(); ?>
-
+</div>

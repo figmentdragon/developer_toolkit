@@ -1,0 +1,50 @@
+// Code - The <code> HTML element displays its contents styled in a fashion intended to indicate that the text is a short fragment of computer code. By default, the content text is displayed using the user agent default monospace font.
+
+@import './../../../../critical/defaults/typography/code';
+
+code {
+  padding: 0.2rem 0.4rem;
+  @include font-size($code-font-size);
+  color: var(--#{$prefix}code-color);
+  word-wrap: break-word;
+  background-color: $code-bg;
+  margin: 0 0.2rem;
+  padding: 0.2rem 0.5rem;
+  white-space: nowrap;
+  border-width: 3;
+  a > & {
+    color: inherit;
+  }
+}
+
+code,
+kbd,
+pre,
+samp,
+tt,
+var {
+  font-family: 'Courier 10 Pitch', Courier, monospace;
+  @include font-size($code-font-size);
+  padding: 0.5rem 1rem;
+  border-radius: 0;
+}
+
+code,
+kbd,
+samp {
+	font-family: monospace, monospace;
+  @include font-size($code-font-size);
+}
+
+code,
+pre {
+  background: $accent;
+  overflow: auto;
+  padding: 0.5rem 1rem;
+  letter-spacing: 0.015em;
+}
+
+code pre,
+pre code {
+  padding: 0;
+}

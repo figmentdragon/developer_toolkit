@@ -1,0 +1,32 @@
+
+// Popovers
+
+// scss-docs-start popover-variables
+$popover-font-size:                 $sm-font-size;
+$popover-bg:                        $white;
+$popover-max-width:                 276px;
+$popover-border-width:              $border-width;
+$popover-border-color:              rgba($black, .2);
+$popover-border-radius:             $lg-border-radius;
+$popover-inner-border-radius:       subtract($popover-border-radius, $popover-border-width);
+$popover-box-box-shadow:                $box-shadow;
+
+$popover-header-font-size:          $base-font-size;
+$popover-header-bg:                 shade-color($popover-bg, 6%);
+$popover-header-color:              var(--#{$prefix}heading-color);
+$popover-header-offset-y:          .5rem;
+$popover-header-offset-x:          $spacer;
+
+$popover-body-color:                $body-color;
+$popover-body-offset-y:            $spacer;
+$popover-body-offset-x:            $spacer;
+
+$popover-arrow-width:               1rem;
+$popover-arrow-height:              .5rem;
+// scss-docs-end popover-variables
+
+// fusv-disable
+// Deprecated in Bootstrap 5.2.0 for CSS variables
+$popover-arrow-color:               $popover-bg;
+$popover-arrow-outer-color:         fade-in($popover-border-color, .05);
+// fusv-enable

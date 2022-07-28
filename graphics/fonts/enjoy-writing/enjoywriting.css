@@ -1,8 +1,7 @@
 @font-face {
-  font-family: "Enjoy Writing";
+  font-family: 'Enjoy Writing';
   font-style: normal;
   font-weight: 400;
-  src: local("Enjoy Writing"), url("https://fonts.cdnfonts.com/s/34906/EnjoyWriting-YzElj.woff") format("woff");
+  src: local("<php get_stylesheet_directory(); ?> . /src/sass/typography/fonts/enjoy-writing/enjoywrting.woff") format("woff");
 }
-
 /*# sourceMappingURL=enjoywriting.css.map */

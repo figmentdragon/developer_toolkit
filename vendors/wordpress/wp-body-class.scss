@@ -1,0 +1,141 @@
+/**
+ * If, for example, you would like to style your search results page in a specific way you can use the “search-results” class to add your styling. WordPress only adds this class to the body tag when the search results page is active so it doesn’t affect any other pages.
+ */
+
+.admin-bar {
+     /* # Only in admin bar */
+ }
+.archive {
+     /* For # Month, Year, Category, Author, Post Type archive */
+ }
+.attachment {
+    /* # On attachment page */
+}
+.attachmentid-/*$id*/ {}
+.attachmentid-/* $post_id */
+.attachment-/* str_replace( $mime_prefix, '', $mime_type ) */
+.attachment-/*mime-type*/ {}
+.author {
+    /* # author page */
+}
+.author-/* $author->ID */
+.author-/* sanitize_html_class/* $author->user_nicename, $author->ID ) */
+.author-/*$user_nicename*/ {}
+.author-paged-/*$page-number*/ {}
+.author-paged-/* $page */
+
+.blog {
+    /* # Add if blog view homepage, otherwise false. */
+}
+.category {
+    /* # category page */
+}
+.category-/*$slug*/ {}
+.category-/* $cat_class */
+.category-/* $cat->term_id */
+.category-paged-/*$page-number*/ {}
+.category-paged-/* $page */
+.custom-background {
+    /* # If theme support 'custom-background' or get_background_image/*) */
+}
+.date {
+     /* # For date archive */
+}
+.date-paged-/* $page */
+.date-paged-/*$page-number*/ {}
+.error404 {
+    /* # On 404 page */
+}
+.home {
+    /* # Depends on the site’s “Front page displays” Reading Settings ‘show_on_front’ and ‘page_on_front’. \n If you set a static page for the front page of your site, this function will return true when viewing that page. */
+}
+.logged-in {}
+.logged-in {
+    /* # Logged in user */
+}
+.no-customize-support {
+    /* # Only in admin bar */
+}
+
+.page {
+    /* # existing single page */
+}
+.page-id-/* $page_id */
+
+
+.page-child {
+    /* # Child page only */
+}
+.page-child parent-pageid-/*$id*/ {}
+.page-paged-/* $page */
+.page-paged-/*$page-number*/ {}
+.page-parent {}
+
+.page-parent {
+    /* # Parent page only */
+}
+.page-template-/* sanitize_html_class( str_replace( array( '.', '/' ), '-', basename( $part, '.php' ) ) ) */
+.page-template-/* sanitize_html_class( str_replace( '.', '-', $template_slug ) ) */
+.page-template {
+    /* # Page templates only */
+}
+.page-template-default {
+    /* # Default page templates only */
+}
+.page-template page-template-/*$template-file-name) {}
+.paged-/* $page */
+.paged {
+    /* # On paged result and not for the first page */
+}
+.paged-/*$page-number*/ {}
+.parent-pageid-/* $post->post_parent */
+.post-type-archive {
+    /* # post type archive page */
+}
+.post-type-archive-/* sanitize_html_class( $post_type ) */
+
+
+.post-type-paged-/* $page */
+.postid-{/*$post_id*/}
+.search {
+   /* # For search */
+}
+.rtl {
+    /* # Checks if current locale is RTL (Right To Left script). */
+}
+
+.search-no-results {}
+.search-no-results {
+    /* # If NOT found any posts in search result */
+}
+.search-paged-/* $page */
+.search-paged-/*$page-number*/ {}
+.search-results {
+    /* # If found posts in search result */
+}
+.search-results {}
+.single {
+    /* # Add for any post type, except {attachments} and {pages} */
+}
+
+.single-/* sanitize_html_class($post->post_type, $post_id) */
+.single-format-/* sanitize_html_class( $post_format ) */
+.single-format-standard {
+    /* # standard post format */
+}
+.single-paged-/*$page-number*/ {}
+.single-paged-/* $page */
+.single-postid-/*$id*/ {}
+.tag {
+    /* # Tags page */
+}
+.tag-/* $tag_class */ {}
+.tag-/* $tag->term_id */
+.tag-paged-/* $page */
+.tag-paged-/*$page-number*/ {}
+.tax-/* sanitize_html_class( $term->taxonomy ) */
+.term-/* $term_class */
+.term-/* $term->term_id */
+.wp-custom-logo {
+    /* # If the site has a custom logo. */
+}

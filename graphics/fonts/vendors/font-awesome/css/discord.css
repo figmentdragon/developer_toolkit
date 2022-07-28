@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'DiscordIcon';
+  src:  url('../fonts/icomoon.eot?of5npw');
+  src:  url('../fonts/icomoon.eot?of5npw#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?of5npw') format('truetype'),
+    url('../fonts/icomoon.woff?of5npw') format('woff'),
+    url('../fonts/icomoon.svg?of5npw#icomoon') format('svg');
+  font-weight: normal;
+	font-display:fallback;
+  font-style: normal;
+}
+
+.fa.fa-discord {
+  /*font-family: 'DiscordIcon' !important;DiscordIcon*/
+  display: inline-block;
+    font: normal normal normal 14px/1 DiscordIcon;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: middle;
+}
+.fa-discord:before {
+  content: "\e900";
+}

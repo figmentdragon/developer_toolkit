@@ -1,0 +1,47 @@
+/* _____________________________________ spacer */
+  /* Base Number */
+  $spacer:                 $margin; //16.8px
+  /* Map */
+  $spacers:                (
+    0:                     0,
+    1:                     $spacer * .25,
+    2:                     $spacer * .5,
+    3:                     $spacer,
+    4:                     $spacer * 1.5,
+    5:                     $spacer * 3,
+    6:                     $spacer * 6,
+    7:                     $spacer * 7,
+    8:                     $spacer * 8,
+    9:                     $spacer * 9,
+    10:                    $spacer * 10,
+    11:                    $spacer * 11,
+    12:                    $spacer * 12,
+    14:                    $spacer * 14,
+    16:                    $spacer * 16,
+    18:                    $spacer * 18,
+    20:                    $spacer * 20,
+    24:                    $spacer * 24,
+    28:                    $spacer * 28,
+    32:                    $spacer * 32,
+    36:                    $spacer * 36,
+    40:                    $spacer * 40,
+    44:                    $spacer * 44,
+    48:                    $spacer * 48,
+    52:                    $spacer * 52,
+    56:                    $spacer * 56,
+    60:                    $spacer * 60,
+    64:                    $spacer * 64,
+    72:                    $spacer * 72,
+    80:                    $spacer * 80
+    );
+
+    $negative-spacers:     negativify-map($spacers);
+
+    $block-spacer:         1.5rem;
+
+    $vertical-spacer:      divide($grid-columns, $spacer);
+    $vertical-spacer-md:   calc($vertical-spacer * $md);
+    $vertical-spacer-lg:   calc($vertical-spacer * $lg);
+    $horizontal-spacer:    divide($grid-row-columns, $spacer);
+    $horizontal-spacer-md: calc($horizontal-spacer * $md);
+    $horizontal-spacer-lg: calc($horizontal-spacer * $lg);

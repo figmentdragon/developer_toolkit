@@ -1,0 +1,28 @@
+$enable_full_pallete: true;
+
+$dark-blue: #01248E;
+$neon-blue: #4c79ff;
+$light-steel-blue: #a5bcff;
+$lavender-blue: #bcccff;
+$light-blue: #afcbff;
+$hawkes-blue: #d2ddff;
+$light-cyan: #d7f9ff;
+$light-white: #f9fbf2;
+$light: #ffede1;
+
+$default: $dark-blue;
+$default-accent: #ffcc33;
+$default-light: tint($default, 15%);
+$default-dark: tint(saturate($default, 5%), 45%);
+
+$default-colors: () !default;
+$default-colors: map-merge(('dark-blue': $dark-blue,
+    'neon-blue': $neon-blue,
+    'light-steel-blue': $light-steel-blue,
+    'lavendar-blue': $lavender-blue,
+    'light-blue': $light-blue,
+    'hawkes-blue': $hawkes-blue,
+    'light-cyan': $light-cyan,
+    'light-white': $light-white,
+    'misty-rose': $light,
+  ), $default-colors);

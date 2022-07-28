@@ -1,0 +1,27 @@
+.skip-link:focus
+{
+    font-size: .875rem;
+    font-weight: 700;
+    line-height: normal;
+
+    z-index: 100000;
+    top: 5px;
+    left: 5px;
+
+    display: block;
+    clip: auto !important;
+
+    width: auto;
+    height: auto;
+    padding: 15px 23px 14px;
+
+    text-decoration: none;
+
+    color: #21759b;
+    border-radius: 3px;
+    background-color: #f1f1f1;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, .6);
+
+    -webkit-clip-path: none;
+            clip-path: none;
+}

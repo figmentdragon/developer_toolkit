@@ -1,0 +1,26 @@
+// scss-docs-start utility-color-variable
+
+$success:       hsl(68, 90%, 38%);
+$info:          hsl(216, 85%, 39%);
+$warning:       hsl(3, 88%, 39%);
+$danger:        hsl(337, 91%, 38%);
+$gray:          $gray-600;
+$light:         $gray-200;
+$soft:          $gray-400;
+$dark:          $gray-800;
+
+
+// scss-docs-end utility-color-variable
+
+// scss-docs-start utility-colors-map
+$utility-colors: ();
+$utility-colors: map-merge((
+  'success':    $success,
+  'info':       $info,
+  'warning':    $warning,
+  'danger':     $danger,
+  'light':      $light,
+  'dark':       $dark),
+$utility-colors);
+
+// scss-docs-end utility-colors-map

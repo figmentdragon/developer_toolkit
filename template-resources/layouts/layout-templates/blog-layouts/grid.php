@@ -2,7 +2,7 @@
 /**
  * Blog Layout | Grid.
  *
- * @package TheCreativityArchitect
+ * @package TheThemeName
  * @subpackage Template Parts
  */
 
@@ -49,7 +49,7 @@ $paged                  = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
 			<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'TheCreativityArchitect' ),
+				'before' => '<div class="page-links">' . __( 'Pages:', 'TheThemeName' ),
 				'after'  => '</div>',
 			) );
 			?>

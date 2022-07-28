@@ -1,0 +1,45 @@
+// scss-docs-start btn-variables
+$btn-offset-y:               $input-btn-offset-y;
+$btn-offset-x:               $input-btn-offset-x;
+$btn-font-family:             $input-btn-font-family;
+$btn-font-size:               $input-btn-font-size;
+$btn-line-height:             $input-btn-line-height;
+$btn-white-space:             null; // Set to `nowrap` to prevent text wrapping
+
+$btn-offset-y-sm:            $input-btn-offset-y-sm;
+$btn-offset-x-sm:            $input-btn-offset-x-sm;
+$btn-font-size-sm:            $input-btn-font-size-sm;
+
+$btn-offset-y-lg:            $input-btn-offset-y-lg;
+$btn-offset-x-lg:            $input-btn-offset-x-lg;
+$btn-font-size-lg:            $input-btn-font-size-lg;
+
+$btn-border-width:            $input-btn-border-width;
+
+$btn-font-weight:             $normal-font-weight;
+$btn-box-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075);
+$btn-focus-width:             $input-btn-focus-width;
+$btn-focus-box-box-shadow:        $input-btn-focus-box-shadow;
+$btn-disabled-opacity:        .65;
+$btn-active-box-box-shadow:       inset 0 3px 5px rgba($black, .125);
+
+$btn-link-color:              var(--#{$prefix}link-color);
+$btn-link-hover-color:        var(--#{$prefix}link-hover-color);
+$btn-link-disabled-color:     $gray-600;
+
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius:           $border-radius;
+$btn-border-radius-sm:        $sm-border-radius;
+$btn-border-radius-lg:        $lg-border-radius;
+
+$btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+$btn-hover-bg-shade-amount:       15%;
+$btn-hover-bg-tint-amount:        15%;
+$btn-hover-border-shade-amount:   20%;
+$btn-hover-border-tint-amount:    10%;
+$btn-active-bg-shade-amount:      20%;
+$btn-active-bg-tint-amount:       20%;
+$btn-active-border-shade-amount:  25%;
+$btn-active-border-tint-amount:   10%;
+// scss-docs-end btn-variables

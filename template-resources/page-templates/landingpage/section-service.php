@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * @package creativityarchitect
+ * @package themename
  */
 if (get_theme_mod('theme_service_section_disable') != 'on') {
     ?>
@@ -52,7 +52,7 @@ if (get_theme_mod('theme_service_section_disable') != 'on') {
                                                 }
                                                 ?>
                                                 <br/>
-                                                <a href="<?php the_permalink(); ?>"><?php esc_html_e('Read More', 'creativityarchitect'); ?> <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
+                                                <a href="<?php the_permalink(); ?>"><?php esc_html_e('Read More', 'themename'); ?> <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                     </div>

@@ -1,0 +1,44 @@
+// Select
+//
+// Replaces the browser default select with a custom one, mostly pulled from
+// https://primer.github.io/.
+// scss-docs-start form-select-variables
+$form-select-offset: $input-offset;
+$form-select-font-family: $input-font-family;
+$form-select-font-size: $input-font-size;
+$form-select-sm-font-size: calc($input-font-size * $sm);
+$form-select-indicator-offset: $form-select-offset * 3; // Extra offset for background-image
+$form-select-font-weight: $input-font-weight;
+$form-select-line-height: $input-line-height;
+$form-select-color: $input;
+$form-select-bg: $input-bg;
+$form-select-inactive-color: null;
+$form-select-inactive-bg: $primary;
+$form-select-inactive-color: $inactive;
+$form-select-bg-position: right $form-select-offset center;
+$form-select-bg-size: 16px 12px; // In pixels because image dimensions
+$form-select-indicator-color: $primary;
+$form-select-indicator: url('data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 16 16\'><path fill=\'none\' stroke=\'#{$form-select-indicator-color}\' stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M2 5l6 6 6-6\'/></svg>');
+
+$form-select-feedback-icon-offset-end: $form-select-offset * 2.5 + $form-select-indicator-offset;
+$form-select-feedback-icon-position: center right $form-select-indicator-offset;
+$form-select-feedback-icon-size: $input-height-inner-half $input-height-inner-half;
+
+$form-select-border-width: $input-border-width;
+$form-select-border-color: $input;
+$form-select-border-radius: $input-border-radius;
+$form-select-box-box-shadow: $box-shadow-active;
+
+$form-select-focus-border-color: $input-border-focus;
+$form-select-focus-width: $input-focus-width;
+$form-select-focus-box-box-shadow: 0 0 0 $form-select-focus-width $input-button-focus-color;
+
+$form-select-sm-border-radius: $input-sm-border-radius;
+
+$form-select-offset-x-lg: $input-offset-x-lg;
+$form-select-offset-y-lg: $input-offset-y-lg;
+$form-select-large-font-size: $input-large-font-size;
+$form-select-lg-border-radius: $input-lg-border-radius;
+
+$form-select-transition: $input-transition;
+// scss-docs-end form-select-variables

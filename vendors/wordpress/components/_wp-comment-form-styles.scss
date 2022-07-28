@@ -1,0 +1,40 @@
+/**
+ * Can be ignored if not using threaded comments
+ */
+
+/*Comment Output*/
+.commentlist,
+.children {
+
+}
+
+.commentlist .reply {}
+.commentlist .reply a {}
+
+.commentlist .alt {}
+.commentlist .odd {}
+.commentlist .even {}
+.commentlist .thread-alt {}
+.commentlist .thread-odd {}
+.commentlist .thread-even {}
+.commentlist li ul.children .alt {}
+.commentlist li ul.children .odd {}
+.commentlist li ul.children .even {}
+
+.commentlist .parent {}
+.commentlist .comment {}
+.commentlist .pingback {}
+.commentlist .bypostauthor {}
+.commentlist
+
+.children article.comment,
+.children li.pingback { /* Nexted comments and pingbacks */
+	padding-top: 1.0em;
+}
+
+
+@import "comments/comments";
+@import "comments/comment-author";
+@import "comments/comment-body";
+@import "comments/comment-form";
+@import "comments/comment-meta";

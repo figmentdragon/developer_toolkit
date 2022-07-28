@@ -1,0 +1,182 @@
+html {
+  overflow: hidden;
+  z-index: 50;
+  margin: 0;
+  padding: .25vh .25vw .25vh .25vw;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient( -120deg, $soft, $default, white);
+}
+
+html, body {
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 2vh 1vw 2vh 1vw;
+}
+
+body {
+  padding: 2vh 1vw 2vh 1vw;
+  width: 100%;
+  height: 100%;
+  @include border-radius($border-radius);
+  overflow-y: hidden;
+  overflow-x: scroll;
+  background-color: rgba($default-light, .65);
+  box-shadow: inset 0 2px 1px $default, inset 0 3px 4px $default;
+}
+
+header {
+  &.site-header {
+    position: fixed;
+    z-index: $zindex-header;
+    top: 3;
+    right: 0;
+    left: 5vw;
+
+    height: 100%;
+    @include border-bottom-radius($border-radius);
+    @include elevation-inset(2);
+  }
+}
+
+.site-branding {
+  position: fixed;
+  z-index: $zindex-branding;
+  top: 0;
+  bottom: 5vh;
+  left: 3vw;
+  z-index: 700;
+  padding-top: 18vh;
+  h3 {
+    writing-mode: vertical-lr;
+    rotate: 180deg;
+    color: white;
+    text-shadow: 0 -1px .5px $default-accent, 0 5.36px 4.896px $light-white, 0 -2px 1px $shadow-inset;
+  }
+}
+
+main {
+  position: relative;
+  z-index: 400;
+  top: 2vh;
+  right: 1vw;
+  left: 1.25vw;
+}
+.scrolling-wrapper {
+  height: 100vh;
+  width: 100vw;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  transition: all 0.5s ease;
+  padding-top: 0px;
+  padding-bottom: 0px;
+
+  .card {
+    display: inline-block;
+  }
+}
+
+article {
+  outline: 2px solid orange;
+}
+
+aside {
+  position: fixed;
+  z-index: $zindex-aside;
+  top: 10vh;
+  bottom: .25vh;
+  left: 2vw;
+  width: 5vw;
+  background-image: linear-gradient( 0deg, transparent, $default, $default-dark, $default-light, white, transparent );
+
+  &.sidebar {
+    @include border-radius($lg-border-radius);
+    @include elevation(4);
+    &:hover {
+  background-image: linear-gradient( 0deg, $default, $default-dark, $default-light, white, transparent, white);
+      @include elevation-inset(5);
+    }
+  }
+}
+
+nav {
+  position: fixed;
+  z-index: 600;
+  top: 0;
+  bottom: 0vh;
+  height: 100%;
+  padding-top: 5vh;
+  @include border-bottom-radius($lg-border-radius);
+}
+
+footer {
+  outline: 2px solid purple;
+}
+
+
+/*==================================================
+ * Effect 5
+ * ===============================================*/
+.effect5
+{
+  position: relative;
+}
+.effect5:before, .effect5:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 25px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 35px 20px #777;
+  box-shadow: 0 35px 20px #777;
+  -webkit-transform: rotate(-8deg);
+  -moz-transform: rotate(-8deg);
+  -o-transform: rotate(-8deg);
+  -ms-transform: rotate(-8deg);
+  transform: rotate(-8deg);
+}
+.effect5:after
+{
+  -webkit-transform: rotate(8deg);
+  -moz-transform: rotate(8deg);
+  -o-transform: rotate(8deg);
+  -ms-transform: rotate(8deg);
+  transform: rotate(8deg);
+  right: 10px;
+  left: auto;
+}
+
+
+
+@import 'modules/global/header';
+
+
+@import 'modules/partials/menu';
+@import 'modules/partials/clearing';
+@import 'modules/partials/posts+pages';
+@import 'modules/partials/media';
+@import 'modules/partials/scroll-paginator';
+
+@import 'modules/partials/widgets/counter';
+@import 'modules/partials/widgets/cta';
+@import 'modules/partials/widgets/feature-box';
+@import 'modules/partials/widgets/pricing';
+
+@import 'modules/partials/sections/services';
+@import 'modules/partials/sections/clients';
+@import 'modules/partials/sections/portfolio';
+@import 'modules/partials/sections/blog';
+@import 'modules/partials/sections/comments';
+@import 'modules/partials/sections/404';
+
+@import 'modules/partials/plugins/woocommerce';
+@import 'modules/partials/plugins/gutenberg';

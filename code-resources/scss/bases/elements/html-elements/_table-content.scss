@@ -1,0 +1,41 @@
+// Table content
+// The elements here are used to create and handle tabular data.
+// Customizes the `.table` component with basic values, each used across all table variations.
+
+@import './../../../critical/defaults/table';
+
+//
+// Basic Bootstrap table
+//
+%table {
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-bottom: $spacer;
+  width: 100%;
+  border: 1px 0 0 1px;
+  vertical-align: $table-cell-vertical-align;
+  font-size: $table-font-size;
+  border-style: solid;
+  caption-side: bottom;
+	table-layout: fixed;
+	text-align: left;
+  a {
+    text-decoration: none;
+  }
+  caption {
+  	margin: 2rem 0;
+  }
+  tr {
+  	border-bottom: 1px solid $gray-700;
+  }
+  th,
+  td {
+    padding: $offset;
+    text-align: left;
+  }
+}
+
+@import 'table-content/caption';
+@import 'table-content/table';
+@import 'table-content/th+td';
+@import 'table-content/thead';

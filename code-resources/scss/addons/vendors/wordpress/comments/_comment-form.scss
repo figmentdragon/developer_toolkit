@@ -1,0 +1,61 @@
+
+.logged-in-as {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  a {
+    font-size: 15px;
+    color: #ababab;
+  }
+}
+
+p.nocomments,
+p.logged-in-as,
+.contact-item {
+  margin-bottom: 20px;
+}
+
+.contact-item textarea {
+  padding-top: 5px;
+  height: 100px;
+  resize: vertical;
+}
+#commentform
+p.nocomments,
+.no-comments,
+.comment-awaiting-moderation {
+  /* Message displayed when there are no comments */
+  color: #5b5b5b;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+
+/* Comment Form */
+
+#commentform
+#commentform input[type="text"] {
+
+}
+#commentform #comment { /* The comment form textarea */
+
+}
+#commentform .form-allowed-tags,
+#commentform .form-allowed-tags code {
+
+}
+p.nocomments { /* Message displayed when there are no comments */
+
+}
+
+.comment-form-cookies-consent label,
+.comment-form-cookies-consent input,
+.woocommerce .comment-form-cookies-consent label {
+    display: inline-block;
+}
+.form-allowed-tags code {
+    font-family: Inconsolata, monospace;
+}

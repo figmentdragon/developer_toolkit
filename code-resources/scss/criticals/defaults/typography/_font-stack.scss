@@ -1,0 +1,25 @@
+// font stacks
+$font-family-sans-serif:        system-ui, -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-serif:             'Georgia', Cambria, Times New Roman, Times, serif;
+$font-family-monospace:         SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+
+/* Enable keyword, short hand for callig font Stack. */
+$base-font-family:        $font-family-sans-serif;
+$font-family-code:        $font-family-monospace;
+
+$default-font:            $font-family-sans-serif;
+$default-light-font:          $font-family-serif;
+$accent-font:             $font-family-serif;
+$main-font:               $font-family-serif;
+$tertiary-font:           $font-family-monospace;
+$site-font:               $font-family-monospace;
+$lead-font:               $font-family-serif;
+
+$page-title-font          : $default-font;
+$post-title-font          : $default-light-font;
+$sub-title-font           : $lead-font;
+$heading-text-font        : tertiary-font;
+$quote-text-font          : $accent-font;
+$body-text-font           : $main-font;
+
+$global-font-size: 100%;

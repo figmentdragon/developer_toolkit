@@ -1,0 +1,109 @@
+//---------------------------------------------------------
+// LI - All List Base Styles Go Here
+
+// The <li> HTML element is used to represent an item in a list. It must be contained in a parent element: an ordered list (ol), an unordered list (ul), or a menu (menu). In menus and unordered lists, list items are usually displayed using bullet points. In ordered lists, they are usually displayed with an ascending counter on the left, such as a number or letter.
+
+// OL
+//The <ol> HTML element represents an ordered list of items — typically rendered as a numbered list.
+
+// UL
+// The <ul> HTML element represents an unordered list of items, typically rendered as a bulleted list.
+//---------------------------------------------------------
+
+// Variables
+$list-inline-offset:         calc($offset * .5);
+
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+ul, ol, dl {
+  text-align:left;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+menu,
+ol,
+ul {
+  list-style: none;
+  font-family: $accent-font;
+  margin: 0 0 1.5em 3em;
+	padding: 0 0 0 4rem;
+  li {
+  	line-height: 1.2;
+    margin-left: 1vw;
+  }
+}
+
+
+ul {
+  font-family: $accent-font;
+	list-style: disc;
+}
+
+ol {
+  font-family: 'Pompiere';
+	list-style: decimal;
+}
+
+
+li {
+  font-family: $accent-font;
+	line-height: 1.2;
+  display: inline-flex;
+  flex-direction: row;
+  flex-flow: nowrap;
+  width: 100%;
+
+  :before {
+    font-size: inherit;
+  }
+  a {
+    :hover{
+    }
+  }
+  > ul,
+  > ol {
+    margin-bottom: 0;
+  }
+  .list-unstyled {
+    margin-left: 0;
+    list-style: none;
+  }
+}
+
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+	margin: $horizontal-spacer $vertical-spacer;
+  margin-bottom: 0;
+}
+
+ul li >  ul,
+ol li >  ol,
+ul li >  ol,
+ol li >  ul{
+  margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+.list-unstyled {
+  @include list-unstyled();
+}
+
+// Inline turns list items into inline-block
+.list-inline {
+  @include list-unstyled();
+}
+.list-inline-item {
+  display: inline-block;
+
+  &:not(:last-child) {
+    margin-right: $list-inline-offset;
+  }
+}

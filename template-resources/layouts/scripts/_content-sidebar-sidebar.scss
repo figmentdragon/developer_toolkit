@@ -1,0 +1,44 @@
+/*
+ * Layout: Content-Sidebar-Sidebar
+ *
+ * Learn more: https://developer.wordpress.org/themes/basics/template-files/
+ */
+
+.site-header {
+	grid-area: header;
+}
+
+
+.content-area,
+#primary {
+	float: left;
+	width: 100%;
+}
+
+.site-main,
+#content {
+	margin: 0 40% 0 0;
+	overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+}
+
+#main .site-content {
+	float: left;
+	overflow: hidden;
+	width: 20%;
+}
+
+#secondary .widget-area { /* Sidebar 1 */
+	margin: 0 0 0 -40%;
+	float: right;
+	overflow: hidden;
+	width: $size-site-sidebar;
+}
+
+#tertiary .widget-area { /* Sidebar 2 */
+	clear: right;
+	margin: 0 0 0 -20%;
+}
+.site-footer {
+	clear: both;
+	width: 100%;
+}

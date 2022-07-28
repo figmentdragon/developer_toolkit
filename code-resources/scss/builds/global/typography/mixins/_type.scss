@@ -1,0 +1,22 @@
+@mixin site-title {
+  font-family: $site-font;
+  font-weight: bolder;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  color: $site-title-color;
+
+  & a {
+    text-decoration: none;
+     :hover {
+       text-decoration: $hover-decoration;
+     }
+  }
+}
+
+@mixin site-description {
+  font-family: $tertiary-font;
+  color: $body-text;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: lowercase;
+}

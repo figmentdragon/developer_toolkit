@@ -1,0 +1,52 @@
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+
+$enable-caret:                true;
+$enable-rounded:              true;
+$enable-shadows:              true;
+$enable-gradients:            true;
+$enable-transitions:          true;
+$enable-reduced-motion:       true;
+$enable-smooth-scroll:        true;
+$enable-grid-classes:         true;
+$enable-container-classes:    true;
+$enable-cssgrid:              true;
+$enable-button-pointers:      true;
+$enable-rfs:                  true;
+$enable-validation-icons:     true;
+$enable-negative-margins:     true;
+$enable-deprecation-messages: true;
+$enable-important-utilities:  true;
+$enable-flex:                 true;
+
+$prefix: ca-;
+
+$blue:       hsl(216, 85%, 39%);
+$indigo:     hsl(272, 77%, 74%);
+$purple:     hsl(286, 91%, 38%);
+$pink:       hsl(322, 91%, 38%);
+$red:        hsl(337, 91%, 38%);
+$orange:     hsl(3, 88%, 39%);
+$yellow:     hsl(43, 89%, 38%);
+$green:      hsl(68, 90%, 38%);
+$teal:       hsl(93, 92%, 38%);
+$cyan:       hsl(144, 83%, 40%);
+$gray:       hsl(240, 6%, 50%);
+
+$sunglow:    hsl(45, 100%, 60%;)
+$silver:     hsl(0, 0%, 75%);
+$chocolate:  hsl(31, 100%, 24%);
+$tiffany:    hsl(178, 90%, 38%);
+
+$primary:    $tiffany;
+$secondary:  $sunglow;
+$accent:     $silver;
+$tertiary:   $chocolate;
+
+$success:    $green;
+$info:       $blue;
+$warning:    $orange;
+$danger:     $red;
+$alert:      $pink;

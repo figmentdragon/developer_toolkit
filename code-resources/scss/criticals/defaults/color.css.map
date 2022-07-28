@@ -1,0 +1,30 @@
+{
+    "version": 3,
+    "mappings": "AEAA;;;;;;;;;;sBAUsB;AGVtB,+EAA+E;AKA/E,wEAAwE;AACtE,qBAAqB;AAYrB,gBAAgB;AAKhB,eAAe;AEPjB,eAAe;AKXf,YAAY;AA6BZ,AAAA,gBAAgB,CAAC,EACf,KAAK,EAAE,IAAI,EACX,gBAAgB,EAAE,6SAWO,GAC1B;;AI3CD,WAAW",
+    "sources": [
+        "color.scss",
+        "colors/functions/_color-contrast.scss",
+        "colors/functions/_color-function.scss",
+        "colors/functions/_colors.scss",
+        "colors/functions/_make-color-map.scss",
+        "colors/_change-percentage.scss",
+        "colors/colors/_gray-scale.scss",
+        "colors/colors/_base.scss",
+        "colors/colors/_theme.scss",
+        "colors/colors/_rgba.scss",
+        "colors/patterns/_background.scss",
+        "colors/patterns/_button.scss",
+        "colors/patterns/_link.scss",
+        "colors/patterns/_text.scss",
+        "colors/patterns/_shadow.scss",
+        "colors/patterns/_gradient.scss",
+        "colors/patterns/gradients/_gradient-theme.scss",
+        "colors/patterns/gradients/_gradient-global.scss",
+        "colors/patterns/gradients/mixins/_css-gradient.scss",
+        "colors/patterns/gradients/mixins/_gradient-global-mixins.scss",
+        "colors/patterns/gradients/mixins/_gradient-mixins.scss",
+        "colors/patterns/gradients/mixins/_gradient-theme-mixins.scss"
+    ],
+    "names": [],
+    "file": "color.css"
+}

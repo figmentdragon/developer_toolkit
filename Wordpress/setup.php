@@ -14,16 +14,16 @@
  *
  * @author WebDevStudios
  */
-function creativitysetup() {
+function ca_setup() {
 	/**
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
 	 * If you're building a theme based on creativity architect, use a find and replace
-	 * to change 'creativityarchitect' to the name of your theme in all the template files.
+	 * to change 'themename' to the name of your theme in all the template files.
 	 * You will also need to update the Gulpfile with the new text domain
 	 * and matching destination POT file.
 	 */
-	load_theme_textdomain( 'creativityarchitect', get_template_directory() . '/build/languages' );
+	load_theme_textdomain( 'themename', get_template_directory() . '/build/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -47,9 +47,9 @@ function creativitysetup() {
 	// Register navigation menus.
 	register_nav_menus(
 		[
-			'primary' => esc_html__( 'Primary Menu', 'creativityarchitect' ),
-			'footer'  => esc_html__( 'Footer Menu', 'creativityarchitect' ),
-			'mobile'  => esc_html__( 'Mobile Menu', 'creativityarchitect' ),
+			'primary' => esc_html__( 'Primary Menu', 'themename' ),
+			'footer'  => esc_html__( 'Footer Menu', 'themename' ),
+			'mobile'  => esc_html__( 'Mobile Menu', 'themename' ),
 		]
 	);
 
@@ -72,7 +72,7 @@ function creativitysetup() {
 	add_theme_support(
 		'custom-background',
 		apply_filters(
-			'creativitycustom_background_args',
+			'ca_custom_background_args',
 			[
 				'default-color' => 'ffffff',
 				'default-image' => '',
@@ -103,22 +103,22 @@ function creativitysetup() {
 		'editor-font-sizes',
 		[
 			[
-				'name' => __( 'Small', 'creativityarchitect' ),
+				'name' => __( 'Small', 'themename' ),
 				'size' => 12,
 				'slug' => 'small',
 			],
 			[
-				'name' => __( 'Normal', 'creativityarchitect' ),
+				'name' => __( 'Normal', 'themename' ),
 				'size' => 16,
 				'slug' => 'normal',
 			],
 			[
-				'name' => __( 'Large', 'creativityarchitect' ),
+				'name' => __( 'Large', 'themename' ),
 				'size' => 36,
 				'slug' => 'large',
 			],
 			[
-				'name' => __( 'Huge', 'creativityarchitect' ),
+				'name' => __( 'Huge', 'themename' ),
 				'size' => 50,
 				'slug' => 'huge',
 			],
@@ -133,7 +133,7 @@ function creativitysetup() {
 	add_theme_support( 'responsive-embeds' );
 }
 
-add_action( 'after_setup_theme', 'creativitysetup' );
+add_action( 'after_setup_theme', 'ca_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -144,11 +144,11 @@ add_action( 'after_setup_theme', 'creativitysetup' );
  *
  * @author WebDevStudios
  */
-function creativitycontent_width() {
-	$GLOBALS['content_width'] = apply_filters( 'creativitycontent_width', 640 );
+function ca_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'ca_content_width', 640 );
 }
 
-add_action( 'after_setup_theme', 'creativitycontent_width', 0 );
+add_action( 'after_setup_theme', 'ca_content_width', 0 );
 
 /**
  * Register widget area.
@@ -157,11 +157,11 @@ add_action( 'after_setup_theme', 'creativitycontent_width', 0 );
  *
  * @author WebDevStudios
  */
-function creativitywidgets_init() {
+function ca_widgets_init() {
 
 	// Define sidebars.
 	$sidebars = [
-		'sidebar-1' => esc_html__( 'Sidebar 1', 'creativityarchitect' ),
+		'sidebar-1' => esc_html__( 'Sidebar 1', 'themename' ),
 	];
 
 	// Loop through each sidebar and register.
@@ -170,7 +170,7 @@ function creativitywidgets_init() {
 			[
 				'name'          => $sidebar_name,
 				'id'            => $sidebar_id,
-				'description'   => /* translators: the sidebar name */ sprintf( esc_html__( 'Widget area for %s', 'creativityarchitect' ), $sidebar_name ),
+				'description'   => /* translators: the sidebar name */ sprintf( esc_html__( 'Widget area for %s', 'themename' ), $sidebar_name ),
 				'before_widget' => '<aside class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h2 class="widget-title">',
@@ -181,4 +181,4 @@ function creativitywidgets_init() {
 
 }
 
-add_action( 'widgets_init', 'creativitywidgets_init' );
+add_action( 'widgets_init', 'ca_widgets_init' );

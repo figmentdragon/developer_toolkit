@@ -2,7 +2,7 @@
 /**
  * Logo.
  *
- * @package TheCreativityArchitect
+ * @package TheThemeName
  * @subpackage Template Parts
  */
 

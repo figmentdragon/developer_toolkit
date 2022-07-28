@@ -1,0 +1,29 @@
+/**
+ * Elements visibility
+ */
+
+.visible-on-mobile {
+    display: none !important;
+
+    @include resp-max($breakpoint-sm) {
+        display: block !important;
+    }
+}
+
+.visible-on-tablet {
+    display: none !important;
+
+    @include resp-max($breakpoint-md) {
+        display: block !important;
+    }
+
+    @include resp-max($breakpoint-sm) {
+        display: none !important;
+    }
+}
+
+.visible-on-desktop {
+    @include resp-max($breakpoint-md) {
+        display: none !important;
+    }
+}

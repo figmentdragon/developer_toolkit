@@ -1,0 +1,33 @@
+/*!
+ * Bootstrap v5.1.3 (https://getbootstrap.com/)
+ * Copyright 2011-2022 The Bootstrap Authors
+ * Copyright 2011-2022 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+
+/**
+ * 1.0.0 Configuration
+ */
+@import "function";
+@import "default";
+@import "maps";
+@import "mixins";
+@import "utilities";
+
+/**
+ * 2.0.0 Layout & Base
+ */
+@import "base/root";
+@import "./../vendors/the-new-css-reset/css/reset";
+@import "base/html-elements";
+@import "base/text-elements";
+
+@import "core/defaults/container-offset";
+@import "core/defaults/grid";
+
+// Helpers
+@import "helpers";
+
+// Utilities
+@import "core/utilities/api";
+// scss-docs-end import-stack

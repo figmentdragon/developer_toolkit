@@ -52,7 +52,7 @@ if( !empty($this->actions_req) ) { ?>
 								<a class="<?php echo esc_attr($btn_class); ?>" data-host-type="<?php echo esc_attr($plugin['host_type']); ?>" data-file="<?php echo esc_attr($plugin['filename']); ?>" data-class="<?php echo esc_attr($plugin['class']); ?>" data-slug="<?php echo esc_attr($plugin['slug']); ?>" href="<?php echo esc_url($th_link); ?>"><?php echo esc_html($label); ?></a>
 							</span>
 							<div class="version-author-info free">
-								<span class="version"><?php echo esc_html__('Version ', 'themename') . esc_html($plugin['version']); ?></span>
+								<span class="version"><?php echo esc_html__('Version ', 'scrollme') . esc_html($plugin['version']); ?></span>
 								<span class="seperator">|</span>
 								<span class="author"><?php echo esc_html($plugin['author']); ?></span>
 							</div>
@@ -113,7 +113,7 @@ if( !empty($this->actions_req) ) { ?>
 								<a class="<?php echo esc_attr($btn_class); ?>" data-file="<?php echo esc_attr($plugin['filename']); ?>" data-slug="<?php echo esc_attr($plugin['slug']); ?>" href="<?php echo esc_url($btn_url); ?>"><?php echo esc_html($label); ?></a>
 							</span>
 							<div class="version-author-info free">
-								<span class="version"><?php echo esc_html__('Version ', 'themename') . esc_html($info->version); ?></span>
+								<span class="version"><?php echo esc_html__('Version ', 'scrollme') . esc_html($info->version); ?></span>
 								<span class="seperator">|</span>
 								<span class="author"><?php echo wp_kses_post($info->author); ?></span>
 							</div>

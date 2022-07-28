@@ -1,0 +1,24 @@
+th {
+	background: $secondary;
+  font-weight: $bold-font-weight;
+  text-align: inherit;
+}
+
+th,
+td {
+  border-bottom: 1px solid #e1e1e1;
+  font-weight: bold;
+  text-align: left;
+  padding: 0.667em;
+  :first-child {
+    padding-left: 0;
+  }
+
+  :last-child {
+    padding-right: 0;
+  }
+
+  :not(last-of-type) {
+    border-right: 1px solid $gray-700;
+  }
+}

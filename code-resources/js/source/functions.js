@@ -1,16 +1,16 @@
- /* global creativityOptions */
+ /* global themenameOptions */
  /*
  * Custom scripts
- * Description: Custom scripts for creativity Pro
+ * Description: Custom scripts for themename Pro
  */
 
 ( function( $ ) {
-	$( window ).on( 'load.creativity resize.creativity', function () {
+	$( window ).on( 'load.themename resize.themename', function () {
 		// Owl Carousel.
 		if ( typeof $.fn.owlCarousel === "function" ) {
 			// Featured Slider
 			var sliderOptions = {
-				rtl:creativityOptions.rtl ? true : false,
+				rtl:themenameOptions.rtl ? true : false,
 				autoHeight:true,
 				margin: 0,
 				items: 1,
@@ -24,14 +24,14 @@
 						items:1
 					},
 				},
-				navText: [creativityOptions.iconNavPrev,creativityOptions.iconNavNext]
+				navText: [themenameOptions.iconNavPrev,themenameOptions.iconNavNext]
 			};
 
 			$(".main-slider").owlCarousel(sliderOptions);
 
 			// Testimonial Section
 			var testimonialOptions = {
-				rtl:creativityOptions.rtl ? true : false,
+				rtl:themenameOptions.rtl ? true : false,
 				autoHeight: true,
 				margin: 0,
 				items: 1,
@@ -49,14 +49,14 @@
 						items:2
 					},
 				},
-				navText: [creativityOptions.iconTestimonialNavPrev,creativityOptions.iconTestimonialNavNext],
+				navText: [themenameOptions.iconTestimonialNavPrev,themenameOptions.iconTestimonialNavNext],
 				dotsContainer: '#slider-dots',
 				navContainer: '#slider-nav'
 			};
 
 			$( '.testimonial-slider' ).owlCarousel(testimonialOptions);
 		}
-		
+
 		if ( typeof $.fn.masonry === "function" && typeof $.fn.imagesLoaded === "function" ) {
 			/*
 		     * Masonry
@@ -118,7 +118,7 @@ $( document ).ready( function() {
 		$( this ).toggleClass( 'open' );
 		$( this ).attr( 'aria-expanded', $( this ).attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
 		$( '.search-wrapper' ).toggle();
-		$( 'body' ).toggleClass( 'search-wrapper-open' );	
+		$( 'body' ).toggleClass( 'search-wrapper-open' );
 
 		if( $("#primary-search-wrapper").hasClass("is-open") ) {
 			setTimeout(function () {
@@ -128,7 +128,7 @@ $( document ).ready( function() {
 	});
 
 	$( '.close-submit' ).on( 'click', function() {
-		$( 'body' ).removeClass( 'search-wrapper-open' );	
+		$( 'body' ).removeClass( 'search-wrapper-open' );
 	});
 });
 
@@ -140,11 +140,11 @@ $( document ).ready( function() {
 
 		// Add dropdown toggle that displays child menu items.
 		var dropdownToggle = $( '<button />', { 'class': 'dropdown-toggle', 'aria-expanded': false })
-			.append( creativityOptions.dropdownIcon )
-			.append( $( '<span />', { 'class': 'screen-reader-text', text: creativityOptions.screenReaderText.expand }) );
+			.append( themenameOptions.dropdownIcon )
+			.append( $( '<span />', { 'class': 'screen-reader-text', text: themenameOptions.screenReaderText.expand }) );
 
 		container.find( '.menu-item-has-children > a, .page_item_has_children > a' ).after( dropdownToggle );
-		container.find( '.menu-item-has-children > a, .page_item_has_children > a' ).append( creativityOptions.dropdownIcon );
+		container.find( '.menu-item-has-children > a, .page_item_has_children > a' ).append( themenameOptions.dropdownIcon );
 
 		// Toggle buttons and submenu items with active children menu items.
 		container.find( '.current-menu-ancestor > button' ).addClass( 'toggled-on' );
@@ -164,7 +164,7 @@ $( document ).ready( function() {
 			// jscs:disable
 			_this.attr( 'aria-expanded', _this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
 			// jscs:enable
-			screenReaderSpan.text( screenReaderSpan.text() === creativityOptions.screenReaderText.expand ? creativityOptions.screenReaderText.collapse : creativityOptions.screenReaderText.expand );
+			screenReaderSpan.text( screenReaderSpan.text() === themenameOptions.screenReaderText.expand ? themenameOptions.screenReaderText.collapse : themenameOptions.screenReaderText.expand );
 		} );
 	}
 
@@ -243,7 +243,7 @@ $( document ).ready( function() {
 			}
 
 			if( search ) {
-				$( 'body' ).removeClass( 'menu-open' );						
+				$( 'body' ).removeClass( 'menu-open' );
 			}
 		} );
 
@@ -264,7 +264,7 @@ $( document ).ready( function() {
 		//Close search when clicked outside search area
 		var container = document.getElementsByClassName('search-content')[0];
 		document.addEventListener('click', function( event ) {
-		  if (container !== event.target && !container.contains(event.target)) {    
+		  if (container !== event.target && !container.contains(event.target)) {
 		    $( 'body' ).removeClass( 'search-wrapper-open' );
 		  }
 		});
@@ -373,7 +373,7 @@ $( document ).ready( function() {
     jQuery( document ).ready( function() {
 		body = jQuery( document.body );
 		jQuery( window )
-			.on( 'load.creativity resize.creativity', function() {
+			.on( 'load.themename resize.themename', function() {
 			if ( window.innerWidth < 1024 ) {
 				jQuery('#primary-menu-wrapper').on('focusout', function () {
 					var $elem = jQuery(this);

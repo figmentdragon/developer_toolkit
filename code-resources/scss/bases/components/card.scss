@@ -1,0 +1,103 @@
+@import 'cards/base-style-card';
+
+.card {
+  @extend %card;
+  padding: $offset-x $offset-y $offset-x $offset-y;
+  background: #fcc99e;
+  opacity: 0.6;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+
+	transition: all 0.4s cubic-bezier(0.33, 1, 0.68, 1);
+	transition-property: background, transform, color, opacity;
+
+	&:not(:empty):before {
+		box-shadow: -2px 2px 8px 2px hsla(0, 0%, 0%, 0.2);
+	}
+
+	&:empty {
+		opacity: 0.3;
+	}
+
+	&:before, &:after {
+		content: "";
+		position: absolute;
+		border-radius: .7em;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		transition: opacity 0.4s cubic-bezier(0.33, 1, 0.68, 1);
+	}
+
+	&:after {
+		box-shadow: -20px 20px 12px 6px hsla(0, 0%, 0%, 0.2);
+		opacity: 0;
+	}
+  &:not(:empty):hover,
+  &:not(:empty):focus {
+    z-index: 100;
+    color: $default;
+    background-color: $default-light;
+    opacity: 1;
+    transform: scale(1.15) rotateZ(20deg);
+    cursor: pointer;
+    &:after {
+      opacity: 1;
+    }
+    &:before {
+      opacity: 0;
+    }
+  }
+}
+.card-body {
+  // Enable `flex-grow: 1` for decks and groups so that card blocks take up
+  // as much space as possible, ensuring footers are aligned to the bottom.
+  flex: 1 1 auto;
+  // Workaround for the image size bug in IE
+  // See: https://github.com/twbs/bootstrap/pull/28855
+  min-height: 1px;
+  padding: var(--#{$default-prefix}card-spacer-y) var(--#{$default-prefix}card-spacer-x);
+  color: var(--#{$default-prefix}card-color);
+}
+
+.card-title {
+  margin-bottom: var(--#{$default-prefix}card-title-spacer-y);
+}
+
+.card-subtitle {
+  margin-top: calc(-.5 * var(--#{$default-prefix}card-title-spacer-y)); // stylelint-disable-line function-disallowed-list
+  margin-bottom: 0;
+}
+
+.card-text:last-child {
+  margin-bottom: 0;
+}
+
+.card-link {
+  @include hover() {
+    text-decoration: none;
+  }
+
+  + .card-link {
+    margin-left: var(--#{$default-prefix}card-spacer-x);
+  }
+}
+
+@import 'cards/textual-caps-card';
+
+@import 'cards/header-card';
+
+@import 'cards/pricing-card';
+
+@import 'cards/image-card';
+
+@import 'cards/deck-card';
+
+@import 'cards/group-card';
+
+@import 'cards/column-card';
+
+@import 'cards/accordion-card';

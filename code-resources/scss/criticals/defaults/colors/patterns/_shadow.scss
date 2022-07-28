@@ -1,0 +1,30 @@
+$shadow: shade($primary, $shadow-percentage);
+$shadow-box:          $shadow;
+$shadow-box-hover:    shade($shadow-box, $hover-percentage);
+$shadow-box-focus:    shade($shadow-box, $focus-percentage);
+
+$shadow-text:         shade($body-text, $shadow-percentage);
+$shadow-text-hover:   shade($shadow-text, $hover-percentage);
+$shadow-text-focus:   shade($shadow-text, $focus-percentage);
+
+$shadow-link:         shade($link-text-active, $shadow-percentage);
+$shadow-link-hover:   shade($link-text-hover, $shadow-percentage);
+$shadow-link-focus:   shade($link-text-focus, $shadow-percentage);
+$shadow-link-visited: shade($link-text-visited, $shadow-percentage);
+
+$shadow-title:        shade($post-title-color, $shadow-percentage);
+
+$shadow-button: shade($shadow-box, $shadow-percentage);
+$shadow-button-inset: tint($shadow-box, $muted-percentage);
+
+$shadow-inset:        tint($shadow-box, $muted-percentage);
+
+$text-shadow:         .75rem .25rem .10rem $shadow-text;
+$title-shadow:        .65rem .5rem .15rem $shadow-title;
+
+@mixin text-inner-shadow {
+  background-image: $gradient-chocolate;
+  text-shadow: inset 0px 2px 3px $chocolate;
+  -webkit-background-clip: text;
+  background-clip: text;
+}

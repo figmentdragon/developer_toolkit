@@ -1,8 +1,7 @@
 @font-face {
-  font-family: "Hand TypeWriter";
+  font-family: 'Hand TypeWriter';
   font-weight: 400;
   font-style: normal;
-  src: local("Hand TypeWriter"), url("https://fonts.cdnfonts.com/s/16195/Hand TypeWriter.woff") format("woff");
+  src: local("<?php get_stylesheet_directory() . /src/sass/typography/fonts/hand-typerwriter/handtypewriter.woff") format("woff");
 }
-
 /*# sourceMappingURL=handtypewriter.css.map */

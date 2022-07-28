@@ -1,0 +1,67 @@
+// Navbar
+
+// scss-docs-start navbar-variable
+$nav-link-height :                   $base-font-size * $base-line-height + $nav-link-offset-y * 2 !default;
+$navbar-nav-link-offset-x :          .5rem !default;
+
+$navbar-offset-y :                   $spacer * .5 !default;
+$navbar-offset-x :                   null !default;
+$navbar-offset-top :                 0.5625rem !default;
+
+$navbar-font-weight :                300 !default;
+$navbar-double-font-size :           15px !default;
+
+// Compute the navbar-brand offset-y so the navbar-brand will have the same height as navbar-text and nav-link
+
+$navbar-brand-font-size :            $lg-font-size !default;
+$navbar-brand-height :               $navbar-brand-font-size * $base-line-height !default;
+$navbar-brand-offset-y :             ($nav-link-height - $navbar-brand-height) * .5 !default;
+$navbar-brand-margin-end :           1rem !default;
+
+$navbar-toggler-offset-y :           .25rem !default;
+$navbar-toggler-offset-x :           .75rem !default;
+$navbar-toggler-font-size :          $lg-font-size !default;
+$navbar-toggler-border-radius :      $btn-border-radius !default;
+$navbar-toggler-focus-width :        $btn-focus-width !default;
+$navbar-toggler-transition :         box-shadow .15s ease-in-out !default;
+
+$navbar-box-shadow :                 0 4px 12px 0 rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.05) !default;
+// scss-docs-end navbar-variable
+
+// scss-docs-start navbar-theme-variable
+$navbar-dark-color :                 rgba($white, .55) !default;
+$navbar-dark-hover-color :           rgba($white, .75) !default;
+$navbar-dark-active-color :          $white !default;
+$navbar-dark-disabled-color :        rgba($white, .25) !default;
+$navbar-dark-toggler-border-color :  rgba($white, .1) !default;
+
+$navbar-light-color :                rgba($black, .55) !default;
+$navbar-light-hover-color :          rgba($black, .7) !default;
+$navbar-light-active-color :         rgba($black, .9) !default;
+$navbar-light-disabled-color :       rgba($black, .3) !default;
+
+$navbar-light-toggler-border-color : rgba($black, .1) !default;
+
+$navbar-light-brand-color :          $navbar-light-active-color !default;
+$navbar-light-brand-hover-color :    $navbar-light-active-color !default;
+$navbar-dark-brand-color :           $navbar-dark-active-color !default;
+$navbar-dark-brand-hover-color :     $navbar-dark-active-color !default;
+$navbar-brand-img-margin-right :     0.25rem !default;
+
+$navbar-scrolling-transition                 : background .5s ease-in-out, padding .5s ease-in-out !default;
+$navbar-scrolling-transition-duration        : 1s !default;
+$navbar-scrolling-padding                    : 12px !default;
+$navbar-top-collapse-padding                 : 5px !default;
+$navbar-nav-transition                       : .35s !default;
+$navbar-dropdown-font-size                   : .9375rem !default;
+$navbar-dropdown-menu-padding                : 10px !default;
+$navbar-flex-icons-offset-md                : 6px !default;
+$navbar-flex-icons-offset-lg                : 3px !default;
+$navbar-form-input-mr                        : 5px !default;
+$navbar-form-input-mb                        : 1px !default;
+$navbar-form-input-ml                        : 8px !default;
+$navbar-form-input-height                    : 1rem !default;
+$navbar-breadcrumb-offset-top               : .3rem !default;
+$navbar-breadcrumb-offset-left              : 1rem !default;
+$navbar-breadcrumb-color                     : rgba(255, 255, 255, .65) !default;
+// scss-docs-end navbar-theme-variable

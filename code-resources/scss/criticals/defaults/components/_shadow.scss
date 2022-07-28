@@ -1,0 +1,25 @@
+// scss-docs-start shadow-variables
+$shadow-dark-intense : .30;
+$shadow-light-intense : .50;
+$shadow-text:                mix($gray-400, $default-dark, $color-interval);
+$shadow-box:                 mix($gray-800, $default-dark, $color-interval);
+$shadow-primary:             mix($gray-800, $default, $color-interval);
+$shadow-secondary:           mix($gray-800, $default-light, $color-interval);
+$shadow-accent:              mix($gray-800, $default-accent, $color-interval);
+
+$blue-box-shadow: $blue-800;
+$indigo-box-shadow: $indigo-900;
+$purple-box-shadow: $purple-800;
+$pink-box-shadow: $pink-800;
+$red-box-shadow: $red-800;
+$orange-box-shadow: $orange-800;
+$yellow-box-shadow: $yellow-900;
+$green-box-shadow: $green-800;
+$teal-box-shadow: $teal-800;
+$cyan-box-shadow: $cyan-800;
+
+// scss-docs-end shadow-variables
+
+$clay-primary : inset 10px 10px 15px $shadow-primary, inset -10px -10px 20px $shadow-secondary, 10px 10px 20px $default-dark-600;
+
+

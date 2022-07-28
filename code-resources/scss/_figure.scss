@@ -1,0 +1,22 @@
+//
+// Figures
+//
+.figure
+{
+    // Ensures the caption's text aligns with the image.
+    display: inline-block;
+}
+
+.figure-img
+{
+    line-height: 1;
+
+    margin-bottom: $spacer * .5;
+}
+
+.figure-caption
+{
+    color: $figure-caption-color;
+
+    @include font-size($figure-caption-font-size);
+}

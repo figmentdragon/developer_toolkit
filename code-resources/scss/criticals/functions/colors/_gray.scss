@@ -1,0 +1,3 @@
+@function gray($key: "100") {
+  @return map-get($grays, $key);
+}

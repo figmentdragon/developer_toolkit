@@ -1,0 +1,7 @@
+// scss-docs-start form-text-variables
+$form-text-margin-top: .25rem;
+$form-text-font-size: $base-font-size;
+$form-text-font-style: sans-serif;
+$form-text-font-weight: $base-font-weight + 100;
+$form-text: mix(black, $info, $body-percentage);
+// scss-docs-end form-text-variables

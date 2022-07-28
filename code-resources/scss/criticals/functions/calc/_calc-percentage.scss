@@ -1,0 +1,24 @@
+/**
+ *RESPONSIVE HELPER FUNCTION
+ *If you're creating a responsive site, then
+ *you've probably already read
+ *Responsive Web Design: http://www.abookapart.com/products/responsive-web-design
+ *
+ *Here's a nice little helper function for calculating
+ *target / context
+ *as mentioned in that book.
+ *
+ *Example:
+ *width: cp(650px, 1000px);
+ *or
+ *width: calc-percent(650px, 1000px);
+ *both compile to:
+ *width: 65%;
+ */
+
+@function calc-percent($target, $container) {
+  @return ($target / $container) * 100%;
+}
+@function cp($target, $container) {
+  @return calc-percent($target, $container);
+}

@@ -1,0 +1,91 @@
+/* =Comments
+----------------------------------------------- */
+
+#comments { /* Container for the comments section */
+	clear: both;
+}
+.bypostauthor { /* Gives post author comments thier own style */
+	display: block;
+}
+.comments-title,
+#reply-title {
+
+}
+.commentlist li {
+	list-style: none;
+}
+.commentlist,
+.children {
+	list-style: none;
+	margin: 0;
+}
+.children { /* Nested comments */
+	margin: 0 0 0 6%;
+}
+.commentlist li.comment {  /* Individual top-level comments */
+
+}
+.commentlist li.pingback {  /* Individual top-level pingbacks */
+
+}
+.commentlist li:last-of-type { /* Do you want to style the last comment differently, such as remove borders? */
+
+}
+.commentlist .children li { /* Contains individual nested comments */
+
+}
+.children article.comment,
+.children li.pingback { /* Nexted comments and pingbacks */
+	padding-top: 1.0em;
+}
+.comment .avatar { /* Comment author's gravatar image */
+
+}
+.comment-author { /* Comment author's name */
+	word-wrap: break-word;
+}
+.comment-meta { /* Comment date, time, etc */
+
+}
+.comment-content { /* Actual comment text */
+
+}
+.comment .reply { /* The "Reply" link under each comment */
+	text-align: right;
+}
+
+
+/* Comment Form */
+.comment-notes,
+#commentform .form-allowed-tags,
+p.nocomments,
+p.logged-in-as,
+#commentform label {
+
+}
+.required { /* The little asterisk next to a required comment field */
+	color: #880000;
+}
+#commentform label { /* The text next to each comment form field */
+	padding: 1em 0;
+}
+#commentform input[type="text"] {
+
+}
+#commentform #comment { /* The comment form textarea */
+
+}
+#commentform .form-allowed-tags,
+#commentform .form-allowed-tags code {
+
+}
+p.nocomments { /* Message displayed when there are no comments */
+
+}
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}

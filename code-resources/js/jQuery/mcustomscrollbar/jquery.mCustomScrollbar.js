@@ -942,15 +942,15 @@ and dependencies (minified).
 			var $this=$(this),d=$this.data(pluginPfx),o=d.opt,
 				mCSB_scrollTools=$(".mCSB_"+d.idx+"_scrollbar:first"),
 				tabindex=!_isNumeric(o.scrollButtons.tabindex) ? "" : "tabindex='"+o.scrollButtons.tabindex+"'",
-				btnHTML=[
+				buttonHTML=[
 					"<a href='#' class='"+classes[13]+"' "+tabindex+" />",
 					"<a href='#' class='"+classes[14]+"' "+tabindex+" />",
 					"<a href='#' class='"+classes[15]+"' "+tabindex+" />",
 					"<a href='#' class='"+classes[16]+"' "+tabindex+" />"
 				],
-				btn=[(o.axis==="x" ? btnHTML[2] : btnHTML[0]),(o.axis==="x" ? btnHTML[3] : btnHTML[1]),btnHTML[2],btnHTML[3]];
+				button=[(o.axis==="x" ? buttonHTML[2] : buttonHTML[0]),(o.axis==="x" ? buttonHTML[3] : buttonHTML[1]),buttonHTML[2],buttonHTML[3]];
 			if(o.scrollButtons.enable){
-				mCSB_scrollTools.prepend(btn[0]).append(btn[1]).next(".mCSB_scrollTools").prepend(btn[2]).append(btn[3]);
+				mCSB_scrollTools.prepend(button[0]).append(button[1]).next(".mCSB_scrollTools").prepend(button[2]).append(button[3]);
 			}
 		},
 		/* -------------------- */
@@ -1195,7 +1195,7 @@ and dependencies (minified).
 			}).bind("mousedown."+namespace+" touchstart."+namespace+" pointerdown."+namespace+" MSPointerDown."+namespace,function(e){
 				e.stopImmediatePropagation();
 				e.preventDefault();
-				if(!_mouseBtnLeft(e)){return;} /* left mouse button only */
+				if(!_mousebuttonLeft(e)){return;} /* left mouse button only */
 				touchActive=true;
 				if(oldIE){document.onselectstart=function(){return false;}} /* disable text selection for IE < 9 */
 				_iframe.call(mCSB_container,false); /* enable scrollbar dragging over iframes by disabling their events */
@@ -1660,30 +1660,30 @@ and dependencies (minified).
 			var $this=$(this),d=$this.data(pluginPfx),o=d.opt,seq=d.sequential,
 				namespace=pluginPfx+"_"+d.idx,
 				sel=".mCSB_"+d.idx+"_scrollbar",
-				btn=$(sel+">a");
-			btn.bind("contextmenu."+namespace,function(e){
+				button=$(sel+">a");
+			button.bind("contextmenu."+namespace,function(e){
 				e.preventDefault(); //prevent right click
 			}).bind("mousedown."+namespace+" touchstart."+namespace+" pointerdown."+namespace+" MSPointerDown."+namespace+" mouseup."+namespace+" touchend."+namespace+" pointerup."+namespace+" MSPointerUp."+namespace+" mouseout."+namespace+" pointerout."+namespace+" MSPointerOut."+namespace+" click."+namespace,function(e){
 				e.preventDefault();
-				if(!_mouseBtnLeft(e)){return;} /* left mouse button only */
-				var btnClass=$(this).attr("class");
+				if(!_mousebuttonLeft(e)){return;} /* left mouse button only */
+				var buttonClass=$(this).attr("class");
 				seq.type=o.scrollButtons.scrollType;
 				switch(e.type){
 					case "mousedown": case "touchstart": case "pointerdown": case "MSPointerDown":
 						if(seq.type==="stepped"){return;}
 						touchActive=true;
 						d.tweenRunning=false;
-						_seq("on",btnClass);
+						_seq("on",buttonClass);
 						break;
 					case "mouseup": case "touchend": case "pointerup": case "MSPointerUp":
 					case "mouseout": case "pointerout": case "MSPointerOut":
 						if(seq.type==="stepped"){return;}
 						touchActive=false;
-						if(seq.dir){_seq("off",btnClass);}
+						if(seq.dir){_seq("off",buttonClass);}
 						break;
 					case "click":
 						if(seq.type!=="stepped" || d.tweenRunning){return;}
-						_seq("on",btnClass);
+						_seq("on",buttonClass);
 						break;
 				}
 				function _seq(a,c){
@@ -2328,7 +2328,7 @@ and dependencies (minified).
 		
 		
 		/* detects left mouse button */
-		_mouseBtnLeft=function(e){
+		_mousebuttonLeft=function(e){
 			return !(e.which && e.which!==1);
 		},
 		/* -------------------- */

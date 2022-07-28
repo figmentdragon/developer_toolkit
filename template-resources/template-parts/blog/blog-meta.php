@@ -4,7 +4,7 @@
  *
  * Renders author/post meta on archives.
  *
- * @package TheCreativityArchitect
+ * @package TheThemeName
  * @subpackage Template Parts
  */
 

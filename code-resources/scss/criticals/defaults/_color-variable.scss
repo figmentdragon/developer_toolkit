@@ -1,0 +1,34 @@
+// scss-docs-start color-variable
+$blue : hsl(216, 85%, 39%);
+$indigo : hsl(272, 77%, 74%);
+$purple : hsl(286, 91%, 38%);
+$pink : hsl(322, 91%, 38%);
+$red : hsl(337, 91%, 38%);
+$orange : hsl(3, 88%, 39%);
+$yellow : hsl(43, 89%, 38%);
+$green : hsl(68, 90%, 38%);
+$teal : hsl(93, 92%, 38%);
+$cyan : hsl(144, 83%, 40%);
+$gray : hsl(240, 6%, 50%);
+// scss-docs-end color-variable
+
+// scss-docs-start colors-map
+$colors: () !default;
+$colors: map-merge((
+  'blue': $blue,
+  'indigo': $indigo,
+  'purple': $purple,
+  'pink': $pink,
+  'red': $red,
+  'orange': $orange,
+  'yellow': $yellow,
+  'green': $green,
+  'teal': $teal,
+  'cyan': $cyan,
+  'white': $white,
+  'gray': $gray-600,
+  'gray-dark': $gray-800
+  ),
+  $colors
+);
+// scss-docs-end colors-map

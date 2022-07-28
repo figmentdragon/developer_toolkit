@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * @package creativityarchitect
+ * @package themename
  */
 if (get_theme_mod('theme_about_page_disable') != 'on') {
     ?>

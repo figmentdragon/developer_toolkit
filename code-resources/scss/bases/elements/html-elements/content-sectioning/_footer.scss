@@ -1,0 +1,24 @@
+// Footer - The <footer> HTML element represents a footer for its nearest sectioning content or sectioning root element. A <footer> typically contains information about the author of the section, copyright data or links to related documents.
+
+
+footer {
+  padding: 0;
+  margin: 0;
+  display: block;
+  justify-content: space-between;
+  align-content: space-evenly;
+  display: block;
+  &.page-footer {
+    bottom: 0;
+    color: $white;
+    .container-fluid {
+      width: auto;
+    }
+    .footer-copyright {
+      overflow: hidden;
+    }
+    a {
+      color: $white;
+    }
+  }
+}

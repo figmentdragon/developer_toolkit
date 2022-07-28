@@ -1,0 +1,26 @@
+// scss-docs-start utility-color-variable
+
+$success:       $cyan;
+$info:          $blue;
+$warning:       $orange;
+$danger:        $red;
+$gray:          $gray-600;
+$light:         $gray-200;
+$soft:          $gray-400;
+$dark:          $gray-800;
+
+
+// scss-docs-end utility-color-variable
+
+// scss-docs-start utility-colors-map
+$utility-colors: ();
+$utility-colors: map-merge((
+  'success':    $success,
+  'info':       $info,
+  'warning':    $warning,
+  'danger':     $danger,
+  'light':      $light,
+  'dark':       $dark),
+$utility-colors);
+
+// scss-docs-end utility-colors-map

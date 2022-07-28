@@ -1,0 +1,57 @@
+
+
+  $card-text-color: tint($text, $card-percentage);
+/* ____________________________________ FOUNDATION */
+/* __________________________ UTILITY */
+$link                        : tint($secondary, $link-percentage);
+  /* Link Utilities */
+  $link-text-active               : tint($link, $active-percentage);
+  $link-bg-active                 : shade($link, $background-percentage);
+  $link-border-active             : shade($link, $border-interval);
+
+  $link-text-inactive             : tint($link, $inactive-percentage);
+  $link-bg-inactive               : shade($link-text-inactive, $background-percentage);
+  $link-bordrt-inactive-border    : shade($link-text-inactive, $border-interval);
+
+
+/* __________________________ OBJECTS */
+
+
+
+
+/* __________________________ COMPONENTS */
+  $card                      : tint($primary, $card-percentage);
+
+  /* Nav */
+  $nav                       : tint($link, $nav-percentage);
+    $nav-link-text           : tint($nav, $link-percentage);
+      $nav-link-text-hover   : shade($nav-link-text, $hover-percentage);
+      $nav-link-text-inactive: shade($nav-link-text, $inactive-percentage);
+
+    // Navbar
+    $navbar-dark-text        : $accent;
+    $navbar-light-text       : $primary;
+
+  /* Lists */
+  $list-group-text           : $gray-900;
+
+  $shadow-text               : .5rem .75rem .25rem $shadow;
+  $shadow-box                : .5rem .75rem .25rem $shadow;
+
+
+
+  /* Utilities Typography */
+
+  /* Nav Utilities */
+
+
+
+  /* Utilities Input*/
+  $input-text                : $gray-500;
+  $input-bg                  : $gray-100;
+  $input-border              : $gray-900;
+  $input-text-focus          : $gray-800;
+  $input-bg-focus            : $white;
+  $input-border-focus        : $gray-100;
+
+/* ______________________________________________________ BACKGROUNDS */

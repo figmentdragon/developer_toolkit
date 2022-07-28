@@ -1,0 +1,10 @@
+.code {
+  @include border-radius($md-border-radius);
+}
+
+.code,
+.kbd,
+.tt,
+.var {
+	font-family: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}

@@ -1,0 +1,35 @@
+/**
+ * WordPress adds dynamic classes to the post elements as well. Here is a list of some of the most popular ones:
+ */
+
+.post {
+
+  &-id {
+
+  }
+}
+
+.page {}
+
+.attachment {}
+
+.sticky {}
+
+.hentry {}
+
+.category {
+
+  &-misc {}
+
+  &-example {}
+
+}
+
+.tag {
+
+  &-news {}
+
+  &-wordpress {}
+
+  &-markup {}
+}

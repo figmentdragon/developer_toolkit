@@ -4,29 +4,29 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package TheCreativityArchitect
- * @since TheCreativityArchitect 1.0
+ * @package TheThemeName
+ * @since TheThemeName 1.0
  */
 ?>
  
 <article id="post-0" class="post no-results not-found">
     <header class="entry-header">
-        <h1 class="entry-title"><?php _e( 'Nothing Found', 'TheCreativityArchitect' ); ?></h1>
+        <h1 class="entry-title"><?php _e( 'Nothing Found', 'TheThemeName' ); ?></h1>
     </header><!-- .entry-header -->
  
     <div class="entry-content">
         <?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
  
-            <p><?php printf( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'TheCreativityArchitect' ), admin_url( 'post-new.php' ) ); ?></p>
+            <p><?php printf( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'TheThemeName' ), admin_url( 'post-new.php' ) ); ?></p>
  
         <?php elseif ( is_search() ) : ?>
  
-            <p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'TheCreativityArchitect' ); ?></p>
+            <p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'TheThemeName' ); ?></p>
             <?php get_search_form(); ?>
  
         <?php else : ?>
  
-            <p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'TheCreativityArchitect' ); ?></p>
+            <p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'TheThemeName' ); ?></p>
             <?php get_search_form(); ?>
  
         <?php endif; ?>

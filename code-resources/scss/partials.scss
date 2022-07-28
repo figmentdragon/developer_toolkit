@@ -1,0 +1,21 @@
+@import 'modules/partials/menu';
+@import 'modules/partials/clearing';
+@import 'modules/partials/posts+pages';
+@import 'modules/partials/header';
+@import 'modules/partials/media';
+@import 'modules/partials/scroll-paginator';
+
+@import 'modules/partials/widgets/counter';
+@import 'modules/partials/widgets/cta';
+@import 'modules/partials/widgets/feature-box';
+@import 'modules/partials/widgets/pricing';
+
+@import 'modules/partials/sections/services';
+@import 'modules/partials/sections/clients';
+@import 'modules/partials/sections/portfolio';
+@import 'modules/partials/sections/blog';
+@import 'modules/partials/sections/comments';
+@import 'modules/partials/sections/404';
+
+@import 'modules/partials/plugins/woocommerce';
+@import 'modules/partials/plugins/gutenberg';

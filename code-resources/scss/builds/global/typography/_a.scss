@@ -1,0 +1,41 @@
+a {
+  text-decoration: none;
+  background-color: transparent;
+  :link,
+  :active,
+  & .active {
+    @include on-event {
+      color: $link-text-visited;
+      text-decoration: $link-decoration;
+    }
+  }
+  &:hover {
+    @include on-event {
+      color: $link-text-hover-color;
+      text-decoration: $hover-decoration;
+    }
+  }
+  :visited {
+    color: $link-visited;
+  }
+  :hover,
+  :focus {
+    color: $link-hover;
+    outline: 0;
+  }
+  :focus {
+    outline: thin-dotted;
+  }
+}
+
+.stretched-link {
+  &::#{$stretched-link-pseudo-element} {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: $stretched-link-z-index;
+    content: "";
+  }
+}

@@ -1,16 +1,16 @@
 <?php
 
 /**
- * themename back compat functionality
+ * Creativity Architect back compat functionality
  *
- * Prevents themename from running on WordPress versions prior to 3.8,
+ * Prevents Creativity Architect from running on WordPress versions prior to 3.8,
  * since this theme is not meant to be backward compatible beyond that
  * and relies on many newer functions and markup changes introduced in 3.8.
  *
  */
 
 /**
- * Prevent switching to themename on old versions of WordPress.
+ * Prevent switching to Creativity Architect on old versions of WordPress.
  *
  * Switches to the default theme.
  *
@@ -29,13 +29,13 @@ add_action('after_switch_theme', 'themename_switch_theme');
  * Add message for unsuccessful theme switch.
  *
  * Prints an update nag after an unsuccessful attempt to switch to
- * themename on WordPress versions prior to 3.8.
+ * Creativity Architect on WordPress versions prior to 3.8.
  *
  *
  * @return void
  */
 function themename_upgrade_notice() {
-    $message = sprintf(__('themename requires at least WordPress version 3.8. You are running version %s. Please upgrade and try again.', 'themename'), $GLOBALS['wp_version']);
+    $message = sprintf(__('Creativity Architect requires at least WordPress version 3.8. You are running version %s. Please upgrade and try again.', 'themename'), $GLOBALS['wp_version']);
     printf('<div class="error"><p>%s</p></div>', $message);
 }
 
@@ -46,7 +46,7 @@ function themename_upgrade_notice() {
  * @return void
  */
 function themename_customize() {
-    wp_die(sprintf(__('themename requires at least WordPress version 3.8. You are running version %s. Please upgrade and try again.', 'themename'), $GLOBALS['wp_version']), '', array(
+    wp_die(sprintf(__('Creativity Architect requires at least WordPress version 3.8. You are running version %s. Please upgrade and try again.', 'themename'), $GLOBALS['wp_version']), '', array(
         'back_link' => true,
     ));
 }
@@ -61,7 +61,7 @@ add_action('load-customize.php', 'themename_customize');
  */
 function themename_preview() {
     if (isset($_GET['preview'])) {
-        wp_die(sprintf(__('themename requires at least WordPress version 3.8. You are running version %s. Please upgrade and try again.', 'themename'), $GLOBALS['wp_version']));
+        wp_die(sprintf(__('Creativity Architect requires at least WordPress version 3.8. You are running version %s. Please upgrade and try again.', 'themename'), $GLOBALS['wp_version']));
     }
 }
 

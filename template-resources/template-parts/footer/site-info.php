@@ -2,13 +2,13 @@
 /**
  * The template used for displaying credits
  *
- * @package creativity
+ * @package creativityarchitect
  */
 ?>
 
 <?php
 /**
- * creativity_credits hook
- * @hooked creativity_footer_content - 10
+ * creativityarchitect_credits hook
+ * @hooked creativityarchitect_footer_content - 10
  */
-do_action( 'creativity_credits' );
+do_action( 'creativityarchitect_credits' );

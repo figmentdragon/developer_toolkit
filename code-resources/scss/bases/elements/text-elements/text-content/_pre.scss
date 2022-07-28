@@ -1,0 +1,39 @@
+// PRE - The <pre> HTML element represents preformatted text which is to be presented exactly as written in the HTML file. The text is typically rendered using a non-proportional, or 'monospaced, font. Whitespace inside this element is displayed as written.
+
+@import './../../../../critical/defaults/typography/code';
+
+pre {
+  display: block;
+  overflow: auto;
+
+  font-family: $font-family-code;
+  color: $pre-color;
+  font-style: italic;
+  @include font-size($code-font-size);
+  line-height: $base-line-height;
+
+  margin: 1em 0 1.6em 0;
+  padding: 1.6em;
+  border: $pre-border-width solid $pre-border-color;
+  background-color: $pre-bg;
+  max-width: 100%;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  // Account for some code outputs that place code tags in pre tags
+  code {
+    padding: 0;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+    border-radius: 0;
+  }
+
+  > code {
+    @include font-size($code-font-size);
+    color: $code-color;
+    word-break: normal;
+    display: block;
+    padding: 1rem 1.5rem;
+    white-space: pre;
+  }
+}

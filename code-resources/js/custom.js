@@ -24,7 +24,7 @@ jQuery(document).ready(function ($) {
     $('a.port-lbox-link').nivoLightbox();
 
     // Bxslider Home
-    $('.creativity-slider').bxSlider({
+    $('.scrollme-slider').bxSlider({
         auto: true,
         pager: true,
         mode: 'fade',
@@ -86,7 +86,7 @@ jQuery(document).ready(function ($) {
 
     }
 
-    $('.widget_creativity-number-counter').one('inview', startKnob);
+    $('.widget_scrollme-number-counter').one('inview', startKnob);
 
     // Portfolio Masonary
     var $container = $('#sm-portfolio').imagesLoaded( function() {
@@ -131,7 +131,7 @@ jQuery(document).ready(function ($) {
     // Pre Loader
     $(window).load(function () {
         // Animate loader off screen
-        $(".creativity-preloader").fadeOut("slow");
+        $(".scrollme-preloader").fadeOut("slow");
     });
 
     // Scroll Sections
@@ -139,7 +139,7 @@ jQuery(document).ready(function ($) {
         $('#fullpage').fullpage({
     
             //Custom selectors
-            sectionSelector: '.creativity-main-section',
+            sectionSelector: '.scrollme-main-section',
             slideSelector: '.sec-slide',
     
             // Scrolling
@@ -183,7 +183,7 @@ jQuery(document).ready(function ($) {
         });
     }
 
-    function creativityFocusForce(focEl){
+    function scrollMeFocusForce(focEl){
         var _doc = document;
         setTimeout( function() {
         focEl = _doc.querySelector( focEl );
@@ -201,7 +201,7 @@ jQuery(document).ready(function ($) {
     $('body').on('click keypress','.btn-transparent-toggle', function(){
         
         $('.site-footer').addClass('scroll-show').addClass('fp-show');
-        creativityFocusForce('.main-navigation ul li:first-child a');
+        scrollMeFocusForce('.main-navigation ul li:first-child a');
     });
 
    

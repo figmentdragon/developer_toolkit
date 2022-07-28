@@ -1,0 +1,38 @@
+@import "colors/functions/color-contrast";
+@import "colors/functions/color-function";
+@import "colors/functions/colors";
+@import "colors/functions/make-color-map";
+
+$silver: #c0c0c0;
+$chocolate: #7b3f00;
+$brown: #3f000f;
+
+@import "colors/change-percentage";
+
+@import "colors/colors/gray-scale";
+@import "colors/colors/base";
+@import "colors/colors/theme";
+@import "colors/colors/rgba";
+
+$body-text: $primary;
+$body-bg: white;
+
+$text-color: shade($body-text, $body-percentage);
+$muted: tint($accent, $muted-percentage);
+$link: shade($secondary, $link-percentage);
+
+$quote:  shade($text-color, $quote-percentage);
+
+$border-color: shade($accent, $border-interval);
+$button: tint($secondary, $button-percentage);
+$shadow: shade($brown, $shadow-percentage);
+
+$gradient: linear-gradient( $primary, $secondary, $accent );
+
+@import "colors/patterns/background";
+@import "colors/patterns/button";
+@import "colors/patterns/link";
+@import "colors/patterns/text";
+
+@import "colors/patterns/shadow";
+@import "colors/patterns/gradient";

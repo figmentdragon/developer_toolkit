@@ -2,7 +2,7 @@
 /**
  * Mobile logo.
  *
- * @package TheCreativityArchitect
+ * @package TheThemeName
  * @subpackage Template Parts
  */
 

@@ -1,0 +1,10 @@
+// Overlay
+.overlay {
+  .mask {
+    opacity: 0;
+    transition: $mask-overlay-transition;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

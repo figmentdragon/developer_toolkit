@@ -1,0 +1,28 @@
+$button                    : tint($secondary, $button-percentage);
+$button-link: tint($secondary, $link-percentage);
+$button-link-color: tint($button-link, $body-percentage);
+$button-link-hover: tint($button-link, $hover-percentage);
+
+$button-border: shade($secondary, $border-interval);
+$button-border-hover: shade($button-border, $hover-percentage);
+
+@mixin button($color) {
+  color: tint($color, $body-percentage);
+  a {
+    $button-link-color: tint($color, $link-percentage);
+    color: $button-link-color;
+    :active{
+      $button-link-active: tint($button-link-color, $active-percentage);
+      color: $button-link-active;
+      :hover,
+      .hover {
+        $button-link-hover: shade($button-link-color, $hover-percentage);
+        color: shift($button-link-color, $hoverpercentage);
+      }
+    }
+    :disabled,
+    .disabled {
+      $button-link-inactive: tint($button-link-color, $muted-percentage);
+    }
+  }
+}

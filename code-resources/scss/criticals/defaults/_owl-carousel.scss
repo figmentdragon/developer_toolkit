@@ -1,0 +1,29 @@
+//Owl Carousel
+
+/*
+ * 	Default theme - Owl Carousel CSS File
+ */
+
+//nav
+
+$owl-nav-color: $dark;
+$owl-nav-color-hover: $dark;
+$owl-nav-font-size: calc($base-font-size * $x2l);
+$owl-nav-rounded: 3px;
+$owl-nav-margin: 5px;
+$owl-nav-offset: 4px 7px;
+$owl-nav-background: $light;
+$owl-nav-background-hover: $dark;
+$owl-nav-disabled-opacity: 0.5;
+
+//Dots
+
+$owl-dot-width: 13px;
+$owl-dot-height: 13px;
+$owl-dot-rounded: $circle-radius;
+$owl-dot-margin: 5px 5px;
+$owl-dot-border-width: 1px;
+$owl-dot-background: $dark;
+$owl-dot-background-active: $dark;
+$owl-dot-box-shadow: 2px 1px 5px #afcbff,
+-2px -1px 5px #ffffff;

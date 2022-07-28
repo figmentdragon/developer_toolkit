@@ -1,0 +1,85 @@
+$h1-font-size:                $base-font-size * 2.5;
+$h2-font-size:                $base-font-size * 2;
+$h3-font-size:                $base-font-size * 1.75;
+$h4-font-size:                $base-font-size * 1.5;
+$h5-font-size:                $base-font-size * 1.25;
+$h6-font-size:                $base-font-size;
+
+// scss-docs-start font-sizes
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size
+);
+// scss-docs-end font-sizes
+
+// scss-docs-start headings-variable
+$headings-margin-bottom:      divide($spacer, 2);
+$headings-font-family:        inherit;
+$headings-font-style:         null;
+$headings-font-weight:        $bolder-font-weight;
+$headings-line-height:        1.2;
+$headings-letter-spacing:      .025em;
+$headings-text-transform:      uppercase;
+$headings-section-letter-spacing:      .025em;
+$headings-section-font-size:           1.375rem;
+$headings-section-font-weight:         $bold-font-weight;
+$headings-section-text-transform:      uppercase;
+
+$headings-color: mix(white, $body-color, $color-interval);
+$lead-color: mix($gray-400, $body-color, $color-interval);
+$title-color: mix($gray-600, $body-color, $color-interval);
+$page-color: mix($gray-700, $body-color, $color-interval);
+$site-color: mix($gray-800, $body-color, $color-interval);
+
+$lead-font-size:              $base-font-size * 1.25;
+$lead-font-weight:            300;
+
+$entry-content-font-size: $lg-font-size;
+
+// Reponsive Headings
+$responsive-headings                         : ();
+$responsive-headings                         : map-merge(
+  (
+    'xs'                                       : (
+      'h1'                                     : 150%,
+      'h2'                                     : 145%,
+      'h3'                                     : 135%,
+      'h4'                                     : 135%,
+      'h5'                                     : 135%
+    ),
+    'sm'                                       : (
+      'h1'                                     : 170%,
+      'h2'                                     : 140%,
+      'h3'                                     : 125%,
+      'h4'                                     : 125%,
+      'h5'                                     : 125%
+    ),
+    'md'                                       : (
+      'h1'                                     : 200%,
+      'h2'                                     : 170%,
+      'h3'                                     : 140%,
+      'h4'                                     : 125%,
+      'h5'                                     : 125%
+    ),
+    'lg'                                       : (
+      'h1'                                     : 200%,
+      'h2'                                     : 170%,
+      'h3'                                     : 140%,
+      'h4'                                     : 125%,
+      'h5'                                     : 125%
+    ),
+    'xl'                                       : (
+      'h1'                                     : 250%,
+      'h2'                                     : 200%,
+      'h3'                                     : 170%,
+      'h4'                                     : 140%,
+      'h5'                                     : 125%
+    ),
+  ),
+  $responsive-headings
+);
+// scss-docs-end headings-variable

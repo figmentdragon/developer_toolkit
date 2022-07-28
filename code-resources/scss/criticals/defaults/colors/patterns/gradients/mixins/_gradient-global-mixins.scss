@@ -1,0 +1,29 @@
+@mixin html-gradient($html-gradient) {
+    background-image: $html-gradient;
+    background-size:cover;
+  }
+
+@mixin footer-gradient {
+    background-image: $footer-gradient;
+    background-size:cover;
+  }
+
+@mixin site-title-gradient {
+    background-image: $site-title-gradient;
+    background-size:cover;
+  }
+
+@mixin header-gradient($header-gradient) {
+  background-image: $header-gradient;
+  background-size:cover;
+}
+
+@mixin background-gradient($theme-color) {
+  background-image: linear-gradient($theme-color, white);
+  background-size:cover;
+}
+
+@mixin global-gradient($deg, $color1, $color2) {
+  background-image: linear-gradient($deg, $color1, $color2);
+  background-size: cover;
+}

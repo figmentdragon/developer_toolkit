@@ -1,0 +1,55 @@
+.comment-author { /* Comment author's name */
+  line-height: normal;
+  margin: 0 28px 28px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #151515;
+  position: relative;
+  text-transform: capitalize;
+	padding-top: 3px;
+
+  .fn {
+    font-size: 18px;
+    font-weight: 600;
+    color: #151515;
+    position: relative;
+    text-transform: capitalize;
+    line-height: normal;
+  }
+
+  a {
+    text-decoration: none;
+    margin-top: 0;
+    margin-bottom: 5px;
+    line-height: 24px;
+    color: #000000;
+    letter-spacing: 1px;
+    font-size: 16px;
+    display: inline-block;
+  }
+  .avatar {
+    height: 65px;
+    width: 65px;
+    left: -100px;
+    position: absolute;
+    border-radius: 50%;
+  }
+  .says {
+    display: none;
+  }
+  .url {
+		color: currentColor;
+  }
+  img {
+    margin-left: -42px;
+    margin-right: 10px;
+  }
+}
+
+.author-name {
+    text-transform: capitalize;
+}
+
+.bypostauthor { /* Gives post author comments thier own style */
+  display: block;
+}

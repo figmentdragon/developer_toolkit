@@ -1,0 +1,40 @@
+//Image and multimedia
+// HTML supports various multimedia resources such as images, audio, and video.
+
+// Audio - The <audio> HTML element is used to embed sound content in documents. It may contain one or more audio sources, represented using the src attribute or the source element: the browser will choose the most suitable one. It can also be the destination for streamed media, using a MediaStream.
+// Img - The <img> HTML element embeds an image into the document.
+// Video - The <video> HTML element embeds a media player which supports video playback into the document. You can use <video> for audio content as well, but the audio element may provide a more appropriate user experience.
+
+// Correct & normalize alignment of undefined display
+audio,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+  *display: inline;
+  *zoom: 1;
+}
+
+//Prevent modern browsers from displaying `audio` without controls.
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+img {
+  margin: .25vh auto;
+  display: block;
+  border: 0;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  .scale-with-grid {
+    max-width: 100%;
+    height: auto;
+  }
+  // Responsive images
+  .is-fluid {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}

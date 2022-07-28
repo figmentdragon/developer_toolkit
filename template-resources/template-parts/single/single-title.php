@@ -4,7 +4,7 @@
  *
  * Renders the title on posts.
  *
- * @package TheCreativityArchitect
+ * @package TheThemeName
  * @subpackage Template Parts
  */
 

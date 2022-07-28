@@ -1,0 +1,65 @@
+/**
+ * Comment Lists
+ */
+.comment-list {
+	padding-left: 0;
+	list-style: none;
+
+	> li {
+		margin-top: $offset-y;
+		margin-bottom: $offset-y;
+	}
+
+}
+
+.comment-list .children {
+	list-style: none;
+	padding-left: 0;
+
+	> li {
+		margin-top: $offset-y;
+		margin-bottom: $offset-y;
+	}
+
+}
+
+.comment-list .depth-2,
+.comment-list .depth-3 {
+	@include media(mobile) {
+		padding-left: 4 * $offset-x;
+	}
+}
+
+.commentlist {
+  list-style: none;
+  margin: 0;
+}
+
+.commentlist li {
+	list-style: none;
+  .comment { /* Individual top-level comments */  }
+  .pingback{ /* Individual top-level pingbacks */ }
+  :last-of-type{  /* Do you want to style the last comment differently, such as remove borders? */ }
+}
+
+.commentlist .children{
+  list-style: none;
+  margin: 0;
+  li { /* Contains individual nested comments */
+    > article {
+      border-top: 1px solid #333333;
+      padding-left: 93px;
+    }
+  }
+}
+
+.commentlist .trackback {
+    padding: 2em 0;
+}
+
+.commentlist .pingback{}
+.commentlist article{
+  + .comment-respond {
+    margin-bottom: 3em;
+  }
+}

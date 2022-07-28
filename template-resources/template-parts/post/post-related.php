@@ -17,11 +17,11 @@ if ($categories):
 	
 	if($related_query->have_posts()): $count=0; ?>
 	<div class="widget widget_related_posts">
-		<h6 class="widget-title"><span><?php echo __('Related Posts', 'TheCreativityArchitect') ?></span></h6>
+		<h6 class="widget-title"><span><?php echo __('Related Posts', 'TheThemeName') ?></span></h6>
 		<div class="entry-list entry-big-thumb">
 			<?php while ($related_query->have_posts() ) : $related_query->the_post()?>
 				<article class="entry">
-					<?php TheCreativityArchitect_featured_image(get_the_ID(), 'medium'); ?>
+					<?php TheThemeName_featured_image(get_the_ID(), 'medium'); ?>
 					<div class="entry-meta">
 						<span class="entry-cat"><?php the_category(' ')?></span>
 					</div>

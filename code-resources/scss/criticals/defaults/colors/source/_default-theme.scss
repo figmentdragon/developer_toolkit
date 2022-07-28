@@ -1,0 +1,22 @@
+$dark-blue: #01248E;
+$neon-blue: #4c79ff;
+$light-steel-blue: #a5bcff;
+$lavender-blue: #bcccff;
+$light-blue: #afcbff;
+$hawkes-blue: #d2ddff;
+$light-cyan: #d7f9ff;
+$light-white: #f9fbf2;
+$light: #ffede1;
+
+$default: $neon-blue;
+$default-accent: #ffcc33;
+$default-light: $hawkes-blue;
+$default-dark: $dark-blue;
+
+$default-theme: () !default;
+$default-theme: map-merge((
+  'default': $neon-blue,
+  'default-accent': #ffcc33,
+  'default-light': $hawkes-blue,
+  'default-dark': $dark-blue
+), $default-theme);

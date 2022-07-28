@@ -1,0 +1,7 @@
+@function varify($list) {
+  $result: null;
+  @each $entry in $list {
+    $result: append($result, var(--#{$prefix}#{$entry}), space);
+  }
+  @return $result;
+}

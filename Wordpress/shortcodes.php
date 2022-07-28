@@ -1,7 +1,7 @@
 <?php
 
 /**
- * themename Custom Shortcodes
+ * Creativity Architect Custom Shortcodes
  * @link http://codex.wordpress.org/Shortcode_API
  */
 
@@ -9,8 +9,8 @@
  * A simple button shortcode, with option to pass link and additional class
  * You can pass your custom classes or font awesome icons.
  * @link http://fontawesome.io/icons/
- * [button link="http://bigemployee.com/" class="big fa-angle-right"]Big Employee[/button]
- * @return: <a href="http://bigemployee.com/" class="button big fa-angle-right">Big Employee</a>
+ * [button link="http://themename.com/" class="big fa-angle-right"]Big Employee[/button]
+ * @return: <a href="http://themename.com/" class="button big fa-angle-right">Big Employee</a>
  */
 function themename_add_shortcode_button($atts, $content = null) {
     extract(

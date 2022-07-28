@@ -1,0 +1,32 @@
+/**
+ * Comment Title
+ */
+
+.comments-title,
+.comment-reply-title {
+  font-size: 26px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	margin: 0 0 20px;
+}
+
+.comment-reply-title {
+	display: flex;
+	justify-content: space-between;
+
+	small {
+
+		a {
+			font-family: $font-secondary;
+			font-size: $sm-font-size;
+			font-style: normal;
+			font-weight: normal;
+			letter-spacing: normal;
+		}
+	}
+}
+
+/* Nested comment reply title*/
+.comment .comment-respond .comment-reply-title {
+	font-size: font-lg;
+}

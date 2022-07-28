@@ -1,0 +1,102 @@
+/*=============Navigations==============*/
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+    float: left;
+    width: 50%;
+}
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+    float: right;
+    text-align: right;
+    width: 50%;
+}
+.navigation.post-navigation {
+    padding: 20px 0 0 0;
+    margin: 0 -30px;
+}
+.navigation.post-navigation a {
+    display: inline-block;
+    position: relative;
+}
+.navigation.post-navigation .nav-label {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    background: #df2c45;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: all 200ms ease-out;
+    text-transform: uppercase;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: bold;
+    line-height: 20px;
+}
+.navigation.post-navigation .nav-label:hover {
+    background: #111;
+}
+.navigation.post-navigation .nav-previous .nav-label:after {
+    float: left;
+    margin: 0 0 0 -7px;
+    padding: 0 7px 0 0;
+    content: "\f104";
+    font-family: "Fontawesome";
+}
+.navigation.post-navigation .nav-next .nav-label:after {
+    float: right;
+    margin: 0 -7px 0 0;
+    padding: 0 0 0 7px;
+    content: "\f105";
+    font-family: "Fontawesome";
+}
+.navigation.post-navigation .nav-title {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    line-height: 20px;
+    padding: 10px;
+    background: #df2c45;
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 200ms ease-out;
+    max-width: 600px;
+    overflow: hidden;
+    opacity: 0;
+    z-index: 1;
+}
+.navigation.post-navigation .nav-previous .nav-title {
+    left: 80%;
+}
+.navigation.post-navigation .nav-previous a:hover .nav-title {
+    left: 100%;
+    opacity: 1;
+}
+.navigation.post-navigation .nav-next .nav-title {
+    right: 80%;
+    text-align: right;
+}
+.navigation.post-navigation .nav-next a:hover .nav-title {
+    right: 100%;
+    opacity: 1;
+}
+.pagination .nav-links {
+    text-align: center;
+}
+.pagination .nav-links span,
+.pagination .nav-links a {
+    background: #df2c45;
+    padding: 10px;
+    margin: 0 2px;
+    color: #FFF;
+    font-size: 13px;
+    display: inline-block;
+    line-height: 1;
+}
+.pagination .nav-links a:hover,
+.pagination .nav-links span.current {
+    background: #111;
+}

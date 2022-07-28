@@ -3,7 +3,7 @@
  * This template displays the post loop.
  *
  * @package Portfolio
- * @since TheCreativityArchitect 1.0
+ * @since TheThemeName 1.0
  */
 
 ?>

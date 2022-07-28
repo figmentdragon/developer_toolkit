@@ -1,0 +1,21 @@
+$base-unit: 1.05 !default;
+
+$xs: calc($base-unit * .15); 
+$sm: calc($base-unit * .9);
+$md: calc($base-unit * 1.65);
+$lg: calc($base-unit * 2.4);
+$xl: calc($base-unit * 3.15);
+$x2l: calc($base-unit * 3.9);
+
+$measurements: () !default;
+$measurements: map-merge(
+  (
+    'xs': .02,
+    'sm': 0.9,
+    'md': 1.7,
+    'lg': 2.5,
+    'xl': 3.3,
+    '2xl': 4.1
+  ),
+  $measurements
+);

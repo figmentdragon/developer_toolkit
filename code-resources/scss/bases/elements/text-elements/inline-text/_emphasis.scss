@@ -1,0 +1,75 @@
+//
+// Emphasis
+//
+
+$small-percentage: 6%;
+$emphasis-font-weight: $semibold-font-weight;
+$sub-sup-font-size: 75%;
+
+b, strong, time, cite, dfn, em, i, sub, sup, small, big {
+	font-family: $accent-font;
+
+}
+b, strong, time, cite, dfn, em, i {
+	font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+
+b, strong, time, cite, small, big {
+	font-weight: $emphasis-font-weight;
+}
+
+b,
+strong,
+time {
+	font-size: $base-font-size;
+	font-weight: $emphasis-font-weight;
+	font-family: $accent-font;
+}
+
+small,
+.small {
+  font-family: $accent-font;
+  line-height: $sm-line-height;
+  @include font-size($small-font-size);
+  font-weight: $normal-font-weight;
+  text-transform: capitalize;
+  text-align: right;
+  color: black;
+  text-shadow: 0 1px .5px $tertiary, 1px 0 .5px $black;
+  display: inline-block;
+}
+
+sub,
+sup {
+  @include font-size($sub-sup-font-size);
+  height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	bottom: 1ex;
+  top: -0.5em;
+}
+
+
+sub {
+	font-size: 60%;
+	vertical-align: bottom;
+	top: 0.5ex;
+	bottom: -0.25em;
+}
+
+big,
+.big {
+	font-size: 125%;
+}
+
+cite,
+dfn,
+em,
+i {
+	font-style: italic;
+}

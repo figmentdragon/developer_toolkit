@@ -12,7 +12,7 @@
 	<h2 class="scaffolding-heading"><?php esc_html_e( 'Buttons', 'creativityarchitect' ); ?></h2>
 	<?php
 		// Button.
-		ca_display_scaffolding_section(
+		display_scaffolding_section(
 			[
 				'title'       => 'Button',
 				'description' => 'Display a button.',

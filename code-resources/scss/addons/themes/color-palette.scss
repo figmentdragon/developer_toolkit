@@ -1,0 +1,74 @@
+// Example: Set your color variables
+@import 'defaults/colors/default-gray';
+@import 'defaults/colors/default-black';
+@import 'defaults/colors/default-color';
+@import 'defaults/colors/default-theme';
+@import 'defaults/colors/primary';
+@import 'defaults/colors/utility';
+
+// Example: Set a color shade step interval
+
+$color-interval:     7.6%;
+$theme-interval:     7.8%;
+$utility-interal:    6.6%;
+
+// Example: Map your colour names to the variables
+
+// Example: Deploy as background (bg) color utility classes
+
+
+@each $key, $value in $utility-colors  {
+  .#{$key} {
+    &-100 {.#{$key}-100: lighten($value, $utility-interal * 4);}
+    &-200 {.#{$key}-200: lighten($value, $utility-interal * 3);}
+    &-300 {.#{$key}-300: lighten($value, $utility-interal * 2);}
+    &-400 {.#{$key}-400: lighten($value, $utility-interal);}
+    &-500 {.#{$key}-500: $value;}
+    &-600 {.#{$key}-600: darken($value, $utility-interal);}
+    &-700 {.#{$key}-700: darken($value, $utility-interal * 2);}
+    &-800 {.#{$key}-800: darken($value, $utility-interal * 3);}
+    &-900 {.#{$key}-900: darken($value, $utility-interal * 4);}
+  }
+}
+
+@each $key, $value in $default-theme  {
+  .#{$key} {
+    &-100 {.#{$key}-100: lighten($value, $theme-interval * 4);}
+    &-200 {.#{$key}-200: lighten($value, $theme-interval * 3);}
+    &-300 {.#{$key}-300: lighten($value, $theme-interval * 2);}
+    &-400 {.#{$key}-400: lighten($value, $theme-interval);}
+    &-500 {.#{$key}-500: $value;}
+    &-600 {.#{$key}-600: darken($value, $theme-interval);}
+    &-700 {.#{$key}-700: darken($value, $theme-interval * 2);}
+    &-800 {.#{$key}-800: darken($value, $theme-interval * 3);}
+    &-900 {.#{$key}-900: darken($value, $theme-interval * 4);}
+  }
+}
+
+@each $key, $value in $colors  {
+  .#{$key} {
+    &-100 {.#{$key}-100: lighten($value, $color-interval * 4);}
+    &-200 {.#{$key}-200: lighten($value, $color-interval * 3);}
+    &-300 {.#{$key}-300: lighten($value, $color-interval * 2);}
+    &-400 {.#{$key}-400: lighten($value, $color-interval);}
+    &-500 {.#{$key}-500: $value;}
+    &-600 {.#{$key}-600: darken($value, $color-interval);}
+    &-700 {.#{$key}-700: darken($value, $color-interval * 2);}
+    &-800 {.#{$key}-800: darken($value, $color-interval * 3);}
+    &-900 {.#{$key}-900: darken($value, $color-interval * 4);}
+  }
+}
+
+@each $key, $value in $primary-theme-colors  {
+  .#{$key} {
+    &-100 {.#{$key}-100: lighten($value, $theme-interval * 4);}
+    &-200 {.#{$key}-200: lighten($value, $theme-interval * 3);}
+    &-300 {.#{$key}-300: lighten($value, $theme-interval * 2);}
+    &-400 {.#{$key}-400: lighten($value, $theme-interval);}
+    &-500 {.#{$key}-500: $value;}
+    &-600 {.#{$key}-600: darken($value, $theme-interval);}
+    &-700 {.#{$key}-700: darken($value, $theme-interval * 2);}
+    &-800 {.#{$key}-800: darken($value, $theme-interval * 3);}
+    &-900 {.#{$key}-900: darken($value, $theme-interval * 4);}
+  }
+}

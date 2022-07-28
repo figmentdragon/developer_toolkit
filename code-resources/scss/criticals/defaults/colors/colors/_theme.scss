@@ -1,0 +1,35 @@
+$primary  : $cyan !default;
+$secondary: $yellow !default;
+$accent   : $silver !default;
+
+$valid    : $green !default;
+$info     : $blue !default;
+$attention: $orange !default;
+$invalid  : $red !default;
+$warning   	: $pink !default;
+
+$light    : $gray-200;
+$dark     : $gray-800;
+
+$primary-rgb:    rgb(10,186,181);
+$secondary-rgb:  rgb(255,228,30);
+$accent-rgb:      rgb(168,169,173);
+$valid-rgb:     rgb(72,199,142) !default;
+$attention-rgb:   rgb(255,71,15) !default;
+$invalid-rgb:   rgb(241,70,104) !default;
+$warning-rgb:     rgb(204,51,153) !default;
+$info-rgb:      rgb(72,95,199) !default;
+$light-rgb:           rgb(192,192,192);
+$dark-rgb:            rgb(26,26,26);
+
+$theme-colors-rgb: (
+primary-rgb:    $primary-rgb,
+secondary-rgb:  $secondary-rgb,
+accent-rgb:      $accent-rgb,
+valid-rgb:     $valid-rgb,
+attention-rgb:   $attention-rgb,
+invalid-rgb:   $invalid-rgb,
+info-rgb:    $info-rgb,
+light-rgb:           $light-rgb,
+dark-rgb:            $dark-rgb
+);

@@ -1,0 +1,118 @@
+-/*-------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    background: #e02d45;
+    border: 1px solid #e02d45;
+    color: #FFF;
+    padding: 8px 30px;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    font-size: 14px;
+    height: 40px;
+}
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+    background: #111;
+    border: 1px solid #111;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+    font-size: 14px;
+    color: #404040;
+    border: 1px solid #CCC;
+    border-radius: 1px;
+    width: 100%;
+    height: 40px;
+}
+select {
+    font-size: 14px;
+    border: 1px solid #CCC;
+    border-radius: 1px;
+    color: #404040;
+    height: 40px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"] {
+    padding: 6px 10px;
+    height: 40px;
+}
+textarea {
+    padding: 6px 10px;
+    width: 100%;
+    min-height: 100px;
+    height: auto;
+}
+form p {
+    margin-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #df2c45;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 10px;
+}
+h1 {
+    font-size: 32px;
+}
+h2 {
+    font-size: 30px;
+}
+h3 {
+    font-size: 28px;
+}
+h4 {
+    font-size: 26px;
+}
+h5 {
+    font-size: 24px;
+}
+h6 {
+    font-size: 22px;
+}
+p {
+    margin: 0 0 25px;
+}

@@ -2,23 +2,23 @@
 /**
  * The template used for displaying hero content
  *
- * @package TheCreativityArchitect
+ * @package themename
  */
 
-$experience_title = get_theme_mod( 'TheCreativityArchitect_hero_experience_title' );
-$date_one         = get_theme_mod( 'TheCreativityArchitect_hero_date_one' );
-$date_two         = get_theme_mod( 'TheCreativityArchitect_hero_date_two' );
-$date_three       = get_theme_mod( 'TheCreativityArchitect_hero_date_three' );
-$date_four        = get_theme_mod( 'TheCreativityArchitect_hero_date_four' );
-$experience_one   = get_theme_mod( 'TheCreativityArchitect_hero_experience_one' );
-$experience_two   = get_theme_mod( 'TheCreativityArchitect_hero_experience_two' );
-$experience_three = get_theme_mod( 'TheCreativityArchitect_hero_experience_three' );
-$experience_four  = get_theme_mod( 'TheCreativityArchitect_hero_experience_four');
+$experience_title = get_theme_mod( 'themename_hero_experience_title' );
+$date_one         = get_theme_mod( 'themename_hero_date_one' );
+$date_two         = get_theme_mod( 'themename_hero_date_two' );
+$date_three       = get_theme_mod( 'themename_hero_date_three' );
+$date_four        = get_theme_mod( 'themename_hero_date_four' );
+$experience_one   = get_theme_mod( 'themename_hero_experience_one' );
+$experience_two   = get_theme_mod( 'themename_hero_experience_two' );
+$experience_three = get_theme_mod( 'themename_hero_experience_three' );
+$experience_four  = get_theme_mod( 'themename_hero_experience_four');
 
 
 
-$TheCreativityArchitect_id = get_theme_mod( 'TheCreativityArchitect_hero_content' );
-$args['page_id'] = absint( $TheCreativityArchitect_id );
+$themename_id = get_theme_mod( 'themename_hero_content' );
+$args['page_id'] = absint( $themename_id );
 
 
 // If $args is empty return false
@@ -37,7 +37,7 @@ if ( $hero_query->have_posts() ) :
 				<div class="section-content-wrapper hero-content-wrapper">
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 						<div class="hentry-inner">
-							<?php $post_thumbnail = TheCreativityArchitect_post_thumbnail( 'full-image', 'html-with-bg', false ); // TheCreativityArchitect_post_thumbnail( $image_size, $TheCreativityArchitect_type = 'html', $echo = true, $no_thumb = false ).
+							<?php $post_thumbnail = themename_post_thumbnail( 'full-image', 'html-with-bg', false ); // themename_post_thumbnail( $image_size, $themename_type = 'html', $echo = true, $no_thumb = false ).
 
 						if ( $post_thumbnail ) :
 							echo $post_thumbnail;
@@ -47,7 +47,7 @@ if ( $hero_query->have_posts() ) :
 							<div class="entry-container full-width">
 						<?php endif; 
 						
-							$TheCreativityArchitect_sub_title = get_theme_mod( 'TheCreativityArchitect_hero_content_sub_title' ); ?>
+							$themename_sub_title = get_theme_mod( 'themename_hero_content_sub_title' ); ?>
 							
 							<div class="section-heading-wrapper">										
 								
@@ -55,9 +55,9 @@ if ( $hero_query->have_posts() ) :
 									<?php the_title( '<h2 class="entry-title section-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">','</a></h2>' ); ?>
 								</header><!-- .entry-header -->
 
-								<?php if ( $TheCreativityArchitect_sub_title ) : ?>
+								<?php if ( $themename_sub_title ) : ?>
 									<div class="section-description">
-										<p><?php echo wp_kses_post( $TheCreativityArchitect_sub_title ); ?></p>
+										<p><?php echo wp_kses_post( $themename_sub_title ); ?></p>
 									</div><!-- .section-description-wrapper -->
 								<?php endif; ?>
 							</div>	
@@ -114,11 +114,11 @@ if ( $hero_query->have_posts() ) :
 									<?php
 
 									wp_link_pages( array(
-										'before'      => '<div class="page-links"><span class="page-links-title">' . esc_html__( 'Pages:', 'TheCreativityArchitect' ) . '</span>',
+										'before'      => '<div class="page-links"><span class="page-links-title">' . esc_html__( 'Pages:', 'themename' ) . '</span>',
 										'after'       => '</div>',
 										'link_before' => '<span class="page-number">',
 										'link_after'  => '</span>',
-										'pagelink'    => '<span class="screen-reader-text">' . esc_html__( 'Page', 'TheCreativityArchitect' ) . ' </span>%',
+										'pagelink'    => '<span class="screen-reader-text">' . esc_html__( 'Page', 'themename' ) . ' </span>%',
 										'separator'   => '<span class="screen-reader-text">, </span>',
 									) );
 								?>
@@ -131,7 +131,7 @@ if ( $hero_query->have_posts() ) :
 											edit_post_link(
 												sprintf(
 													/* translators: %s: Name of current post */
-													esc_html__( 'Edit %s', 'TheCreativityArchitect' ),
+													esc_html__( 'Edit %s', 'themename' ),
 													the_title( '<span class="screen-reader-text">"', '"</span>', false )
 												),
 												'<span class="edit-link">',

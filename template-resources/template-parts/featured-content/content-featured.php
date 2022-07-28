@@ -2,7 +2,7 @@
 /**
  * The template for displaying featured posts on the front page
  *
- * @package creativity
+ * @package creativityarchitect
  */
 ?>
 
@@ -10,7 +10,7 @@
 	<div class="hentry-inner">
 		<?php
 		if( has_post_thumbnail() ) {
-			creativity_post_thumbnail( array(767, 575) );			
+			creativityarchitect_post_thumbnail( array(767, 575) );			
 		}
 		?>
 
@@ -20,7 +20,7 @@
 				
 				<?php if ( 'post' === get_post_type() ) : ?>
 				<div class="entry-meta">
-					<?php creativity_posted_on(); ?>
+					<?php creativityarchitect_posted_on(); ?>
 
 				</div><!-- .entry-meta -->
 				<?php

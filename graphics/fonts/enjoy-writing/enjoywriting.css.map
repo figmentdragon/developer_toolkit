@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,UAAU;EACN,WAAW,EAAE,eAAe;EAC5B,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,GAAG;EAChB,GAAG,EAAE,wGAAwG,CAAC,cAAc",
+    "sources": [
+        "enjoywriting.scss"
+    ],
+    "names": [],
+    "file": "enjoywriting.css"
+}

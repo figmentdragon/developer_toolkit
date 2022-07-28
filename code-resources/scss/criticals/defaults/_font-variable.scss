@@ -1,0 +1,34 @@
+// scss-docs-start font-variable
+@import 'font-stack';
+
+// $font-size-root affects the value of `rem`, which is used for as well font sizes, offsets, and margins
+// $base-font-size affects the font size of the body text
+$font-size-root:              null;
+$base-font-size:              1rem !default; // Assumes the browser default, typically `16px`
+$sm-font-size:                $base-font-size * .875;
+$lg-font-size:                $base-font-size * 1.25;
+
+$base-font-weight:            400 !default;
+
+$font-weight-thin     : subtract($base-font-weight, 300, thin);
+$font-weight-lighter  : subtract($base-font-weight, 200, extra-light);
+$font-weight-light    : subtract($base-font-weight, 100, light);
+$normal-font-weight   : $base-font-weight;
+$font-weight-medium   : add($base-font-weight, 100, medium);
+$semibold-font-weight : add($base-font-weight, 200, semi-bold);
+$bold-font-weight     : add($base-font-weight, 300, bold);
+$bolder-font-weight   : add($base-font-weight, 400, extra-bold);
+$heavy-font-weight    : add($base-font-weight, 500, heavy);
+$ultra-font-weight     : add($base-font-weight, 550, extra-black);
+
+$base-line-height:            1.6 !default;
+$sm-line-height:              1.25;
+$line-height-lg:              2;
+
+$h1-font-size:                $base-font-size * 2.5;
+$h2-font-size:                $base-font-size * 2;
+$h3-font-size:                $base-font-size * 1.75;
+$h4-font-size:                $base-font-size * 1.5;
+$h5-font-size:                $base-font-size * 1.25;
+$h6-font-size:                $base-font-size;
+// scss-docs-end font-variable

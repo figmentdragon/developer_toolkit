@@ -23,11 +23,11 @@
 				<?php the_date(); ?> <?php the_time(); ?>
 			</time>
 		</span>
-		<span class="author"><?php esc_html_e( 'Published by', 'creativityarchitect' ); ?> <?php the_author_posts_link(); ?></span>
-		<span class="comments"><?php if ( comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'creativityarchitect' ), __( '1 Comment', 'creativityarchitect' ), __( '% Comments', 'creativityarchitect' ) ); ?></span>
+		<span class="author"><?php esc_html_e( 'Published by', 'themename' ); ?> <?php the_author_posts_link(); ?></span>
+		<span class="comments"><?php if ( comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'themename' ), __( '1 Comment', 'themename' ), __( '% Comments', 'themename' ) ); ?></span>
 		<!-- /post details -->
 
-		<?php creativityarchitectwp_excerpt( 'creativityarchitectwp_index' ); // Build your custom callback length in functions.php. ?>
+		<?php themenamewp_excerpt( 'themenamewp_index' ); // Build your custom callback length in functions.php. ?>
 
 		<?php edit_post_link(); ?>
 
@@ -40,7 +40,7 @@
 
 	<!-- article -->
 	<article>
-		<h2><?php esc_html_e( 'Sorry, nothing to display.', 'creativityarchitect' ); ?></h2>
+		<h2><?php esc_html_e( 'Sorry, nothing to display.', 'themename' ); ?></h2>
 	</article>
 	<!-- /article -->
 

@@ -1,0 +1,11 @@
+// Zoom
+.zoom {
+  img, video {
+    transition: $mask-zoom-transition;
+  }
+  &:hover {
+    img, video {
+      transform: $mask-zoom-transform;
+    }
+  }
+}

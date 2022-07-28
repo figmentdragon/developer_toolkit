@@ -1,23 +1,23 @@
 <?php
 /**
- * themename Number Counter Widgets
+ * Scrollme Number Counter Widgets
  *
- * @package themename
+ * @package scrollme
  */
 
-add_action( 'widgets_init', 'themename_register_number_counter_widgets' );
-function themename_register_number_counter_widgets() {
-    register_widget( 'WP_themename_Number_Counter' );
+add_action( 'widgets_init', 'scrollme_register_number_counter_widgets' );
+function scrollme_register_number_counter_widgets() {
+    register_widget( 'WP_Scrollme_Number_Counter' );
 }
 
-class WP_themename_Number_Counter extends WP_Widget {
+class WP_Scrollme_Number_Counter extends WP_Widget {
 
     /* Register Widget with WordPress */
     function __construct() {
         parent::__construct(
-            'themename-number-counter',
-            __( 'AP: Number Counter', 'themename' ),
-            array( 'classname' => 'themename-number-counter', 'description' => __( 'Number Animation Conter', 'themename' ) )
+            'scrollme-number-counter',
+            __( 'AP: Number Counter', 'scrollme' ),
+            array( 'classname' => 'scrollme-number-counter', 'description' => __( 'Number Animation Conter', 'scrollme' ) )
         );
     }
     
@@ -28,14 +28,14 @@ class WP_themename_Number_Counter extends WP_Widget {
 	 private function widget_fields() {
 		$fields = array(
 			'counter_title' => array(
-                'themename_widgets_name' => 'counter_title',
-                'themename_widgets_title' => __('Title','themename'),
-                'themename_widgets_field_type' => 'text'
+                'scrollme_widgets_name' => 'counter_title',
+                'scrollme_widgets_title' => __('Title','scrollme'),
+                'scrollme_widgets_field_type' => 'text'
             ),
             'counter' => array(
-                'themename_widgets_name' => 'counter',
-                'themenamec_widgets_title' => __('Counter','themename'),
-                'themename_widgets_field_type' => 'number'
+                'scrollme_widgets_name' => 'counter',
+                'scrollmec_widgets_title' => __('Counter','scrollme'),
+                'scrollme_widgets_field_type' => 'number'
             ),
 		);
 		
@@ -58,7 +58,7 @@ class WP_themename_Number_Counter extends WP_Widget {
         $title     = isset( $instance['counter_title'] ) ? esc_attr( $instance['counter_title'] ) : '';
         $counter     = isset( $instance['counter'] ) ? absint( $instance['counter'] ) : 0;
         ?>
-            <div class="counter-wrap widget_themename-number-counter clearfix">
+            <div class="counter-wrap widget_scrollme-number-counter clearfix">
                 <div class="counter-text"><?php echo esc_html($title); ?></div>
                 <div class="counter-img clearfix">
                     <input type="text" data-width="100" data-fgColor="#df2c45" data-bgColor="#212c35" data-height="50" value="0" data-number="<?php echo esc_html($counter); ?>" min="0" max="100" class="ak-counter clearfix">
@@ -83,7 +83,7 @@ class WP_themename_Number_Counter extends WP_Widget {
         ?>
             <p>
             <label for="<?php echo esc_attr($this->get_field_id( 'counter_title' )); ?>">
-            <?php esc_html__('Counter Title', 'themename'); ?>
+            <?php esc_html__('Counter Title', 'scrollme'); ?>
             </label>
             
             <input class="widefat" id="<?php echo esc_attr($this->get_field_id( 'counter_title' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'counter_title' )); ?>" type="text" value="<?php echo esc_html($title); ?>" />
@@ -91,13 +91,13 @@ class WP_themename_Number_Counter extends WP_Widget {
 
             <p>
             <label for="<?php echo esc_attr($this->get_field_id( 'counter' )); ?>">
-            <?php esc_html__('Counter Number', 'themename'); ?>
+            <?php esc_html__('Counter Number', 'scrollme'); ?>
             </label>
             
             <input class="widefat" id="<?php echo esc_attr($this->get_field_id( 'counter' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'counter' )); ?>" type="number" value="<?php echo esc_html($counter); ?>" />
             </p>
 
-            <div class="startKnob" style="display: none;"><?php esc_html__( 'start', 'themename' ); ?></div>
+            <div class="startKnob" style="display: none;"><?php esc_html__( 'start', 'scrollme' ); ?></div>
 
     <?php
     }

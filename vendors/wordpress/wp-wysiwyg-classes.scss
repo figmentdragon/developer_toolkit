@@ -1,0 +1,107 @@
+/**
+ * The WISWYG editor is one of the most popular and most used aspects of WordPress. For this reason it is a good idea to have styles ready for anything that the user might add to their blog, like images or blockquotes. The following CSS shows you what classes WordPress automatically adds to these elements:
+ */
+
+.entry-content img {}
+.alignleft, img.alignleft {
+  display: inline;
+
+    /*rtl:ignore*/
+    float: left;
+
+    /*rtl:ignore*/
+    margin-right: 1.5em;
+    margin-bottom: 1.5em;
+}
+.alignright, img.alignright {
+  display: inline;
+  /*rtl:ignore*/
+  float: right;
+
+  /*rtl:ignore*/
+  margin-left: 1.5em;
+  margin-bottom: 1.5em;
+}
+.aligncenter, img.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5em;
+}
+.alignnone, img.alignnone {}
+
+.wp-caption {
+  background: $body-bg;
+  border: thin solid #F0F0F0;
+  max-width: 95%;
+  padding: $horizontal-offset $vertical-offset;
+  text-align: center;
+  img[class*="wp-image-"] {
+    @include center-block;
+  }
+  .wp-caption-text {
+		margin: 0.8075em 0;
+    padding: 0 $horizontal-offset $vertical-offset;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+	}
+}
+.wp-caption img {
+  width: auto;
+  max-width: 98.5%;
+  height: auto;
+  border: 0 none;
+  @include reset-box;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+p.wp-caption-text,
+.gallery-caption {
+  margin: 0;
+  padding: 0 $horizontal-offset $vertical-offset;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+	display: block;
+}
+
+
+.wp-smiley {}
+
+blockquote.left {}
+blockquote.right {}
+
+.gallery dl {}
+.gallery dt {}
+.gallery dd {}
+.gallery dl a {}
+.gallery dl img {}
+
+.gallery {
+	margin-bottom: 1.5em;
+	display: grid;
+	grid-gap: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+}
+
+// Loops to enumerate the classes for gallery columns.
+@for $i from 2 through 9 {
+
+	.gallery-columns-#{$i} {
+		grid-template-columns: repeat($i, 1fr);
+	}
+}
+
+
+.size-full {}
+.size-large {}
+.size-medium {}
+.size-thumbnail {}

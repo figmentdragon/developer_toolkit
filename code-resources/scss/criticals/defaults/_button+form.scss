@@ -1,0 +1,61 @@
+// Buttons + Forms
+//
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+
+@import 'buttons+forms/input-btn-variable';
+
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background, and border color.
+@import 'buttons+forms/button-variable';
+
+
+// Forms
+@import 'buttons+forms/form-text-variable';
+
+// scss-docs-start form-label-variables
+@import 'buttons+forms/form-label-variable';
+// scss-docs-end form-label-variables
+
+// scss-docs-start form-input-variables
+@import 'buttons+forms/form-input-variable';
+// scss-docs-end form-input-variables
+
+// scss-docs-start form-check-variables
+@import 'buttons+forms/form-check-variable';
+// scss-docs-end form-check-variables
+
+// scss-docs-start form-switch-variables
+@import 'buttons+forms/form-switch-variable';
+// scss-docs-end form-switch-variables
+
+// scss-docs-start input-group-variables
+@import 'buttons+forms/input-group-variable';
+// scss-docs-end input-group-variables
+
+// scss-docs-start form-select-variables
+@import 'buttons+forms/form-select-variable';
+// scss-docs-end form-select-variables
+
+// scss-docs-start form-range-variables
+@import 'buttons+forms/form-range-variable';
+// scss-docs-end form-range-variables
+
+// scss-docs-start form-file-variables
+@import 'buttons+forms/form-file-variable';
+// scss-docs-end form-file-variables
+
+// scss-docs-start form-floating-variables
+@import 'buttons+forms/form-floating-variable';
+// scss-docs-end form-floating-variables
+
+// Form validation
+
+// scss-docs-start form-feedback-variables
+@import 'buttons+forms/form-feedback-variable';
+// scss-docs-end form-feedback-variables
+
+// scss-docs-start form-validation-states
+@import 'buttons+forms/form-validation-variable';
+// scss-docs-end form-validation-states

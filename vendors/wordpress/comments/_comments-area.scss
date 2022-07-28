@@ -1,0 +1,11 @@
+.comments-area {
+  clear: both;
+  display: block;
+  width: 100%;
+}
+
+.comments-area .comment-list > li:first-child > article,
+.comments-area .comment-list > li.pingback:first-child,
+.comments-area .comment-list > li.trackback:first-child {
+    border-top: none;
+}

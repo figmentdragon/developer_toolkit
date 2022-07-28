@@ -1,0 +1,145 @@
+/* =Comments
+----------------------------------------------- */
+h3#comments {
+  margin-bottom: 80px;
+  font-size: 16px;
+}
+
+#comments {
+  margin-top: 50px;
+  border-top: 2px solid #F6F6F6;
+  margin-top: 40px;
+  padding-top: 40px;
+  .comment-list,
+  .children {
+    list-style: none;
+  }
+  .comments-inner {
+    margin-top: 30px;
+  }
+  .comments-inner + #respond {
+    margin-top: 50px;
+  }
+  .comment-list {
+    padding-left: 0;
+    margin: 0;
+  }
+  .children {
+    padding-left: 30px;
+  }
+  .comment-avatar{
+    width: 60px;
+    height: 60px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+    float: left;
+  }
+  .comment-context {
+    margin-left: 60px;
+    padding-left: 20px;
+  }
+  .comment-context .title {
+    font-size: $base-font-size;
+    display: inline-block;
+  }
+  .comment-content p:last-child {
+    margin-bottom: 0;
+  }
+  .comment-date {
+    color: #ababab;
+    font-size: $base-font-size;
+    font-style: italic;
+
+    :before {
+      content: '-';
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+  }
+  .comment-body {
+    margin-top: 30px;
+  }
+  .reply {
+    font-syle: italic;
+  }
+}
+
+.comment-reply-title{
+  margin-top: 0;
+  margin-bottom: 5px;
+  line-height: 24px;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: 1px;
+
+  small {
+    text-align: right;
+    float: right;
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    top: 8px;
+    font-size: 14px;
+  }
+}
+
+.comments-area > .comment-list > .comment:first-of-type {
+    border-top: 0;
+}
+.comments-area > .comment-list > .comment:last-of-type {
+    border-bottom: 1px solid #e9e9e9;
+}
+
+.comment .avatar { /* Comment author's gravatar image */
+}
+
+.comment .reply { /* The "Reply" link under each comment */
+	text-align: right;
+}
+
+.comment-subscription-form {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.comments-pagination {
+    margin: 2em 0 3em;
+}
+
+ol .children {
+    margin-left: 90px !important;
+}
+
+.comments-title,
+#reply-title {
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+.commentlist,
+.children {}
+
+.children { /* Nested comments */
+	list-style: none;
+	margin: 0 0 0 6%;
+}
+.children article.comment,
+.children li.pingback { /* Nexted comments and pingbacks */
+	padding-top: 1.0em;
+}
+
+.comment .reply { /* The "Reply" link under each comment */
+	text-align: right;
+}
+
+.no-comments {
+    margin: 0;
+    padding-top: 1.75em;
+}
+
+.comment-navigation + .no-comments {
+    border-top: 0;
+    padding-top: 0;
+}

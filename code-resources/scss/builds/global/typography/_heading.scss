@@ -1,0 +1,92 @@
+.subheader {
+  color: tint($heading-text-color, $lead-percentage);
+}
+.lead {
+  font-size: $lead-font-size;
+  font-weight: $lead-font-weight;
+  color: tint-color($body-text, $lead-percentage);
+}
+
+
+.site-title {
+  font-family: $site-font;
+  text-transform: capitalize;
+	font-variant: small-caps;
+  font-weight: $headings-font-weight;
+  line-height: 1rem;
+  margin: calc(($horizontal-spacer * 1.5)) 0 calc(($horizontal-spacer * .5));
+
+  a {
+    outline: none;
+    &:active,
+    &.active {
+      text-decoration: none;
+      &:hover,
+      &:focus {
+
+      }
+      &:visited {
+        text-decoration: none;
+
+      }
+    }
+    &:disabled,
+    &.disabled {
+
+    }
+  }
+}
+
+.page-title {
+  font-family: $page-title-font;
+	color: $page;
+  font-weight: $headings-font-weight;
+  margin: $horizontal-spacer 0 calc($horizontal-spacer * .5);
+  @include links;
+}
+
+.post-title {
+	font-family: $post-title-font;
+	color: $title;
+  font-weight: 700;
+
+  @include links;
+}
+
+.site-description,
+.tagline,
+.page-title {
+	font-family: $tertiary-font;
+  font-size: 1.75vw;
+  text-transform: lowercase;
+  text-align: right;
+  color: shade($accent, $heading-percentage);
+  margin: calc(($horizontal-spacer * 1.05)) 0 calc(($horizontal-spacer * .2));
+  @include links;
+}
+
+.heading {
+	font-family: $tertiary-font;
+  font-weight: $base-font-weight;
+	color: $heading;
+  margin: $horizontal-spacer 0 $horizontal-spacer;
+  @include links;
+}
+
+.lead {
+	font-family: $lead-font;
+	font-weight: $lead-font-weight;
+	font-size: $lead-font-size;
+	color: $lead;
+  margin: $horizontal-spacer 0 $horizontal-spacer;
+}
+
+// These declarations are kept separate from and placed after
+// the previous tag-based declarations so that the classes beat the tags in
+// the CSS cascade, and thus <h1 class="h2"> will be styled like an h2.
+.h1 { font-size: h1; }
+.h2 { font-size: h2; }
+.h3 { font-size: h3; }
+.h4 { font-size: h4; }
+.h5 { font-size: h5; }
+.h6 { font-size: h6; }

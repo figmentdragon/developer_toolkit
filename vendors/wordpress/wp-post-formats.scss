@@ -1,0 +1,20 @@
+/**
+ * WordPress adds dynamic classes to your post using the post_class () function that will allow you to create your own styles for each format. The post_class () function will add a class in the form of “.format-foo” where foo is whatever post format you have chosen ie. gallery, image, etc.
+ */
+
+.format {
+
+  &-image {}
+
+  &-gallery {}
+
+  &-chat {}
+
+  &-link {}
+
+  &-quote {}
+
+  &-status {}
+
+  &-video {}
+}

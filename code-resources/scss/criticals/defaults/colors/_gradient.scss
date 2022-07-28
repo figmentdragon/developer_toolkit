@@ -1,0 +1,34 @@
+// Gradient
+//
+// The gradient which is added to components if `$enable-gradients` is `true`
+// This gradient is also added to elements with `.bg-gradient`
+// scss-docs-start variable-gradient
+$gradient: linear-gradient(-120deg, rgba($tertiary, .85), rgba($primary, .95), rgba($secondary, .65), rgba($accent, .45), transparent, 95%);
+// scss-docs-end variable-gradient
+
+
+$gradient-tabs-bg: linear-gradient(320deg, transparent, rgba($white, .10) 20%, rgba($accent, .20) 35%, rgba($accent, .30) 50%, rgba($accent, .40) 65%);
+
+$gradient-html: radial-gradient(circle at 70% 65%, $white 1%, $primary, $secondary, $accent, $white);
+
+/* Theme Colors */
+$gradient-theme: linear-gradient($primary, $secondary, $accent, $tertiary, transparent);
+$gradient-tertiary: linear-gradient(120deg, $tertiary, white, transparent);
+$gradient-primary: linear-gradient(190deg, $primary, white, transparent);
+$gradient-secondary: linear-gradient(180deg, $secondary, white 33%, transparent 50%);
+$gradient-accent: linear-gradient(290deg, $accent, white, transparent);
+
+@mixin gradient-theme($deg, $theme-color) {
+  background-image: linear-gradient($deg, $theme-color, white, transparent);
+  background-size: cover;
+}
+
+@mixin gradient-background ($theme-color) {
+  background-image: linear-gradient($theme-color, white);
+  background-size: cover;
+}
+
+@mixin gradient-global($gradient) {
+  background-image: $gradient;
+  background-size: cover;
+}

@@ -1,0 +1,23 @@
+// DL - The <dl> HTML element represents a description list. The element encloses a list of groups of terms (specified using the dt element) and descriptions (provided by dd elements). Common uses for this element are to implement a glossary or to display metadata (a list of key-value pairs).
+
+dl,
+menu,
+ol,
+ul {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+dl {
+  margin: 0 0 ($spacer * $x2l);
+  dd {
+    padding-left: $offset * 2;
+  }
+}
+
+// Horizontal description lists w/ grid classes
+.dl-horizontal {
+  margin-right: -$grid-gutter-width;
+  margin-left: -$grid-gutter-width;
+  @include clearfix;
+}

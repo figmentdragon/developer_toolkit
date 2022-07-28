@@ -1,0 +1,77 @@
+// Comment body
+.comment-body {
+  border: 1px solid #EEE;
+  padding: 20px;
+  position: relative;
+  font-size: 15px;
+	margin-bottom: 1.7 * $offset-y;
+	margin-left: 100px;
+
+	> * {
+		margin-top: $offset-y;
+		margin-bottom: $offset-y;
+	}
+
+	.reply {
+    margin-top: 20px;
+    text-align: right;
+    a {
+      font-size: 14px;
+      color: inherit;
+      :hover {
+        color: #df2c45;
+      }
+      :before {
+        content: "\f112 ";
+        font-family: "Fontawesome";
+        margin-right: 6px;        
+      }
+    }
+		.comment-reply-link {
+			-webkit-transition: 120ms ease-in;
+			-o-transition: 120ms ease-in;
+			transition: 120ms ease-in;
+			text-decoration: none;
+		}
+	}
+}
+
+div.comment-body {
+    margin-left: 0;
+}
+
+// Pingbacks & Trackbacks
+.pingback,
+.trackback {
+	.comment-body {
+		padding: 10px 0;
+		margin-top: $offset-y;
+		margin-bottom: $offset-y;
+		 a{
+	    text-decoration: none;
+		 }
+	}
+	a {
+    text-decoration: none;
+	}
+	.url {
+	font-family: $font-primary;
+	}
+}
+
+.comment-respond {
+	margin-top: $offset-y;
+	> * {
+		margin-top: $offset-y;
+		margin-bottom: $offset-y;
+		&:first-child {
+			margin-top: 0;
+		}
+		&:last-child {
+			margin-bottom: 0;
+			&.comment-form {
+				margin-bottom: $offset-y;
+			}
+		}
+	}
+}

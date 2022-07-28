@@ -1,0 +1,32 @@
+// scss-docs-start black-color-variable
+$light-black : hsl(206, 42%, 93%);
+$black-100 : hsl(0, 0%, 75%);
+$black-200 : hsl(0, 0%, 60%);
+$black-300 : hsl(0, 0%, 48%);
+$black-400 : hsl(0, 0%, 38%);
+$black-500 : hsl(0, 0%, 31%);
+$black-600 : hsl(0, 0%, 24%);
+$black-700 : hsl(0, 0%, 20%);
+$black-800 : hsl(0, 0%, 16%);
+$black-900 : hsl(0, 0%, 10%);
+$black : hsl(120, 100%, 0%);
+// scss-docs-end black-color-variable
+
+$text-dark: $black-800; // used in YIQ color contrast
+$text-light: $black-200; // used in YIQ color contrast
+
+// fusv-disable
+// scss-docs-start black-colors-map
+$blacks: ();
+$blacks: map-merge(('100': $black-100,
+    '200': $black-200,
+    '300': $black-300,
+    '400': $black-400,
+    '500': $black-500,
+    '600': $black-600,
+    '700': $black-700,
+    '800': $black-800,
+    '900': $black-900,
+    'black': $black),
+  $blacks);
+// scss-docs-end black-colors-map

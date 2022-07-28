@@ -2,10 +2,10 @@
 /**
  * The template used for displaying slider
  *
- * @package TheCreativityArchitect
+ * @package themename
  */
 
-$quantity     = get_theme_mod( 'TheCreativityArchitect_slider_number', 4 );
+$quantity     = get_theme_mod( 'themename_slider_number', 4 );
 $no_of_post   = 0; // for number of posts
 $post_list    = array(); // list of valid post/page ids
 
@@ -17,12 +17,12 @@ $args = array(
 //Get valid number of posts
 
 for ( $i = 1; $i <= $quantity; $i++ ) {
-	$TheCreativityArchitect_post_id = '';
+	$themename_post_id = '';
 
-	$TheCreativityArchitect_post_id = get_theme_mod( 'TheCreativityArchitect_slider_page_' . $i );
+	$themename_post_id = get_theme_mod( 'themename_slider_page_' . $i );
 
-	if ( $TheCreativityArchitect_post_id && '' !== $TheCreativityArchitect_post_id ) {
-		$post_list = array_merge( $post_list, array( $TheCreativityArchitect_post_id ) );
+	if ( $themename_post_id && '' !== $themename_post_id ) {
+		$post_list = array_merge( $post_list, array( $themename_post_id ) );
 
 		$no_of_post++;
 	}
@@ -43,12 +43,12 @@ while ( $loop->have_posts() ) :
 
 	$classes = 'post post-' . get_the_ID() . ' hentry slides';
 
-	$slider_logo = get_theme_mod( 'TheCreativityArchitect_slider_logo_image_' . ( absint( $loop ->current_post ) + 1 ) );
+	$slider_logo = get_theme_mod( 'themename_slider_logo_image_' . ( absint( $loop ->current_post ) + 1 ) );
 
 	?>
 	<article class="<?php echo esc_attr( $classes ); ?>">
 		<div class="hentry-inner">
-			<?php TheCreativityArchitect_post_thumbnail( 'TheCreativityArchitect-slider', 'html', true, true ); ?>
+			<?php themename_post_thumbnail( 'themename-slider', 'html', true, true ); ?>
 			
 			<div class="entry-container">
 				<div class="content-wrapper">

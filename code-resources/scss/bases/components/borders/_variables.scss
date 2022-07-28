@@ -1,0 +1,28 @@
+/* ____________________________________ BORDERS */
+$border-width                    : 2px !default;
+$border-radi                     : .45rem !default;
+$border-style     : solid !default;
+$border-color     : mix($border, black, $border-percentage);
+
+  $border-widths: (
+    1: 1px,
+    2: 2px,
+    3: 3px,
+    4: 4px,
+    5: 5px
+  );
+
+  $xs-border-width: $border-width * $size-xs;
+  $sm-border-width: $border-width * $size-sm; /* 1.75 */
+  $md-border-width: $border-width * $size-md;
+  $lg-border-width: $border-width * $size-lg;
+  $xl-border-width: $border-width * $size-xl;
+
+  $focus-border-width: $border-width * $size-xxl;
+
+/* Border Radius */
+$sm-border-radius:      $border-radi * $size-sm;
+$md-border-radius:      $border-radi * $size-md;
+$lg-border-radius:      $border-radi * $size-lg;
+$xl-border-radius:      $border-radi * $size-xl;
+$xxl-border-radius:     $border-radi * $size-xxl;

@@ -1,0 +1,39 @@
+// Embedded content
+// In addition to regular multimedia content, HTML can include a variety of other content, even if it's not always easy to interact with.
+
+// Embed - The <embed> HTML element embeds external content at the specified point in the document. This content is provided by an external application or other source of interactive content such as a browser plug-in.
+
+// iFrame - The <iframe> HTML element represents a nested browsing context, embedding another HTML page into the current one.
+
+// Object - The <object> HTML element represents an external resource, which can be treated as an image, a nested browsing context, or a resource to be handled by a plugin.
+
+embed,
+iframe,
+object,
+video {
+  border: 0;
+  max-width: 100%;
+  vertical-align: middle;
+  p > & {
+  }
+}
+
+
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+iframe {
+  border: 0;
+  max-width: 100%;
+}
+
+
+p > embed,
+p > iframe,
+p > object,
+p > video {
+  margin-bottom: 0;
+}

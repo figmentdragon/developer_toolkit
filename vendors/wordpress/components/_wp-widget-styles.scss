@@ -1,0 +1,22 @@
+/* =Widgets
+----------------------------------------------- */
+
+
+.widget-area { /* All of the sidebar container divs get this common class */
+}
+
+.widget-title { }
+
+@import "widgets/widget-archives";
+@import "widgets/widget-calendar";
+@import "widgets/widget-categories";
+@import "widgets/widget-cloud";
+@import "widgets/widget-links";
+@import "widgets/widget-menu";
+@import "widgets/widget-meta";
+@import "widgets/widget-pages";
+@import "widgets/widget-recent-comments";
+@import "widgets/widget-recent-entries";
+@import "widgets/widget-rss";
+@import "widgets/widget-search";
+@import "widgets/widget-text";

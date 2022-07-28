@@ -13,11 +13,11 @@
 
 	<?php
 	// Right-aligned Image.
-	ca_display_scaffolding_section(
+	display_scaffolding_section(
 		[
 			'title'       => 'Numeric Pagination',
 			'description' => 'Display numeric pagination.',
-			'usage'       => 'ca_display_numeric_pagination()',
+			'usage'       => 'display_numeric_pagination()',
 			'output'      => '
 				<nav class="pagination-container">
 					<a class="prev page-numbers" href="#>&laquo;</a>

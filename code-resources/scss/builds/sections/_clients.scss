@@ -1,0 +1,33 @@
+/*--------------------------------------------------------------------------
+CLient Section Start
+----------------------------------------------------------------------------*/
+
+.client-slider {
+    margin: 0;
+}
+.client-slider .client-sub {
+    width: 20%;
+    float: left;
+    padding: 15px;
+}
+.client-slider .client-sub:hover{
+    opacity: 0.8;
+}
+.client-sub-inner {
+    height: 120px;
+    text-align: center;
+    width: 100%;
+    display: table;
+    background: #FFF;
+}
+.client-sub-inner img {
+    max-height: 120px;
+    padding: 10px;
+}
+.client-table-outer {
+    display: table-cell;
+    vertical-align: middle;
+}
+.client-table-outer a {
+    display: block;
+}

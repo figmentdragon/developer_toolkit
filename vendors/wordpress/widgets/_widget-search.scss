@@ -1,0 +1,60 @@
+/* Search widget */
+#searchsubmit {
+	display: none;
+}
+
+#searchform {}
+.widget_search {
+  #s {  }
+}
+
+.search-form{
+  position: relative;
+  right: 0;
+  top: 0;
+}
+.search-form label{
+  position: relative;
+  height: 32px;
+  padding: 0 2px;
+  z-index: 1;
+  margin: 0;
+}
+.search-form label:before {
+  position: absolute;
+  top: 6px;
+  right: 0;
+  z-index: 20;
+  font: normal normal normal 14px/1 FontAwesome;
+  content: "\f002";
+  speak: never;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.widget input[type=search].search-field {
+    width: -webkit-calc(100% - 35px);
+    width: calc(100% - 35px);
+}
+.widget button.search-submit {
+    padding: 0;
+    width: 35px;
+}
+
+.search-submit {
+    border-radius: 0 2px 2px 0;
+    bottom: 0;
+	height: 37px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 42px;
+}
+
+.widget_search .icon {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+}

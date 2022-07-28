@@ -1,0 +1,39 @@
+/* THEME */
+
+
+@mixin gradient-chocolate {
+  background-image: $gradient-chocolate;
+  background-size: cover;
+  height: 100vh;
+};
+
+@mixin gradient-primary {
+  background-image: $gradient-primary;
+  background-size: cover;
+};
+
+@mixin gradient-secondary {
+  background-image: $gradient-secondary;
+  background-size: cover;
+};
+
+@mixin gradient-accent {
+  background-image: $gradient-accent;
+  background-size: cover;
+};
+
+@mixin linear-gradient($color, $color2, $color3) {
+  background-image: linear-gradient(
+  290deg,
+  transparent,
+  rgba($white, .3) 40%,
+  rgba($color3, .5) 35%
+  rgba($color2, 0.4) 25%,
+  rgba($color2, 0.5) 40%,
+  rgba($color, 0.6) 45%,
+  rgba($color, 0.7) 55%,
+  rgba($color, 0.8) 65%,
+  rgba($color, 0.9) 80%,
+  rgba($color, 1) 90%
+  );
+}

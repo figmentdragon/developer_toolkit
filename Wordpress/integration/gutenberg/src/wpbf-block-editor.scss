@@ -1,0 +1,53 @@
+// Config
+@import "../../../../assets/scss/config/config";
+@import "../../../../assets/scss/main/blocks";
+
+.block-editor-block-styles {
+	.block-editor-block-preview__content {
+		.notice {
+			display: inline-block;
+
+			&.is-style-full-width {
+				display: block;
+			}
+		}
+	}
+}
+
+/* Notices */
+.notice {
+	background: $base-color-alt;
+	border: 2px solid $base-color;
+	padding: 5px $padding-small;
+	border-radius: 4px;
+	margin-bottom: $margin;
+	font-weight: 700;
+}
+
+// Notice modifier (warning)
+.notice-warning {
+	background: rgba($yellow,.1);
+	border-color: $yellow;
+	color: $yellow;
+}
+
+// Notice modifier (error)
+.notice-error {
+	background: rgba($red,.1);
+	border-color: $red;
+	color: $red;
+}
+
+// Notice modifier (success)
+.notice-success {
+	background: rgba($green,.1);
+	border-color: $green;
+	color: $green;
+}
+
+// Notice modifier (primary)
+.notice-primary {
+	background: rgba($blue,.1);
+	border-color: $blue;
+	color: $blue;
+}

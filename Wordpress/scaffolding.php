@@ -14,7 +14,7 @@
  *
  * @param array $args The scaffolding defaults.
  */
-function creativitydisplay_scaffolding_section( $args = [] ) {
+function ca_display_scaffolding_section( $args = [] ) {
 	// Set defaults.
 	$defaults = [
 		'title'       => '', // The scaffolding title.
@@ -29,7 +29,7 @@ function creativitydisplay_scaffolding_section( $args = [] ) {
 	$args = wp_parse_args( $args, $defaults );
 
 	// Grab our allowed tags.
-	$allowed_tags = creativityscaffolding_allowed_html();
+	$allowed_tags = ca_scaffolding_allowed_html();
 
 	// Add a unique class to the wrapper.
 	$class = 'scaffolding-' . str_replace( ' ', '-', strtolower( $args['title'] ) ); ?>
@@ -40,7 +40,7 @@ function creativitydisplay_scaffolding_section( $args = [] ) {
 			<?php if ( $args['title'] ) : ?>
 			<header class="scaffolding-document-header display-flex flex-start space-between accordion-item-header">
 				<h3 class="scaffolding-document-title accordion-item-title"><?php echo esc_html( $args['title'] ); ?></h3>
-				<button type="button" class="scaffolding-button"><?php esc_html_e( 'Details', 'creativityarchitect' ); ?></button>
+				<button type="button" class="scaffolding-button"><?php esc_html_e( 'Details', 'themename' ); ?></button>
 			</header><!-- .scaffolding-document-header -->
 			<?php endif; ?>
 
@@ -49,19 +49,19 @@ function creativitydisplay_scaffolding_section( $args = [] ) {
 				<div class="scaffolding-document-details">
 
 				<?php if ( $args['description'] ) : ?>
-					<p><strong><?php esc_html_e( 'Description', 'creativityarchitect' ); ?>:</strong></p>
+					<p><strong><?php esc_html_e( 'Description', 'themename' ); ?>:</strong></p>
 					<p class="scaffolding-document-description"><?php echo esc_html( $args['description'] ); ?></p>
 				<?php endif; ?>
 
 				<?php if ( $args['parameters'] ) : ?>
-					<p><strong><?php esc_html_e( 'Parameters', 'creativityarchitect' ); ?>:</strong></p>
+					<p><strong><?php esc_html_e( 'Parameters', 'themename' ); ?>:</strong></p>
 					<?php foreach ( $args['parameters'] as $key => $value ) : ?>
 						<p><code><?php echo esc_html( $key ); ?></code> <?php echo esc_html( $value ); ?></p>
 					<?php endforeach; ?>
 				<?php endif; ?>
 
 				<?php if ( $args['arguments'] ) : ?>
-					<p><strong><?php esc_html_e( 'Arguments', 'creativityarchitect' ); ?>:</strong></p>
+					<p><strong><?php esc_html_e( 'Arguments', 'themename' ); ?>:</strong></p>
 					<?php foreach ( $args['arguments'] as $key => $value ) : ?>
 						<p><code><?php echo esc_html( $key ); ?></code> <?php echo esc_html( $value ); ?></p>
 					<?php endforeach; ?>
@@ -72,12 +72,12 @@ function creativitydisplay_scaffolding_section( $args = [] ) {
 				<div class="scaffolding-document-usage">
 
 				<?php if ( $args['usage'] ) : ?>
-					<p><strong><?php esc_html_e( 'Usage', 'creativityarchitect' ); ?>:</strong></p>
+					<p><strong><?php esc_html_e( 'Usage', 'themename' ); ?>:</strong></p>
 					<pre><?php echo esc_html( $args['usage'] ); ?></pre>
 				<?php endif; ?>
 
 				<?php if ( $args['output'] ) : ?>
-					<p><strong><?php esc_html_e( 'HTML Output', 'creativityarchitect' ); ?>:</strong></p>
+					<p><strong><?php esc_html_e( 'HTML Output', 'themename' ); ?>:</strong></p>
 					<pre><?php echo esc_html( $args['output'] ); ?></pre>
 				<?php endif; ?>
 
@@ -104,7 +104,7 @@ function creativitydisplay_scaffolding_section( $args = [] ) {
  *
  * @return array The allowed tags and attributes.
  */
-function creativityscaffolding_allowed_html() {
+function ca_scaffolding_allowed_html() {
 	// Add additional HTML tags to the wp_kses() allowed html filter.
 	return array_merge(
 		wp_kses_allowed_html( 'post' ),
@@ -164,7 +164,7 @@ function creativityscaffolding_allowed_html() {
  *
  * @param array $args The array of colors or fonts.
  */
-function creativitydisplay_global_scaffolding_section( $args = [] ) {
+function ca_display_global_scaffolding_section( $args = [] ) {
 	// Set defaults.
 	$defaults = [
 		'global_type' => '', // Can be 'colors' or 'fonts'.
@@ -243,7 +243,7 @@ function creativitydisplay_global_scaffolding_section( $args = [] ) {
  *
  * @author Carrie Forde
  */
-function creativityhook_theme_scaffolding() {
+function ca_hook_theme_scaffolding() {
 	$template_dir = 'template-parts/scaffolding/scaffolding';
 
 	get_template_part( $template_dir, 'globals' );
@@ -255,4 +255,4 @@ function creativityhook_theme_scaffolding() {
 	get_template_part( $template_dir, 'elements' );
 }
 
-add_action( 'creativityscaffolding_content', 'creativityhook_theme_scaffolding' );
+add_action( 'ca_scaffolding_content', 'ca_hook_theme_scaffolding' );

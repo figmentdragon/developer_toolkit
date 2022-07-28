@@ -1,0 +1,46 @@
+// scss-docs-start table-variant
+$table-bg-scale: 80%;
+$table-hover-bg-factor: .075;
+$table-striped-bg-factor: .05;
+$table-active-bg-factor: .1;
+$table-border-factor: .1;
+// scss-docs-start table-loop
+$table-variants: (
+  'primary': shift-color($default, $table-bg-scale),
+  'secondary': shift-color($default-light, $table-bg-scale),
+  'accent': shift-color($default-accent, $table-bg-scale),
+  'tertiary': shift-color($default-dark, $table-bg-scale),
+  'success': shift-color($success, $table-bg-scale),
+  'info': shift-color($info, $table-bg-scale),
+  'warning': shift-color($warning, $table-bg-scale),
+  'danger': shift-color($danger, $table-bg-scale),
+  'light': $light,
+  'dark': $dark);
+// scss-docs-end table-loop
+
+
+@each $key, $color in $table-variants {
+  .table-#{$key} {
+    $background: mix(white, $color, $color-interval);
+    $color: color-contrast(opaque($color, $gray-200));
+    $hover-bg: mix($color, $background, percentage($table-hover-bg-factor));
+    $striped-bg: mix($color, $background, percentage($table-striped-bg-factor));
+    $active-bg: mix($color, $background, percentage($table-active-bg-factor));
+    $border-color: mix($color, $background, percentage($table-border-factor));
+
+    --#{$default-prefix}table-color: #{$color};
+    --#{$default-prefix}table-bg: #{$gray-200};
+    --#{$default-prefix}table-border-color: #{$border-color};
+    --#{$default-prefix}table-striped-bg: #{$striped-bg};
+    --#{$default-prefix}table-striped-color: #{color-contrast($striped-bg)};
+    --#{$default-prefix}table-active-bg: #{$active-bg};
+    --#{$default-prefix}table-active-color: #{color-contrast($active-bg)};
+    --#{$default-prefix}table-hover-bg: #{$hover-bg};
+    --#{$default-prefix}table-hover-color: #{color-contrast($hover-bg)};
+
+    color: var(--#{$default-prefix}table-color);
+    border-color: var(--#{$default-prefix}table-border-color);
+  }
+}
+
+// scss-docs-end table-variant

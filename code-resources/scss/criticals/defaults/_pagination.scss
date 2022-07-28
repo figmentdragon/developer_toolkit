@@ -1,0 +1,41 @@
+// Pagination
+
+// scss-docs-start pagination-variables
+$pagination-offset-y:              .375rem;
+$pagination-offset-x:              .75rem;
+$pagination-offset-y-sm:           .25rem;
+$pagination-offset-x-sm:           .5rem;
+$pagination-offset-y-lg:           .75rem;
+$pagination-offset-x-lg:           1.5rem;
+
+$pagination-font-size:              $base-font-size;
+
+$pagination-color:                  var(--#{$prefix}link-color);
+$pagination-bg:                     $white;
+$pagination-border-radius:          $border-radius;
+$pagination-border-width:           $border-width;
+$pagination-margin-start:           calc($pagination-border-width * -1); // stylelint-disable-line function-disallowed-list
+$pagination-border-color:           $gray-300;
+
+$pagination-focus-color:            var(--#{$prefix}link-hover-color);
+$pagination-focus-bg:               $gray-200;
+$pagination-focus-box-box-shadow:       $input-btn-focus-box-shadow;
+$pagination-focus-outline:          0;
+
+$pagination-hover-color:            var(--#{$prefix}link-hover-color);
+$pagination-hover-bg:               $gray-200;
+$pagination-hover-border-color:     $gray-300;
+
+$pagination-active-color:           $component-active-color;
+$pagination-active-bg:              $component-active-bg;
+$pagination-active-border-color:    $pagination-active-bg;
+
+$pagination-disabled-color:         $gray-600;
+$pagination-disabled-bg:            $white;
+$pagination-disabled-border-color:  $gray-300;
+
+$pagination-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+$pagination-border-radius-sm:       $sm-border-radius;
+$pagination-border-radius-lg:       $lg-border-radius;
+// scss-docs-end pagination-variables

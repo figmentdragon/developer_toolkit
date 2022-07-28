@@ -1,0 +1,23 @@
+// Body The <body> HTML element represents the content of an HTML document. There can be only one <body> element in a document.
+
+// Settings for the `<body>` element.
+
+@import './../../../critical/defaults/typography/body';
+
+// scss-docs-start reboot-body-rules
+body {
+  margin: 0;
+  font-family: var(--#{$prefix}main-font);
+  @include font-size(var(--#{$prefix}body-font-size));
+  font-weight: var(--#{$prefix}body-font-weight);
+  line-height: var(--#{$prefix}body-line-height);
+  color: var(--#{$prefix}body-color);
+  text-align: var(--#{$prefix}body-text-align);;
+  word-spacing: 1px;
+  background-color: var(--#{$prefix}body-bg); // 2
+  -webkit-text-size-adjust: 100%; // 3
+  -webkit-tap-highlight-color: rgba($black, 0); // 4
+
+  text-size-adjust: none;
+}
+// scss-docs-end reboot-body-rules

@@ -2,30 +2,39 @@
 /**
  * Template Name: Blank Page Template
  *
- * Template for displaying a blank page.
- *
- * @package creativity
+
  */
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
+
+//get_header();
+
+//microheader
 ?>
-<!DOCTYPE html>
+<!doctype html>
 <html <?php language_attributes(); ?>>
-<head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<?php wp_head(); ?>
-</head>
-<body>
-	<?php
-	while ( have_posts() ) {
-		the_post();
-		get_template_part( 'loop-templates/content', 'blank' );
-	}
-	wp_footer();
-	?>
-</body>
-</html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- wp_head begin -->
+    <?php wp_head(); ?>
+    <!-- wp_head end -->
+  </head>
+  <body <?php body_class(); ?> >
+    <?php wp_body_open(); ?>  
+ <?php 
+//end microheader
+
+
+if ( have_posts() ) : 
+    while ( have_posts() ) : the_post();
+        the_content();
+    endwhile;
+else :
+    _e( 'Sorry, no posts matched your criteria.', 'textdomain' );
+endif;
+
+get_footer();

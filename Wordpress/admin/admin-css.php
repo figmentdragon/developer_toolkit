@@ -33,7 +33,7 @@ function my_custom_admin_css() {
         text-transform: uppercase;
         color: red !important;
     }
-    .edit-post-layout__meta_boxes:not(:empty) .edit-post-meta-boxes-area {
+    .edit-post-layout__metaboxes:not(:empty) .edit-post-meta-boxes-area {
         margin: auto 0px !important;
     }
   </style>';

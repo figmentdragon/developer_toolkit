@@ -1,6 +1,6 @@
 <?php
 /**
- * themename Theme Options
+ * Creativity Architect Theme Options
  *
  */
 
@@ -74,276 +74,281 @@ add_action('admin_menu', 'themename_theme_options_add_page');
  * Add theme specific contextual help
  */
 function themename_theme_options_help() {
-  $help = '<p>' . __('Few notes about these Theme Options:', 'themename') . '</p>' .
-  '<p>' . __('Page and Post layout settings overwrite these Theme Option settings.', 'themename') . '</p>' .
-  '<p>' . __('Comment settings in Theme Options overwrite the individual Page and Post settings:', 'themename') . '</p>' .
-  '<p>' . __('Remember to click "Save Changes" to save any changes you have made to the theme options.', 'themename') . '</p>';
-  $sidebar = '<p><strong>' . __('For more information:', 'themename') . '</strong></p>' .
-  '<p>' . __('<a href="http://codex.wordpress.org/Appearance_Theme_Options_Screen" target="_blank">Documentation on Theme Options</a>', 'themename') . '</p>' .
-  '<p>' . __('<a href="http://wordpress.org/support/" target="_blank">Support Forums</a>', 'themename') . '</p>';
-  $screen = get_current_screen();
-  if (method_exists($screen, 'add_help_tab')) {
-    $screen->add_help_tab(array(
-      'title' => __('Overview', 'themename'),
-      'id' => 'theme-options-help',
-      'content' => $help,
-    ));
-    $screen->set_help_sidebar($sidebar);
-  }
+
+    $help = '<p>' . __('Few notes about these Theme Options:', 'themename') . '</p>' .
+            '<p>' . __('Page and Post layout settings overwrite these Theme Option settings.', 'themename') . '</p>' .
+            '<p>' . __('Comment settings in Theme Options overwrite the individual Page and Post settings:', 'themename') . '</p>' .
+            '<p>' . __('Remember to click "Save Changes" to save any changes you have made to the theme options.', 'themename') . '</p>';
+
+    $sidebar = '<p><strong>' . __('For more information:', 'themename') . '</strong></p>' .
+            '<p>' . __('<a href="http://codex.wordpress.org/Appearance_Theme_Options_Screen" target="_blank">Documentation on Theme Options</a>', 'themename') . '</p>' .
+            '<p>' . __('<a href="http://wordpress.org/support/" target="_blank">Support Forums</a>', 'themename') . '</p>';
+
+    $screen = get_current_screen();
+
+    if (method_exists($screen, 'add_help_tab')) {
+        $screen->add_help_tab(array(
+            'title' => __('Overview', 'themename'),
+            'id' => 'theme-options-help',
+            'content' => $help,
+        ));
+
+        $screen->set_help_sidebar($sidebar);
+    }
 }
 
 /**
  * returns an array of layout options
  */
 function themename_layouts() {
-  $layout_options = array(
-    'content-sidebar' => array(
-      'value' => 'content-sidebar',
-      'label' => __('Content on left', 'themename'),
-      'thumbnail' => get_template_directory_uri() . '/images/content-sidebar.png'
-    ),
-    'sidebar-content' => array(
-      'value' => 'sidebar-content',
-      'label' => __('Content on right', 'themename'),
-      'thumbnail' => get_template_directory_uri() . '/images/sidebar-content.png'
-    ),
-    'content' => array(
-      'value' => 'content',
-      'label' => __('One-column, no sidebar', 'themename'),
-      'thumbnail' => get_template_directory_uri() . '/images/content.png'
-    )
-  );
-  return apply_filters('themename_layouts', $layout_options);
+    $layout_options = array(
+        'content-sidebar' => array(
+            'value' => 'content-sidebar',
+            'label' => __('Content on left', 'themename'),
+            'thumbnail' => get_template_directory_uri() . '/images/content-sidebar.png'
+        ),
+        'sidebar-content' => array(
+            'value' => 'sidebar-content',
+            'label' => __('Content on right', 'themename'),
+            'thumbnail' => get_template_directory_uri() . '/images/sidebar-content.png'
+        ),
+        'content' => array(
+            'value' => 'content',
+            'label' => __('One-column, no sidebar', 'themename'),
+            'thumbnail' => get_template_directory_uri() . '/images/content.png'
+        )
+    );
+    return apply_filters('themename_layouts', $layout_options);
 }
 
 /**
  * return default theme options
  */
 function themename_get_default_theme_options() {
-  $default_theme_options = array(
-    'phone' => '',
-    'address' => '',
-    'twitter' => '',
-    'facebook' => '',
-    'googleplus' => '',
-    'instagram' => '',
-    'youtube' => '',
-    'pinterest' => '',
+    $default_theme_options = array(
+        'phone' => '',
+        'address' => '',
+        'twitter' => '',
+        'facebook' => '',
+        'googleplus' => '',
+        'instagram' => '',
+        'youtube' => '',
+        'pinterest' => '',
 		'whatsapp' => '',
-    'theme_layout' => 'content-sidebar',
-    'page_comments' => 'on',
-    'post_comments' => 'on',
-    'footer_copyright' => __('Copyright', 'themename') . ' &copy; ' . date("Y") . ' <a href="' . site_url() . '">' . get_bloginfo('name') . '</a>',
-    'footer_text' => sprintf(__('Proudly powered by %s', 'themename'), '<a href="http://wordpress.org">WordPress</a>'),
-    'footer_analytics' => ''
-  );
-  return apply_filters('themename_default_theme_options', $default_theme_options);
+        'theme_layout' => 'content-sidebar',
+        'page_comments' => 'on',
+        'post_comments' => 'on',
+        'footer_copyright' => __('Copyright', 'themename') . ' &copy; ' . date("Y") . ' <a href="' . site_url() . '">' . get_bloginfo('name') . '</a>',
+        'footer_text' => sprintf(__('Proudly powered by %s', 'themename'), '<a href="http://wordpress.org">WordPress</a>'),
+        'footer_analytics' => ''
+    );
+    return apply_filters('themename_default_theme_options', $default_theme_options);
 }
 
 /**
  * @return array of theme options
  */
 function themename_get_theme_options() {
-  return get_option('themename_theme_options', themename_get_default_theme_options());
+    return get_option('themename_theme_options', themename_get_default_theme_options());
 }
 
 /**
  * render the phone settings
  */
 function themename_settings_field_phone() {
-  $options = themename_get_theme_options();
-  ?>
-  <input type="text" class="large-text" id="contact-phone" name="themename_theme_options[phone]" value="<?php echo esc_attr($options['phone']); ?>" />
-  <?php
+    $options = themename_get_theme_options();
+    ?>
+    <input type="text" class="large-text" id="contact-phone" name="themename_theme_options[phone]" value="<?php echo esc_attr($options['phone']); ?>" />
+    <?php
 }
 
 /**
  * render the address settings
  */
 function themename_settings_field_address() {
-  $options = themename_get_theme_options();
-  ?>
-  <input type="text" class="large-text" id="contact-address" name="themename_theme_options[address]" value="<?php echo esc_attr($options['address']); ?>" />
-  <?php
+    $options = themename_get_theme_options();
+    ?>
+    <input type="text" class="large-text" id="contact-address" name="themename_theme_options[address]" value="<?php echo esc_attr($options['address']); ?>" />
+    <?php
 }
 
 /**
  * render the twitter settings
  */
 function themename_settings_field_twitter() {
-  $options = themename_get_theme_options();
-  ?>
-  <input type="text" class="large-text" id="social-twitter" name="themename_theme_options[twitter]" value="<?php echo esc_attr($options['twitter']); ?>" />
-  <?php
+    $options = themename_get_theme_options();
+    ?>
+    <input type="text" class="large-text" id="social-twitter" name="themename_theme_options[twitter]" value="<?php echo esc_attr($options['twitter']); ?>" />
+    <?php
 }
 
 /**
  * render the facebook settings
  */
 function themename_settings_field_facebook() {
-  $options = themename_get_theme_options();
-  ?>
-  <input type="text" class="large-text" id="social-facebook" name="themename_theme_options[facebook]" value="<?php echo esc_attr($options['facebook']); ?>" />
-  <?php
+    $options = themename_get_theme_options();
+    ?>
+    <input type="text" class="large-text" id="social-facebook" name="themename_theme_options[facebook]" value="<?php echo esc_attr($options['facebook']); ?>" />
+    <?php
 }
 
 /**
  * render the google+ settings
  */
 function themename_settings_field_googleplus() {
-  $options = themename_get_theme_options();
-  ?>
-  <input type="text" class="large-text" id="social-googleplus" name="themename_theme_options[googleplus]" value="<?php echo esc_attr($options['googleplus']); ?>" />
-  <?php
+    $options = themename_get_theme_options();
+    ?>
+    <input type="text" class="large-text" id="social-googleplus" name="themename_theme_options[googleplus]" value="<?php echo esc_attr($options['googleplus']); ?>" />
+    <?php
 }
 
 /**
  * render the instagram settings
  */
 function themename_settings_field_instagram() {
-  $options = themename_get_theme_options();
-  ?>
-  <input type="text" class="large-text" id="social-instagram" name="themename_theme_options[instagram]" value="<?php echo esc_attr($options['instagram']); ?>" />
-  <?php
+    $options = themename_get_theme_options();
+    ?>
+    <input type="text" class="large-text" id="social-instagram" name="themename_theme_options[instagram]" value="<?php echo esc_attr($options['instagram']); ?>" />
+    <?php
 }
 
 /**
  * render the youtube settings
  */
 function themename_settings_field_youtube() {
-  $options = themename_get_theme_options();
-  ?>
-  <input type="text" class="large-text" id="social-youtube" name="themename_theme_options[youtube]" value="<?php echo esc_attr($options['youtube']); ?>" />
-  <?php
+    $options = themename_get_theme_options();
+    ?>
+    <input type="text" class="large-text" id="social-youtube" name="themename_theme_options[youtube]" value="<?php echo esc_attr($options['youtube']); ?>" />
+    <?php
 }
 
 /**
  * render the pinterest settings
  */
 function themename_settings_field_pinterest() {
-  $options = themename_get_theme_options();
-  ?>
-  <input type="text" class="large-text" id="social-pinterest" name="themename_theme_options[pinterest]" value="<?php echo esc_attr($options['pinterest']); ?>" />
-  <?php
+    $options = themename_get_theme_options();
+    ?>
+    <input type="text" class="large-text" id="social-pinterest" name="themename_theme_options[pinterest]" value="<?php echo esc_attr($options['pinterest']); ?>" />
+    <?php
 }
 
 /**
  * render the whatsapp settings
  */
 function themename_settings_field_whatsapp() {
-  $options = themename_get_theme_options();
-  ?>
-  <input type="text" class="large-text" id="social-whatsapp" name="themename_theme_options[whatsapp]" value="<?php echo esc_attr($options['whatsapp']); ?>" />
-  <?php
+    $options = themename_get_theme_options();
+    ?>
+    <input type="text" class="large-text" id="social-whatsapp" name="themename_theme_options[whatsapp]" value="<?php echo esc_attr($options['whatsapp']); ?>" />
+    <?php
 }
 
 /**
  * render the default layout setting field
  */
 function themename_settings_field_layout() {
-  $options = themename_get_theme_options();
-  foreach (themename_layouts() as $layout):
-    ?>
-    <div class="layout image-radio-option theme-layout">
-      <label class="description">
-        <input type="radio" name="themename_theme_options[theme_layout]"
-        value="<?php echo esc_attr($layout['value']); ?>" <?php checked($options['theme_layout'], $layout['value']); ?> />
-        <span>
-          <img src="<?php echo esc_url($layout['thumbnail']); ?>" width="136" height="122" alt="" />
-          <?php echo $layout['label']; ?>
-        </span>
-      </label>
-    </div>
-    <?php
-  endforeach;
+    $options = themename_get_theme_options();
+    foreach (themename_layouts() as $layout):
+        ?>
+        <div class="layout image-radio-option theme-layout">
+            <label class="description">
+                <input type="radio" name="themename_theme_options[theme_layout]"
+                       value="<?php echo esc_attr($layout['value']); ?>" <?php checked($options['theme_layout'], $layout['value']); ?> />
+                <span>
+                    <img src="<?php echo esc_url($layout['thumbnail']); ?>" width="136" height="122" alt="" />
+                    <?php echo $layout['label']; ?>
+                </span>
+            </label>
+        </div>
+        <?php
+    endforeach;
 }
 
 /**
  * returns an array of layout options
  */
 function themename_comment_options() {
-  $comment_options = array(
-    'page-comments' => array(
-      'key' => 'page_comments',
-      'label' => __('Show Comments on Pages', 'themename')
-    ),
-    'post-comments' => array(
-      'key' => 'post_comments',
-      'label' => __('Show Comments on Posts', 'themename')
-    )
-  );
-  return apply_filters('themename_comment_options', $comment_options);
+    $comment_options = array(
+        'page-comments' => array(
+            'key' => 'page_comments',
+            'label' => __('Show Comments on Pages', 'themename')
+        ),
+        'post-comments' => array(
+            'key' => 'post_comments',
+            'label' => __('Show Comments on Posts', 'themename')
+        )
+    );
+    return apply_filters('themename_comment_options', $comment_options);
 }
 
 /**
  * render the default comments setting field
  */
 function themename_settings_field_comments() {
-  $options = themename_get_theme_options();
-  foreach (themename_comment_options() as $comment):
-    ?>
-    <div class="commnet checkbox-input theme-comment">
-      <label class="description">
-        <input type="checkbox" name="themename_theme_options[<?php echo esc_attr($comment['key']) ?>]"
-        <?php checked($options[$comment['key']], 'on'); ?>  />
-        <span>
-          <?php echo $comment['label']; ?>
-        </span>
-      </label>
-    </div>
-    <?php
-  endforeach;
+    $options = themename_get_theme_options();
+    foreach (themename_comment_options() as $comment):
+        ?>
+        <div class="commnet checkbox-input theme-comment">
+            <label class="description">
+                <input type="checkbox" name="themename_theme_options[<?php echo esc_attr($comment['key']) ?>]"
+                       <?php checked($options[$comment['key']], 'on'); ?>  />
+                <span>
+                    <?php echo $comment['label']; ?>
+                </span>
+            </label>
+        </div>
+        <?php
+    endforeach;
 }
 
 /**
  * render the footer copyright settings field
  */
 function themename_settings_field_footer_copyright() {
-  $options = themename_get_theme_options();
-  ?>
-  <input type="text" class="large-text" id="footer-copyright" name="themename_theme_options[footer_copyright]" value="<?php echo esc_attr($options['footer_copyright']); ?>" />
-  <?php
+    $options = themename_get_theme_options();
+    ?>
+    <input type="text" class="large-text" id="footer-copyright" name="themename_theme_options[footer_copyright]" value="<?php echo esc_attr($options['footer_copyright']); ?>" />
+    <?php
 }
 
 /**
  * render the footer text settings field
  */
 function themename_settings_field_footer_text() {
-  $options = themename_get_theme_options();
-  ?>
-  <input type="text" class="large-text" id="footer-text" name="themename_theme_options[footer_text]" value="<?php echo esc_attr($options['footer_text']); ?>" />
-  <?php
+    $options = themename_get_theme_options();
+    ?>
+    <input type="text" class="large-text" id="footer-text" name="themename_theme_options[footer_text]" value="<?php echo esc_attr($options['footer_text']); ?>" />
+    <?php
 }
 
 /**
  * render the footer Analytics Javascript
  */
 function themename_settings_field_footer_analytics() {
-  $options = themename_get_theme_options();
-  ?>
-  <textarea class="large-text" rows="5" id="footer-analytics" name="themename_theme_options[footer_analytics]"/><?php echo esc_attr($options['footer_analytics']); ?></textarea>
-  <?php
+    $options = themename_get_theme_options();
+    ?>
+    <textarea class="large-text" rows="5" id="footer-analytics" name="themename_theme_options[footer_analytics]"/><?php echo esc_attr($options['footer_analytics']); ?></textarea>
+    <?php
 }
 
 /**
  * @return rendered options page
  */
 function themename_theme_options_render_page() {
-  ?>
-  <div class="wrap">
-    <?php screen_icon(); ?>
-    <?php $theme_name = wp_get_theme(); ?>
-    <h2><?php printf(__('%s Options', 'themename'), $theme_name); ?></h2>
-      <?php settings_errors(); ?>
-      <form method="post" action="options.php">
-        <?php
-          settings_fields('themename_options');
-          do_settings_sections('theme_options');
-          submit_button();
-        ?>
-    </form>
-  </div>
-  <?php
+    ?>
+    <div class="wrap">
+        <?php screen_icon(); ?>
+        <?php $theme_name = wp_get_theme(); ?>
+        <h2><?php printf(__('%s Options', 'themename'), $theme_name); ?></h2>
+        <?php settings_errors(); ?>
+        <form method="post" action="options.php">
+            <?php
+            settings_fields('themename_options');
+            do_settings_sections('theme_options');
+            submit_button();
+            ?>
+        </form>
+    </div>
+    <?php
 }
 
 /**
@@ -404,14 +409,3 @@ function themename_theme_options_validate($input) {
 
     return apply_filters('themename_theme_options_validate', $output, $input, $defaults);
 }
-
-/**
- * Execute Analytics code further down the page
- * @link https://codex.wordpress.org/Plugin_API/Action_Reference/wp_footer
- */
-function themename_theme_options_render_analytics() {
-    $options = themename_get_theme_options();
-    echo $options['footer_analytics'];
-}
-
-add_action('wp_footer', 'themename_theme_options_render_analytics', 100);

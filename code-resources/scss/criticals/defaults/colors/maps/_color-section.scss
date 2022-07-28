@@ -1,0 +1,10 @@
+// Sections
+$section-colors: ();
+$section-colors: map-merge((
+  "primary":      $default,
+  "secondary":    $neu-secondary,
+  "gray":         $gray-400,
+  "white":        $white,
+  "dark":         $dark,
+  "black":        $black
+), $section-colors);

@@ -13,7 +13,7 @@
 
 	<?php
 		// Theme colors.
-		ca_display_global_scaffolding_section(
+		display_global_scaffolding_section(
 			[
 				'global_type' => 'colors',
 				'title'       => 'Colors',
@@ -28,7 +28,7 @@
 		);
 
 		// Theme fonts.
-		ca_display_global_scaffolding_section(
+		display_global_scaffolding_section(
 			[
 				'global_type' => 'fonts',
 				'title'       => 'Fonts',

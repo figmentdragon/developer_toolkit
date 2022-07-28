@@ -1,18 +1,26 @@
 /**
  * Scripts within the customizer controls window.
  *
- * Adds a warning to the Theme Layout Settings section.
+ * Contextually shows the navbar type setting and informs the preview
+ * when users open or close the front page sections section.
  */
 
  (function() {
 	wp.customize.bind( 'ready', function() {
 		// Only show the navbar type setting when running Bootstrap 5.
-		wp.customize.section( 'understrap_theme_layout_options').notifications.add( 'example-warning', new wp.customize.Notification(
-			'example-warning',
-			{
-				type: 'warning',
-				message: 'You are currently using an Understrap child theme, which may override some of these settings.'
-			}
-		) );
+		wp.customize( 'understrap_bootstrap_version', function( setting ) {
+			wp.customize.control( 'understrap_navbar_type', function( control ) {
+				var visibility = function() {
+					if ( 'bootstrap5' === setting.get() ) {
+						control.container.slideDown( 180 );
+					} else {
+						control.container.slideUp( 180 );
+					}
+				};
+
+				visibility();
+				setting.bind( visibility );
+			});
+		});
 	});
 })();

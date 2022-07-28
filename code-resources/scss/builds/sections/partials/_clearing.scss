@@ -1,0 +1,21 @@
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+
+.clearfix:before,
+.clearfix:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.nav-links:after,
+.nav-links:before {
+    content: '';
+    display: table;
+}
+.clearfix:after,
+.site-header:after,
+.site-content:after,
+.nav-links:after {
+    clear: both;
+}

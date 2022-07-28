@@ -1,0 +1,17 @@
+
+.hr-light {
+  border-top: 1px solid $hr-light;
+}
+
+.hr-dark {
+  border-top: 1px solid $hr-dark;
+}
+
+.vr {
+  display: inline-block;
+  align-self: stretch;
+  width: 1px;
+  min-height: 1em;
+  background-color: currentColor;
+  opacity: $hr-opacity;
+}

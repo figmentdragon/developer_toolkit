@@ -15,57 +15,6 @@
  * @link http://adambrown.info/p/wp_hooks
  */
 
-add_filter('excerpt_length', 'themename_excerpt_length');
-add_filter('excerpt_more', 'themename_excerpt_more');
-add_filter('body_class', 'themename_body_classes');
-add_filter('wp_title', 'themename_wp_title', 10, 2);
-add_filter('the_content', 'themename_anchor_content_h2');
-add_filter('the_content', 'themename_replace_ptags_around_images_with_figure');
-add_filter('the_content', 'themename_remove_ptags_around_embeds');
-add_filter('img_caption_shortcode', 'themename_img_caption_shortcode_filter', 10, 3);
-add_filter('comment_form_defaults', 'themename_remove_comment_allowed_tags_notes');
-add_filter('post_class', 'themename_remove_hentry_from_homepage');
-add_filter( 'embed_oembed_html', 'creatvity_embed_html', 10, 2 );
-add_filter( 'video_embed_html', 'creatvity_embed_html', 10, 2 ); // Jetpack
-add_filter( 'document_title_separator', 'themename_remove_sep_home_notagline', 99 );
-add_filter( 'nav_menu_link_attributes', 'themename_schema_url', 10 );
-add_filter( 'post_comments_feed_link', 'primary_post_comments_feed_link');
-add_filter( 'wp_enqueue_scripts', 'themename_defer_scripts', 10, 3 );
-add_filter( 'document_title_separator', 'themename_document_title_separator' );
-// This theme uses its own gallery styles.
-add_filter( 'use_default_gallery_style', '__return_false');
-add_filter( 'the_title', 'themename_title' );
-add_filter( 'post_comments_feed_link', 'primary_post_comments_feed_link');
-add_filter( 'avatar_defaults', 'themenamegravatar' ); // Custom Gravatar in Settings > Discussion
-add_filter( 'body_class', 'add_slug_to_body_class' ); // Add slug to body class (Starkers build)
-add_filter( 'widget_text', 'do_shortcode' ); // Allow shortcodes in Dynamic Sidebar
-add_filter( 'widget_text', 'shortcode_unautop' ); // Remove <p> tags in Dynamic Sidebars (better!)
-add_filter( 'wp_nav_menu_args', 'my_wp_nav_menu_args' ); // Remove surrounding <div> from WP Navigation
-// add_filter( 'nav_menu_css_class', 'my_css_attributes_filter', 100, 1 ); // Remove Navigation <li> injected classes (Commented out by default)
-// add_filter( 'nav_menu_item_id', 'my_css_attributes_filter', 100, 1 ); // Remove Navigation <li> injected ID (Commented out by default)
-// add_filter( 'page_css_class', 'my_css_attributes_filter', 100, 1 ); // Remove Navigation <li> Page ID's (Commented out by default)
-add_filter( 'the_category', 'remove_category_rel_from_category_list' ); // Remove invalid rel attribute
-add_filter( 'the_excerpt', 'shortcode_unautop' ); // Remove auto <p> tags in Excerpt (Manual Excerpts only)
-add_filter( 'the_excerpt', 'do_shortcode' ); // Allows Shortcodes to be executed in Excerpt (Manual Excerpts only)
-add_filter( 'excerpt_more', 'themename_view_article' ); // Add 'View Article' button instead of [...] for Excerpts
-add_filter( 'show_admin_bar', 'remove_admin_bar' ); // Remove Admin bar
-add_filter( 'style_loader_tag', 'themename_style_remove' ); // Remove 'text/css' from enqueued stylesheet
-add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10 ); // Remove width and height dynamic attributes to thumbnails
-add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 ); // Remove width and height dynamic attributes to post images
-add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 ); // Remove width and height dynamic attributes to post images
-add_filter( 'document_title_separator', 'themename_remove_sep_home_notagline', 99 );
-
-// fix title issue when no tagline exists
-function themename_remove_sep_home_notagline($sep) {
-	$tagline = get_bloginfo( 'description', 'display' );
-	if (is_home() && strlen(trim($tagline)) == 0) {
-		return '';
-	} else {
-		return $sep;
-	}
-}
-
-
 /**
  * Set Excerpt length in words
  * @param int $length
@@ -75,12 +24,18 @@ function themename_remove_sep_home_notagline($sep) {
 function themename_excerpt_length($length) {
     return 23; // Just for Jordan
 }
+
+add_filter('excerpt_length', 'themename_excerpt_length');
+
 /**
  *  add ... and return excerpt more
  */
 function themename_excerpt_more($more) {
     return ' &hellip;';
 }
+
+add_filter('excerpt_more', 'themename_excerpt_more');
+
 if (!function_exists('themename_the_attached_image')) :
 
     /**
@@ -92,7 +47,7 @@ if (!function_exists('themename_the_attached_image')) :
     function themename_the_attached_image() {
         $post = get_post();
         /**
-         * Filter the default themename attachment size.
+         * Filter the default Creativity Architect attachment size.
          *
          *
          * @param array $dimensions {
@@ -143,6 +98,7 @@ if (!function_exists('themename_the_attached_image')) :
 
 endif;
 
+
 /**
  * Create a nicely formatted and more specific title element text for output
  * in head of document, based on current view.
@@ -171,6 +127,8 @@ function themename_wp_title($title, $sep) {
     return $title;
 }
 
+add_filter('wp_title', 'themename_wp_title', 10, 2);
+
 // This function adds nice anchor with id attribute to our h2 tags for reference
 // Ref: http://www.w3.org/TR/html4/struct/links.html#h-12.2.3
 function themename_anchor_content_h2($content) {
@@ -189,6 +147,8 @@ function themename_anchor_content_h2($content) {
             , $content);
     return $content;
 }
+
+add_filter('the_content', 'themename_anchor_content_h2');
 
 /**
  * Filter <p> tags wrapping images
@@ -212,6 +172,8 @@ function themename_replace_ptags_around_images_with_figure($content) {
     return $content;
 }
 
+add_filter('the_content', 'themename_replace_ptags_around_images_with_figure');
+
 /**
  * Filter <p> tags wrapping iframes and other embed elements
  * I know, I know.. Just following WordPress Coding Standards
@@ -225,6 +187,8 @@ function themename_remove_ptags_around_embeds($content) {
     $content = preg_replace('/<p.*?>\s?(<iframe .*>*.<\/iframe>)\s*<\/p>/iU', '\1', $content);
     return $content;
 }
+
+add_filter('the_content', 'themename_remove_ptags_around_embeds');
 
 /**
  * Improves the caption shortcode with HTML5 figure & figcaption; microdata & wai-aria attributes
@@ -257,6 +221,8 @@ function themename_img_caption_shortcode_filter($val, $attr, $content = null) {
     return '<figure id="' . $id . '" aria-describedby="figcaption_' . $id . '" class="wp-caption ' . esc_attr($align) . '">' . do_shortcode($content) . '<figcaption id="figcaption_' . $id . '" class="wp-caption-text" itemprop="description" style="width: ' . (0 + (int) $width) . 'px">' . $caption . '</figcaption></figure>';
 }
 
+add_filter('img_caption_shortcode', 'themename_img_caption_shortcode_filter', 10, 3);
+
 /**
  * Remove the text - 'You may use these <abbr title="HyperText Markup
  * Language">HTML</abbr> tags ...'
@@ -265,10 +231,13 @@ function themename_img_caption_shortcode_filter($val, $attr, $content = null) {
  * @return array    Returns the $defaults array.
  * @link http://wordpress.org/support/topic/remove-html-tags-and-attributes?replies=35#post-2429820
  */
+
 function themename_remove_comment_allowed_tags_notes($defaults) {
     $defaults['comment_notes_after'] = '';
     return $defaults;
 }
+
+add_filter('comment_form_defaults', 'themename_remove_comment_allowed_tags_notes');
 
 /**
  * Remove 'hentry' from post_class()
@@ -281,106 +250,4 @@ function themename_remove_hentry_from_homepage($class) {
     return $class;
 }
 
-/*  Add responsive container to embeds
-/* ------------------------------------ */
-function creatvity_embed_html( $html, $url ) {
-
-	$host = wp_parse_url($url, PHP_URL_HOST);
-	if (strpos($host, 'youtu.be') == false || strpos($host, 'youtube.com') == false) {
-		return '<div class="video_fit_container">' . $html . '</div>';
-	}
-	if (strpos($host, 'vimeo.com') == false) {
-		return '<div class="video_fit_container">' . $html . '</div>';
-	}
-  return $html;
-}
-
-function themename_filter_lazyload_images( $content, $type = 'ratio' ) {
-
-        if ( is_feed()
-            || intval( get_query_var( 'print' ) ) == 1
-            || intval( get_query_var( 'printpage' ) ) == 1
-            || strpos( $_SERVER['HTTP_USER_AGENT'], 'Opera Mini' ) == false
-						|| ('themename_lazyload_image_banner') == false
-        ) {
-            return $content;
-        }
-
-        $respReplace = 'data-sizes="auto" data-srcset=';
-
-        $matches = array();
-        $skip_images_regex = '/class=".*lazyload.*"/';
-        $skip_images_regex2 = "/class='.*lazyload.*'/";
-        $placeholder_image = apply_filters( 'lazysizes_placeholder_image',
-            'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' );
-        preg_match_all( '/<img\s+.*?>/', $content, $matches );
-
-        $search = array();
-        $replace = array();
-
-        foreach ( $matches[0] as $imgHTML ) {
-
-            // Don't to the replacement if a skip class is provided and the image has the class.
-            if ( ! ( preg_match( $skip_images_regex, $imgHTML ) ) && ! ( preg_match( $skip_images_regex2, $imgHTML ) ) ) {
-							preg_match( '/width="(.*?)"/', $imgHTML, $matchesWidth);
-							preg_match( '/height="(.*?)"/', $imgHTML, $matchesHeight);
-								if ($matchesWidth && $matchesHeight) {
-									$placeholder_image = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 ".$matchesWidth[1]." ".$matchesHeight[1]."'%3E%3C/svg%3E";
-								} else {
-									preg_match( "/width='(.*?)'/", $imgHTML, $matchesWidth);
-									preg_match( "/height='(.*?)'/", $imgHTML, $matchesHeight);
-									if ($matchesWidth && $matchesHeight) {
-										$placeholder_image = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 ".$matchesWidth[1]." ".$matchesHeight[1]."'%3E%3C/svg%3E";
-									}
-								}
-                $replaceHTML = preg_replace( '/<img(.*?)src=/i',
-                    '<img$1src=' . $placeholder_image . ' data-src=', $imgHTML );
-
-                $replaceHTML = preg_replace( '/srcset=/i', $respReplace, $replaceHTML );
-								$newClass = ('lazyload ' . 'themename_lazyload_effect');
-
-								$pattern1 = "/class='([^']*)'/";
-								$pattern2 = '/class="([^"]*)"/';
-				        // Class attribute set.
-				        if ( preg_match( $pattern1, $replaceHTML, $matches ) ) {
-				            $definedClasses = explode( ' ', $matches[1] );
-				            if ( ! in_array( $newClass, $definedClasses ) ) {
-				                $definedClasses[] = $newClass;
-				                $replaceHTML = str_replace(
-				                    $matches[0],
-				                    sprintf( 'class="%s"', implode( ' ', $definedClasses ) ),
-				                    $replaceHTML
-				                );
-				            }
-				        // Class attribute not set.
-							} else if ( preg_match( $pattern2, $replaceHTML, $matches ) ) {
-				            $definedClasses = explode( ' ', $matches[1] );
-				            if ( ! in_array( $newClass, $definedClasses ) ) {
-				                $definedClasses[] = $newClass;
-				                $replaceHTML = str_replace(
-				                    $matches[0],
-				                    sprintf( 'class="%s"', implode( ' ', $definedClasses ) ),
-				                    $replaceHTML
-				                );
-				            }
-				        // Class attribute not set.
-				        } else {
-				            $replaceHTML = preg_replace( '/(\<.+\s)/', sprintf( '$1class="%s" ', $newClass ), $replaceHTML );
-				        }
-
-
-                $replaceHTML .= '<noscript>' . $imgHTML . '</noscript>';
-
-                array_push( $search, $imgHTML );
-                array_push( $replace, $replaceHTML );
-            }
-        }
-
-        $content = str_replace( $search, $replace, $content );
-
-        return $content;
-    }
-		if ('themename_lazyload_image_banner' == true ) {
-			add_filter( 'the_content', 'themename_filter_lazyload_images', 99 );
-			apply_filters( 'widget_custom_html_content', 'themename_filter_lazyload_images' );
-		}
+add_filter('post_class', 'themename_remove_hentry_from_homepage');

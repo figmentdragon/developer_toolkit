@@ -1,0 +1,71 @@
+//WORDPRESS BODY CLASSES - style a page via class
+//If, for example, you would like to style your search results page in a specific way you can use the “search-results” class to add your styling. WordPress only adds this class to the body tag when the search results page is active so it doesn’t affect any other pages.
+
+
+.admin-bar {
+     /* # Only in admin bar */
+ }
+
+.archive {}                       /* For # Month, Year, Category, Author, Post Type archive */
+
+.attachment {}                    /* attatchment page */
+	.attachmentid-1 {}              /* individual attatchment page (i.e. body.attachmentid-763) */
+	.attachment-mime-type {}        /* style mime type pages */
+
+.author {}                        /* # author page */
+	.author-nicename {}             /* user nicename (i.e. body.author-samueladams) */
+	.author-paged-1 {}              /* paged author archives (i.e. body.author-paged-4) for page 4 */
+
+.blog {}                          /* blog template page */
+
+.category {}                      /* category page */
+	.category-1 {}                  /* individual category page (i.e. body.category-6) */
+	.category-paged-1 {}            /* replace the number to the corresponding page number */
+  .category-%slug-{}
+  .category-%cat_class-{}
+
+.custom-background {}                  /* # If theme support 'custom-background' or get_background_image ) */
+
+.date {}                          /* date archive page */
+	.date-paged-1 {}                /* replace the number to the corresponding page number */
+
+.error404 {}                      /* 404 page */
+
+.home { /* home page */
+  outline: 2px solid red;
+  position: relative;
+  margin: 1vh .75vw 1vh .75vw;
+  padding: 2vh .75vw 2vh 2vw;
+}
+
+.logged-in {}                     /* if user is logged in */
+
+.paged {}                         /* paged items like search results or archives */
+	.paged-1 {}                     /* individual paged (i.e. body.paged-3) */
+
+.page-template {}                 /* custom page template page */
+	.page-template-page-php {}      /* individual page template (i.e. body.page-template-contact-php */
+	.page-paged-1 {}                /* replace the number to the corresponding page number */
+	.page-parent {}                 /* parent page template */
+	.page-child {}                  /* child page template */
+	.parent-pageid-1 {}             /* replace the number to the corresponding page number */
+
+.rtl {}                           /* for sites that are read right to left (i.e. hebrew) */
+
+.search {}                        /* search page */
+	.search-results {}              /* search result page */
+	.search-no-results {}           /* no results search page */
+	.search-paged-1 {}              /* individual paged search (i.e. body.search-paged-3) */
+
+.single {}                        /* single post page */
+	.postid-1 {}                    /* individual post page by id (i.e. body.postid-73) */
+	.single-paged-1 {}              /* individual paged single (i.e. body.single-paged-3) */
+  .single-format-%post_format-{}
+  .single-format-standard {}
+
+.tag {}                           /* tag page */
+	.tag-slug {}                    /* individual tag page (i.e. body.tag-news) */
+	.tag-paged-1 {}                 /* replace the number to the corresponding page number */
+
+.tax {}
+.term {}

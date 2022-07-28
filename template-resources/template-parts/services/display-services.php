@@ -2,23 +2,23 @@
 /**
  * The template for displaying services content
  *
- * @package creativity
+ * @package creativityarchitect
  */
 
-$enable_content = get_theme_mod( 'creativity_service_option', 'disabled' );
+$enable_content = get_theme_mod( 'creativityarchitect_service_option', 'disabled' );
 
-if ( ! creativity_check_section( $enable_content ) ) {
+if ( ! creativityarchitect_check_section( $enable_content ) ) {
 	// Bail if services content is disabled.
 	return;
 }
 
-$creativity_title = get_option( 'ect_service_title', esc_html__( 'We design & build brands', 'creativity' ) );
+$creativityarchitect_title = get_option( 'ect_service_title', esc_html__( 'We design & build brands', 'creativityarchitect' ) );
 $sub_title    = get_option( 'ect_service_content' );
 
 $classes[] = 'services-section';
 $classes[] = 'section';
 
-if ( ! $creativity_title && ! $sub_title ) {
+if ( ! $creativityarchitect_title && ! $sub_title ) {
 	$classes[] = 'no-section-heading';
 }
 
@@ -27,11 +27,11 @@ if ( ! $creativity_title && ! $sub_title ) {
 <div id="services-section" class="<?php echo esc_attr( implode( ' ', $classes ) ); ?>">
 	<div class="wrapper">
 		<div class="service-content-area">
-			<?php if ( $creativity_title || $sub_title ) : ?>
+			<?php if ( $creativityarchitect_title || $sub_title ) : ?>
 				<div class="section-heading-wrapper">
-					<?php if ( $creativity_title ) : ?>
+					<?php if ( $creativityarchitect_title ) : ?>
 						<div class="section-title-wrapper">
-							<h2 class="section-title"><?php echo wp_kses_post( $creativity_title ); ?></h2>
+							<h2 class="section-title"><?php echo wp_kses_post( $creativityarchitect_title ); ?></h2>
 						</div><!-- .page-title-wrapper -->
 					<?php endif;  
 

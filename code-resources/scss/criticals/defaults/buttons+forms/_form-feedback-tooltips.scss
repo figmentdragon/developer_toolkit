@@ -1,0 +1,11 @@
+@import './../../defaults/tooltip';
+
+// Form tooltips must come after regular tooltips
+// scss-docs-start tooltip-feedback-variable
+$form-feedback-tooltip-offset-y:     $tooltip-offset-y !default;
+$form-feedback-tooltip-offset-x:     $tooltip-offset-x !default;
+$form-feedback-tooltip-font-size:     $tooltip-font-size !default;
+$form-feedback-tooltip-line-height:   null !default;
+$form-feedback-tooltip-opacity:       $tooltip-opacity !default;
+$form-feedback-tooltip-border-radius: $tooltip-border-radius !default;
+// scss-docs-end tooltip-feedback-variable

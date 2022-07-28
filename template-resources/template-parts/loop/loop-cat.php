@@ -3,7 +3,7 @@
  * This template displays the archive loop.
  *
  * @package Portfolio
- * @since TheCreativityArchitect 1.0
+ * @since TheThemeName 1.0
  */
 
 ?>

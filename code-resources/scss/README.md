@@ -1,52 +1,18 @@
-# BUILD
-  [] Assets
-    () CSS
-    () JS
-    () Scss Stylesheets
-  [] Inc
-    () Function Sheets
-    () Classes
-    () Plugins
-  [] Scripts
+naked-wordpress
+===============
 
-# DOC
+A well-commented blank Wordpress theme.
 
+### Contributors
+- [@andjosh][0] _(maintainer)_
+  - [Buy Josh a coffee](https://www.buymeacoffee.com/andjosh)!
+- [@kodewilliams][1]
+- [@JohnnyWalkerDesign][2]
+- [@ljllewellyn][3]
+- [@Munnday][4]
 
-
-# MANUAL
-
-
-# TOOLKIT
-### Library of resources
-
-## Code Resources
-  [] Sass/Scss Library
-    () Mixins
-    () Helpers
-    () Style Elements
-      + Colors
-        - Gradients
-        - Shadows
-      + Typography
-        - Buttons + Forms
-        - Lists / Menus
-        - Links
-        - Headings
-        - Tables
-    () Base Elements
-    () Components
-    () Pages
-      + Layout
-      + Sections
-    () Grid
-  [] Js
-  [] Variables
-  [] Utilities
-  [] Functions
-
-## TEMPLATES
-  [] HTML Templates
-  [] WP / PHP Templates
-    () Template Parts
-  [] Layout Templates
-  [] Stylesheet Templates
+[0]: https://github.com/andjosh
+[1]: https://github.com/kodewilliams
+[2]: https://github.com/JohnnyWalkerDesign
+[3]: https://github.com/ljllewellyn
+[4]: https://github.com/Munnday

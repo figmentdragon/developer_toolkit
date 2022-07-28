@@ -1,0 +1,37 @@
+*:focus {
+    outline: 0;
+}
+
+@import "forms/mixins_forms/button";
+@import "forms/mixins_forms/form";
+@import "forms/mixins_forms/label";
+@import "forms/mixins_forms/placeholder";
+
+@import "forms/form-control";
+@import "forms/form-floating";
+@import "forms/form-label";
+@import "forms/form-range";
+@import "forms/form-select";
+@import "forms/form-validation";
+
+
+/**
+ * Form utility classes
+ */
+
+.form--inline {
+  .form__group {
+      display: inline-block;
+  }
+}
+
+.form {
+  .form__group {
+    display: block;
+    margin-bottom: $base-spacing-unit;
+    .form__label {
+        display: block;
+        margin-bottom: ($base-spacing-unit / 2);
+    }
+  }
+}

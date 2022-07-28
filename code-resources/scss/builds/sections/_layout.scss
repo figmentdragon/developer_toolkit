@@ -1,0 +1,57 @@
+.#{$default-prefix}-gutter {
+  --ca-gutter-x: #{$default-prefix}gutter-x;
+}
+
+.#{$default-prefix}-layout {
+
+  @include media-breakpoint-up(lg) {
+    display: grid;
+    grid-template-areas: "sidebar main";
+    grid-template-columns: 1fr 5fr;
+    gap: $grid-gutter-width;
+  }
+}
+
+.#{$default-prefix}-sidebar {
+  grid-area: sidebar;
+}
+
+.#{$default-prefix}-main {
+  grid-area: main;
+
+  @include media-breakpoint-down(lg) {
+    max-width: 760px;
+    margin-inline: auto;
+  }
+
+  @include media-breakpoint-up(md) {
+    display: grid;
+    grid-template-areas:
+      "intro"
+      "toc"
+      "content";
+    grid-template-rows: auto auto 1fr;
+    gap: inherit;
+  }
+
+  @include media-breakpoint-up(lg) {
+    grid-template-areas:
+      "intro   toc"
+      "content toc";
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 4fr 1fr;
+  }
+}
+
+.#{$default-prefix}-intro {
+  grid-area: intro;
+}
+
+.#{$default-prefix}-toc {
+  grid-area: toc;
+}
+
+.#{$default-prefix}-content {
+  grid-area: content;
+  min-width: 1px; // Fix width when bd-content contains a `<pre>` https://github.com/twbs/bootstrap/issues/25410
+}

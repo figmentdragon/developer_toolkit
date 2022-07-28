@@ -4,7 +4,7 @@
  *
  * Renders categories on archives.
  *
- * @package TheCreativityArchitect
+ * @package TheThemeName
  * @subpackage Template Parts
  */
 
@@ -17,7 +17,7 @@ if ( 'post' !== get_post_type() ) {
 
 echo '<p class="footer-categories">';
 
-echo '<span class="categories-title">' . apply_filters( 'categories_title', __( 'Filed under:', 'TheCreativityArchitect' ) ) . '</span> ';
+echo '<span class="categories-title">' . apply_filters( 'categories_title', __( 'Filed under:', 'TheThemeName' ) ) . '</span> ';
 
 echo get_the_category_list( ', ' );
 

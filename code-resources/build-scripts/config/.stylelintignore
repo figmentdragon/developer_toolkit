@@ -1,0 +1,5 @@
+build/
+scss/vendors/
+!.*.js
+node_modules/
+scss/utils/functions/

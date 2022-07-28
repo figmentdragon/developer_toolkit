@@ -1,0 +1,184 @@
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+
+.sticky {
+    display: block;
+}
+.blog .hentry,
+.archive .hentry {
+    padding: 30px;
+    background: #FFF;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+.byline,
+.updated:not(.published) {
+    display: none;
+}
+.single .byline,
+.group-blog .byline {
+    display: inline;
+}
+.page-content,
+.entry-content,
+.entry-summary {
+  @include clearfix;
+  margin: 15px 0 0;
+}
+.page-links {
+    clear: both;
+    margin: 0 0 15px;
+}
+#content {
+    margin-bottom: 70px;
+}
+.page-template-tpl-home #content {
+    margin-bottom: 0;
+}
+#primary {
+    width: 70%;
+    padding: 30px;
+    float: left;
+    background: #FFF;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1)
+}
+.left_sidebar #primary {
+    float: right;
+}
+.no_sidebar #primary {
+    width: auto;
+    float: none;
+}
+.blog #primary,
+.archive #primary {
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+}
+#secondary {
+    width: 28%;
+    float: right;
+}
+.left_sidebar #secondary {
+    float: left;
+}
+#secondary .widget {
+    background: #FFF;
+    padding: 30px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1)
+}
+.widget-area .widget-title {
+    font-size: 22px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.widget-area ul,
+.widget-area ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.widget-area ul ul,
+.widget-area ol ol {
+    border-top: 1px solid #F9F9F9;
+    padding-top: 8px;
+    margin-top: 8px;
+    margin-left: 10px;
+}
+.widget-area li {
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #F9F9F9;
+    line-height: 1.3;
+}
+.widget-area li:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+.widget-area a {
+    color: inherit;
+}
+.widget-area a:hover {
+    color: #df2c45;
+}
+#secondary #search-submit {
+    display: none;
+}
+/*===========Title CSS=================*/
+
+.entry-header {
+    margin: 0 -30px;
+    border-left: 15px solid #df2c45;
+    padding: 5px 30px 5px 15px;
+    margin-bottom: 25px;
+}
+.fp-slide .entry-header {
+    margin: 0 0 40px;
+}
+h1.entry-title {
+    margin: 0 0 5px;
+    font-size: 28px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+}
+h1.entry-title a {
+    color: #444;
+}
+h1.entry-title a:hover,
+h1.entry-title span {
+    color: #df2c45;
+}
+.entry-meta {
+    font-size: 13px;
+    color: #555;
+}
+.entry-meta > span {
+    margin-right: 15px;
+}
+.entry-meta .fa {
+    margin-right: 6px;
+}
+.entry-meta a {
+    color: #555;
+}
+.entry-meta a:hover {
+    color: #df2c45;
+}
+.entry-link {
+    margin-left: -30px;
+}
+.entry-link a {
+    display: inline-block;
+    background: mix($gray-200, $secondary, $color-interval);
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: all 200ms ease-out;
+    text-transform: uppercase;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: bold;
+    line-height: 20px;
+}
+.entry-link a:hover {
+    background: #111;
+}
+.page-header {
+    background: #FFF;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-left: 15px solid #df2c45;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+.page-title {
+    margin: 0;
+}
+.fp-slide h1.entry-title {
+    font-size: 40px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    border-bottom: 0;
+    padding-bottom: 0;
+}

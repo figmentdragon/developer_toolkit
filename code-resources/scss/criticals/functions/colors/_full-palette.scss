@@ -1,0 +1,33 @@
+// Globals
+// Full palette of colors
+@each $name, $color in $colors {
+  @each $color_type, $color_value in $color {
+    @if $color_type=="base" {
+      .#{name} {
+        background-color: $color_value !important;
+      }
+      .#{name}-text {
+        color: $color-value !important;
+      }
+      .rgba-#{$name}-slight,
+      .rgba-#{$name}-slight:after {
+        background-color: rgba($color_value, .1);
+      }
+      .rgba-#{$name}-light,
+      .rgba-#{$name}-light:after {
+        background-color: rgba($color_value, .3);
+      }
+      .rgba-#{$name}-strong,
+      .rgba-#{$name}-strong:after {
+        background-color: rgba($color_value, .7);
+      }
+    }
+    @else {
+      @if $enable_full_palette {
+        .#{$name}.#{$color_type} {
+          background-color: $color_value !important;
+        }
+      }
+    }
+  }
+}

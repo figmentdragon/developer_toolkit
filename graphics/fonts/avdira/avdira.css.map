@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,qDAAqD;AACrD,UAAU;EACT,WAAW,EAAC,QAAQ;EACpB,GAAG,EAAE,oBAAoB,CAAC,aAAa,EACvC,oBAAoB,CAAC,cAAc,EACnC,mBAAmB,CAAC,kBAAkB,EACtC,0BAA0B,CAAC,aAAa;EACxC,WAAW,EAAC,MAAM;EAClB,UAAU,EAAC,MAAM",
+    "sources": [
+        "avdira.scss"
+    ],
+    "names": [],
+    "file": "avdira.css"
+}

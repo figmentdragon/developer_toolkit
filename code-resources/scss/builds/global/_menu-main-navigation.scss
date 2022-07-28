@@ -1,0 +1,157 @@
+/* =Menu
+----------------------------------------------- */
+
+/* Style your navigation menu, which is inside .site-header. A basic drop-down menu structure is provided. */
+
+.main-navigation { /* wraps the entire navigation menu */
+	clear: both;
+	display: block;
+	float: left;
+	font-size: 18px
+	width: 100%;
+	:after { /* Clears the floats after the menu */
+		clear: both;
+		content: "";
+		display: block;
+	}
+}
+
+.main-navigation ul { /* The menu is an unordered list */
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+.main-navigation li { /* Makes the menu "list" items horizontal */
+	float: left;
+	position: relative;
+	font-size: 14px;
+	transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	text-transform: uppercase;
+}
+.main-navigation a { /* The individual list item links */
+	display: block;
+	text-decoration: none;
+	color: #fff;
+	line-height: 60px;
+	padding: 0 20px;
+}
+.main-navigation > ul > li {
+    float: left;
+}
+.main-navigation ul ul { /* Submenu drop-down "box" */
+	box-shadow: 0 3px 3px rgba($shadow,0.2);
+	display: none;
+	float: left;
+	position: absolute;
+			top: 1.5em;
+			left: 0;
+			bottom: 100%;
+			right: 0;
+	z-index: 99999;
+	background: $nav-bg;
+	width: 200px;
+}
+.main-navigation ul ul ul { /* 3rd+ level drop-down "box" */
+	left: 100%;
+	top: 0;
+	right: 100%;
+	bottom: 0;
+}
+.main-navigation ul ul li { /* List items inside the drop-down box */
+}
+.main-navigation ul ul a { /* Menu links inside the drop-down "box" */
+  width: 200px;
+}
+.main-navigation li:hover > ul {
+	display: block;
+}
+.main-navigation li:hover > a,
+.main-navigation li.current_page_item a,
+.main-navigation li.current-menu-item a,
+.main-navigation ul ul a:hover { /* Hover styles for menu items */
+	background: mix(black, $nav-bg, $hover-percentage);
+}
+.main-navigation ul ul:hover > a {
+
+}
+.main-navigation ul li:hover > ul {
+	display: block;
+}
+
+/* Small menu toggle area for screens < 600 pixels wide. The small menu requires some simple JavaScript in order to take affect. See http://themeshaper.com/2012/10/31/the-wordpress-theme-header-template/ for instructions on setting up this script. */
+.menu-toggle {
+    cursor: pointer;
+}
+.main-small-navigation .menu {
+    display: none;
+}
+
+.toogle-wrap {
+    float: left;
+}
+#toggle {
+    display: block;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    padding: 6px;
+    line-height: 50px;
+    margin-top: 5px;
+    pointer-events: none;
+}
+.page-template-tpl-home #toggle {
+    margin-top: -70px;
+    background: rgba(223, 44, 69, 0.8);
+    box-shadow: 0px 0px 0 2px rgba(223, 44, 69, 0.5);
+    pointer-events: auto;
+}
+#toggle div {
+    width: 100%;
+    height: 3px;
+    background: #FFF;
+    margin: 8px auto;
+    transition: all 0.3s;
+    backface-visibility: hidden;
+}
+.site-footer.fp-show #toggle div {
+    -ms-transform: none;
+    -webkit-transform: none;
+    transform: none;
+}
+.site-footer.fp-show #toggle .one {
+    -ms-transform: rotate(45deg) translate(3px, -7px);
+    -webkit-transform: rotate(45deg) translate(3px, -7px);
+    transform: rotate(45deg) translate(3px, -7px);
+    -ms-transform-origin: 0 0;
+    -webkit-transform: 0 0;
+    transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+}
+.site-footer.fp-show #toggle .two {
+    opacity: 0;
+}
+.site-footer.fp-show #toggle .three {
+    -ms-transform: rotate(-45deg) translate(3px, 5px);
+    -webkit-transform: rotate(-45deg) translate(3px, 5px);
+    transform: rotate(-45deg) translate(3px, 5px);
+    -ms-transform-origin: 0 0;
+    -webkit-transform: 0 0;
+    transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+}
+#toggle .two {
+    opacity: 1
+}
+.site-footer.fp-show #toggle {
+    margin-top: 6px;
+    background: none;
+    border: 0;
+    box-shadow: none;
+}
+.fp-viewing-home-home #toggle {
+    display: none;
+}

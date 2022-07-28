@@ -1,0 +1,8 @@
+{
+  "*.json"
+  "node_modules"
+  "*.php"
+  "scss/utils/functions/**"
+  "style.css"
+  "README.md"
+}

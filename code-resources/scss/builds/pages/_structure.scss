@@ -1,0 +1,57 @@
+/* =Structure
+----------------------------------------------- */
+
+/* Refer to the HTML structure graphic (http://themeshaper.com/wp-content/uploads/2012/10/html-visual.png) to see how these elements are nested in the mark-up.
+
+Use this section to set widths and margins, and to build a layout. For examples of layouts that you can copy and paste into this section, see:
+https://github.com/Automattic/_s/blob/master/layouts/
+*/
+
+.site { /* The the outer-most container, wraps the entire site */
+
+}
+.site-header { /* The container for the entire header area */
+
+}
+#page {
+  display: block;
+  margin: 1em;
+}
+
+#main { /* The container for #primary, #secondary, and #tertiary */
+  .widget-area {
+    float: right;
+    overflow: hidden;
+    width: 220px;
+  }
+}
+#primary { /* The container for your primary content.*/
+  float: left;
+  margin: 0 -240px 0 0;
+  width: 100%;
+}
+#content { /* The container for your post and page content. */
+
+}
+#secondary { /* Container for your first widget area */
+
+}
+#tertiary { /* Container for your second widget area */
+
+}
+#colophon {
+  @include clearfix;width: 100%;
+  display: block;
+  width: 100%;
+}
+
+.site-footer { /* Container for the entire site footer area */
+
+}
+
+/* Increase the size of the content area for templates without sidebars */
+.full-width #content,
+.image-attachment #content,
+.error404 #content {
+	margin: 0;
+}

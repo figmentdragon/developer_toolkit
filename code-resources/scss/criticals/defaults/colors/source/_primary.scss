@@ -1,0 +1,18 @@
+$sunglow:    hsl(45, 100%, 60%);
+$silver:     hsl(0, 0%, 75%);
+$chocolate:  hsl(31, 100%, 24%);
+$tiffany:    hsl(178, 90%, 38%);
+
+$primary:    $tiffany;
+$secondary:  $sunglow;
+$accent:     $silver;
+$tertiary:   $chocolate;
+
+$primary-theme-colors: () !default;
+$primary-theme-colors: map-merge((
+'primary': $tiffany,
+'secondary': $sunglow,
+'accent': $silver,
+'tertiary': $chocolate,
+),
+$primary-theme-colors );

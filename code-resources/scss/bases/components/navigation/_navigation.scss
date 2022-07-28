@@ -1,0 +1,215 @@
+/* =Navigation
+----------------------------------------------- */
+
+/* Older/Newer Post Navigation */
+
+.site-content .site-navigation {
+
+}
+.site-content .nav-previous {
+	float: left;
+	width: 50%;
+}
+.site-content .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+nav.nav {
+  position: fixed;
+  top: 10vh;
+  right: 85vw;
+  bottom: 2vh;
+  left: 6vw;
+
+  margin-right: 5vw;
+  margin-left: 0vw;
+
+  padding-top: 4vh;
+  padding-bottom: 4vh;
+
+  overflow: visible;
+  text-align: left;
+
+  ul.primary-menu {
+    margin-left: 0;
+    align-items: center;
+    display: inline;
+    margin-right: 5px;
+
+    li.menu-item {
+      float: left;
+      margin: 5px 10px 0 0;
+
+      a {
+        color: $link-text-active;
+        font-family: 'Raylig';
+        font-size: 1.25vw;
+        font-weight: bolder;
+        text-transform: capitalize;
+        line-height: .5rem;
+
+        :hover {
+          color: $link-text-hover;
+          @include elevation(10);
+          background: white;
+          -webkit-text-stroke-color: $tertiary;
+        }
+      }
+    }
+  }
+  ul.social-links-menu {
+    margin-top: 15vh;
+    margin-bottom: 0;
+    margin-left: 1vw;
+    overflow: visible;
+    writing-mode: vertical-rl;
+    justify-content: flex-end;
+    display: inline-flex;
+    align-items:flex-end;
+
+    li.social-icons {
+      list-style: none;
+      margin: 0;
+      margin-left: .75vw;
+
+      justify-content: center;
+      padding: 0;
+      height: 3rem;
+      width: 3rem;
+      border-radius: 100rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+      a {
+        font-size: 2rem;
+        line-height: .25;
+        transition: 0.3s;
+
+        &:hover {
+          opacity: 1;
+          background: $secondary-bg;
+          color: $link-text-hover;
+          text-decoration: none;
+        }
+      }
+      &:last-child a {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+    float: left;
+    width: 50%;
+}
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+    float: right;
+    text-align: right;
+    width: 50%;
+}
+.navigation.post-navigation {
+    padding: 20px 0 0 0;
+    margin: 0 -30px;
+}
+.navigation.post-navigation a {
+    display: inline-block;
+    position: relative;
+}
+.navigation.post-navigation .nav-label {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    background: #df2c45;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: all 200ms ease-out;
+    text-transform: uppercase;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: bold;
+    line-height: 20px;
+}
+.navigation.post-navigation .nav-label:hover {
+    background: #111;
+}
+.navigation.post-navigation .nav-previous .nav-label:after {
+    float: left;
+    margin: 0 0 0 -7px;
+    padding: 0 7px 0 0;
+    content: "\f104";
+    font-family: "Fontawesome";
+}
+.navigation.post-navigation .nav-next .nav-label:after {
+    float: right;
+    margin: 0 -7px 0 0;
+    padding: 0 0 0 7px;
+    content: "\f105";
+    font-family: "Fontawesome";
+}
+.navigation.post-navigation .nav-title {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    line-height: 20px;
+    padding: 10px;
+    background: #df2c45;
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 200ms ease-out;
+    max-width: 600px;
+    overflow: hidden;
+    opacity: 0;
+    z-index: 1;
+}
+.navigation.post-navigation .nav-previous .nav-title {
+    left: 80%;
+}
+.navigation.post-navigation .nav-previous a:hover .nav-title {
+    left: 100%;
+    opacity: 1;
+}
+.navigation.post-navigation .nav-next .nav-title {
+    right: 80%;
+    text-align: right;
+}
+.navigation.post-navigation .nav-next a:hover .nav-title {
+    right: 100%;
+    opacity: 1;
+}
+.pagination .nav-links {
+    text-align: center;
+}
+.pagination .nav-links span,
+.pagination .nav-links a {
+    background: #df2c45;
+    padding: 10px;
+    margin: 0 2px;
+    color: #FFF;
+    font-size: 13px;
+    display: inline-block;
+    line-height: 1;
+}
+.pagination .nav-links a:hover,
+.pagination .nav-links span.current {
+    background: #111;
+}
+
+@include media-breakpoint-up(lg) {
+    .social-icons {
+        position: absolute;
+        height: 100%;
+        top: 0;
+        right: 2.5rem;
+        width: auto;
+    }
+}

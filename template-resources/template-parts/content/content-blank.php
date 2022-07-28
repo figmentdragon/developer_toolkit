@@ -2,7 +2,7 @@
 /**
  * Blank content partial template
  *
- * @package creativity
+ * @package Understrap
  */
 
 // Exit if accessed directly.

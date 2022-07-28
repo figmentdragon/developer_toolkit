@@ -1,7 +1,7 @@
 <?php
 
 /**
- * themename Title Widget
+ * Creativity Architect Title Widget
  * 
  * Because sometimes all you need is just a title and nothing else.
  * @output <h4>$title</h4>

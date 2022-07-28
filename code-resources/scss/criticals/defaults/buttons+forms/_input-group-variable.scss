@@ -1,0 +1,5 @@
+$input-group-addon-offset: calc($input-offset * .75%);
+$input-group-addon-font-weight: $input-font-weight;
+$input-group-addon-color: mix(black, $input-text, $body-percentage);
+$input-group-addon-bg: mix(white, $input-bg, $background-percentage);
+$input-group-addon-border-color: $input-border;

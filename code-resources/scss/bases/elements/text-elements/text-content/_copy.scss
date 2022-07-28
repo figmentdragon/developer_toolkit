@@ -1,0 +1,33 @@
+// P
+//The <p> HTML element represents a paragraph. Paragraphs are usually represented in visual media as blocks of text separated from adjacent blocks by blank lines and/or first-line indentation, but HTML paragraphs can be any structural grouping of related content, such as images or form fields.
+
+p {
+  text-align:left;
+  font-size: 100%;
+  font-size: $base-font-size;
+  margin-top: 0;
+  margin-bottom: $paragraph-margin-bottom;
+  padding: 1em 3em;
+  line-height: $base-line-height;
+  + p {
+    margin:0;
+    text-indent: 1.5em;
+  }
+  .lead {
+    font-size:150%;
+    margin:1em 0;
+
+    + p {
+      text-indent:0;
+    }
+  }
+  > code {
+    padding:0.25em;
+    background:#eee;
+  }
+  + ul,
+  + ol,
+  + dl {
+    margin-bottom: 1.5em;
+  }
+}

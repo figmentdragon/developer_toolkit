@@ -1,0 +1,29 @@
+
+
+/* Grid Variables */
+$grid-columns         : 16;
+$grid-gutter          : 16px;
+$grid-row-columns     : 16;
+
+$gutter: $grid-gutter;
+
+$gutters: (
+  0: 0,
+  1: $gutter * .25,
+  2: $gutter * .5,
+  3: $gutter,
+  4: $gutter * 1.5,
+  5: $gutter * 3,
+);
+
+$gutter-x: $grid-gutter * 2.5;
+$gutter-y: $grid-gutter;
+
+$default-width: 610px;
+$max-content-width: 1400px - ($grid-gutter * 2);
+$grid-max-width: 1336px + ($grid-gutter * 2);
+
+/* Container offset */
+$container-offset: (2 * $grid-gutter);
+$container-offset-x: $container-offset * .5;
+$container-offset-y: $container-offset;

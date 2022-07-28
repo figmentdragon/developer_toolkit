@@ -60,19 +60,19 @@
 /**
 * Upgred To Pro
 */
-.control-section-themename-pro{
+.control-section-scrollme-pro{
  display: block !important;
 }
-#customize-theme-controls .control-section-themename-pro h3.accordion-section-title {
+#customize-theme-controls .control-section-scrollme-pro h3.accordion-section-title {
    background: #0073aa !important;
    color: #FFF !important;
    border: 0;
 }
-.control-section-themename-pro .accordion-section-title .button {
+.control-section-scrollme-pro .accordion-section-title .button {
    margin-top: -4px;
    margin-left: 8px;
    border: none;
    color: #fff;
    background: #28c503;
-   box-shadow: none;
+   box-box-shadow: none;
 }

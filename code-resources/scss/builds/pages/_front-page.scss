@@ -1,0 +1,23 @@
+#front-page {
+    background: url('assets/images/compdrawing.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100vh;
+    max-height: 100vh;
+    width: 100vw;
+    max-width: 100vw;
+}
+
+.page-template-template-home-page #container {
+    padding-bottom: 0;
+}
+
+.homewrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-sizing: border-box;
+}

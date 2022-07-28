@@ -2,7 +2,9 @@
   font-family: "Euphorigenic";
   font-style: normal;
   font-weight: 400;
-  src: local("Euphorigenic"), url("https://fonts.cdnfonts.com/s/8860/euphorigenic.woff") format("woff");
+  src: local("<?php echo get_stylesheet_directory(); ?>/src/sass/typography/fonts/euphorigenic/EuphorigenicW00Regular.woof") format("woff");
+  src: local("<?php echo get_stylesheet_directory(); ?>/src/sass/typography/fonts/euphorigenic/euphorigenic.woff") format("woff");
+  src: local("<?php echo get_stylesheet_directory(); ?>/src/sass/typography/fonts/euphorigenic/euphorigenic.eot") fosass/typography/at("eot");
+  src: local("<?php echo get_stylesheet_directory(); ?>/src/sass/typography/fonts/euphorigenic/euphorigenic.svg") format("svg");
 }
-
 /*# sourceMappingURL=euphorigenic.css.map */

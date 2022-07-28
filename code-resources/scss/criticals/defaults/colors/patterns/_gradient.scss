@@ -1,0 +1,12 @@
+$gradient: linear-gradient(-120deg, rgba($primary, .95), rgba($secondary, .65), rgba($accent, .45), transparent, 95%);
+
+$gradient-tabs-bg: linear-gradient(320deg, transparent, rgba($white, .10) 20%, rgba($accent, .20) 35%, rgba($accent, .30) 50%, rgba($accent, .40) 65%);
+
+$gradient-chocolate: linear-gradient( 120deg, $brown, $chocolate, $white );
+
+@import "gradients/gradient-theme";
+@import "gradients/gradient-global";
+@import "gradients/mixins/css-gradient";
+@import "gradients/mixins/gradient-global-mixins";
+@import "gradients/mixins/gradient-mixins";
+@import "gradients/mixins/gradient-theme-mixins";

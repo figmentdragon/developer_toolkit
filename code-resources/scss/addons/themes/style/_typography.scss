@@ -1,0 +1,299 @@
+/* ________________________________________________________
+Site Name: CJMT
+Author: CJ Montes-Termini
+
+Stylesheet: CJMT Brand Typography
+
+	= TOC =
+		(1) Font Face (In Your Face)
+		(2) Font Stacks
+		(3) Font Variables
+			- [] Font Families
+			- [] Font Colors
+				- Shadows
+				- Gradients
+				- Stroke Outline
+		(4) Text Level CSS Selectors
+			- [] Text Level
+			- [] Headings
+			- [] Links
+		(5) Text Level HTML Elements
+		(6) Responsive Settings
+
+ _____________________________________________ TYPOGRAPHY */
+
+@import "fonts";
+
+$font-size-root: null;
+$font-size-base: 1.05rem;
+$base-unit: 1.15rem; // Assumes the browser default, typically `16px`
+
+$font-size-sm: calc($font-size-base * 0.875);
+$font-size-md: $font-size-base;
+$font-size-lg: calc($font-size-base * $lg);
+$font-size-xl: calc($font-size-base * $xl);
+$font-size-xxl: calc($font-size-base * $xxl);
+
+$font-weight-lighter: lighter;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$font-weight-bolder: bolder;
+
+$font-weight-base: $font-weight-normal;
+
+$letter-spacing-xs: calc(0.75 * $base-unit-sm) rem;
+$letter-spacing-sm: calc(0.875 * $base-unit-sm) rem;
+$letter-spacing-md: calc(1.05 * $base-unit-sm) rem;
+$letter-spacing-lg: calc(1.25 * $base-unit-sm) rem;
+$letter-spacing-xl: calc(1.5 * $base-unit-sm) rem;
+$letter-spacing-xxl: calc(3 * $base-unit-sm) rem;
+
+$line-height-base: 1.15;
+$line-height-xs: calc(0.75 * $line-height-base) rem;
+$line-height-sm: calc(0.875 * $line-height-base) rem;
+$line-height-md: calc(1.05 * $line-height-base) rem;
+$line-height-lg: calc(1.25 * $line-height-base) rem;
+$line-height-xl: calc(1.5 * $line-height-base) rem;
+$line-height-xxl: calc(3 * $line-height-base) rem;
+
+$line-height-body: $line-height-base;
+
+$heading-base-unit: 1.25vh;
+// scss-docs-end font-variables
+
+// scss-docs-start font-sizes
+$heading-font-sizes: (
+  h1: $heading-base-unit * 5,
+  h2: $heading-base-unit * 4.5,
+  h3: $heading-base-unit * 4,
+  h4: $heading-base-unit * 3.5,
+  h5: $heading-base-unit * 3,
+  h6: $heading-base-unit * 2.5
+);
+// scss-docs-end font-sizes
+
+// scss-docs-start headings-variables
+$headings-margin: $base-unit * 0.5;
+$headings-font-family: null;
+$headings-font-style: null;
+$headings-font-weight: 600;
+$headings-line-height: 1.2;
+$headings-color: null;
+// scss-docs-end headings-variables
+
+// scss-docs-start display-headings
+$display-font-sizes: (
+  1: 5rem,
+  2: 4.5rem,
+  3: 4rem,
+  4: 3.5rem,
+  5: 3rem,
+  6: 2.5rem
+);
+
+$display-weight: 300;
+$display-line-height: $headings-line-height;
+// scss-docs-end display-headings
+
+// scss-docs-start type-variables
+$lead-font-size: $base-unit * 1.25;
+$lead-font-weight: 300;
+
+$small-font-size: sm;
+
+$sub-sup-font-size: xs;
+
+$initialism-font-size: sm;
+
+$blockquote-margin-y: $base-unit;
+$blockquote-font-size: $font-size-base * 2.25;
+$blockquote-footer-color: $silver;
+$blockquote-footer-font-size: md;
+$blockquote-border-color: shade-color($blockquote-footer-color, $border-shade-percentage);
+
+$hr-margin-y: $base-unit;
+$hr-color: inherit;
+$hr-height: $base-unit * 2;
+$hr-opacity: 0.25;
+$hr-border-width: $border-width-md;
+$hr-border-color: $hot-pink;
+
+$legend-margin-bottom: 0.5rem;
+$legend-font-size: xl;
+$legend-font-weight: null;
+
+$mark-padding: 0.2rem;
+
+$dt-font-weight: $font-weight-bold;
+
+$nested-kbd-font-weight: $font-weight-bold;
+
+$list-inline-padding: 0.5rem;
+
+$mark-bg: $gray-300;
+
+$quotation: obalique;
+$citation: italic;
+$link: underline;
+// scss-docs-end type-variables
+
+// Code
+
+$code-font-size: $small-font-size;
+$code-color: $pink;
+$code-bg: $black;
+
+$kbd-padding-y: 0.2rem;
+$kbd-padding-x: 0.4rem;
+$kbd-font-size: $code-font-size;
+$kbd-color: $white;
+$kbd-bg: $gray-900;
+
+$pre-color: null;
+$pre-scrollable-max-height: 340px;
+
+@import "type";
+
+/* TEXT SELECTORS ___ */
+p {
+  -ms-word-wrap: break-word;
+  word-break: break-word; //non-standart css for webkit
+  word-wrap: break-word;
+  // cleaning up the ragged lines and breaks
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  // sets a minimum number of characters before and after the break
+  -webkit-hyphenate-before: 2;
+  -webkit-hyphenate-after: 3;
+  hyphenate-lines: 3;
+  // enabling fancy ligatures when available
+  -webkit-font-feature-settings: "liga", "dlig";
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga", "dlig";
+  -o-font-feature-settings: "liga", "dlig";
+  font-feature-settings: "liga", "dlig";
+}
+
+
+
+a {
+  outline: none !important;
+  font-weight: bold;
+  text-decoration: none;
+
+
+    @include on-event {
+      color: $link-text-hover-color;
+      text-decoration: underline;
+    }
+}
+a:link {
+  color: $link-text-color;
+}
+a:visited {
+  color: shade($link-text-color, $link-visited-shade-percentage);
+}
+a:hover {
+  color: $link-text-hover-color;
+}
+a:active {
+  color: $active-text-color;
+  outline: none;
+}
+
+
+
+p {
+  text-align: left;
+  font-size: 100%;
+  margin: 1em 0 0;
+}
+
+p.lead {
+  font-size: $lead-font-size;
+  margin: 1em 0;
+  font-weight: $lead-font-weight;
+}
+
+p + p {
+  margin: 0;
+  text-indent: 1.5em;
+}
+
+p + ul,
+p + ol,
+p + dl {
+  margin-bottom: 1.5em;
+}
+p.lead + p {
+  text-indent: 0;
+}
+
+
+ul,
+ol,
+dl {
+  text-align: left;
+}
+
+dt {
+  font-weight: bold;
+}
+code {
+  font-family: courier, monospace;
+}
+p > code {
+  padding: 0.25em;
+  background: #eee;
+}
+pre {
+  text-align: left;
+  font-size: 100%;
+}
+hr {
+  height: $hr-height;
+  color: $hr-color;
+  border: 1px solid #eee;
+  margin: 2em 0 $hr-margin-y;
+}
+
+.normal {
+  font-weight: normal;
+}
+.quiet {
+  color: #999;
+}
+.pull-left {
+  float: left;
+  margin: 0.5em 2em 1em 0;
+}
+.pull-right {
+  float: right;
+  margin: 0.5em 0 1em 2em;
+}
+
+/* HTML ELEMENTS _____ */
+
+/* RESPONSIVE SETTINGS */
+@media (max-width: 500px) {
+  body {
+    font-size: 80%;
+  }
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+    float: none !important;
+  }
+}
+
+/* If you want to give a common style to all of the titles in your theme, here's a place to do it (you can style them individually later) */
+.site-title,
+.entry-title,
+.page-title,
+.widget-title,
+.comments-title,
+#reply-title {
+
+}

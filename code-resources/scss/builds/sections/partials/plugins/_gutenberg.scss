@@ -1,0 +1,83 @@
+/*Guttenberg Compatible CSS*/
+.entry-content ol {
+    padding-left: 1.25rem;
+    margin: 0;
+    margin-bottom: 0rem;
+}
+
+.entry-content ol li {
+    position: relative;
+    padding: 5px 0 5px 5px;
+    font-weight: 400;
+    list-style: decimal;
+    line-height: 1.8;
+}
+.entry-content ul li {
+    position: relative;
+    padding: 5px 0 5px 5px;
+    font-weight: 400;
+    list-style: disc;
+}
+.entry-content ul li ul, .entry-content ol li ol {
+    padding-left: 1rem;
+    margin: 0;
+    padding-top: 0;
+    line-height: 1.8;
+}
+
+ul.wp-block-categories.wp-block-categories-list.aligncenter {
+    text-align: center;
+}
+ul.wp-block-categories li{
+    list-style: none;
+}
+
+ul.wp-block-archives.wp-block-archives-list li {
+    list-style: none;
+}
+
+ul.wp-block-archives.wp-block-archives-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+ul.wp-block-gallery.alignnone {
+    margin-left: 0;
+    padding: 0;
+}
+
+.wp-block-gallery .blocks-gallery-item figure {
+    position: relative;
+}
+
+@media (min-width: 750px) {
+
+    .alignfull {
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+        width: auto;
+        max-width: 1000%;
+    }
+    .alignwide {
+        margin-left: calc(25% - 25vw);
+        margin-right: calc(25% - 25vw);
+        width: auto;
+        max-width: 1000%;
+    }
+
+    .left_sidebar  .alignfull,  .left_sidebar  .alignwide,
+    .right_sidebar  .alignfull, .right_sidebar .alignwide{
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+button.btn-transparent-toggle {
+    background: transparent;
+    border: none;
+    float: right;
+}
+button.btn-transparent-toggle:focus {
+    background: transparent;
+    border: none;
+}

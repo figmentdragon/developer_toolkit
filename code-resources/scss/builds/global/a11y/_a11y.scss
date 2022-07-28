@@ -1,0 +1,117 @@
+/* Assistive Tech –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/**
+ * Text meant only for screen readers. It's hidden due to the clip property, but
+ * visible in the page source. If you take a look back in the template files at
+ * the mark-up for our main menu and other navigation areas, you'll notice that
+ * we have headers such as "Menu" and "Site Navigation" wrapped in an
+ * <code>h1</code> tag with a class of "assistive-text". Screen readers will
+ * read this text aloud, making it easier for users to locate structural
+ * sections in your theme.
+ */
+ .assistive-text,
+ .screen-reader-text,
+ .sr-only,
+ .says {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+
+  overflow: hidden;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  word-wrap: normal !important;
+
+  border: 0;
+
+  -webkit-clip-path: inset(50%);
+            clip-path: inset(50%);
+  // Many screen reader and browser combinations announce broken words as they would appear visually.
+    word-break: normal;
+
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000; /* Above WP toolbar */
+  }
+}
+
+#primary[tabindex='-1']:focus {
+  outline: 0;
+}
+
+/* must have higher specificity than alternative color schemes inline styles */
+.skip-link,
+.site .skip-link {
+	background-color: #f1f1f1;
+	box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: 700;
+	left: -9999em;
+	outline: none;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	text-transform: none;
+	top: -9999em;
+
+  :focus {
+    font-size: .875rem;
+    font-weight: 700;
+    line-height: normal;
+
+    z-index: 100000;
+    top: 5px;
+    left: 5px;
+
+    display: block;
+    clip: auto !important;
+
+    width: auto;
+    height: auto;
+    padding: 15px 23px 14px;
+
+    text-decoration: none;
+
+    color: #21759b;
+    border-radius: 3px;
+    background-color: #f1f1f1;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, .6);
+
+    -webkit-clip-path: none;
+            clip-path: none;
+  }
+}
+
+.logged-in .site .skip-link {
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+@media
+  (prefers-reduced-motion)
+{
+    *
+    {
+        transition-delay: 0s !important;
+        transition-duration: 0s !important;
+    }
+}

@@ -1,0 +1,8 @@
+$card-text : shade($body-text, $card-percentage);
+$card-bg:                               tint($accent-bg, $card-percentage);
+$card-shadow:                       shade($card-bg, $shadow-percentage);
+$card-shadow-inset : tint($card-shadow, $muted-percentage);
+
+/* CARD */
+$card-box-shadow: 1.5rem 1.25rem 1.25rem $card-shadow;
+$card-box-shadow-inset: $card-shadow-inset -.25rem -.25rem -.50rem 0px inset, $card-shadow-inset .25rem .25rem .50rem 0px inset;

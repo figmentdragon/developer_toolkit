@@ -1,0 +1,13 @@
+/* Interactive */
+details {
+	display: block;
+}
+
+summary {
+  display: list-item;
+  cursor: pointer;
+}
+
+[hidden] {
+  display: none !important;
+}

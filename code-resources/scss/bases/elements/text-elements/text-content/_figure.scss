@@ -1,0 +1,29 @@
+// Figures
+
+// scss-docs-start figure-variables
+$figure-caption-font-size:          $sm-font-size !default;
+$figure-caption-color:              lighten($primary, $color-interval);
+$figure-caption-border-width: 			$sm-border-width;
+// scss-docs-end figure-variables
+
+figure {
+	border: $sm-border-width solid mix($gray-800, $accent, $color-interval);
+  display: inline-block;
+	padding: 1rem;
+	width: 100%;
+  margin: 1em 40px;
+  img {
+    margin: 0 auto;
+  }
+  figcaption {
+    font-size: $figure-caption-font-size;
+  	margin-top: 0.5rem;
+  	text-align: center;
+  }
+}
+
+figure figcaption {
+	font-size: $figure-caption-font-size;
+	margin-top: 0.5rem;
+	text-align: center;
+}

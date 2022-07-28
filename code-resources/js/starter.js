@@ -3,34 +3,34 @@
 // You have two choices for including Bootstrap's JS files—the whole thing,
 // or just the bits that you need.
 
+import Popper from 'popper.js/dist/popper.js'	// Needs to be included for tooltips and popover
+import Alert from 'bootstrap/js/dist/alert'
+import Button from 'bootstrap/js/dist/button'
+import Carousel from 'bootstrap/js/dist/carousel'
+import Collapse from 'bootstrap/js/dist/collapse'
+import Dropdown from 'bootstrap/js/dist/dropdown'
+import Modal from 'bootstrap/js/dist/modal'
+import Offcanvas from 'bootstrap/js/dist/offcanvas'
+import Popover from 'bootstrap/js/dist/popover'
+import Scrollspy from 'bootstrap/js/dist/scrollspy'
+import Tab from 'bootstrap/js/dist/tab'
+import Toast from 'bootstrap/js/dist/toast'
+import Tooltip from 'bootstrap/js/dist/tooltip'
+import Util from 'bootstrap4/js/src/util'
 
-// Option 1
-//
-// Import Bootstrap's bundle (all of Bootstrap's JS + Popper.js dependency)
-
-// import "../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
-
-
-// Option 2
-//
-// Import just what we need
-
-// If you're importing tooltips or popovers, be sure to include our Popper.js dependency
-// import "../../node_modules/popper.js/dist/popper.min.js";
-
-import "../../node_modules/bootstrap/js/dist/util.js";
-import "../../node_modules/bootstrap/js/dist/modal.js";
-import "../../node_modules/bootstrap/js/dist/carousel.js";
-import "../../node_modules/bootstrap/js/dist/dropdown.js";
-import "../../node_modules/bootstrap/js/dist/scrollspy.js";
-import "../../node_modules/bootstrap/js/dist/tab.js";
-import "../../node_modules/bootstrap/js/dist/alert.js";
-import "../../node_modules/bootstrap/js/dist/base-component.js";
-import "../../node_modules/bootstrap/js/dist/button.js";
-
-import "../../node_modules/sass/sass.js";
-import "../../node_modules/sass/sass.dart.js";
-import "../../node_modules/scss/src/compiler.js";
-import "../../node_modules/scss/src/index.js";
-
-import "../../node_modules/serve/bin/serve.js";
+export {
+	Popper,
+	Util,
+	Alert,
+	Button,
+	Carousel,
+	Collapse,
+	Dropdown,
+	Modal,
+	Offcanvas,
+	Popover,
+	Scrollspy,
+	Tab,
+	Toast,
+	Tooltip
+}

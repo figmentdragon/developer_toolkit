@@ -13,7 +13,7 @@
 
 	<?php
 	// H1.
-	ca_display_scaffolding_section(
+	display_scaffolding_section(
 		[
 			'title'       => 'H1',
 			'description' => 'Display an H1',
@@ -23,7 +23,7 @@
 	);
 
 	// H2.
-	ca_display_scaffolding_section(
+	display_scaffolding_section(
 		[
 			'title'       => 'H2',
 			'description' => 'Display an H2',
@@ -33,7 +33,7 @@
 	);
 
 	// H3.
-	ca_display_scaffolding_section(
+	display_scaffolding_section(
 		[
 			'title'       => 'H3',
 			'description' => 'Display an H3',
@@ -43,7 +43,7 @@
 	);
 
 	// H4.
-	ca_display_scaffolding_section(
+	display_scaffolding_section(
 		[
 			'title'       => 'H4',
 			'description' => 'Display an H4',
@@ -53,7 +53,7 @@
 	);
 
 	// H5.
-	ca_display_scaffolding_section(
+	display_scaffolding_section(
 		[
 			'title'       => 'H5',
 			'description' => 'Display an H5',
@@ -63,7 +63,7 @@
 	);
 
 	// H6.
-	ca_display_scaffolding_section(
+	display_scaffolding_section(
 		[
 			'title'       => 'H6',
 			'description' => 'Display an H6',
@@ -73,7 +73,7 @@
 	);
 
 	// Body.
-	ca_display_scaffolding_section(
+	display_scaffolding_section(
 		[
 			'title'       => 'Paragraph',
 			'description' => 'Display a paragraph',
@@ -83,7 +83,7 @@
 	);
 
 	// Link.
-	ca_display_scaffolding_section(
+	display_scaffolding_section(
 		[
 			'title'       => 'Link',
 			'description' => 'Displays a link.',
@@ -93,7 +93,7 @@
 	);
 
 	// HTML table.
-	ca_display_scaffolding_section(
+	display_scaffolding_section(
 		[
 			'title'       => 'Table',
 			'description' => 'Display a table',
@@ -182,7 +182,7 @@
 
 
 	// Ordered List.
-	ca_display_scaffolding_section(
+	display_scaffolding_section(
 		[
 			'title'       => 'Ordered List',
 			'description' => 'Display an ordered list.',
@@ -226,7 +226,7 @@
 	);
 
 	// Unordered List.
-	ca_display_scaffolding_section(
+	display_scaffolding_section(
 		[
 			'title'       => 'Unordered List',
 			'description' => 'Display an unordered list.',
@@ -270,7 +270,7 @@
 	);
 
 	// Blockquote.
-	ca_display_scaffolding_section(
+	display_scaffolding_section(
 		[
 			'title'       => 'Blockquote',
 			'description' => 'Display a blockquote.',
@@ -280,7 +280,7 @@
 	);
 
 	// Code tag.
-	ca_display_scaffolding_section(
+	display_scaffolding_section(
 		[
 			'title'       => 'Code Tag',
 			'description' => 'Display a code tag.',
@@ -290,7 +290,7 @@
 	);
 
 	// Em tag.
-	ca_display_scaffolding_section(
+	display_scaffolding_section(
 		[
 			'title'       => 'Emphasize Tag',
 			'description' => 'Display an <em> tag.',
@@ -300,7 +300,7 @@
 	);
 
 	// Strong tag.
-	ca_display_scaffolding_section(
+	display_scaffolding_section(
 		[
 			'title'       => 'Strong Tag',
 			'description' => 'Display bold text.',
@@ -310,7 +310,7 @@
 	);
 
 	// Abbreviation Tag.
-	ca_display_scaffolding_section(
+	display_scaffolding_section(
 		[
 			'title'       => 'Abbreviation Tag',
 			'description' => 'Display an abbreviation.',
@@ -320,7 +320,7 @@
 	);
 
 	// Cite Tag.
-	ca_display_scaffolding_section(
+	display_scaffolding_section(
 		[
 			'title'       => 'Cite Tag',
 			'description' => 'Display a citation.',
@@ -330,7 +330,7 @@
 	);
 
 	// Strikeout Tag.
-	ca_display_scaffolding_section(
+	display_scaffolding_section(
 		[
 			'title'       => 'Strikeout Text',
 			'description' => 'Display strikeout text.',
@@ -340,7 +340,7 @@
 	);
 
 	// Delete Tag.
-	ca_display_scaffolding_section(
+	display_scaffolding_section(
 		[
 			'title'       => 'Delete Text',
 			'description' => 'Display the edited content of a text string.',
@@ -350,7 +350,7 @@
 	);
 
 	// Preformatted Tag.
-	ca_display_scaffolding_section(
+	display_scaffolding_section(
 		[
 			'title'       => 'Preformatted tag.',
 			'description' => 'This tag styles large blocks of code.',
@@ -374,7 +374,7 @@
 	);
 
 	// Keyboard Tag.
-	ca_display_scaffolding_section(
+	display_scaffolding_section(
 		[
 			'title'       => 'Keyboard Tag',
 			'description' => 'To display a key.',
@@ -384,7 +384,7 @@
 	);
 
 	// Subscript Tag.
-	ca_display_scaffolding_section(
+	display_scaffolding_section(
 		[
 			'title'       => 'Subscript Tag',
 			'description' => 'To display a subscript.',
@@ -394,7 +394,7 @@
 	);
 
 	// Superscript Tag.
-	ca_display_scaffolding_section(
+	display_scaffolding_section(
 		[
 			'title'       => 'Superscript Tag',
 			'description' => 'To display a superscript.',
@@ -404,7 +404,7 @@
 	);
 
 	// Variable Tag.
-	ca_display_scaffolding_section(
+	display_scaffolding_section(
 		[
 			'title'       => 'Variable Tag',
 			'description' => 'The HTML Variable element (<var>) represents the name of a variable in a mathematical expression or a programming context.',
@@ -414,7 +414,7 @@
 	);
 
 	// Address Tag.
-	ca_display_scaffolding_section(
+	display_scaffolding_section(
 		[
 			'title'       => 'Address Tag',
 			'description' => 'To display an address.',
@@ -436,7 +436,7 @@
 	);
 
 	// Definition lists.
-	ca_display_scaffolding_section(
+	display_scaffolding_section(
 		[
 			'title'       => 'Definition Lists',
 			'description' => 'To display defintion lists.',

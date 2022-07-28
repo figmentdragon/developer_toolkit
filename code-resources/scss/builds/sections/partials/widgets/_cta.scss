@@ -1,0 +1,27 @@
+/*---Call To Action---*/
+
+.cta-banner {
+    text-align: center;
+    padding: 15px;
+    background: #F6F6F6;
+    border: 1px solid #EEE;
+    background: #FFF;
+}
+.cta-banner .main-title {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: bold;
+}
+.banner-btn a.btn {
+    display: inline-block;
+    background: mix($gray-200, $secondary, $color-interval);
+    color: #ffffff;
+    text-transform: uppercase;
+    line-height: 40px;
+    height: 40px;
+    padding: 0 20px;
+}
+.banner-btn a:hover {
+    background: #111;
+}

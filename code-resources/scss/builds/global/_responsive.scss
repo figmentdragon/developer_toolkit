@@ -1,0 +1,26 @@
+/* =Responsive Structures
+----------------------------------------------- */
+@media (max-width: 1199px) {
+  #header {
+    left: -300px;
+  }
+
+  #main {
+    margin-left: 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+	#content,
+	#primary,
+	#secondary,
+	#tertiary { /* Remove floats on all structural elements for smaller screens */
+		float: none;
+		margin: 0;
+		padding: 0;
+	}
+	#primary,
+	#secondary,
+	#tertiary { /* Make all structural elements full-width */
+		width: 100%;
+	}
+}

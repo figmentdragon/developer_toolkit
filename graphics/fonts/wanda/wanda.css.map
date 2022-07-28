@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,UAAU;EAEN,WAAW,EAAE,OAAO;EAAG,WAAW,EAAE,GAAG;EAAG,UAAU,EAAE,MAAM;EAAG,GAAG,EAAE,uFAAuF,CAAC,cAAc",
+    "sources": [
+        "wanda.scss"
+    ],
+    "names": [],
+    "file": "wanda.css"
+}

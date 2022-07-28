@@ -1,0 +1,41 @@
+/**
+* Template Name: 404
+*
+* @package WordPress
+* @subpackage Twenty_Fourteen
+* @since Twenty Fourteen 1.0
+*
+* The template for displaying 404 pages (not found)
+*
+* @link https://codex.wordpress.org/Creating_an_Error_404_Page
+*
+*/
+
+.error404 main p {
+	font-size: $lg-font-size;
+	margin-bottom: calc($vertical-spacer * 1.6666666667);
+}
+
+.error-404-msg{
+    font-size: 200px;
+    color: #EEE;
+    text-align: center;
+}
+
+.error-404-msg span{
+    font-size: 30px;
+}
+
+.error404 .widget {
+	float: left;
+	width: 33%;
+}
+.error404 .widget .widgettitle,
+.error404 .widget ul {
+	margin-right: 1em;
+}
+.error404 .widget_tag_cloud {
+	clear: both;
+	float: none;
+	width: 100%;
+}

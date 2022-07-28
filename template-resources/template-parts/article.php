@@ -4,7 +4,7 @@
  *
  * Displays posts on archives, category, search and index pages.
  *
- * @package TheCreativityArchitect
+ * @package TheThemeName
  * @subpackage Template Parts
  */
 

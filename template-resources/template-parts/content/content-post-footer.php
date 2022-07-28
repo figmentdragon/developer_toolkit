@@ -8,12 +8,12 @@
 	<div class="entry-footer">
 		<?php if(!is_single()):  ?>
 		<div class="entry-footer-top">
-			<a href="<?php echo get_the_permalink()?>" title="<?php the_title_attribute() ?>" class="entry-button"><?php echo __('Continue Reading', 'TheCreativityArchitect'); ?></a>
+			<a href="<?php echo get_the_permalink()?>" title="<?php the_title_attribute() ?>" class="entry-button"><?php echo __('Continue Reading', 'TheThemeName'); ?></a>
 		</div>
 		<?php endif; ?>
 		<div class="entry-footer-bottom">
 			<div class="entry-share">
-				<?php echo TheCreativityArchitect_social_sharing_buttons() ?>
+				<?php echo TheThemeName_social_sharing_buttons() ?>
 			</div>
 			<div class="entry-comments">
 				<a href="<?php comments_link(); ?>"><span class="fa fa-comment"></span>

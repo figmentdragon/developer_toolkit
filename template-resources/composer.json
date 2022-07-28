@@ -1,0 +1,31 @@
+{
+	"name": "cjtermini/creativityarchitect",
+	"description": "a horizontal scrolling writing portfolio",
+	"type": "wordpress-theme",
+	"license": "GPL-2.0-or-later",
+	"authors": [
+		{
+			"name": "CJTermini",
+			"email": "cjmtermini@thecreativityarchitect.com"
+		}
+	],
+	"config": {
+		"platform": {
+			"php": "7.4"
+		}
+	},
+	"require": {
+		"composer/installers": "^1.11.0"
+	},
+	"require-dev": {
+		"dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+		"phpcompatibility/phpcompatibility-wp": "^2.1.1",
+		"wp-cli/wp-cli-bundle": "^2.5.0",
+		"wp-coding-standards/wpcs": "^2.3.0"
+	},
+	"scripts": {
+		"format": "phpcbf --report=summary,source",
+		"lint": "phpcs --report=summary,source",
+		"pot": "wp i18n make-pot . build/languages/creativityarchitect.pot --exclude=node_modules,vendor,build --allow-root"
+	}
+}

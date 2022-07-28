@@ -1,0 +1,42 @@
+{
+	"apiVersion": 2,
+	"name": "themename/notice",
+	"title": "Notice",
+	"category": "themename",
+	"parent": [
+		"themename/notices"
+	],
+	"description": "Notice block utilizing CSS Framework of THEMENAME.",
+	"textdomain": "THEMENAME",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"typeClassName": {
+			"type": "string",
+			"default": ""
+		},
+		"message": {
+			"type": "string",
+			"default": ""
+		},
+		"contentAlignment": {
+			"type": "string",
+			"default": ""
+		},
+		"id": {
+			"type": "string"
+		}
+	},
+	"styles": [
+		{
+			"name": "",
+			"label": "Inline",
+			"isDefault": true
+		},
+		{
+			"name": "full-width",
+			"label": "Full width"
+		}
+	]
+}

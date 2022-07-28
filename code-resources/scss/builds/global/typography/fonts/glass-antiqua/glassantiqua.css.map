@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,UAAU,GAEN,WAAW,EAAE,eAAe,EAC5B,WAAW,EAAE,GAAG,EAChB,UAAU,EAAE,MAAM,EAElB,GAAG,EAAE,4GAA4G,CAAC,cAAc",
+    "sources": [
+        "glassantiqua.scss"
+    ],
+    "names": [],
+    "file": "glassantiqua.css"
+}

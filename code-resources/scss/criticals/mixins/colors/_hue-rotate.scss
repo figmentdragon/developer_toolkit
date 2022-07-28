@@ -1,0 +1,18 @@
+@mixin hue-rotate{
+  background-blend-mode: color-burn;
+  animation: hue-rotate 3s linear infinite;
+  @keyframes hue-rotate {
+    from {
+      -webkit-filter: hue-rotate(0);
+      -moz-filter: hue-rotate(0);
+      -ms-filter: hue-rotate(0);
+        filter: hue-rotate(0);
+    }
+    to {
+      -webkit-filter: hue-rotate(277deg);
+      -moz-filter: hue-rotate(277deg);
+      -ms-filter: hue-rotate(277deg);
+      filter: hue-rotate(277deg);
+    }
+  }
+}

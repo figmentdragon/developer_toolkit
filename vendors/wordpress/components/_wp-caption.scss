@@ -1,0 +1,32 @@
+
+/* Captions */
+.wp-caption { /* The container for image captions */
+
+  img { /* The image inside the caption container */
+  }
+
+  .wp-caption .wp-caption-text,
+  p.wp-caption-text,
+  .gallery-caption {
+    margin: 0;
+    padding: 0 $horizontal-offset $vertical-offset;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+  }
+}
+.wp-caption.aligncenter,
+.wp-caption.alignleft,
+.wp-caption.alignright,
+.wp-caption.alignnone { /* Add spacing around captions and post text */
+	margin-bottom: 1.5em;
+}
+.wp-caption
+.wp-caption img[class*="wp-image-"] {
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}

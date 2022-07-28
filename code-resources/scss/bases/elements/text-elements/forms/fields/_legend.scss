@@ -1,0 +1,22 @@
+$legend-margin-bottom:        calc($spacer * .5);
+$legend-font-size:            $base-font-size * $md;
+$legend-font-weight:          null;
+
+legend {
+  @include box-sizing($type: border-box);
+  color: $body-color;
+	display: table;
+  border: 0;
+  float: left;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin-bottom: $legend-margin-bottom;
+  @include font-size($legend-font-size);
+  font-weight: $legend-font-weight;
+  line-height: $base-line-height;
+	white-space: normal;
+  + * {
+    clear: left;
+  }
+}

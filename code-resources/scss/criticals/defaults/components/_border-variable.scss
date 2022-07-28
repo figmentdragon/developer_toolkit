@@ -1,0 +1,22 @@
+// scss-docs-start border-variables
+$border-width:                2 !default;
+$border-widths: (
+  1: calc($border-width + 0)px,
+  2: calc($border-width + 1)px,
+  3: calc($border-width + 2)px,
+  4: calc($border-width + 3)px,
+  5: calc($border-width + 4)px
+);
+
+$border-style:                solid;
+$border-color:                rgba($black, .15) !default;
+// scss-docs-end border-variables
+
+// scss-docs-start border-radius-variables
+$border-radius:               .375rem !default;
+$sm-border-radius:            .25rem;
+$lg-border-radius:            .5rem;
+$border-radius-xl:            1rem;
+$border-radius-x2l:           2rem;
+$border-radius-pill:          50rem;
+// scss-docs-end border-radius-variables

@@ -1,7 +1,7 @@
 <?php 
 /**
  * @package WordPress
- * @subpackage TheCreativityArchitect
+ * @subpackage TheThemeName
  */
 ?>
   <div class="header">  

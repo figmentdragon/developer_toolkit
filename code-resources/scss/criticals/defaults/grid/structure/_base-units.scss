@@ -1,0 +1,40 @@
+$base-value: 16;
+$margin: $base-value * 1.05rem;
+$padding: $base-value * 1px;
+$measurement: $base-value * 1.08;
+
+/**! 1px = 1/96 inch;
+ * 1cm = 37.8px, 25.2/64";
+ * 1mm = 3.78px, 1/10cm;
+ * 1in = 96px, 2.54cm;
+ * 1px = 1.3333px, 1/72";
+ * 1pc = 16px, 1/6";
+ *
+ * em = inherit font-size from parent;
+ *   ex: parent { font-size: 16px;}
+ *       parent child { font-size: 1em; }
+ *       parent child grandchild { font-size: 3em; }
+ *       parent child2 { font-size: 2em; }
+ *
+ *       parent { font-size: 16px; }
+ *       parent child { font-size: 16px } (16 * 1)
+ *       parent child grandchild { font-size: 48px;} (16 * 3)
+ *       parent child2 { font-size: 36px; } (16 * 2)
+ * *if em used with width or height, calculate using size of target element
+ *
+ * rem = based on root of document; typically html (16px); change html root to change;
+ *   ex: p { font-size: 1.25rem; } (16 * 1.25)
+ *
+ * % = percent relative to parent size;
+ *
+ * 1vh = 1% of viewable-height;
+ * 1vw = 1% if viewable-width;
+ *
+ * vmin & vmax = viewport minimum & viewport maximum;
+ *   1vmin = 1% of viewport smallest dimension
+ *   1vmax = 1% of viewport largest dimension
+ *
+ * RARELY USED:
+ * ex = size of "x" (lowercase); 1/2 height of 1em;
+ * ch (character-unit) = width of 0 (zero, or U+0030) of the font;
+ */

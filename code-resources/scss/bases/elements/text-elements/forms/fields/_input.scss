@@ -1,0 +1,225 @@
+$input-offset-y: $offset-y;
+$input-offset-x: $offset-x;
+$input-font-family: $tertiary-font;
+$input-font-size: $base-font-size;
+$input-font-weight: $normal-font-weight;
+$input-line-height: $base-line-height;
+
+$input-offset-y-sm: $offset-y-sm;
+$input-offset-x-sm: $offset-x-sm;
+$input-sm-font-size: $sm-font-size;
+
+$input-offset-y-lg: $offset-lg;
+$input-offset-x-lg: $offset-lg;
+$input-large-font-size: $lg-font-size;
+
+$input-text:                 mix($gray-400, $info, $color-interval);
+$input-text-focus:           mix($gray-400, $info, $color-interval);
+$input-text-valid:           mix($gray-400, $info, $color-interval);
+$input-text-disabled:        mix($gray-100, $info, $color-interval);
+$input-text-invalid:         mix($gray-100, $info, $color-interval);
+
+$input-border:               mix($gray-800, $info, $color-interval);
+$input-border-focus:         mix($gray-800, $info, $color-interval);
+$input-border-valid:         mix($gray-800, $info, $color-interval);
+$input-border-invalid:        mix($gray-800, $info, $color-interval);
+$input-border-error:          mix($gray-800, $info, $color-interval);
+
+$input-border-width: 3;
+$input-focus-width: 5;
+$input-focus-box-shadow: $box-shadow;
+
+$input-height-border: $input-border-width * 2;
+$input-height-inner: calc($input-line-height * 1), ($input-offset-x * 2);
+$input-height-inner-half: divide(calc($input-line-height * .5), $input-offset-x);
+$input-height-inner-quarter: divide(calc($input-line-height * .25), calc($input-offset-x * .5));
+
+$input-border-radius: $border-radius;
+$input-sm-border-radius: $sm-border-radius;
+$input-lg-border-radius: $lg-border-radius;
+
+$input-bg:                   mix($gray-200, $info, $color-interval);
+$input-bg-focus:             mix($gray-200, $info, $color-interval);
+$input-bg-active:            mix($gray-200, $info, $color-interval);
+$input-bg-valid:             mix($gray-200, $info, $color-interval);
+$input-bg-disabled:           mix($gray-200, $info, $color-interval);
+$input-bg-invalid:            mix($gray-200, $info, $color-interval);
+
+$input-disabled-color:       mix(white, $info, $color-interval);
+$input-placeholder-color:    mix($info, white, $color-interval);
+$input-plaintext:           $body-bg;
+
+$input-box-shadow           : inset 0 1px 0 rgba($gray-800, .15), 0 1px 1px rgba($gray-800, .075);
+$input-focus-box-shadow     : inset 0 1px 0 rgba($gray-800, .15), 0 1px 1px rgba($gray-800, .075);
+$input-active-box-shadow: $input-box-shadow;
+
+$input-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+$form-color-width: 3rem;
+
+input {
+  border-radius: 0;
+  line-height: $input-line-height;
+  overflow: visible;
+  color: shade($info, 8%);
+  border: solid $input-border-width $input-border;
+  background-color: tint($info, 8%);
+  &:focus {
+    outline-style: dotted;
+    outline-color: $input-border-focus;
+    outline-width: $input-border-width;
+    text-decoration: none;
+  }
+  &::-webkit-input-placeholder{
+    color: $input-placeholder-color;
+  }
+  &:-moz-placeholder {
+    color: $input-placeholder-color;
+  }
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+  [type=checkbox],
+  [type=radio] {
+    @include box-sizing($type: border-box);
+    padding: 0;
+  }
+  [type=number] {
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      height: auto;
+    }
+  }
+  [type=search] {
+    @include box-sizing($type: content-box);
+    outline-offset: -2px;
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+    }
+  }
+  [type='search'],
+  [type='text'],
+  [type='url'],
+  [type='number'],
+  [type='password'],
+  [type='email'],
+  [type='file'] {
+    border: $input-border-width solid $input-border;
+    padding: 0 $input-offset-y-sm;
+    transition: $input-transition;
+    @include box-sizing($type: border-box);
+    height: 36px;
+    width: 100%;
+    -webkit-appearance: none;
+  }
+  [type='file'] {
+      height: auto;
+  }
+  [type='submit'] {
+      border-radius: 0;
+  }
+  // spacing out the password (thx @murtaugh)
+  [type='password'] {
+    letter-spacing: 0.3em;
+  }
+  [type='reset'],
+  [type='submit'] {
+    border-radius: $lg-border-radius;
+    background: tint($info, 8%);
+    color: shade($info, 8%);
+    text-shadow: 0 1px 1px rgba($shadow-text, .8);
+    cursor: pointer;
+    @include font-size($input-font-size);
+    line-height: $input-line-height;
+    padding: $input-offset-x-sm $input-offset-y-lg;
+    transition: $input-transition;
+    &:hover {
+      border-style: solid;
+      background: $input-bg-focus;
+      border-color: $input-border-focus;
+      box-shadow: $input-box-shadow;
+      text-shadow: 0 2px 2px $shadow-text;
+    }
+  	&:active,
+  	&:focus {
+  		border-color: $input-border-focus;
+  	}
+  }
+}
+
+input[type='text'],
+input[type='password'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='date'],
+input[type='month'],
+input[type='time'],
+input[type='week'],
+input[type='number'],
+input[type='email'],
+input[type='url'],
+input[type='search'],
+input[type='tel'],
+input[type='file'],
+input[type='color'] {
+  @include box-sizing($type: border-box);
+  background-color: tint($info, 8%);
+  border: $input-border-width solid $input-border;
+  border-radius: $border-radius;
+  font-family: $input-font-family;
+  @include font-size($input-font-size);
+  line-height: $input-line-height;
+  color: shade($info, 8%);
+  padding: divide($offset, 4) divide($offset, 2);
+  margin-bottom: $horizontal-spacer;
+  height: 40px;
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  vertical-align: middle;
+  box-shadow: none;
+  @include transition(background-color 0.24s ease-in-out);
+  &:focus,
+  &:active {
+    background-color: $input-bg-focus;
+    outline: none;
+  }
+  // error notification
+  &.error,
+  &.is-invalid {
+    color: $input-text-invalid;
+    border-color: $input-border-invalid;
+    background-color: $input-bg-invalid;
+    background-position: 99% center;
+    background-repeat: no-repeat;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1THEMENAMEJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2NDM0NDREQkYwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2NDM0NDREQ0YwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjQ3ODRGRkE2RjA0QTExRTI5MjhERkZBMTMzMDYwNzI2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjY0MzQ0NERBRjA0QjExRTI5MjhERkZBMTMzMDYwNzI2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+U8iT5wAAAedJREFUeNqk1U9I02Ecx/HtV3aIFAc1hcRDUoGXRAq0oNLA2CrsEFmHbikZu0iQYIFGYAiegkCpLipBxPpDEBMUzB0EhSG2LhG7hMR2GviPgUTvB57Bw8P3+U23B16HPX8+e/b8nt93wezZSMCnhXETF3AcB5BDCnH8Dq98ExcGHcFn8Ah3cdDni+fxnPDv9oAnTB7CKu6VCFXtChZy56LxUjt+jfuB8toSOth9wd7xWAWhqrUjYR/FRTwWJm+iIPT/w7bQf5ljiZnBg45dtKFX6H+LU8gIY8OEV6vgTkStwXWE8BPTGDHGPqNPz2mCfSOOYkA99TvCt1bhGPL68zMcwmncMuape10jrI+q4BbHi/FLn31S9z2x5tRhTc+1W506ipM+T3oRD4X+8+qtc4SqFvL0z/Fr14S+Szjis8bz9Lvvaq8cwS/wwGfdlqfPSWqTiFlX77o13u9Ym1PBs8JAytpRoy44X9Ft9E/gvbA+rYKn8NcaaMVc8UHgBw4b9/iqUQZ6hOAJFbyDcUflmsEX4a6+wTtHGfhAIUqa1U29Zc2BytouThD8x6xuN5CtMPi2CrXLZkZf/HyZoRFCP7n+QVR4PV7uI/AjGghN7OU/r1ilnqILtfpNC+o6vIFljBKYlhb/F2AAgaBsWR5wRiIAAAAASUVORK5CYII=);
+    outline-color: mix($gray-800, $info, $color-interval);
+  } // end invalid input
+
+  // success notification
+  &.success,
+  &.is-valid {
+    color: $input-text-valid;
+    border-color: $input-border-valid;
+    background-color: $input-bg-valid;
+    background-position: 99% center;
+    background-repeat: no-repeat;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1THEMENAMEJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2NDM0NDRERkYwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2NDM0NDRFMEYwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjY0MzQ0NERERjA0QjExRTI5MjhERkZBMTMzMDYwNzI2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjY0MzQ0NERFRjA0QjExRTI5MjhERkZBMTMzMDYwNzI2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+7olkTQAAAfhJREFUeNqklU9oE0EUhzdroWjw0tBeWlDxkEaIp55TsCU9VKIgCrHBelA8CQ1Kr1WPbZrQ3gqtQqvGqxpQc2jBk6BIIaAGD4qNCKURpDSKiPi98gLDsJt//uBjsztvfnk7895sIPAw6/joGMThFJyAXn2+A+9gA57/TaY/eU0OeBgfhGm4DiGnsb7DAszxBz/NAdcKjMJLuNWCqagHbsscN5+L+hmH4QkMOe1L5jzFfNA2PgT34ajTuY7AGuZB0/hmh5m+gS0r8xv1zRvg+gGCHZiOwnF4DP3iB3sQkYxPd2C6CWfhB9Xwlus5+K1j4jXuaq3a+gM1H9OPcAa+7q9lPidZJqHbiIm7Wg22rsEI7FrPSzAMX/T+ADyAKSsu7Fr1KplehLvwCs5DvfBf65p+MypqRbO1FXK9utH4/QKuaqYTsG3E3INJv00Q46px3+XxanJ/Ute2/vqP4FKDza2KcdljIKdnhS0xXYULTaqmLMZFn8FFSFtvt6x70ExFCS5oUXspq2ssa7oEl1swFa+CGFdgtkHgPDyDKy02zyxNU6lXRUZb1EuHYayNNs+Yh5B0WQo+/8fpJnNTZFuzz2OpjoQ2QruSOQlMy35fEGmEGMxY9e1brxobw7TkWA1h6xfckUPb+JhGoE/Hpfvew7qUld/H9J8AAwDpw3WYrxcZ3QAAAABJRU5ErkJggg==);
+    outline-color: $success;
+  } // end valid input
+
+  // a disabled input
+  &[disabled],
+  &.is-disabled {
+    cursor: not-allowed;
+    border-color: $gray-100;
+    opacity: 0.6;
+
+    &:focus,
+    &:active {
+      background-color: mix($gray-200, $info, $color-interval);
+    } // end disabled focus
+  } // end disabled input
+}

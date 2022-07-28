@@ -1,0 +1,25 @@
+{
+	"apiVersion": 2,
+	"name": "themename/notices",
+	"title": "Notices",
+	"category": "themename",
+	"icon": "info-outline",
+	"description": "Notice block utilizing CSS Framework of THEMENAME.",
+	"textdomain": "THEMENAME",
+	"supports": {
+		"anchor": true
+	},
+	"attributes": {
+		"contentJustification": {
+			"type": "string",
+			"default": "left"
+		},
+		"orientation": {
+			"type": "string",
+			"default": "horizontal"
+		},
+		"id": {
+			"type": "string"
+		}
+	}
+}

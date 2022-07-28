@@ -1,0 +1,108 @@
+/**
+ * 1.3.0 Defaults
+ * Variables should follow the `$component-state-property-size` formula for
+ * consistent naming. Ex: $nav-link-disabled-color and
+ * $modal-content-box-shadow-xs.
+ */
+
+@import "function";
+
+@import "core/defaults/color";
+
+@import "core/utilities/palette-generator";
+
+@import "core/defaults/escaped-character";
+
+@import "core/defaults/option";
+
+@import "core/defaults/prefix";
+
+@import "core/defaults/gradient";
+
+@import "core/defaults/size";
+
+@import "core/defaults/measurement";
+
+@import "core/defaults/margin";
+
+@import "core/defaults/padding";
+
+@import "core/defaults/position-value";
+
+@import "core/defaults/body";
+
+@import "core/defaults/link";
+
+@import "core/defaults/paragraph";
+
+@import "core/defaults/structure";
+
+@import "core/defaults/grid";
+
+@import "core/defaults/container-offset";
+
+@import "core/defaults/component";
+
+@import "core/defaults/font-stack";
+@import "core/defaults/typography";
+
+$base-line-height: $line-height-base;
+$sm-font-size: $sm-font-size;
+$base-font-size: $base-font-size;
+$bolder-font-weight: $bold-font-weighter;
+
+@import "core/defaults/table";
+
+@import "core/defaults/button+form";
+
+@import "core/defaults/zindex";
+
+@import "core/defaults/nav";
+
+@import "core/defaults/dropdown";
+
+@import "core/defaults/pagination";
+
+@import "core/defaults/placeholder";
+
+@import "core/defaults/jumbotron";
+
+@import "core/defaults/card";
+
+@import "core/defaults/accordion";
+
+@import "core/defaults/tooltip";
+
+@import "core/defaults/popover";
+
+@import "core/defaults/toast";
+
+@import "core/defaults/badge";
+
+@import "core/defaults/modal";
+
+@import "core/defaults/alert";
+
+@import "core/defaults/progress-bar";
+
+@import "core/defaults/list-group";
+
+@import "core/defaults/thumbnail";
+
+@import "core/defaults/figure";
+
+@import "core/defaults/breadcrumb";
+
+@import "core/defaults/carousel";
+
+@import "core/defaults/spinner";
+
+@import "core/defaults/close";
+
+@import "core/defaults/offcanvas";
+
+@import "core/defaults/code";
+
+@import "core/defaults/utilities";
+
+@import "core/defaults/printing";

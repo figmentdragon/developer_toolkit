@@ -1,0 +1,124 @@
+//
+// Switch
+//
+
+.form-switch {
+  padding-left: $form-switch-offset-start;
+
+  .form-check-input {
+    width: $form-switch-width;
+    margin-top: 0.3em;
+    margin-right: 8px;
+    margin-left: $form-switch-offset-start * -1;
+    background-image: none;
+    border-width: 0;
+    background-position: left center;
+    background-position: left center;
+    @include border-radius($form-switch-border-radius);
+    @include transition($form-switch-transition);
+
+    &:after {
+      content: '';
+      position: absolute;
+      border: none;
+      z-index: 2;
+      border-radius: $form-switch-form-check-input-after-border-radius;
+      width: $form-switch-form-check-input-after-width;
+      height: $form-switch-form-check-input-after-height;
+      background-color: $form-switch-form-check-input-after-background-color;
+      margin-top: $form-switch-form-check-input-after-margin-top;
+      box-shadow: $form-switch-form-check-input-after-shadow;
+      transition: $form-switch-form-check-input-after-transition;
+    }
+
+    &:focus {
+      background-image: none;
+      &:before {
+        box-shadow: $form-switch-form-check-input-focus-before-shadow;
+        transform: $form-switch-form-check-input-focus-before-transform;
+        transition: $form-switch-form-check-input-focus-before-transition;
+      }
+      &:after {
+        border-radius: $form-switch-form-check-input-focus-after-border-radius;
+        width: $form-switch-form-check-input-focus-after-width;
+        height: $form-switch-form-check-input-focus-after-height;
+      }
+    }
+
+    &:checked {
+      background-position: $form-switch-checked-bg-position;
+      background-image: none;
+
+      &:checked {
+        background-image: none;
+
+        &:focus {
+          background-image: none;
+
+          &:before {
+            margin-left: $form-switch-form-check-input-checked-focus-before-margin-left;
+            box-shadow: $form-switch-form-check-input-checked-focus-before-shadow;
+            transform: $form-switch-form-check-input-checked-focus-before-transform;
+            transition: $form-switch-form-check-input-checked-focus-before-transition;
+          }
+        }
+
+        &[type='checkbox'] {
+          background-image: none;
+
+          &:after {
+            content: '';
+            position: absolute;
+            border: none;
+            z-index: 2;
+            border-radius: $form-switch-form-check-input-checked-checkbox-after-border-radius;
+            width: $form-switch-form-check-input-checked-checkbox-after-width;
+            height: $form-switch-form-check-input-checked-checkbox-after-height;
+            background-color: $form-switch-form-check-input-checked-checkbox-after-background-color;
+            margin-top: $form-switch-form-check-input-checked-checkbox-after-margin-top;
+            margin-left: $form-switch-form-check-input-checked-checkbox-after-margin-left;
+            box-shadow: $form-switch-form-check-input-checked-checkbox-after-shadow;
+            transition: $form-switch-form-check-input-checked-checkbox-after-transition;
+          }
+        }
+      }
+
+      @if $enable-gradients {
+        background-image: escape-svg($form-switch-checked-bg-image),
+          var(--#{$default-prefix}gradient);
+      } @else {
+        background-image: escape-svg($form-switch-checked-bg-image);
+      }
+    }
+  }
+
+  &.form-check-reverse {
+    padding-right: $form-switch-offset-start;
+    padding-left: 0;
+
+    .form-check-input {
+      margin-right: $form-switch-offset-start * -1;
+      margin-left: 0;
+    }
+  }
+}
+
+.form-check-inline {
+  display: inline-block;
+  margin-right: $form-check-inline-margin-end;
+}
+
+.btn-check {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  pointer-events: none;
+
+  &[disabled],
+  &:disabled {
+    + .btn {
+      pointer-events: none;
+      filter: none;
+      opacity: $form-check-btn-check-disabled-opacity;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+/**
+ * Hamburger menu
+ */
+
+.nav-burger {
+    position: fixed;
+    top: $base-spacing-unit;
+    right: $base-spacing-unit;
+    z-index: 550;
+    transition: all $animation-speed $animation;
+}
+
+.nav-burger-line {
+    width: 35px;
+    height: 3px;
+    background-color: $brand-colour;
+    display: none;
+    margin: 8px auto;
+    transition: all $animation-speed $animation;
+
+    @include resp-max($breakpoint-md) {
+        display: block;
+    }
+
+    .nav-burger.open & {
+        &:nth-child(2) {
+            opacity: 0;
+        }
+
+        &:nth-child(1) {
+            transform: translateY(11px) rotate(45deg);
+        }
+
+        &:nth-child(3) {
+            transform: translateY(-11px) rotate(-45deg);
+        }
+    }
+}

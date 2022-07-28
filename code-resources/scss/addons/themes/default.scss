@@ -1,0 +1,55 @@
+/**
+* Dev notes
+*
+* Background information on nomenclature and architecture decisions here.
+*
+* - Functions, variables, and mixins are included for easy reuse.
+*   Doing so gives us access to the same core utilities provided by .
+*   For example, consistent media queries through those mixins.
+*
+* - #Default Theme variables are prefixed with `default-prefix`.
+*   These custom colors avoid collision with the provided components.
+*
+* - #Default Classes are prefixed with '.default-prefix'.
+*   These classes indicate the layout and components for the theme and design at their most basic building block level.  custom-built or modified components for the design
+*   They are not included in the 'Core', 'Base' or 'Module' folders.
+*/
+
+/* Load Critical Files' */
+@import './../../source/core/scss/criticals/function';
+
+@import '../../../scss/grid';
+
+/* Default Variables */
+$enable_full_palette: true;
+$default-prefix: ca;
+
+/* Colors */
+
+@import 'criticals/functions/color.scss';
+@import 'criticals/functions/full-palette';
+
+// Load docs components
+@import './../../source/core/scss/addons/bootstrap/site/assets/scss/variables';
+@import './../../source/core/scss/addons/bootstrap/site/assets/scss/navbar';
+@import './../../source/core/scss/addons/bootstrap/site/assets/scss/search';
+@import './../../source/core/scss/addons/bootstrap/site/assets/scss/masthead';
+@import './../../source/core/scss/addons/bootstrap/site/assets/scss/ads';
+@import './../../source/core/scss/addons/bootstrap/site/assets/scss/content';
+@import './../../source/core/scss/addons/bootstrap/site/assets/scss/skippy';
+@import './../../source/core/scss/addons/bootstrap/site/assets/scss/sidebar';
+@import './../../source/core/scss/addons/bootstrap/site/assets/scss/layout';
+@import './../../source/core/scss/addons/bootstrap/site/assets/scss/toc';
+@import './../../source/core/scss/addons/bootstrap/site/assets/scss/footer';
+@import './../../source/core/scss/addons/bootstrap/site/assets/scss/component-examples';
+@import './../../source/core/scss/addons/bootstrap/site/assets/scss/buttons';
+@import './../../source/core/scss/addons/bootstrap/site/assets/scss/callouts';
+@import './../../source/core/scss/addons/bootstrap/site/assets/scss/brand';
+@import './../../source/core/scss/addons/bootstrap/site/assets/scss/colors';
+@import './../../source/core/scss/addons/bootstrap/site/assets/scss/clipboard-js';
+@import './../../source/core/scss/addons/bootstrap/site/assets/scss/placeholder-img';
+
+// Load docs dependencies
+@import './../../source/core/scss/addons/bootstrap/site/assets/scss/syntax';
+@import './../../source/core/scss/addons/bootstrap/site/assets/scss/anchor';
+@import './../../source/core/scss/addons/bootstrap/site/assets/scss/algolia';

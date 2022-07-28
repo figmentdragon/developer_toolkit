@@ -1,0 +1,18 @@
+caption {
+  padding-top: $table-cell-offset-y;
+  padding-bottom: $table-cell-offset-y;
+  font-weight: $bold-font-weight;
+  border-width: 1px 1px 0 1px;
+  border-style: solid;
+  border-color: inherit;
+  text-align: center;
+  color: $table-caption-color;
+}
+
+//
+// Change placement of captions with a class
+//
+
+.caption-top {
+  caption-side: top;
+}

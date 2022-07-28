@@ -1,0 +1,724 @@
+/* Default Color Palette */
+:root {
+  --primary: #0e1c36;
+  --primary-dark: #1a3a76;
+  --primary-light: #5180d9;
+  --accent: #ffcc33;
+  --primary-dark-rgb: to-rgb(#1a3a76);
+  --primary-light-rgb: to-rgb(#5180d9);
+  --accent-rgb: to-rgb(#ffcc33);
+  --black-rgb: to-rgb(black);
+  --white-rgb: to-rgb(white);
+}
+
+.midnight-blue-100 {
+  background-color: #264c92;
+  color: black;
+  box-shadow: #3e4758;
+}
+.midnight-blue-200 {
+  background-color: #20407b;
+  color: black;
+  box-shadow: #323c50;
+}
+.midnight-blue-300 {
+  background-color: #1a3464;
+  color: #050912;
+  box-shadow: #263247;
+}
+.midnight-blue-400 {
+  background-color: #14284d;
+  color: #091324;
+  box-shadow: #1a273f;
+}
+.midnight-blue-500 {
+  background-color: #0e1c36;
+}
+.midnight-blue-600 {
+  background-color: #08101f;
+  color: #132548;
+  box-shadow: #101d35;
+}
+.midnight-blue-700 {
+  background-color: #020408;
+  color: #172f5a;
+  box-shadow: #131e34;
+}
+.midnight-blue-800 {
+  background-color: black;
+  color: #1c386d;
+  box-shadow: #151f33;
+}
+.midnight-blue-900 {
+  background-color: black;
+  color: #21427f;
+  box-shadow: #172032;
+}
+
+.light-blue-100 {
+  background-color: white;
+  color: #538fff;
+  box-shadow: #a7badc;
+}
+.light-blue-200 {
+  background-color: white;
+  color: #6a9eff;
+  box-shadow: #a9bee5;
+}
+.light-blue-300 {
+  background-color: #e9f1ff;
+  color: #81adff;
+  box-shadow: #abc2ed;
+}
+.light-blue-400 {
+  background-color: #ccdeff;
+  color: #98bcff;
+  box-shadow: #adc7f6;
+}
+.light-blue-500 {
+  background-color: #afcbff;
+}
+.light-blue-600 {
+  background-color: #92b8ff;
+  color: #c6daff;
+  box-shadow: #a3bded;
+}
+.light-blue-700 {
+  background-color: #75a5ff;
+  color: #dde9ff;
+  box-shadow: #98afda;
+}
+.light-blue-800 {
+  background-color: #5892ff;
+  color: #f4f8ff;
+  box-shadow: #8ca1c8;
+}
+.light-blue-900 {
+  background-color: #3b7fff;
+  color: white;
+  box-shadow: #8193b5;
+}
+
+.light-cyan-100 {
+  background-color: white;
+  color: #7bebff;
+  box-shadow: #c2d8dc;
+}
+.light-cyan-200 {
+  background-color: white;
+  color: #92efff;
+  box-shadow: #c7e0e5;
+}
+.light-cyan-300 {
+  background-color: white;
+  color: #a9f2ff;
+  box-shadow: #cce8ed;
+}
+.light-cyan-400 {
+  background-color: #f4fdff;
+  color: #c0f6ff;
+  box-shadow: #d2f1f6;
+}
+.light-cyan-500 {
+  background-color: #d7f9ff;
+}
+.light-cyan-600 {
+  background-color: #baf5ff;
+  color: #eefcff;
+  box-shadow: #c8e7ed;
+}
+.light-cyan-700 {
+  background-color: #9df0ff;
+  color: white;
+  box-shadow: #b9d5da;
+}
+.light-cyan-800 {
+  background-color: #80ecff;
+  color: white;
+  box-shadow: #aac3c8;
+}
+.light-cyan-900 {
+  background-color: #63e8ff;
+  color: white;
+  box-shadow: #9bb1b5;
+}
+
+.light-white-100 {
+  background-color: white;
+  color: #d9e5ac;
+  box-shadow: #d8d9d3;
+}
+.light-white-200 {
+  background-color: white;
+  color: #e1ebbd;
+  box-shadow: #e0e2db;
+}
+.light-white-300 {
+  background-color: white;
+  color: #e9f0cf;
+  box-shadow: #e8eae3;
+}
+.light-white-400 {
+  background-color: white;
+  color: #f1f6e0;
+  box-shadow: #f1f3ea;
+}
+.light-white-500 {
+  background-color: #f9fbf2;
+}
+.light-white-600 {
+  background-color: #eff4dc;
+  color: white;
+  box-shadow: #e7e9e1;
+}
+.light-white-700 {
+  background-color: #e4edc6;
+  color: white;
+  box-shadow: #d5d7cf;
+}
+.light-white-800 {
+  background-color: #dae6af;
+  color: white;
+  box-shadow: #c3c5be;
+}
+.light-white-900 {
+  background-color: #d0e099;
+  color: white;
+  box-shadow: #b1b3ad;
+}
+
+.misty-rose-100 {
+  background-color: white;
+  color: #ffb685;
+  box-shadow: #dcd0c8;
+}
+.misty-rose-200 {
+  background-color: white;
+  color: #ffc49c;
+  box-shadow: #e5d7ce;
+}
+.misty-rose-300 {
+  background-color: white;
+  color: #ffd1b3;
+  box-shadow: #eddfd5;
+}
+.misty-rose-400 {
+  background-color: #fffefe;
+  color: #ffdfca;
+  box-shadow: #f6e6db;
+}
+.misty-rose-500 {
+  background-color: #ffede1;
+}
+.misty-rose-600 {
+  background-color: #ffdcc4;
+  color: #fffbf8;
+  box-shadow: #eddcd1;
+}
+.misty-rose-700 {
+  background-color: #ffcaa7;
+  color: white;
+  box-shadow: #dacbc1;
+}
+.misty-rose-800 {
+  background-color: #ffb98a;
+  color: white;
+  box-shadow: #c8bab2;
+}
+.misty-rose-900 {
+  background-color: #ffa76d;
+  color: white;
+  box-shadow: #b5aaa2;
+}
+
+.primary-100 {
+  background-color: #264c92;
+  color: black;
+  box-shadow: #3e4758;
+}
+.primary-200 {
+  background-color: #20407b;
+  color: black;
+  box-shadow: #323c50;
+}
+.primary-300 {
+  background-color: #1a3464;
+  color: #050912;
+  box-shadow: #263247;
+}
+.primary-400 {
+  background-color: #14284d;
+  color: #091324;
+  box-shadow: #1a273f;
+}
+.primary-500 {
+  background-color: #0e1c36;
+}
+.primary-600 {
+  background-color: #08101f;
+  color: #132548;
+  box-shadow: #101d35;
+}
+.primary-700 {
+  background-color: #020408;
+  color: #172f5a;
+  box-shadow: #131e34;
+}
+.primary-800 {
+  background-color: black;
+  color: #1c386d;
+  box-shadow: #151f33;
+}
+.primary-900 {
+  background-color: black;
+  color: #21427f;
+  box-shadow: #172032;
+}
+
+.accent-100 {
+  background-color: #ffe9a7;
+  color: #d6a100;
+  box-shadow: #dcba56;
+}
+.accent-200 {
+  background-color: #ffe28a;
+  color: #edb200;
+  box-shadow: #e5bf4d;
+}
+.accent-300 {
+  background-color: #ffdb6d;
+  color: #ffc105;
+  box-shadow: #edc345;
+}
+.accent-400 {
+  background-color: #ffd350;
+  color: #ffc61c;
+  box-shadow: #f6c83c;
+}
+.accent-500 {
+  background-color: #ffcc33;
+}
+.accent-600 {
+  background-color: #ffc516;
+  color: #ffd24a;
+  box-shadow: #edbe32;
+}
+.accent-700 {
+  background-color: #f8ba00;
+  color: #ffd761;
+  box-shadow: #dab031;
+}
+.accent-800 {
+  background-color: #dba400;
+  color: #ffdd78;
+  box-shadow: #c8a230;
+}
+.accent-900 {
+  background-color: #be8e00;
+  color: #ffe38f;
+  box-shadow: #b59430;
+}
+
+.success-100 {
+  background-color: #ddf541;
+  color: #556105;
+  box-shadow: #9ead3b;
+}
+.success-200 {
+  background-color: #d8f425;
+  color: #687706;
+  box-shadow: #9fb02f;
+}
+.success-300 {
+  background-color: #d1ef0d;
+  color: #7b8d07;
+  box-shadow: #a0b323;
+}
+.success-400 {
+  background-color: #b9d40b;
+  color: #8ea209;
+  box-shadow: #a0b516;
+}
+.success-500 {
+  background-color: #a1b80a;
+}
+.success-600 {
+  background-color: #899c08;
+  color: #b4ce0b;
+  box-shadow: #97ac0d;
+}
+.success-700 {
+  background-color: #718107;
+  color: #c7e40c;
+  box-shadow: #8c9f0f;
+}
+.success-800 {
+  background-color: #586505;
+  color: #d5f314;
+  box-shadow: #829312;
+}
+.success-900 {
+  background-color: #404a04;
+  color: #d9f42a;
+  box-shadow: #788715;
+}
+
+.info-100 {
+  background-color: #4b8df0;
+  color: #082c63;
+  box-shadow: #3e6bad;
+}
+.info-200 {
+  background-color: #307cee;
+  color: #0a3678;
+  box-shadow: #3365b0;
+}
+.info-300 {
+  background-color: #156bec;
+  color: #0b3f8e;
+  box-shadow: #275fb3;
+}
+.info-400 {
+  background-color: #115fd3;
+  color: #0d49a3;
+  box-shadow: #1b59b5;
+}
+.info-500 {
+  background-color: #0f53b8;
+}
+.info-600 {
+  background-color: #0d469d;
+  color: #115ccd;
+  box-shadow: #114fac;
+}
+.info-700 {
+  background-color: #0b3a82;
+  color: #1266e2;
+  box-shadow: #134c9f;
+}
+.info-800 {
+  background-color: #082e67;
+  color: #1f71ed;
+  box-shadow: #164893;
+}
+.info-900 {
+  background-color: #06224c;
+  color: #347fef;
+  box-shadow: #184587;
+}
+
+.warning-100 {
+  background-color: #f35048;
+  color: #650b06;
+  box-shadow: #af423d;
+}
+.warning-200 {
+  background-color: #f2362d;
+  color: #7a0e08;
+  box-shadow: #b23730;
+}
+.warning-300 {
+  background-color: #f01c11;
+  color: #901009;
+  box-shadow: #b52c24;
+}
+.warning-400 {
+  background-color: #d6180e;
+  color: #a5120b;
+  box-shadow: #b82018;
+}
+.warning-500 {
+  background-color: #bb150c;
+}
+.warning-600 {
+  background-color: #a0120a;
+  color: #d1170d;
+  box-shadow: #ae170e;
+}
+.warning-700 {
+  background-color: #840f08;
+  color: #e6190f;
+  box-shadow: #a21811;
+}
+.warning-800 {
+  background-color: #690c07;
+  color: #f0261b;
+  box-shadow: #951a13;
+}
+.warning-900 {
+  background-color: #4e0905;
+  color: #f23b31;
+  box-shadow: #891c16;
+}
+
+.danger-100 {
+  background-color: #f64086;
+  color: #610528;
+  box-shadow: #ae3b66;
+}
+.danger-200 {
+  background-color: #f52474;
+  color: #770631;
+  box-shadow: #b12e60;
+}
+.danger-300 {
+  background-color: #f10b63;
+  color: #8d073a;
+  box-shadow: #b32259;
+}
+.danger-400 {
+  background-color: #d50a58;
+  color: #a30843;
+  box-shadow: #b61553;
+}
+.danger-500 {
+  background-color: #b9094c;
+}
+.danger-600 {
+  background-color: #9d0741;
+  color: #cf0a55;
+  box-shadow: #ad0c49;
+}
+.danger-700 {
+  background-color: #820635;
+  color: #e50b5e;
+  box-shadow: #a00f46;
+}
+.danger-800 {
+  background-color: #66052a;
+  color: #f41369;
+  box-shadow: #941143;
+}
+.danger-900 {
+  background-color: #4a031f;
+  color: #f52977;
+  box-shadow: #871440;
+}
+
+.light-100 {
+  background-color: #b0c6ee;
+  color: #2553a8;
+  box-shadow: #6a89c3;
+}
+.light-200 {
+  background-color: #98b4e8;
+  color: #295cbb;
+  box-shadow: #6486c8;
+}
+.light-300 {
+  background-color: #81a3e3;
+  color: #2e66ce;
+  box-shadow: #5d84ce;
+}
+.light-400 {
+  background-color: #6992de;
+  color: #3e73d4;
+  box-shadow: #5782d3;
+}
+.light-500 {
+  background-color: #5180d9;
+}
+.light-600 {
+  background-color: #396fd3;
+  color: #648edd;
+  box-shadow: #4e79ca;
+}
+.light-700 {
+  background-color: #2b61c4;
+  color: #779ce1;
+  box-shadow: #4a71bb;
+}
+.light-800 {
+  background-color: #2655ac;
+  color: #89a9e5;
+  box-shadow: #476aac;
+}
+.light-900 {
+  background-color: #214994;
+  color: #9cb7e9;
+  box-shadow: #43629c;
+}
+
+.dark-100 {
+  background-color: #336bd2;
+  color: #0a152b;
+  box-shadow: #465b82;
+}
+.dark-200 {
+  background-color: #2a5ebe;
+  color: #0e1f3e;
+  box-shadow: #3b537f;
+}
+.dark-300 {
+  background-color: #2552a6;
+  color: #122851;
+  box-shadow: #304a7c;
+}
+.dark-400 {
+  background-color: #1f468e;
+  color: #163164;
+  box-shadow: #254279;
+}
+.dark-500 {
+  background-color: #1a3a76;
+}
+.dark-600 {
+  background-color: #152f5f;
+  color: #1e4489;
+  box-shadow: #1b396f;
+}
+.dark-700 {
+  background-color: #102347;
+  color: #224d9c;
+  box-shadow: #1d3769;
+}
+.dark-800 {
+  background-color: #0a172f;
+  color: #2756af;
+  box-shadow: #1e3662;
+}
+.dark-900 {
+  background-color: #050b17;
+  color: #2b60c2;
+  box-shadow: #1f345c;
+}
+
+.table-primary {
+  --ca-table-color: color-contrast(opaque(shift-color(#0e1c36, 80%), #999999));
+  --ca-table-bg: #999999;
+  --ca-table-border-color: color-contrast(shift-color(#0e1c36, 80%), 10%);
+  --ca-table-striped-bg: color-contrast(shift-color(#0e1c36, 80%), 5%);
+  --ca-table-striped-color: color-contrast(color-contrast(shift-color(#0e1c36, 80%), 5%));
+  --ca-table-active-bg: color-contrast(shift-color(#0e1c36, 80%), 10%);
+  --ca-table-active-color: color-contrast(color-contrast(shift-color(#0e1c36, 80%), 10%));
+  --ca-table-hover-bg: shift-color(shift-color(#0e1c36, 80%), 7.5%);
+  --ca-table-hover-color: color-contrast(shift-color(shift-color(#0e1c36, 80%), 7.5%));
+  color: var(--ca-table-color);
+  border-color: var(--ca-table-border-color);
+}
+
+.table-secondary {
+  --ca-table-color: color-contrast(opaque(shift-color(#5180d9, 80%), #999999));
+  --ca-table-bg: #999999;
+  --ca-table-border-color: color-contrast(shift-color(#5180d9, 80%), 10%);
+  --ca-table-striped-bg: color-contrast(shift-color(#5180d9, 80%), 5%);
+  --ca-table-striped-color: color-contrast(color-contrast(shift-color(#5180d9, 80%), 5%));
+  --ca-table-active-bg: color-contrast(shift-color(#5180d9, 80%), 10%);
+  --ca-table-active-color: color-contrast(color-contrast(shift-color(#5180d9, 80%), 10%));
+  --ca-table-hover-bg: shift-color(shift-color(#5180d9, 80%), 7.5%);
+  --ca-table-hover-color: color-contrast(shift-color(shift-color(#5180d9, 80%), 7.5%));
+  color: var(--ca-table-color);
+  border-color: var(--ca-table-border-color);
+}
+
+.table-accent {
+  --ca-table-color: color-contrast(opaque(shift-color(#ffcc33, 80%), #999999));
+  --ca-table-bg: #999999;
+  --ca-table-border-color: color-contrast(shift-color(#ffcc33, 80%), 10%);
+  --ca-table-striped-bg: color-contrast(shift-color(#ffcc33, 80%), 5%);
+  --ca-table-striped-color: color-contrast(color-contrast(shift-color(#ffcc33, 80%), 5%));
+  --ca-table-active-bg: color-contrast(shift-color(#ffcc33, 80%), 10%);
+  --ca-table-active-color: color-contrast(color-contrast(shift-color(#ffcc33, 80%), 10%));
+  --ca-table-hover-bg: shift-color(shift-color(#ffcc33, 80%), 7.5%);
+  --ca-table-hover-color: color-contrast(shift-color(shift-color(#ffcc33, 80%), 7.5%));
+  color: var(--ca-table-color);
+  border-color: var(--ca-table-border-color);
+}
+
+.table-tertiary {
+  --ca-table-color: color-contrast(opaque(shift-color(#1a3a76, 80%), #999999));
+  --ca-table-bg: #999999;
+  --ca-table-border-color: color-contrast(shift-color(#1a3a76, 80%), 10%);
+  --ca-table-striped-bg: color-contrast(shift-color(#1a3a76, 80%), 5%);
+  --ca-table-striped-color: color-contrast(color-contrast(shift-color(#1a3a76, 80%), 5%));
+  --ca-table-active-bg: color-contrast(shift-color(#1a3a76, 80%), 10%);
+  --ca-table-active-color: color-contrast(color-contrast(shift-color(#1a3a76, 80%), 10%));
+  --ca-table-hover-bg: shift-color(shift-color(#1a3a76, 80%), 7.5%);
+  --ca-table-hover-color: color-contrast(shift-color(shift-color(#1a3a76, 80%), 7.5%));
+  color: var(--ca-table-color);
+  border-color: var(--ca-table-border-color);
+}
+
+.table-success {
+  --ca-table-color: color-contrast(opaque(shift-color(#a1b80a, 80%), #999999));
+  --ca-table-bg: #999999;
+  --ca-table-border-color: color-contrast(shift-color(#a1b80a, 80%), 10%);
+  --ca-table-striped-bg: color-contrast(shift-color(#a1b80a, 80%), 5%);
+  --ca-table-striped-color: color-contrast(color-contrast(shift-color(#a1b80a, 80%), 5%));
+  --ca-table-active-bg: color-contrast(shift-color(#a1b80a, 80%), 10%);
+  --ca-table-active-color: color-contrast(color-contrast(shift-color(#a1b80a, 80%), 10%));
+  --ca-table-hover-bg: shift-color(shift-color(#a1b80a, 80%), 7.5%);
+  --ca-table-hover-color: color-contrast(shift-color(shift-color(#a1b80a, 80%), 7.5%));
+  color: var(--ca-table-color);
+  border-color: var(--ca-table-border-color);
+}
+
+.table-info {
+  --ca-table-color: color-contrast(opaque(shift-color(#0f53b8, 80%), #999999));
+  --ca-table-bg: #999999;
+  --ca-table-border-color: color-contrast(shift-color(#0f53b8, 80%), 10%);
+  --ca-table-striped-bg: color-contrast(shift-color(#0f53b8, 80%), 5%);
+  --ca-table-striped-color: color-contrast(color-contrast(shift-color(#0f53b8, 80%), 5%));
+  --ca-table-active-bg: color-contrast(shift-color(#0f53b8, 80%), 10%);
+  --ca-table-active-color: color-contrast(color-contrast(shift-color(#0f53b8, 80%), 10%));
+  --ca-table-hover-bg: shift-color(shift-color(#0f53b8, 80%), 7.5%);
+  --ca-table-hover-color: color-contrast(shift-color(shift-color(#0f53b8, 80%), 7.5%));
+  color: var(--ca-table-color);
+  border-color: var(--ca-table-border-color);
+}
+
+.table-warning {
+  --ca-table-color: color-contrast(opaque(shift-color(#bb150c, 80%), #999999));
+  --ca-table-bg: #999999;
+  --ca-table-border-color: color-contrast(shift-color(#bb150c, 80%), 10%);
+  --ca-table-striped-bg: color-contrast(shift-color(#bb150c, 80%), 5%);
+  --ca-table-striped-color: color-contrast(color-contrast(shift-color(#bb150c, 80%), 5%));
+  --ca-table-active-bg: color-contrast(shift-color(#bb150c, 80%), 10%);
+  --ca-table-active-color: color-contrast(color-contrast(shift-color(#bb150c, 80%), 10%));
+  --ca-table-hover-bg: shift-color(shift-color(#bb150c, 80%), 7.5%);
+  --ca-table-hover-color: color-contrast(shift-color(shift-color(#bb150c, 80%), 7.5%));
+  color: var(--ca-table-color);
+  border-color: var(--ca-table-border-color);
+}
+
+.table-danger {
+  --ca-table-color: color-contrast(opaque(shift-color(#b9094c, 80%), #999999));
+  --ca-table-bg: #999999;
+  --ca-table-border-color: color-contrast(shift-color(#b9094c, 80%), 10%);
+  --ca-table-striped-bg: color-contrast(shift-color(#b9094c, 80%), 5%);
+  --ca-table-striped-color: color-contrast(color-contrast(shift-color(#b9094c, 80%), 5%));
+  --ca-table-active-bg: color-contrast(shift-color(#b9094c, 80%), 10%);
+  --ca-table-active-color: color-contrast(color-contrast(shift-color(#b9094c, 80%), 10%));
+  --ca-table-hover-bg: shift-color(shift-color(#b9094c, 80%), 7.5%);
+  --ca-table-hover-color: color-contrast(shift-color(shift-color(#b9094c, 80%), 7.5%));
+  color: var(--ca-table-color);
+  border-color: var(--ca-table-border-color);
+}
+
+.table-light {
+  --ca-table-color: color-contrast(opaque(#999999, #999999));
+  --ca-table-bg: #999999;
+  --ca-table-border-color: color-contrast(#999999, 10%);
+  --ca-table-striped-bg: color-contrast(#999999, 5%);
+  --ca-table-striped-color: color-contrast(color-contrast(#999999, 5%));
+  --ca-table-active-bg: color-contrast(#999999, 10%);
+  --ca-table-active-color: color-contrast(color-contrast(#999999, 10%));
+  --ca-table-hover-bg: shift-color(#999999, 7.5%);
+  --ca-table-hover-color: color-contrast(shift-color(#999999, 7.5%));
+  color: var(--ca-table-color);
+  border-color: var(--ca-table-border-color);
+}
+
+.table-dark {
+  --ca-table-color: color-contrast(opaque(#292929, #999999));
+  --ca-table-bg: #999999;
+  --ca-table-border-color: color-contrast(#292929, 10%);
+  --ca-table-striped-bg: color-contrast(#292929, 5%);
+  --ca-table-striped-color: color-contrast(color-contrast(#292929, 5%));
+  --ca-table-active-bg: color-contrast(#292929, 10%);
+  --ca-table-active-color: color-contrast(color-contrast(#292929, 10%));
+  --ca-table-hover-bg: shift-color(#292929, 7.5%);
+  --ca-table-hover-color: color-contrast(shift-color(#292929, 7.5%));
+  color: var(--ca-table-color);
+  border-color: var(--ca-table-border-color);
+}

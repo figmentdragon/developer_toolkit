@@ -10,7 +10,7 @@
  *
  * @author WebDevStudios
  */
-function creativityscripts() {
+function ca_scripts() {
 	$asset_file_path = dirname( __DIR__ ) . '/build/index.asset.php';
 
 	if ( is_readable( $asset_file_path ) ) {
@@ -30,14 +30,14 @@ function creativityscripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'creativityscripts' );
+add_action( 'wp_enqueue_scripts', 'ca_scripts' );
 
 /**
  * Preload styles and scripts.
  *
  * @author WebDevStudios
  */
-function creativitypreload_scripts() {
+function ca_preload_scripts() {
 	$asset_file_path = dirname( __DIR__ ) . '/build/index.asset.php';
 
 	if ( is_readable( $asset_file_path ) ) {
@@ -54,18 +54,18 @@ function creativitypreload_scripts() {
 	<link rel="preload" href="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/build/index.js?ver=<?php echo esc_html( $asset_file['version'] ); ?>" as="script">
 	<?php
 }
-add_action( 'wp_head', 'creativitypreload_scripts', 1 );
+add_action( 'wp_head', 'ca_preload_scripts', 1 );
 
 /**
  * Preload assets.
  *
  * @author Corey Collins
  */
-function creativitypreload_assets() {
+function ca_preload_assets() {
 	?>
-	<?php if ( creativityget_custom_logo_url() ) : ?>
-		<link rel="preload" href="<?php echo esc_url( creativityget_custom_logo_url() ); ?>" as="image">
+	<?php if ( ca_get_custom_logo_url() ) : ?>
+		<link rel="preload" href="<?php echo esc_url( ca_get_custom_logo_url() ); ?>" as="image">
 	<?php endif; ?>
 	<?php
 }
-add_action( 'wp_head', 'creativitypreload_assets', 1 );
+add_action( 'wp_head', 'ca_preload_assets', 1 );

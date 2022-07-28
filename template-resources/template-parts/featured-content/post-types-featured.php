@@ -2,10 +2,10 @@
 /**
  * The template for displaying featured content items
  *
- * @package creativity
+ * @package creativityarchitect
  */
 
-$number = get_theme_mod( 'creativity_featured_content_number', 3 );
+$number = get_theme_mod( 'creativityarchitect_featured_content_number', 3 );
 
 if ( ! $number ) {
 	// If number is 0, then this section is disabled
@@ -24,17 +24,17 @@ $no_of_post = 0; // for number of posts
 $args['post_type'] = 'featured-content';
 
 for ( $i = 1; $i <= $number; $i++ ) {
-	$creativity_post_id = '';
+	$creativityarchitect_post_id = '';
 
-	$creativity_post_id =  get_theme_mod( 'creativity_featured_content_cpt_' . $i );
+	$creativityarchitect_post_id =  get_theme_mod( 'creativityarchitect_featured_content_cpt_' . $i );
 
-	if ( $creativity_post_id && '' !== $creativity_post_id ) {
+	if ( $creativityarchitect_post_id && '' !== $creativityarchitect_post_id ) {
 		// Polylang Support.
 		if ( class_exists( 'Polylang' ) ) {
-			$creativity_post_id = pll_get_post( $creativity_post_id, pll_current_language() );
+			$creativityarchitect_post_id = pll_get_post( $creativityarchitect_post_id, pll_current_language() );
 		}
 
-		$post_list = array_merge( $post_list, array( $creativity_post_id ) );
+		$post_list = array_merge( $post_list, array( $creativityarchitect_post_id ) );
 
 		$no_of_post++;
 	}

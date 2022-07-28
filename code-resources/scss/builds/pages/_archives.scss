@@ -1,0 +1,81 @@
+$archive-description-font-size: $base-font-size;
+$archive-description-line-height: $base-line-height;
+
+.page-title
+{
+    font-size: h2;
+}
+
+h1.page-title,
+h2.page-title
+{
+    font-weight: $bold-font-weight;
+}
+
+h1.page-title
+{
+    line-height: $lg-line-height;
+}
+
+.page-header
+{
+    padding-bottom: calc(2 * $vertical-spacer);
+
+    border-bottom: 3px solid $border;
+}
+
+.archive,
+.search,
+.blog
+{
+    .content-area
+    {
+        .format-aside,
+        .format-status,
+        .format-link
+        {
+            .entry-content
+            {
+                font-size: $entry-content-font-size;
+            }
+        }
+    }
+
+    .format-image,
+    .format-gallery,
+    .format-video
+    {
+        .entry-content
+        {
+            margin-top: calc(2 * $vertical-spacer);
+        }
+    }
+
+    .entry-footer
+    {
+        .cat-links,
+        .tags-links
+        {
+            display: block;
+        }
+    }
+
+    &.logged-in
+    {
+        .entry-footer
+        {
+            .posted-on
+            {
+                margin-right: calc(.5 * $base-unit);
+            }
+        }
+    }
+}
+
+.archive-description
+{
+    font-size: $archive-description-font-size;
+    line-height: $archive-description-line-height;
+
+    margin-top: $vertical-spacer;
+}

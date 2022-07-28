@@ -1,0 +1,42 @@
+/* =Widgets
+----------------------------------------------- */
+/**
+ * When styling widgets you will probably end up using the same styles over and over again. For this reason it is a good idea to combine classes on your style sheet using commas. For example, you could combine .widget_pages ul and .widget_archive ul by doing something like this:
+ *  ".widget_pages ul, .widget_archive ul {}"
+ */
+
+.widget { /* The individual widget */
+	margin: 0 0 1.5em;
+
+	// Make sure select elements fit in widgets.
+	select {
+		max-width: 100%;
+	}
+}
+
+.widget-area { /* All of the sidebar container divs get this common class */
+}
+
+.widget-title { }
+.widget ul { /* Unordered lists inside widgets */
+ 	list-style: none;
+ 	margin: 0;
+ }
+.widget ul li { /* Unordered list items inside widgets */
+ 	margin-bottom: 0.25em;
+ }
+
+.textwidget {}
+.widget_text {}
+.textwidget p {}
+
+@import "widgets/widget-archives";
+@import "widgets/widget-calendar";
+@import "widgets/widget-categories";
+@import "widgets/widget-cloud";
+@import "widgets/widget-links";
+@import "widgets/widget-meta";
+@import "widgets/widget-pages";
+@import "widgets/widget-recent-comments";
+@import "widgets/widget-recent-entries";
+@import "widgets/widget-search";

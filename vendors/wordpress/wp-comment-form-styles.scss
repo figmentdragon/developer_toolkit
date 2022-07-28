@@ -1,0 +1,133 @@
+/**
+ * Can be ignored if not using threaded comments
+ */
+
+/*Comment Output*/
+.commentlist,
+.children {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.commentlist .reply {}
+.commentlist .reply a {}
+
+.commentlist .alt {}
+.commentlist .odd {}
+.commentlist .even {}
+.commentlist .thread-alt {}
+.commentlist .thread-odd {}
+.commentlist .thread-even {}
+.commentlist li ul.children .alt {}
+.commentlist li ul.children .odd {}
+.commentlist li ul.children .even {}
+
+.commentlist .vcard {}
+.commentlist .vcard cite.fn {}
+.commentlist .vcard span.says {}
+.commentlist .vcard img.photo {}
+.commentlist .vcard img.avatar {}
+.commentlist .vcard cite.fn a.url {}
+
+.commentlist .comment-meta {}
+.commentlist .comment-meta a {}
+.commentlist .commentmetadata {}
+.commentlist .commentmetadata a {}
+
+.commentlist .parent {}
+.commentlist .comment {
+  border-top: 1px solid #e9e9e9;
+  margin: 0 0 40px 50px;
+  padding: 20px;
+  position: relative;
+  list-style: none;
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+
+  .children {
+    margin-top: 40px;
+  }
+}
+.commentlist .children { /* Nested comments */
+    list-style: none;
+    margin: 0 0 0 6%;
+    padding: 0;
+}
+.commentlist .pingback {}
+.commentlist .bypostauthor {}
+.commentlist .comment-author {
+    float: left;
+    margin-right: 10px;
+    img {
+      position: absolute;
+      left: -50px;
+      top: 5px;
+      -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+      -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    }
+    .says {
+      display: none;
+    }
+  }
+.commentlist .comment-author-admin {}
+
+.commentlist {}
+.commentlist li {
+  list-style: none;
+  :before {
+    display: none;
+  }
+  :last-of-type { /* Do you want to style the last comment differently, such as remove borders? */
+  }
+  .comment {  /* Individual top-level comments */ }
+  .pingback {  /* Individual top-level pingbacks */}
+  .children li { /* Contains individual nested comments */}
+  .comment-respond {
+    margin-bottom: 50px;
+  }
+}
+.commentlist li p {}
+.commentlist li ul {}
+.commentlist li ul.children li {}
+.commentlist li ul.children li.alt {}
+.commentlist li ul.children li.byuser {}
+.commentlist li ul.children li.comment {}
+.commentlist li ul.children li.depth-/*{id}*/ {}
+.commentlist li ul.children li.bypostauthor {}
+.commentlist li ul.children li.comment-author-admin {}
+
+.children article.comment,
+.children li.pingback { /* Nexted comments and pingbacks */
+	padding-top: 1.0em;
+}
+
+#cancel-comment-reply {}
+#cancel-comment-reply a {}
+
+/*Comment Form */
+#respond { }
+#reply-title { }
+#cancel-comment-reply-link { }
+#commentform { }
+#author { }
+#email { }
+#url { }
+#comment
+#submit
+.comment-notes { }
+.required { }
+.comment-form-author { }
+.comment-form-email { }
+.comment-form-url { }
+.comment-form-comment { }
+.form-allowed-tags { }
+.form-submit {}
+
+@import "comments/comments";
+@import "comments/comment-author";
+@import "comments/comment-body";
+@import "comments/comment-form";
+@import "comments/comment-meta";

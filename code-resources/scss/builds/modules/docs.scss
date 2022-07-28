@@ -1,0 +1,62 @@
+/*!
+ * Bootstrap Docs (https://getbootstrap.com/)
+ * Copyright 2011-2022 The Bootstrap Authors
+ * Copyright 2011-2022 Twitter, Inc.
+ * Licensed under the Creative Commons Attribution 3.0 Unported License.
+ * For details, see https://creativecommons.org/licenses/by/3.0/.
+ */
+
+// Dev notes
+//
+// Background information on nomenclature and architecture decisions here.
+//
+// - Bootstrap functions, variables, and mixins are included for easy reuse.
+//   Doing so gives us access to the same core utilities provided by Bootstrap.
+//   For example, consistent media queries through those mixins.
+//
+// - Bootstrap's **docs variables** are prefixed with `$bd-`.
+//   These custom colors avoid collision with the components Bootstrap provides.
+//
+// - Classes are prefixed with `.bd-`.
+//   These classes indicate custom-built or modified components for the design
+//   and layout of the Bootstrap docs. They are not included in our builds.
+//
+// Happy Bootstrapping!
+
+// Load Bootstrap variables and mixins
+//@import "function";
+//@import "default";
+//@import "mixins";
+
+// fusv-disable
+$enable-grid-classes: false; // stylelint-disable-line scss/dollar-variable-default
+$enable-cssgrid: true; // stylelint-disable-line scss/dollar-variable-default
+// fusv-enable
+//@import "grid";
+
+// Load docs components
+@import "docs/variables";
+@import "docs/nav";
+@import "docs/navbar";
+@import "docs/subnav";
+@import "docs/masthead";
+@import "docs/ads";
+@import "docs/content";
+@import "docs/skippy";
+@import "docs/sidebar";
+@import "docs/layout";
+@import "docs/toc";
+@import "docs/footer";
+@import "docs/component-examples";
+@import "docs/buttons";
+@import "docs/callouts";
+@import "docs/browser-bugs";
+@import "docs/brand";
+@import "docs/colors";
+@import "docs/clipboard-js";
+@import "docs/placeholder-img";
+
+// Load docs dependencies
+@import "docs/syntax";
+@import "docs/anchor";
+@import "docs/algolia";

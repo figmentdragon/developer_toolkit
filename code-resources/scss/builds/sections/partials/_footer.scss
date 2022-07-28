@@ -1,0 +1,30 @@
+/*--------------------------------------------------------------------------
+Footer Starts
+----------------------------------------------------------------------------*/
+.footer {}
+.site-footer {
+  @include clearfix;
+  @include border-start-radius($sm-border-radius);
+  position: fixed;
+  bottom: 1vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: $zindex-footer;
+  height: 3vh;
+}
+.page-template-tpl-home .site-footer {
+  -ms-transform: translateY(100%);
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+}
+.page-template-tpl-home .site-footer.fp-show {
+  -ms-transform: translateY(0);
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+.site-footer .container {
+  position: relative;
+}

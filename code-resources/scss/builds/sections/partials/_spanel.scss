@@ -1,0 +1,31 @@
+/*================Spanel=====================*/
+
+.fp-slide {
+    position: relative;
+}
+.s-panel-inner {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.container {
+    padding: 0 90px;
+}
+.fp-section .container {
+    width: 100%;
+    padding: 120px 90px;
+}
+.fp-section .mCSB_scrollTools {
+    top: 100px;
+    bottom: 80px
+}
+.fp-slides .mCSB_inside > .mCSB_container {
+    margin-right: 0;
+}

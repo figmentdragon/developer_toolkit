@@ -2,23 +2,23 @@
 /**
  * The template for displaying services content
  *
- * @package TheCreativityArchitect
+ * @package TheThemeName
  */
 
-$enable_content = get_theme_mod( 'TheCreativityArchitect_service_option', 'disabled' );
+$enable_content = get_theme_mod( 'TheThemeName_service_option', 'disabled' );
 
-if ( ! TheCreativityArchitect_check_section( $enable_content ) ) {
+if ( ! TheThemeName_check_section( $enable_content ) ) {
 	// Bail if services content is disabled.
 	return;
 }
 
-$TheCreativityArchitect_title = get_option( 'ect_service_title', esc_html__( 'We design & build brands', 'TheCreativityArchitect' ) );
+$TheThemeName_title = get_option( 'ect_service_title', esc_html__( 'We design & build brands', 'TheThemeName' ) );
 $sub_title    = get_option( 'ect_service_content' );
 
 $classes[] = 'services-section';
 $classes[] = 'section';
 
-if ( ! $TheCreativityArchitect_title && ! $sub_title ) {
+if ( ! $TheThemeName_title && ! $sub_title ) {
 	$classes[] = 'no-section-heading';
 }
 
@@ -27,11 +27,11 @@ if ( ! $TheCreativityArchitect_title && ! $sub_title ) {
 <div id="services-section" class="<?php echo esc_attr( implode( ' ', $classes ) ); ?>">
 	<div class="wrapper">
 		<div class="service-content-area">
-			<?php if ( $TheCreativityArchitect_title || $sub_title ) : ?>
+			<?php if ( $TheThemeName_title || $sub_title ) : ?>
 				<div class="section-heading-wrapper">
-					<?php if ( $TheCreativityArchitect_title ) : ?>
+					<?php if ( $TheThemeName_title ) : ?>
 						<div class="section-title-wrapper">
-							<h2 class="section-title"><?php echo wp_kses_post( $TheCreativityArchitect_title ); ?></h2>
+							<h2 class="section-title"><?php echo wp_kses_post( $TheThemeName_title ); ?></h2>
 						</div><!-- .page-title-wrapper -->
 					<?php endif;  
 

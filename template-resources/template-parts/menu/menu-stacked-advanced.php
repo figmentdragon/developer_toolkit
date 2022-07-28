@@ -2,7 +2,7 @@
 /**
  * Stacked advanced menu.
  *
- * @package TheCreativityArchitect
+ * @package TheThemeName
  * @subpackage Template Parts
  */
 
@@ -34,7 +34,7 @@ defined( 'ABSPATH' ) || die( "Can't access directly" );
 
 	<?php do_action( 'before_main_menu' ); ?>
 
-	<nav id="navigation" class="container container-center nav-wrapper" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement" aria-label="<?php _e( 'Site Navigation', 'TheCreativityArchitect' ); ?>">
+	<nav id="navigation" class="container container-center nav-wrapper" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement" aria-label="<?php _e( 'Site Navigation', 'TheThemeName' ); ?>">
 
 		<?php do_action( 'main_menu_open' ); ?>
 

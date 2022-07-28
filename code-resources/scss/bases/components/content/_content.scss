@@ -1,0 +1,90 @@
+/* =Content
+----------------------------------------------- */
+
+/* Styles for posts and pages */
+.sticky { /* Style your sticky posts. This class is applied to the same element as .hentry below. */
+
+}
+.hentry { /* The wrapper for individual posts */
+	margin: 0 0 1.5em;
+	padding-bottom: 1.5em;
+}
+.entry-header { /* Container for the entry title, byline and post date */
+
+}
+.entry-title,
+.entry-title a { /* Post titles */
+
+}
+.page-title { /* Page titles */
+
+}
+body.search .page-title,
+body.archive .page-title { /* Optional, if you want your page titles to look different on search and archive pages */
+
+}
+.entry-meta { /* Container for the entry metadata */
+	clear: both;
+}
+.entry-date {
+
+}
+.byline { /* By default, bylines are hidden */
+	display: none;
+}
+.single .byline,
+.group-blog .byline { /* Bylines are displayed on single posts and/or when there are multiple authors */
+	display: inline;
+}
+.cat-links {  /* Styles category links inside the entry meta */
+
+}
+.tag-links { /* Styles links to tags inside the entry-meta */
+
+}
+.sep {  /* Separator between category links, cat links, comments links, etc */
+
+}
+.comments-link {  /* Link to leave a comment */
+
+}
+.edit-link { /* Link to Edit the post (only shows up for admins)
+
+}
+.entry-content,
+.entry-summary { /* Container for the post body/excerpt text */
+	margin: 1.5em 0 0;
+}
+
+/* Styling In-Post Tables */
+.entry-content table,
+.comment-content table {
+	border: 1px solid #000;
+	border-left-width: 0;
+	margin: 0 -0.083em 2.083em 0;
+	text-align: left;
+	width: 100%;
+}
+.entry-content tr th,
+.entry-content thead th,
+.comment-content tr th,
+.comment-content thead th {
+	border-left: 1px solid #000;
+	font-weight: bold;
+	padding: 0.5em 	1.25em;
+}
+.entry-content tr td,
+.comment-content tr td {
+	border: 1px solid #000;
+  	border-width: 1px 0 0 1px;
+	padding: 0.5em 	1.25em;
+}
+.entry-content tr.odd td,
+.comment-content tr.odd td { /* If you want to apply alternate styles to even/odd table rows */
+
+}
+
+.page-links { /* Style the page numbers for multi-page posts (posts that have been split with <!--next-page -->. */
+	clear: both;
+	margin: 0 0 1.5em;
+}

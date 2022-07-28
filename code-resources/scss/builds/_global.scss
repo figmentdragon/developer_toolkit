@@ -1,0 +1,163 @@
+.top, .bottom, .right, .left {
+  position: fixed;
+  z-index: 9999;
+}
+
+html, .right, .bottom {
+  background-image: radial-gradient( circle at 95% 95%, $default, $default-dark, $default-light, white);
+}
+
+.top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 2vh;
+}
+
+.right {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 1vw;
+  height: 100%;
+}
+
+.bottom {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2vh;
+}
+
+.left {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 1vw;
+  height: 100%;
+}
+
+html {
+  overflow: hidden;
+  z-index: 50;
+  padding: 2vh 1vw 1vh 5vw;
+  height: 100%;
+  width: 100%;
+}
+
+html, body {
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+}
+
+body,
+.page {
+  @extend %page;
+  width: 100%;
+  background-color: rgba($light, .95);
+  z-index: 60;
+  @include border-radius($lg-border-radius);
+  box-shadow: inset 4px 6px 10px $gray-900, inset 6px 8px 12px $default-dark;
+}
+
+.page {
+  background-color: purple;
+}
+
+header {
+  width: 4vw;
+  &.site-header {
+    position: fixed;
+    z-index: $zindex-header;
+    top: 2.12vh;
+    bottom: 2.12vh;
+    left: 1vw;
+    width: 4vw;
+    outline: 2px solid orange;
+  }
+  outline: 2px solid red;
+}
+
+.site-branding {
+  position: fixed;
+  z-index: $zindex-branding;
+  top: 0;
+  bottom: 5vh;
+  left: .25vw;
+  padding-top: 18vh;
+  width: 5vw;
+  h1 {
+    writing-mode: vertical-lr;
+    rotate: 180deg;
+  }
+  h3 {
+    writing-mode: vertical-lr;
+    rotate: 180deg;
+    color: white;
+    text-shadow: 0 2px .5px $gray-900, 0 5px 2px $default-accent, 0 -2px 1px white;
+  }
+}
+
+main {
+  position: relative;
+  z-index: 400;
+  top: 0;
+  right: 1vw;
+  left: 0;
+  outline: 2px solid black;
+  &.scrolling-wrapper {
+    height: 100vh;
+    width: 100vw;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    transition: all 0.5s ease;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    .card {
+      display: inline-block;
+    }
+  }
+}
+
+article {
+  outline: 2px solid yellow;
+}
+
+aside {
+  position: fixed;
+  z-index: $zindex-aside;
+  top: 2.25vh;
+  bottom: 2.25vh;
+  left: 0;
+  padding-top: 2.25vh;
+  padding-bottom: 2.25vh;
+  width: 5vw;
+  outline: 2px solid green;
+}
+
+nav {
+  position: fixed;
+  z-index: 600;
+  top: 0;
+  bottom: 0vh;
+  left: 3vw;
+  height: 100%;
+  padding-top: 5vh;
+  @include border-bottom-radius($lg-border-radius);
+  outline: 2px solid blue;
+}
+
+footer {
+  outline: 2px solid purple;
+}

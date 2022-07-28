@@ -114,7 +114,7 @@
 
 				<?php if( isset( $plugin['class'] ) && !class_exists( $plugin['class'] ) ) : ?>
 					<div class="action-tab warning">
-						<h3><?php echo esc_html__("Install : ", 'themename'). esc_html($info->name). esc_html__(" Plugin", 'themename'); ?></h3>
+						<h3><?php echo esc_html__("Install : ", 'scrollme'). esc_html($info->name). esc_html__(" Plugin", 'scrollme'); ?></h3>
 						<p><?php echo esc_html($plugin['info']); ?></p>
 
 						<span class="plugin-action-btn plugin-card-<?php echo esc_attr($plugin['slug']); ?>" action_button>

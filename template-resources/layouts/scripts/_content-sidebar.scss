@@ -1,27 +1,49 @@
+/*
+ * Layout: Content-Sidebar
+ *
+ * Learn more: https://developer.wordpress.org/themes/basics/template-files/
+ */
+
+
 .site {
 	display: grid;
-	grid-template-columns: auto ($size__site-sidebar);
-	grid-template-areas:
-		"header header"
-		"main sidebar"
-		"footer footer";
+	grid-template-columns: repeat($grid-columns, 1fr);
+	grid-template-rows: repeat($grid-row-columns, 1fr);
+	gap: $grid-gutter-width;
 }
 
 .site-header {
-	grid-area: header;
+	grid-column: ;
+	grid-row: ;
 }
 
-.site-main {
-	grid-area: main;
+.content-area,
+#primary {
+	float: left;
+	margin: 0 (-$size-site-sidebar) 0 0;
+	width: $size__site-main;
+	height: 100%;
+	white-space: nowrap;
+}
+
+.site-main,
+#content {
+	margin: 0 $size-site-sidebar 0 0;
 	overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
 }
 
-.widget-area {
-	grid-area: sidebar;
+.site-content .widget-area,
+#secondary { /* Sidebar 1 */
+	float: right;
+	overflow: hidden;
+	width: $size-site-sidebar;
+}
+
+#tertiary { /* Sidebar 2 */
+	clear: right;
 }
 
 .site-footer {
-	grid-area: footer;
+	clear: both;
+	width: $size__site-main;
 }
-
-@import "no-sidebar";

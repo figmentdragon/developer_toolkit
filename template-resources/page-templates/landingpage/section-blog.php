@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * @package creativityarchitect
+ * @package themename
  */
 if (get_theme_mod('theme_blog_section_disable') != 'on') {
     ?>
@@ -36,7 +36,7 @@ if (get_theme_mod('theme_blog_section_disable') != 'on') {
                 $query = new WP_Query($args);
                 if ($query->have_posts()):
                     while ($query->have_posts()) : $query->the_post();
-                        $theme_image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'creativityarchitect-blog-thumb');
+                        $theme_image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'themename-blog-thumb');
                         ?>
                         <div class="ht-blog-post ht-clearfix">
                             <?php
@@ -61,7 +61,7 @@ if (get_theme_mod('theme_blog_section_disable') != 'on') {
                             </div>
 
                             <div class="ht-blog-read-more">
-                                <a href="<?php the_permalink(); ?>"><?php esc_html_e('Read More', 'creativityarchitect'); ?></a>
+                                <a href="<?php the_permalink(); ?>"><?php esc_html_e('Read More', 'themename'); ?></a>
                             </div>
                         </div>
                         <?php

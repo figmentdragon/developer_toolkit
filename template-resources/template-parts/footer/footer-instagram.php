@@ -2,7 +2,7 @@
 /**
  * Displays footer instagram widget
  *
- * @package creativity
+ * @package creativityarchitect
  */
 ?>
 

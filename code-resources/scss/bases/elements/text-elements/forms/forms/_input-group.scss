@@ -1,0 +1,207 @@
+//
+// Base styles
+//
+
+.input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap; // For form validation feedback
+  align-items: stretch;
+  width: 100%;
+
+  > .form-control,
+  > .form-select {
+    position: relative; // For focus state's z-index
+    flex: 1 1 auto;
+    width: 1%;
+    min-width: 0; // https://stackoverflow.com/questions/36247140/why-dont-flex-items-shrink-past-content-size
+    min-height: $input-group-min-height;
+    height: $input-group-height;
+    padding-top: $input-group-offset-y;
+    padding-bottom: $input-group-offset-y;
+    transition: $input-group-transition;
+  }
+
+  // Bring the 'active' form control to the top of surrounding elements
+  > .form-control:focus,
+  > .form-select:focus {
+    z-index: 3;
+    transition: $input-group-focus-transition;
+    border-color: $input-group-focus-border-color;
+    outline: 0;
+    box-shadow: $input-group-focus-box-shadow;
+  }
+
+  // Ensure buttons are always above inputs for more visually pleasing borders.
+  // This isn't needed for `.input-group-text` since it shares the same border-color
+  // as our inputs.
+  .btn {
+    position: relative;
+    z-index: 2;
+
+    &:focus {
+      z-index: 3;
+    }
+  }
+}
+
+// Textual addons
+//
+// Serves as a catch-all element for any text or radio/checkbox input you wish
+// to prepend or append to an input.
+
+.input-group-text {
+  display: flex;
+  align-items: center;
+  padding-top: $input-group-text-offset-y;
+  padding-bottom: $input-group-text-offset-y;
+  @include font-size($input-font-size); // Match inputs
+  font-weight: $input-group-addon-font-weight;
+  line-height: $input-line-height;
+  color: $input-group-addon-color;
+  text-align: center;
+  white-space: nowrap;
+  background-color: transparent;
+  border: $input-border-width solid $input-group-addon-border-color;
+  @include border-radius($input-border-radius);
+  > .form-check-input[type='checkbox'] {
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+  > .form-check-input[type='radio'] {
+    margin-right: 0;
+  }
+}
+
+
+// Sizing
+//
+// Remix the default form control sizing classes into new ones for easier
+// manipulation.
+
+.input-group-lg > .form-control,
+.input-group-lg > .form-select,
+.input-group-lg > .input-group-text,
+.input-group-lg > .btn {
+  padding: $input-offset-y-lg $input-offset-x-lg;
+  @include font-size($input-font-size-lg);
+  @include border-radius($input-lg-border-radius);
+}
+
+.input-group-lg {
+  > .form-control {
+    height: $input-group-lg-height;
+    font-size: $input-group-lg-font-size;
+    padding-top: $input-group-lg-offset-y;
+    padding-bottom: $input-group-lg-offset-y;
+  }
+
+  .input-group-text {
+    font-size: $input-group-lg-text-font-size;
+  }
+}
+
+.input-group-sm > .form-control,
+.input-group-sm > .form-select,
+.input-group-sm > .input-group-text,
+.input-group-sm > .btn {
+  padding: $input-offset-y-sm $input-offset-x-sm;
+  @include font-size($input-font-size-sm);
+  @include border-radius($input-sm-border-radius);
+}
+
+.input-group-sm {
+  > .form-control {
+    min-height: $input-group-sm-min-height;
+    height: $input-group-sm-height;
+    font-size: $input-group-sm-font-size;
+    padding-top: $input-group-sm-offset-y;
+    padding-bottom: $input-group-sm-offset-y;
+  }
+
+  .input-group-text {
+    font-size: $input-group-sm-text-font-size;
+    line-height: $input-group-sm-text-line-height;
+  }
+}
+
+
+.input-group-lg > .form-select,
+.input-group-sm > .form-select {
+  padding-right: $form-select-offset-x + $form-select-indicator-offset;
+}
+
+// Rounded corners
+//
+// These rulesets must come after the sizing ones to properly override sm and lg
+// border-radius values when extending. They're more specific than we'd like
+// with the `.input-group >` part, but without it, we cannot override the sizing.
+
+// stylelint-disable-next-line no-duplicate-selectors
+.input-group {
+  &:not(.has-validation) {
+    > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu),
+    > .dropdown-toggle:nth-last-child(n + 3) {
+      @include border-end-radius(0);
+    }
+  }
+
+  &.has-validation {
+    > :nth-last-child(n + 3):not(.dropdown-toggle):not(.dropdown-menu),
+    > .dropdown-toggle:nth-last-child(n + 4) {
+      @include border-end-radius(0);
+    }
+  }
+
+  $validation-messages: '';
+  @each $state in map-keys($form-validation-states) {
+    $validation-messages: $validation-messages +
+      ':not(.' +
+      unquote($state) +
+      '-tooltip)' +
+      ':not(.' +
+      unquote($state) +
+      '-feedback)';
+  }
+
+  > :not(:first-child):not(.dropdown-menu)#{$validation-messages} {
+    margin-left: -$input-border-width;
+    @include border-start-radius(0);
+  }
+  &.form-outline {
+    .input-group-text {
+      border-left: 0;
+    }
+    input + .input-group-text {
+      border: 0;
+      border-left: $input-group-form-outline-border-left-width solid
+        $input-group-form-outline-border-left-color;
+    }
+  }
+  .form-outline:not(:first-child),
+  .select-wrapper:not(:first-child),
+  .form-outline:not(:first-child) .form-notch-leading,
+  .select-wrapper:not(:first-child) .form-notch-leading {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+  }
+  .form-outline:not(:last-child),
+  .select-wrapper:not(:last-child),
+  .form-outline:not(:last-child) .form-notch-trailing,
+  .select-wrapper:not(:last-child) .form-notch-trailing {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+}
+
+.input-group > [class*='btn-outline-'] + [class*='btn-outline-'] {
+  border-left: 0;
+}
+
+.input-group > .btn[class*='btn-outline-'] {
+  padding-top: 0.47rem;
+}
+
+.input-group > .btn {
+  padding-top: 0.59rem;
+}

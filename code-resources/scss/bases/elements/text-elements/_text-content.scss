@@ -1,0 +1,25 @@
+// Text content
+// Use HTML text content elements to organize blocks or sections of content placed between the opening <body> and closing </body> tags. Important for accessibility and SEO, these elements identify the purpose or structure of that content.
+
+@import 'text-content/copy';
+@import 'text-content/dd';
+@import 'text-content/div';
+@import 'text-content/dl';
+@import 'text-content/dt';
+@import 'text-content/figure';
+@import 'text-content/hr';
+@import 'text-content/lists';
+@import 'text-content/pre';
+@import 'text-content/quote';
+
+// Responsive headings
+@each $key, $val in $grid-breakpoints {
+  @include media-breakpoint-up($key) {
+    $y: map-get($responsive-headings, $key);
+    @each $name, $value in $y {
+      .#{$name}-responsive {
+        font-size: $value;
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 <?php
-if(!class_exists('themename_Welcome')) :
+if(!class_exists('Scrollme_Welcome')) :
 
-	class themename_Welcome {
+	class Scrollme_Welcome {
 
 			public $tab_sections 		= array(); // Welcome Page Tab Sections
 			public $theme_name 			= null; // For storing Theme Name
@@ -30,13 +30,13 @@ if(!class_exists('themename_Welcome')) :
 
 				/** Tabs **/
 				$this->tab_sections = array(
-					'getting_started' => esc_html__('Getting Started', 'themename'),
-					'actions_required' => esc_html__('Recommended Plugins', 'themename'),
+					'getting_started' => esc_html__('Getting Started', 'scrollme'),
+					'actions_required' => esc_html__('Recommended Plugins', 'scrollme'),
 					
-					'demo_import' => esc_html__('Import Demo', 'themename'),
-					'free_vs_pro' => esc_html__('Free Vs Pro', 'themename'),
-					'changelog' => esc_html__('ChangeLog', 'themename'),
-					'support' => esc_html__('Support', 'themename'),
+					'demo_import' => esc_html__('Import Demo', 'scrollme'),
+					'free_vs_pro' => esc_html__('Free Vs Pro', 'scrollme'),
+					'changelog' => esc_html__('ChangeLog', 'scrollme'),
+					'support' => esc_html__('Support', 'scrollme'),
 				);
 
 				/** Strings **/
@@ -111,8 +111,8 @@ if(!class_exists('themename_Welcome')) :
 		if( is_admin() && ('themes.php' == $pagenow) && (isset($_GET['activated'])) ) {
 			?>
 			<div class="updated apwelcome-an notice notice-success is-dismissible">
-				<h2><?php printf(esc_html__( 'Welcome!', 'themename' )) ?></h2>
-				<p class="about-desc"><?php /* translators: %s : Theme Name */ printf(esc_html__( 'Thank you for installing %1$s. It is now installed and ready to use. Here are some useful links to get started: ', 'themename' ), $this->theme_name);  ?></p>
+				<h2><?php printf(esc_html__( 'Welcome!', 'scrollme' )) ?></h2>
+				<p class="about-desc"><?php /* translators: %s : Theme Name */ printf(esc_html__( 'Thank you for installing %1$s. It is now installed and ready to use. Here are some useful links to get started: ', 'scrollme' ), $this->theme_name);  ?></p>
 				<hr/>
 				<div class="apwelcome-column-wrap">
 
@@ -120,14 +120,14 @@ if(!class_exists('themename_Welcome')) :
 						<div>
 							<h3>
 								<span class="dashicons dashicons-feedback"></span>
-								<?php printf(esc_html__( 'Starter site demos!', 'themename' )) ?>
+								<?php printf(esc_html__( 'Starter site demos!', 'scrollme' )) ?>
 							</h3>
-							<p><?php printf( wp_kses_post( 'You\'ve  got 1  great starter sites (Demos) to start with. By using one of these starter sites you\'ll get a great guidance on how to use the theme to its fullest and also save time to make your website. ', 'themename' ), $this->theme_name, esc_url(admin_url( 'themes.php?page=welcome-page#demo_import' ) ) ); ?></p>
+							<p><?php printf( wp_kses_post( 'You\'ve  got 1  great starter sites (Demos) to start with. By using one of these starter sites you\'ll get a great guidance on how to use the theme to its fullest and also save time to make your website. ', 'scrollme' ), $this->theme_name, esc_url(admin_url( 'themes.php?page=welcome-page#demo_import' ) ) ); ?></p>
 						</div>
 						<div>
 							<div class="button-wrapper">
-								<a class="button button-primary button-hero install-now" href="<?php echo esc_url(admin_url( 'themes.php?page=welcome-page#demo_import' )) ?>"><?php esc_html_e( 'Ready to use starter sites.', 'themename' ); ?></a>
-								<?php printf( wp_kses_post( '<a class="options-page-btn notice-info-btn button-secondary" href="%2$s"> Or Start setting up your theme now (without demo)!</a>', 'themename' ), $this->theme_name, esc_url(admin_url( 'themes.php?page=welcome-page' ))  ); ?>
+								<a class="button button-primary button-hero install-now" href="<?php echo esc_url(admin_url( 'themes.php?page=welcome-page#demo_import' )) ?>"><?php esc_html_e( 'Ready to use starter sites.', 'scrollme' ); ?></a>
+								<?php printf( wp_kses_post( '<a class="options-page-btn notice-info-btn button-secondary" href="%2$s"> Or Start setting up your theme now (without demo)!</a>', 'scrollme' ), $this->theme_name, esc_url(admin_url( 'themes.php?page=welcome-page' ))  ); ?>
 							</div>
 						</div>
 					</div>
@@ -135,13 +135,13 @@ if(!class_exists('themename_Welcome')) :
 						<div>
 							<h3>
 								<span class="dashicons dashicons-category"></span>
-								<?php printf(esc_html__( 'Documentation', 'themename' )) ?>
+								<?php printf(esc_html__( 'Documentation', 'scrollme' )) ?>
 							</h3>
-							<p><?php printf( wp_kses_post( 'How to use %1$s! Here we\'ve a full and detailed documentation that explains how to use %1$s in its best. ', 'themename' ), $this->theme_name  ); ?></p>
+							<p><?php printf( wp_kses_post( 'How to use %1$s! Here we\'ve a full and detailed documentation that explains how to use %1$s in its best. ', 'scrollme' ), $this->theme_name  ); ?></p>
 
 							<div class="apwelcome-doc-btn">
-								<a href="<?php echo esc_url($this->strings['doc_link']);?>" class=" button" ><span><?php esc_html_e( 'Full Documentation', 'themename' ); ?></span></a>
-								<a href="<?php echo esc_url('https://accesspressthemes.com/support/')?>" class=" ti-return-dashboard  button button-secondary  install-now" ><span><?php esc_html_e( 'Contact Support', 'themename' ); ?></span></a>
+								<a href="<?php echo esc_url($this->strings['doc_link']);?>" class=" button" ><span><?php esc_html_e( 'Full Documentation', 'scrollme' ); ?></span></a>
+								<a href="<?php echo esc_url('https://accesspressthemes.com/support/')?>" class=" ti-return-dashboard  button button-secondary  install-now" ><span><?php esc_html_e( 'Contact Support', 'scrollme' ); ?></span></a>
 							</div>
 						</div>
 
@@ -205,19 +205,19 @@ if(!class_exists('themename_Welcome')) :
 							<?php endforeach; ?>
 							<div class="notice-sidebar is_loading">
 								<div class= "notice-sidebar-item">
-									<h4><?php echo esc_html('Join in our social networks!','themename') ?></h4>
-									<p><?php echo esc_html__('Get connected, share your opinions and more via our social community: ', 'themename'); ?></p>
+									<h4><?php echo esc_html('Join in our social networks!','scrollme') ?></h4>
+									<p><?php echo esc_html__('Get connected, share your opinions and more via our social community: ', 'scrollme'); ?></p>
 
-									<p><a href="<?php echo esc_url('https://www.facebook.com/AccessPressThemes')?>"><?php echo esc_html('Join our Facebook Group','themename') ?></a><?php echo esc_html__(' -to receive updates, offers and more.', 'themename'); ?></p>
+									<p><a href="<?php echo esc_url('https://www.facebook.com/AccessPressThemes')?>"><?php echo esc_html('Join our Facebook Group','scrollme') ?></a><?php echo esc_html__(' -to receive updates, offers and more.', 'scrollme'); ?></p>
 
-									<p><a href="<?php echo esc_url('https://www.youtube.com/channel/UCzD8I1moKISXDjAVr8dIf-w')?>"><?php echo esc_html('Subscribe our YouTube Channel','themename') ?></a><?php echo esc_html__(' -for tutorials, videos and more.', 'themename'); ?></p>
+									<p><a href="<?php echo esc_url('https://www.youtube.com/channel/UCzD8I1moKISXDjAVr8dIf-w')?>"><?php echo esc_html('Subscribe our YouTube Channel','scrollme') ?></a><?php echo esc_html__(' -for tutorials, videos and more.', 'scrollme'); ?></p>
 
-									<p><a href="<?php echo esc_url('https://twitter.com/apthemes')?>"><?php echo esc_html('Follow us on Twitter','themename') ?></a><?php echo esc_html__(' -to stay updated. ', 'themename'); ?></p>
+									<p><a href="<?php echo esc_url('https://twitter.com/apthemes')?>"><?php echo esc_html('Follow us on Twitter','scrollme') ?></a><?php echo esc_html__(' -to stay updated. ', 'scrollme'); ?></p>
 								</div>
 								<div class= "notice-sidebar-item">
-									<h4><?php echo esc_html('Rate us!','themename') ?></h4>
-									<p><?php /* translators: %s : Theme Name */ printf(esc_html__('Are you enjoying %1$s? We would love to hear your feedback!', 'themename'),$this->theme_name); ?></p>
-									<a href="https://wordpress.org/support/theme/themename/reviews/#new-post"><?php echo esc_html('Write a review','themename') ?></a>
+									<h4><?php echo esc_html('Rate us!','scrollme') ?></h4>
+									<p><?php /* translators: %s : Theme Name */ printf(esc_html__('Are you enjoying %1$s? We would love to hear your feedback!', 'scrollme'),$this->theme_name); ?></p>
+									<a href="https://wordpress.org/support/theme/scrollme/reviews/#new-post"><?php echo esc_html('Write a review','scrollme') ?></a>
 
 								</div>
 							</div>
@@ -355,7 +355,7 @@ if(!class_exists('themename_Welcome')) :
 			public function plugin_installer_callback(){
 
 				if ( ! current_user_can('install_plugins') ) {
-					wp_die( esc_html__( 'Sorry, you are not allowed to install plugins on this site.', 'themename' ) );
+					wp_die( esc_html__( 'Sorry, you are not allowed to install plugins on this site.', 'scrollme' ) );
 				}
 
 				$nonce = isset( $_POST["nonce"] ) ? sanitize_text_field( wp_unslash( $_POST["nonce"] ) ) : '';
@@ -365,7 +365,7 @@ if(!class_exists('themename_Welcome')) :
 
 				// Check our nonce, if they don't match then bounce!
 				if (! wp_verify_nonce( $nonce, 'plugin_installer_nonce' )) {
-					wp_die( esc_html__( 'Error - unable to verify nonce, please try again.', 'themename') );
+					wp_die( esc_html__( 'Error - unable to verify nonce, please try again.', 'scrollme') );
 				}
 
 
@@ -457,7 +457,7 @@ if(!class_exists('themename_Welcome')) :
 					echo "success";
 
 				} else {
-					echo esc_html__('Plugin Does not Exists' , 'themename');
+					echo esc_html__('Plugin Does not Exists' , 'scrollme');
 				}
 
 				die();
@@ -477,7 +477,7 @@ if(!class_exists('themename_Welcome')) :
 					echo "success";
 
 				} else {
-					echo esc_html__('Plugin Does not Exists' , 'themename');
+					echo esc_html__('Plugin Does not Exists' , 'scrollme');
 				}
 
 				die();

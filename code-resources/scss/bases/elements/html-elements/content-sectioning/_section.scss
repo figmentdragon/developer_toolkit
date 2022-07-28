@@ -1,0 +1,23 @@
+// Section - The <section> HTML element represents a generic standalone section of a document, which doesn't have a more specific semantic element to represent it. Sections should always have a heading, with very few exceptions.
+
+section,
+.section {
+  padding: divide($offset-x, 2.5) divide($offset-y, 2.5);
+  overflow: hidden;
+	width: 100%;
+  display: block;
+	&:nth-of-type(even) {
+		background: #fff;
+		color: #111;
+	}
+  @include desktop {
+    padding: 32px;
+    // Sizes
+    &.is-medium {
+      padding: $offset-md;
+    }
+    &.is-large {
+      padding: $offset-lg;
+    }
+  }
+}
